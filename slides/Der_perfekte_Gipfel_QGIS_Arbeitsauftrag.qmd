@@ -22,11 +22,11 @@ Ihr arbeitet vollständig **digital in QGIS**. Die gefundenen Gipfel werden als 
 2. **Einen Gipfel untersuchen.** Bestimmt Gipfelhöhe, Dominanz, maßgebliche Schartenhöhe, Prominenz und – soweit begründbar – den E-Wert. Verwendet eigene Punkte und Linien, um eure Hypothesen räumlich festzuhalten.
 3. **Ergebnis überprüfen.** Eine andere Gruppe sucht gezielt nach näher gelegenem höherem Gelände, alternativen Verbindungen oder Problemen am Datenrand. Überarbeitet die Berechnung, wenn nötig.
 4. **Aussagegrenzen benennen.** Unterscheidet zwischen bestimmt, auf den Datenausschnitt beschränkt und noch offen. Ein begründet vorläufiges Ergebnis ist zulässig; zeigt, welche Information fehlt.
-5. **Vom Vorgehen zum Algorithmus.** Beschreibt, wie ein Programm Gipfel finden, Verbindungen prüfen, eine Suche beenden und unvollständige Daten erkennen müsste. 
+5. **Vom Vorgehen zum Algorithmus.** Beschreibt, wie ein Programm Gipfel finden, Verbindungen prüfen, eine Suche beenden und unvollständige Daten erkennen müsste. Vergleicht euren Ablauf danach mit dem Repository [`perfectPeak`](https://github.com/gisma/perfectPeak/tree/37b49f1).
 
 ## Abgabe
 
-Speichert eure Arbeit im QGIS-Arbeitsprojekt mit den bearbeiteten Layern ab und erläutert euren ausgewählten Gipfel kurz anhand der Karte. Dazu gehören eure Gipfelregel, die Prüfung des höheren Geländes, die Schartenhypothese, die ermittelten Werte und der Status der Aussage. **Ein Ausdruck oder eine Papierkarte ist nicht erforderlich.**
+Gebt euer **gespeichertes QGIS-Arbeitsprojekt** mit den bearbeiteten Layern ab und erläutert euren ausgewählten Gipfel kurz anhand der Karte. Dazu gehören eure Gipfelregel, die Prüfung des höheren Geländes, die Schartenhypothese, die ermittelten Werte und der Status der Aussage. **Ein Ausdruck oder eine Papierkarte ist nicht erforderlich.**
 
 # QGIS-Workflow
 
@@ -168,6 +168,48 @@ Schreibt euren Arbeitsablauf als kurze Folge eindeutiger Regeln auf:
 4. Wie meldet das Programm, dass der Datenausschnitt keine abgesicherte Aussage erlaubt?
 
 Prüft dann das Repository [`gisma/perfectPeak` (Commit `37b49f1`)](https://github.com/gisma/perfectPeak/tree/37b49f1). **Welche eurer Entscheidungen und Abbruchbedingungen erkennt ihr im Code wieder – welche nicht?**
+
+## Exkurs · Automatisierung in QGIS: Stapelverarbeitung und Modelle
+
+Viele Schritte der Gipfelanalyse lassen sich wiederholen, ohne jede Berechnung einzeln einzurichten. QGIS bietet dafür zwei Werkzeuge: **Stapelverarbeitung (Batch)** führt *denselben Algorithmus* mit mehreren Eingaben aus; der **grafische Modellierer** verknüpft *verschiedene Algorithmen* zu einem Ablauf. Auch ein selbst erstelltes Modell kann anschließend im Batch laufen.
+
+| Aufgabe | Umsetzung in QGIS | Ergebnis |
+|:--|:--|:--|
+| Höheres Gelände für A, B, … abgrenzen | **Rasterrechner**, einmal je Gipfelhöhe | Eine 0/1-Maske je Gipfel |
+| Entfernung zum nächsten höheren Rasterpixel bestimmen | **GDAL → Proximity (Rasterentfernung)**, je Maske | Ein Entfernungsraster je Gipfel |
+| Entfernung am jeweiligen Gipfel ablesen | **Rasterwerte abtasten** am zugehörigen Gipfelpunkt | Rasterbasierter Dominanzwert innerhalb des DGM |
+| Mehrere Höhenstufen untersuchen | Rasterrechner im Batch, z. B. 2450, 2500, 2550 m | Vergleichbare Flächenmasken |
+| Maßgebliche Scharte finden | Zusammenhangsprüfung über Höhenstufen bzw. eigener Algorithmus | Nicht allein durch die obigen Batch-Schritte gelöst |
+
+::: {.callout-tip title="QGIS: Zwei Gipfel als Batch berechnen"}
+1. Öffnet **`Verarbeitung → Werkzeugkiste`** und sucht dort nach **„Rasterrechner“** (Processing-Algorithmus `native:rastercalc`, nicht nur den Dialog im Menü `Raster`).
+2. Rechtsklick auf den Algorithmus → **„Als Stapelverarbeitung ausführen“**. Legt zwei Zeilen an: eine für **A**, eine für **B**. Beide verwenden das DGM als Eingabe, aber unterschiedliche Ausdrücke für die Gipfelhöhe.
+3. Für A lautet der Ausdruck beispielsweise:
+
+   ```text
+   "DGM_10m – Analysegrundlage@1" > 2564.257080078125
+   ```
+
+   Für B verwendet ihr dessen tatsächlichen Höhenwert aus dem Gipfellayer. Übernehmt die DGM-Ausdehnung und achtet auf dasselbe Rastergitter (**324 × 360 Zellen**, **EPSG:31254**). Speichert die Ausgaben unter verschiedenen Namen, z. B. `maske_A.tif` und `maske_B.tif`.
+4. Startet **GDAL → Proximity (Rasterentfernung)** ebenfalls als Batch: Zeile A mit `maske_A.tif`, Zeile B mit `maske_B.tif`. **Zielwert 1**, **Entfernungseinheit georeferenzierte Koordinaten (Meter)**; getrennte Ausgabedateien.
+5. Lest aus jedem Entfernungsraster den Wert **am zugehörigen Gipfelpunkt** ab – manuell oder mit **„Rasterwerte abtasten“**. Die A-Maske darf nicht als Dominanzberechnung für B interpretiert werden.
+
+**Ergebnis:** Zwei vergleichbar und reproduzierbar berechnete **rasterbasierte Dominanzwerte innerhalb des Ausschnitts**, noch keine vollständigen E-Werte.
+:::
+
+::: {.callout-note title="QGIS: Mehrere Werkzeuge mit dem grafischen Modellierer verknüpfen"}
+Öffnet **`Verarbeitung → Grafischer Modellierer`**. Definiert **DGM** und **Gipfelhöhe** als Modelleingaben und verbindet dann:
+
+**Rasterrechner (höheres Gelände)** → **Proximity (Entfernung)** → **Rasterwerte am Zielgipfel abtasten**.
+
+Für den letzten Schritt braucht das Modell auch den **zugehörigen Gipfelpunkt** als Eingabe. Modell speichern und zuerst mit A testen; danach das Modell aus der Werkzeugkiste **als Stapelverarbeitung** für weitere Gipfel ausführen. Verschiedene Ein- und Ausgabedateien verhindern, dass Ergebnisse überschrieben werden.
+
+Ein Modell automatisiert nur die **eingebauten Schritte**: Es entscheidet nicht von selbst, ob eine andere Verbindung über eine höhere Scharte führt oder ob der Datenrand die Aussage ungültig macht.
+:::
+
+**Wo beginnt ein eigener Algorithmus?** Für eine vollständige Prominenzberechnung müsste das Verfahren die **zusammenhängende Fläche des Zielgipfels** bei wechselnden Höhenschwellen verfolgen, prüfen, wann sie höheres Gelände erreicht, die **maßgebliche Schartenhöhe** bestimmen und mögliche Verbindungen über den **Datenrand** erkennen. Dabei muss die Raster-Nachbarschaft (4er oder 8er) festgelegt sein. Das erfordert zusätzliche Logik, etwa in einem **PyQGIS-Processing-Skript** oder im untersuchten `perfectPeak`-Ansatz. Erst danach können Prominenz und E-Wert auf Grundlage geprüfter Ergebnisse berechnet werden.
+
+**Dokumentation:** [QGIS-Stapelverarbeitung](https://docs.qgis.org/3.44/en/docs/user_manual/processing/batch.html) · [Grafischer Modellierer](https://docs.qgis.org/3.44/en/docs/user_manual/processing/modeler.html) · [GDAL Proximity](https://docs.qgis.org/3.44/en/docs/user_manual/processing_algs/gdal/rasteranalysis.html).
 
 # Datengrundlage und Hinweise
 
