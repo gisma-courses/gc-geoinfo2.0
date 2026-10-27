@@ -1202,7 +1202,7 @@
     "href": "slides/Der_perfekte_Gipfel_QGIS_Arbeitsauftrag.html",
     "title": "Der perfekte Gipfel",
     "section": "",
-    "text": "Ziel: Bestimmt die Gipfel im Untersuchungsgebiet. Wählt einen Gipfel aus und versucht, seine Dominanz, Prominenz und den Eigenständigkeitswert E anhand der Definitionen aus der Artikelanalyse zu ermitteln. Entscheidend ist nicht nur ein Zahlenwert, sondern die Frage, welche räumlichen Beziehungen ihr tatsächlich nachweisen könnt.\nIhr arbeitet vollständig digital in QGIS. Die gefundenen Gipfel werden als Punkte gespeichert, mögliche Verbindungen als Linien und Scharten als Punkte. Eure geometrischen Einträge und Begründungen bleiben im QGIS-Projekt erhalten.\n\nGipfel bestimmen. Untersucht Höhenmodell, Schummerung und Höhenlinien. Erfasst die von euch angenommenen Gipfel als Punkte, lest ihre Höhen aus dem DGM ab und formuliert eure Aufnahmeregel. Vergleicht eure Auswahl mit einer anderen Gruppe: Wo gibt es Unterschiede und warum?\nEinen Gipfel untersuchen. Bestimmt Gipfelhöhe, Dominanz, maßgebliche Schartenhöhe, Prominenz und – soweit begründbar – den E-Wert. Verwendet eigene Punkte und Linien, um eure Hypothesen räumlich festzuhalten.\nErgebnis überprüfen. Eine andere Gruppe sucht gezielt nach näher gelegenem höherem Gelände, alternativen Verbindungen oder Problemen am Datenrand. Überarbeitet die Berechnung, wenn nötig.\nAussagegrenzen benennen. Unterscheidet zwischen bestimmt, auf den Datenausschnitt beschränkt und noch offen. Ein begründet vorläufiges Ergebnis ist zulässig; zeigt, welche Information fehlt.\nVom Vorgehen zum Algorithmus. Beschreibt, wie ein Programm Gipfel finden, Verbindungen prüfen, eine Suche beenden und unvollständige Daten erkennen müsste. Vergleicht euren Ablauf danach mit dem Repository perfectPeak.\n\n\n\nGebt euer gespeichertes QGIS-Arbeitsprojekt mit den bearbeiteten Layern ab und erläutert euren ausgewählten Gipfel kurz anhand der Karte. Dazu gehören eure Gipfelregel, die Prüfung des höheren Geländes, die Schartenhypothese, die ermittelten Werte und der Status der Aussage. Ein Ausdruck oder eine Papierkarte ist nicht erforderlich.",
+    "text": "Ziel: Bestimmt die Gipfel im Untersuchungsgebiet. Wählt einen Gipfel aus und versucht, seine Dominanz, Prominenz und den Eigenständigkeitswert E anhand der Definitionen aus der Artikelanalyse zu ermitteln. Entscheidend ist nicht nur ein Zahlenwert, sondern die Frage, welche räumlichen Beziehungen ihr tatsächlich nachweisen könnt.\nIhr arbeitet vollständig digital in QGIS. Die gefundenen Gipfel werden als Punkte gespeichert, mögliche Verbindungen als Linien und Scharten als Punkte. Eure geometrischen Einträge und Begründungen bleiben im QGIS-Projekt erhalten.\n\nGipfel bestimmen. Untersucht Höhenmodell, Schummerung und Höhenlinien. Erfasst die von euch angenommenen Gipfel als Punkte, lest ihre Höhen aus dem DGM ab und formuliert eure Aufnahmeregel. Vergleicht eure Auswahl mit einer anderen Gruppe: Wo gibt es Unterschiede und warum?\nEinen Gipfel untersuchen. Bestimmt Gipfelhöhe, Dominanz, maßgebliche Schartenhöhe, Prominenz und – soweit begründbar – den E-Wert. Verwendet eigene Punkte und Linien, um eure Hypothesen räumlich festzuhalten.\nErgebnis überprüfen. Eine andere Gruppe sucht gezielt nach näher gelegenem höherem Gelände, alternativen Verbindungen oder Problemen am Datenrand. Überarbeitet die Berechnung, wenn nötig.\nAussagegrenzen benennen. Unterscheidet zwischen bestimmt, auf den Datenausschnitt beschränkt und noch offen. Ein begründet vorläufiges Ergebnis ist zulässig; zeigt, welche Information fehlt.\nVom Vorgehen zum Algorithmus. Beschreibt, wie ein Programm Gipfel finden, Verbindungen prüfen, eine Suche beenden und unvollständige Daten erkennen müsste. Vergleicht euren Ablauf danach mit dem Repository perfectPeak.\n\n\n\nSpeichert euer gespeichertes QGIS-Arbeitsprojekt mit den bearbeiteten Layern ab und erläutert euren ausgewählten Gipfel kurz anhand der Karte. Dazu gehören eure Gipfelregel, die Prüfung des höheren Geländes, die Schartenhypothese, die ermittelten Werte und der Status der Aussage. Ein Ausdruck oder eine Papierkarte ist nicht erforderlich.",
     "crumbs": [
       " Der Perfekte Gipfel ",
       "Der perfekte Gipfel - QGIS-Arbeitsprojekt"
@@ -1213,7 +1213,7 @@
     "href": "slides/Der_perfekte_Gipfel_QGIS_Arbeitsauftrag.html#abgabe",
     "title": "Der perfekte Gipfel",
     "section": "",
-    "text": "Gebt euer gespeichertes QGIS-Arbeitsprojekt mit den bearbeiteten Layern ab und erläutert euren ausgewählten Gipfel kurz anhand der Karte. Dazu gehören eure Gipfelregel, die Prüfung des höheren Geländes, die Schartenhypothese, die ermittelten Werte und der Status der Aussage. Ein Ausdruck oder eine Papierkarte ist nicht erforderlich.",
+    "text": "Speichert euer gespeichertes QGIS-Arbeitsprojekt mit den bearbeiteten Layern ab und erläutert euren ausgewählten Gipfel kurz anhand der Karte. Dazu gehören eure Gipfelregel, die Prüfung des höheren Geländes, die Schartenhypothese, die ermittelten Werte und der Status der Aussage. Ein Ausdruck oder eine Papierkarte ist nicht erforderlich.",
     "crumbs": [
       " Der Perfekte Gipfel ",
       "Der perfekte Gipfel - QGIS-Arbeitsprojekt"
@@ -1692,11 +1692,11 @@
     ]
   },
   {
-    "objectID": "slides/perfekter_gipfel_reveal.html#qgis-eine-lokale-hypothese",
-    "href": "slides/perfekter_gipfel_reveal.html#qgis-eine-lokale-hypothese",
+    "objectID": "slides/perfekter_gipfel_reveal.html#eine-lokale-hypothese",
+    "href": "slides/perfekter_gipfel_reveal.html#eine-lokale-hypothese",
     "title": "Der perfekte Gipfel",
-    "section": "QGIS: eine lokale Hypothese",
-    "text": "QGIS: eine lokale Hypothese\nArbeitsauftrag in QGIS\n\nUntersucht zwei Gipfel auf Höhenmodell, Schummerung und Höhenlinien.\nMarkiert für den niedrigeren Gipfel das vermutete nächste höhere Gelände und eine mögliche Bezugsscharte.\nBegründet eure Auswahl anhand des Geländes.\n\n\nWelche Beobachtung würde eure Zuordnung widerlegen?\n\nDas Ergebnis ist eine räumliche Hypothese. Ein vollständiger E-Wert ist damit noch nicht abgesichert.\n\nEinen fachlich vorgeprüften Ausschnitt bereitstellen. Gipfelpositionen zunächst vorgeben. Ein höherer Gipfel des Paares benötigt zur eigenen Bewertung wiederum höheres Gelände außerhalb dieses Paares.",
+    "section": "Eine lokale Hypothese",
+    "text": "Eine lokale Hypothese\nAusgangsfrage für das QGIS-Arbeitsblatt\n\nBetrachtet die Gipfelkandidaten A (2564,26 m) und B (2592,12 m) im Relief.\nÜberlegt, welche Verbindung zwischen beiden möglichst wenig Höhe verliert.\nVermutet eine Scharte und begründet, warum genau diese Stelle infrage kommt.\n\n\nWelche Beobachtung würde eure Zuordnung widerlegen?\n\nDas Ergebnis ist eine räumliche Hypothese. Ein vollständiger E-Wert ist damit noch nicht abgesichert.\n\nAnschluss: Arbeitsblatt, Schritte 0–1 · Gipfelkandidaten zunächst ausblenden, Verbindung und Scharte als Linie bzw. Punkt digital erfassen.\n\n\nDie QGIS-Startansicht enthält A und B. Erst nach eigener Geländeinterpretation den Layer „Gipfelkandidaten A–F“ einblenden. Die Dateneingabe und das Speichern stehen ausschließlich im Arbeitsblatt.",
     "crumbs": [
       " Der Perfekte Gipfel ",
       "Schritt 2 - Die technische Umsetzung"
@@ -1707,7 +1707,7 @@
     "href": "slides/perfekter_gipfel_reveal.html#die-umgebung-verändert-die-aufgabe",
     "title": "Der perfekte Gipfel",
     "section": "Die Umgebung verändert die Aufgabe",
-    "text": "Die Umgebung verändert die Aufgabe\nArbeitsauftrag: Vergrößert den sichtbaren Ausschnitt.\n\n\n\n\n\n\n\nBisherige Annahme\nPrüfung gegen Alternativen\n\n\n\n\nDieser Nachbar ist entscheidend.\nLiegt anderes höheres Gelände näher?\n\n\nDiese Scharte ist maßgeblich.\nGibt es eine Verbindung, deren tiefster Punkt höher liegt?\n\n\nDie sichtbare Umgebung genügt.\nKönnen Bereiche außerhalb des Ausschnitts das Ergebnis verändern?\n\n\n\nAlle potenziell entscheidenden Alternativen müssen berücksichtigt oder begründet ausgeschlossen werden.\n\nNur den sichtbaren Kartenausschnitt ändern. DEM, Auflösung und Höhendaten bleiben gleich. Ein Ausschnitt, der eine Alternative ausschließt, kann eine lokale Hypothese scheinbar bestätigen.",
+    "text": "Die Umgebung verändert die Aufgabe\nGedankenexperiment: Wir betrachten nicht mehr nur A und B, sondern das ganze DGM – unter anderem C (2659,54 m) und D (2716,06 m).\n\n\n\n\n\n\n\nBisherige Annahme\nPrüfung gegen Alternativen\n\n\n\n\nDieser Nachbar ist entscheidend.\nLiegt anderes höheres Gelände näher?\n\n\nDiese Scharte ist maßgeblich.\nGibt es eine Verbindung, deren tiefster Punkt höher liegt?\n\n\nDie sichtbare Umgebung genügt.\nKönnen Bereiche außerhalb des Ausschnitts das Ergebnis verändern?\n\n\n\nAlle potenziell entscheidenden Alternativen müssen berücksichtigt oder begründet ausgeschlossen werden.\n\nAnschluss: Arbeitsblatt, Schritt 2 · auf den gesamten DGM-Ausschnitt zoomen, eigene Gipfelregel formulieren und Gipfel als Punkte erfassen.\n\n\nNur den sichtbaren Kartenausschnitt ändern. DEM, Auflösung und Höhendaten bleiben gleich. Ein Ausschnitt, der eine Alternative ausschließt, kann eine lokale Hypothese scheinbar bestätigen.",
     "crumbs": [
       " Der Perfekte Gipfel ",
       "Schritt 2 - Die technische Umsetzung"
@@ -1718,7 +1718,7 @@
     "href": "slides/perfekter_gipfel_reveal.html#dominanz-die-kürzeste-entfernung",
     "title": "Der perfekte Gipfel",
     "section": "Dominanz: die kürzeste Entfernung",
-    "text": "Dominanz: die kürzeste Entfernung\nFür einen Gipfel AA mit Höhe hAh_A suchen wir alle Orte mit z(x)&gt;hAz(x)&gt;h_A.\ndA=minx:z(x)&gt;hAdist(A,x)d_A=\\min_{x:\\,z(x)&gt;h_A}\\operatorname{dist}(A,x)\nIn QGIS nachvollziehen\n\nHöheres Gelände mit dem Rasterrechner markieren: \"DEM@1\" &gt; h_A.\nDie nächstgelegene markierte Fläche bestimmen.\nEntfernung zum höheren Gelände und Entfernung zum Gipfelpunkt vergleichen.\n\nEntscheidend ist höheres Gelände. Ein Gipfelpunktverzeichnis allein reicht dafür nicht.\n\nh_A ist im Rasterausdruck durch den Höhenwert zu ersetzen. Höhe und Gipfelposition konsistent aus demselben DEM entnehmen. Für eine Rasterberechnung kann GDAL Proximity mit Zielwert 1 und georeferenzierten Einheiten verwendet werden. Es misst zwischen Pixelzentren. Geeignetes metrisches CRS verwenden. Die Maske bezieht sich immer auf genau die Höhe des untersuchten Gipfels.",
+    "text": "Dominanz: die kürzeste Entfernung\nFür einen Gipfel AA mit Höhe hAh_A suchen wir alle Orte mit z(x)&gt;hAz(x)&gt;h_A.\ndA=minx:z(x)&gt;hAdist(A,x)d_A=\\min_{x:\\,z(x)&gt;h_A}\\operatorname{dist}(A,x)\nIm Arbeitsblatt räumlich prüfen\n\nHöheres Gelände mit dem Rasterrechner markieren: \"DGM_10m – Analysegrundlage@1\" &gt; h_A.\nDie nächstgelegene markierte Fläche bestimmen.\nDie kürzeste Entfernung vom Gipfel zum höheren Gelände bestimmen.\n\nEntscheidend ist höheres Gelände. Ein Gipfelpunktverzeichnis allein reicht dafür nicht.\n\nAnschluss: Arbeitsblatt, Schritt 3 · höhere Rasterzellen für A oder B markieren; Entfernungsbestimmung optional.\n\n\nh_A ist im Rasterausdruck durch den Höhenwert zu ersetzen. Höhe und Gipfelposition konsistent aus demselben DEM entnehmen. Für eine Rasterberechnung kann GDAL Proximity mit Zielwert 1 und georeferenzierten Einheiten verwendet werden. Es misst zwischen Pixelzentren. Geeignetes metrisches CRS verwenden. Die Maske bezieht sich immer auf genau die Höhe des untersuchten Gipfels.",
     "crumbs": [
       " Der Perfekte Gipfel ",
       "Schritt 2 - Die technische Umsetzung"
@@ -1729,51 +1729,40 @@
     "href": "slides/perfekter_gipfel_reveal.html#prominenz-die-höchste-verbindungsscharte",
     "title": "Der perfekte Gipfel",
     "section": "Prominenz: die höchste Verbindungsscharte",
-    "text": "Prominenz: die höchste Verbindungsscharte\nJeder Weg zu höherem Gelände hat einen tiefsten Punkt.\nGesucht wird der höchste dieser tiefsten Punkte.\n\n\n\nMöglicher Weg ab Gipfel A\nTiefster Punkt\n\n\n\n\nVerbindung zum höheren Bereich B\n1600 m\n\n\nAlternative Verbindung zum höheren Bereich C\n1750 m\n\n\nWeitere geprüfte Verbindung\n1500 m\n\n\n\nBei hA=2000mh_A=2000\\,\\mathrm{m} ergibt die beste dieser Verbindungen:\npA=2000−1750=250mp_A=2000-1750=250\\,\\mathrm{m}\n\nSchematisches Beispiel. 1750 m ist erst dann die maßgebliche Schartenhöhe, wenn keine noch höher verlaufende Verbindung existiert.",
+    "text": "Prominenz: die höchste Verbindungsscharte\nJeder Weg zu höherem Gelände hat einen tiefsten Punkt.\nGesucht wird der höchste dieser tiefsten Punkte.\n\n\n\nMöglicher Weg ab Gipfel A\nTiefster Punkt\n\n\n\n\nVerbindung zum höheren Bereich B\n1600 m\n\n\nAlternative Verbindung zum höheren Bereich C\n1750 m\n\n\nWeitere geprüfte Verbindung\n1500 m\n\n\n\nBei hA=2000mh_A=2000\\,\\mathrm{m} ergibt die beste dieser Verbindungen:\npA=2000−1750=250mp_A=2000-1750=250\\,\\mathrm{m}\n\nSchematisches Beispiel, keine Höhenwerte aus dem Arbeitsgebiet. 1750 m ist erst dann die maßgebliche Schartenhöhe, wenn keine noch höher verlaufende Verbindung existiert.\n\n\nAnschluss: Arbeitsblatt, Schritt 4 · nicht nur eine einzelne Gratverbindung prüfen, sondern alternative Wege zu höherem Gelände berücksichtigen.",
     "crumbs": [
       " Der Perfekte Gipfel ",
       "Schritt 2 - Die technische Umsetzung"
     ]
   },
   {
-    "objectID": "slides/perfekter_gipfel_reveal.html#qgis-den-übergang-sichtbar-machen",
-    "href": "slides/perfekter_gipfel_reveal.html#qgis-den-übergang-sichtbar-machen",
+    "objectID": "slides/perfekter_gipfel_reveal.html#höhenstufen-den-übergang-sichtbar-machen",
+    "href": "slides/perfekter_gipfel_reveal.html#höhenstufen-den-übergang-sichtbar-machen",
     "title": "Der perfekte Gipfel",
-    "section": "QGIS: den Übergang sichtbar machen",
-    "text": "QGIS: den Übergang sichtbar machen\nArbeitsauftrag zur Schartensuche\n\nErzeugt mehrere Masken mit \"DEM@1\" &gt; s.\nVerfolgt jeweils die zusammenhängende Fläche des untersuchten Gipfels.\nPrüft, ob diese bereits Gelände oberhalb seiner Gipfelhöhe enthält.\nGrenzt den Wechsel zwischen „getrennt“ und „verbunden“ mit kleineren Höhenschritten ein.\n\nDokumentation: zwei Masken beiderseits des Übergangs, das Höhenintervall und offene Alternativen am Kartenrand.\n\ns jeweils durch eine konkrete Suchhöhe ersetzen. Bei Bedarf binäre Masken polygonisieren und zusammenhängende Teile getrennt betrachten. 4er- oder 8er-Nachbarschaft konsistent festlegen. Einzelne manuelle Höhenstufen verdeutlichen das Prinzip, sind allein kein Vollständigkeitsnachweis. Ein Profil entlang eines gewählten Grates ist ebenfalls nur ein Kandidat.",
+    "section": "Höhenstufen: den Übergang sichtbar machen",
+    "text": "Höhenstufen: den Übergang sichtbar machen\nVom Konzept zur räumlichen Prüfung\n\nErzeugt mehrere Masken mit \"DGM_10m – Analysegrundlage@1\" &gt; s.\nVerfolgt jeweils die zusammenhängende Fläche des untersuchten Gipfels.\nPrüft, ob diese bereits Gelände oberhalb seiner Gipfelhöhe enthält.\nGrenzt den Wechsel zwischen „getrennt“ und „verbunden“ mit kleineren Höhenschritten ein.\n\nMerke: Die erste gefundene Verbindung ist nicht automatisch die maßgebliche.\n\nAnschluss: Arbeitsblatt, Schritt 4 · mehrere Höhenstufen prüfen; die konkrete QGIS-Anleitung steht dort.\n\n\ns jeweils durch eine konkrete Suchhöhe ersetzen. Bei Bedarf binäre Masken polygonisieren und zusammenhängende Teile getrennt betrachten. 4er- oder 8er-Nachbarschaft konsistent festlegen. Einzelne manuelle Höhenstufen verdeutlichen das Prinzip, sind allein kein Vollständigkeitsnachweis. Ein Profil entlang eines gewählten Grates ist ebenfalls nur ein Kandidat.",
     "crumbs": [
       " Der Perfekte Gipfel ",
       "Schritt 2 - Die technische Umsetzung"
     ]
   },
   {
-    "objectID": "slides/perfekter_gipfel_reveal.html#das-repository-als-prüfbarer-ablauf",
-    "href": "slides/perfekter_gipfel_reveal.html#das-repository-als-prüfbarer-ablauf",
+    "objectID": "slides/perfekter_gipfel_reveal.html#aussagegrenzen-gehören-zum-ergebnis",
+    "href": "slides/perfekter_gipfel_reveal.html#aussagegrenzen-gehören-zum-ergebnis",
     "title": "Der perfekte Gipfel",
-    "section": "Das Repository als prüfbarer Ablauf",
-    "text": "Das Repository als prüfbarer Ablauf\n\n\n\nManuell nachvollzogener Schritt\nFunktion in perfectPeak\n\n\n\n\nHöheres Gelände und Entfernung prüfen\ncalculateDominance.R\n\n\nZusammenhang über Höhenstufen prüfen\ncalculateProminence.R\n\n\nKennzahlen zum E-Wert verknüpfen\ncalculateIndependence.R\n\n\nBerechnung für mehrere Gipfel steuern\nRpeak.R\n\n\n\nAlgorithmischer Auftrag: alle relevanten Alternativen berücksichtigen und erst bei erfülltem Zielkriterium sowie ausreichender Höhengenauigkeit abbrechen.\nZunächst geben wir die Gipfelposition vor. Automatische Gipfelerkennung und Namenszuordnung folgen als Erweiterung.\n\nQuellcode: gisma/perfectPeak, untersuchter Stand 37b49f1 vom 03.02.2016. Prüfung des Codes, kein vollständiger Lauf der historischen GIS-Umgebung.",
+    "section": "Aussagegrenzen gehören zum Ergebnis",
+    "text": "Aussagegrenzen gehören zum Ergebnis\nMit gesicherter Schartenhöhe und Dominanz berechnen wir den E-Wert anhand der bereits analysierten Formel.\nFür die Auswertung: Karte mit geprüften Beziehungen, hh, hsh_s, pp, dd und gegebenenfalls EE – jeweils mit Begründung und räumlicher Gültigkeit.\nBleibt eine entscheidende Alternative ungeprüft, kennzeichnen wir das Ergebnis als vorläufig. Der höchste Rasterpunkt D lässt sich innerhalb des DGM nicht gegenüber höherem Gelände außerhalb des Ausschnitts abschließend bewerten.\n\nAnschluss: Arbeitsblatt, Schritt 5 · Ergebnisse gegenseitig prüfen, Gegenhypothesen festhalten und Datenrand beachten.\n\n\nGrundlage: C. Rauch (2012), „Der perfekte Gipfel“, DAV Panorama 2/2012, S. 112–117. Repository · QGIS: Rasterentfernung",
     "crumbs": [
       " Der Perfekte Gipfel ",
       "Schritt 2 - Die technische Umsetzung"
     ]
   },
   {
-    "objectID": "slides/perfekter_gipfel_reveal.html#diagnose-regel-und-implementierung",
-    "href": "slides/perfekter_gipfel_reveal.html#diagnose-regel-und-implementierung",
+    "objectID": "slides/perfekter_gipfel_reveal.html#und-jetzt-das-qgis-arbeitsblatt",
+    "href": "slides/perfekter_gipfel_reveal.html#und-jetzt-das-qgis-arbeitsblatt",
     "title": "Der perfekte Gipfel",
-    "section": "Diagnose: Regel und Implementierung",
-    "text": "Diagnose: Regel und Implementierung\n\n\n\n\n\n\n\nBefund im untersuchten Code\nArbeitsfrage\n\n\n\n\nProminenz: Die Zusammenhangsfläche muss mehr als einen Gipfel enthalten. Höhere Gipfel werden nicht eigens ausgewählt.\nKann ein niedrigerer Nebengipfel den Abbruch auslösen?\n\n\nE-Wert: Der Dominanzterm wird oberhalb von 100 km verwendet und darunter weggelassen.\nEntspricht das der Regel im Artikel?\n\n\nDominanz: Die Höhenmaske verwendet ⌈h+𝚎𝚡𝚊𝚌𝚝.𝚎𝚗𝚘𝚞𝚐𝚑/2⌉\\lceil h+\\texttt{exact.enough}/2\\rceil.\nWelche Wirkung hat diese zusätzliche Höhenschwelle?\n\n\n\nErgebnis: fehlerhafte oder zusätzliche Regel benennen, Wirkung erklären und eine Korrektur formulieren.\n\nFundstellen: R/calculateProminence.R, R/calculateIndependence.R und R/calculateDominance.R im genannten Commit. Das gesamte Repository wird hier nicht repariert. Die Implementierungsanalyse bleibt an die zuvor entwickelten räumlichen Definitionen gebunden.",
-    "crumbs": [
-      " Der Perfekte Gipfel ",
-      "Schritt 2 - Die technische Umsetzung"
-    ]
-  },
-  {
-    "objectID": "slides/perfekter_gipfel_reveal.html#ergebnis-und-aussagegrenze",
-    "href": "slides/perfekter_gipfel_reveal.html#ergebnis-und-aussagegrenze",
-    "title": "Der perfekte Gipfel",
-    "section": "Ergebnis und Aussagegrenze",
-    "text": "Ergebnis und Aussagegrenze\nMit gesicherter Schartenhöhe und Dominanz berechnen wir den E-Wert anhand der bereits analysierten Formel.\nAbgabe: Karte mit geprüften Beziehungen, Tabelle mit hh, hsh_s, pp, dd und gegebenenfalls EE sowie eine begründete Aussage zur räumlichen Gültigkeit.\nBleibt eine entscheidende Alternative ungeprüft, kennzeichnen wir das Ergebnis als vorläufig.\n\nGrundlage: C. Rauch (2012), „Der perfekte Gipfel“, DAV Panorama 2/2012, S. 112–117. Repository · QGIS: Rasterentfernung",
+    "section": "Und jetzt: das QGIS-Arbeitsblatt",
+    "text": "Und jetzt: das QGIS-Arbeitsblatt\nDie Konzepte sind der Maßstab für die praktische Arbeit – das Arbeitsblatt enthält die Werkzeuge.\n\n\n\n\n\n\n\nKonzeptionelle Frage\nSchritt im Arbeitsblatt\n\n\n\n\nWo sind Gipfel, Weg und vermutete Scharte?\n0–2 · DGM ansehen, Punkte und Linien erfassen\n\n\nWo beginnt höheres Gelände?\n3 · Dominanz prüfen\n\n\nWelche Scharte ist maßgeblich?\n4 · Höhenstufen und Alternativen\n\n\nWelche Aussage ist belastbar?\n5 · Ergebnis und Gegenprüfung\n\n\nWelche Regeln braucht die automatische Suche?\n6 · Vom Vorgehen zum Algorithmus\n\n\n\nAbgegeben wird ein gespeichertes QGIS-Projekt mit digitalen Markierungen und Begründungen, kein Kartenausdruck.\nArbeitsblatt „Der perfekte Gipfel“ öffnen\n\nDas Arbeitsblatt führt die konkreten Werkzeuge (Digitalisierung, Rasterrechner, GDAL Proximity) aus. Stapelverarbeitung und grafischer Modellierer sind dort als Exkurs enthalten. Die Detaildiagnose einzelner perfectPeak-Funktionen gehört nicht in den konzeptionellen Warm-up-Foliensatz.",
     "crumbs": [
       " Der Perfekte Gipfel ",
       "Schritt 2 - Die technische Umsetzung"

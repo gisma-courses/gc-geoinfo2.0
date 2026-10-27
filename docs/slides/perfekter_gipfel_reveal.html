@@ -986,10 +986,10 @@ margin-right: 0; }
 .reveal .slides{text-align:left}.reveal h1{font-size:2.1em;text-transform:none}.reveal h2{font-size:1.48em;text-transform:none;margin-bottom:0.75em;border-bottom:4px solid #d78b32;padding-bottom:0.25em}.reveal p{line-height:1.35}.reveal strong{color:#156b74}.reveal li{margin-bottom:0.42em}.reveal table{font-size:0.76em;width:100%;margin:0.7em 0}.reveal td,.reveal th{padding:0.45em 0.5em;vertical-align:top}.reveal th{background:#e7efed}.reveal blockquote{box-shadow:none;width:94%;margin:0.7em 0;background:#e7efed;padding:0.5em 0.7em;font-style:normal;border-left:5px solid #167785}.reveal pre{font-size:0.67em;width:100%;box-shadow:none}.reveal pre code{padding:18px;max-height:360px}.reveal .small{font-size:0.69em}.reveal .subtitle{font-size:1.1em}.reveal #title-slide{text-align:left}.reveal .slide-number{font-size:16px}.reveal math{font-size:0.95em}
 </style>
 <meta property="og:title" content="Der perfekte Gipfel – Grundlagenkurs GI-S (QGIS)">
-<meta property="og:description" content="Praxisergänzung: lokale Hypothese und vollständige Suche">
+<meta property="og:description" content="Konzeptionelles Warm-up zum QGIS-Arbeitsauftrag">
 <meta property="og:site_name" content="Grundlagenkurs GI-S (QGIS)">
 <meta name="twitter:title" content="Der perfekte Gipfel – Grundlagenkurs GI-S (QGIS)">
-<meta name="twitter:description" content="Praxisergänzung: lokale Hypothese und vollständige Suche">
+<meta name="twitter:description" content="Konzeptionelles Warm-up zum QGIS-Arbeitsauftrag">
 <meta name="twitter:creator" content="@gisma">
 <meta name="twitter:card" content="summary">
 </head>
@@ -999,7 +999,7 @@ margin-right: 0; }
 
 <section id="title-slide" class="quarto-title-block center">
   <h1 class="title">Der perfekte Gipfel</h1>
-  <p class="subtitle">Praxisergänzung: lokale Hypothese und vollständige Suche</p>
+  <p class="subtitle">Konzeptionelles Warm-up zum QGIS-Arbeitsauftrag</p>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -1010,20 +1010,23 @@ Chris Reudenbach
 </div>
 
 </section>
-<section id="qgis-eine-lokale-hypothese" class="slide level2">
-<h2>QGIS: eine lokale Hypothese</h2>
-<p><strong>Arbeitsauftrag in QGIS</strong></p>
+<section id="eine-lokale-hypothese" class="slide level2">
+<h2>Eine lokale Hypothese</h2>
+<p><strong>Ausgangsfrage für das QGIS-Arbeitsblatt</strong></p>
 <ol type="1">
-<li>Untersucht zwei Gipfel auf Höhenmodell, Schummerung und Höhenlinien.</li>
-<li>Markiert für den niedrigeren Gipfel das vermutete nächste höhere Gelände und eine mögliche Bezugsscharte.</li>
-<li>Begründet eure Auswahl anhand des Geländes.</li>
+<li>Betrachtet die Gipfelkandidaten <strong>A (2564,26 m)</strong> und <strong>B (2592,12 m)</strong> im Relief.</li>
+<li>Überlegt, welche Verbindung zwischen beiden möglichst wenig Höhe verliert.</li>
+<li>Vermutet eine Scharte und begründet, warum genau diese Stelle infrage kommt.</li>
 </ol>
 <blockquote>
 <p>Welche Beobachtung würde eure Zuordnung widerlegen?</p>
 </blockquote>
 <p>Das Ergebnis ist eine <strong>räumliche Hypothese</strong>. Ein vollständiger E-Wert ist damit noch nicht abgesichert.</p>
+<div class="small">
+<p><strong>Anschluss:</strong> Arbeitsblatt, Schritte <strong>0–1</strong> · Gipfelkandidaten zunächst ausblenden, Verbindung und Scharte als Linie bzw. Punkt digital erfassen.</p>
+</div>
 <aside class="notes">
-<p>Einen fachlich vorgeprüften Ausschnitt bereitstellen. Gipfelpositionen zunächst vorgeben. Ein höherer Gipfel des Paares benötigt zur eigenen Bewertung wiederum höheres Gelände außerhalb dieses Paares.</p>
+<p>Die QGIS-Startansicht enthält A und B. Erst nach eigener Geländeinterpretation den Layer „Gipfelkandidaten A–F“ einblenden. Die Dateneingabe und das Speichern stehen ausschließlich im Arbeitsblatt.</p>
 <style type="text/css">
 span.MJX_Assistive_MathML {
 position:absolute!important;
@@ -1038,7 +1041,7 @@ display:block!important;
 </section>
 <section id="die-umgebung-verändert-die-aufgabe" class="slide level2">
 <h2>Die Umgebung verändert die Aufgabe</h2>
-<p><strong>Arbeitsauftrag: Vergrößert den sichtbaren Ausschnitt.</strong></p>
+<p><strong>Gedankenexperiment:</strong> Wir betrachten nicht mehr nur A und B, sondern das ganze DGM – unter anderem <strong>C (2659,54 m)</strong> und <strong>D (2716,06 m)</strong>.</p>
 <table class="caption-top">
 <colgroup>
 <col style="width: 50%">
@@ -1066,6 +1069,9 @@ display:block!important;
 </tbody>
 </table>
 <p><strong>Alle potenziell entscheidenden Alternativen müssen berücksichtigt oder begründet ausgeschlossen werden.</strong></p>
+<div class="small">
+<p><strong>Anschluss:</strong> Arbeitsblatt, Schritt <strong>2</strong> · auf den gesamten DGM-Ausschnitt zoomen, eigene Gipfelregel formulieren und Gipfel als Punkte erfassen.</p>
+</div>
 <aside class="notes">
 <p>Nur den sichtbaren Kartenausschnitt ändern. DEM, Auflösung und Höhendaten bleiben gleich. Ein Ausschnitt, der eine Alternative ausschließt, kann eine lokale Hypothese scheinbar bestätigen.</p>
 <style type="text/css">
@@ -1084,13 +1090,16 @@ display:block!important;
 <h2>Dominanz: die kürzeste Entfernung</h2>
 <p>Für einen Gipfel <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math> mit Höhe <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>h</mi><mi>A</mi></msub><annotation encoding="application/x-tex">h_A</annotation></semantics></math> suchen wir alle Orte mit <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>z</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>x</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>&gt;</mo><msub><mi>h</mi><mi>A</mi></msub></mrow><annotation encoding="application/x-tex">z(x)&gt;h_A</annotation></semantics></math>.</p>
 <p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>d</mi><mi>A</mi></msub><mo>=</mo><munder><mo>min</mo><mrow><mi>x</mi><mo>:</mo><mspace width="0.167em"></mspace><mi>z</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>x</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>&gt;</mo><msub><mi>h</mi><mi>A</mi></msub></mrow></munder><mo>dist</mo><mrow><mo stretchy="true" form="prefix">(</mo><mi>A</mi><mo>,</mo><mi>x</mi><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">d_A=\min_{x:\,z(x)&gt;h_A}\operatorname{dist}(A,x)</annotation></semantics></math></p>
-<p><strong>In QGIS nachvollziehen</strong></p>
+<p><strong>Im Arbeitsblatt räumlich prüfen</strong></p>
 <ul>
-<li>Höheres Gelände mit dem Rasterrechner markieren: <code>&quot;DEM@1&quot; &gt; h_A</code>.</li>
+<li>Höheres Gelände mit dem Rasterrechner markieren: <code>&quot;DGM_10m – Analysegrundlage@1&quot; &gt; h_A</code>.</li>
 <li>Die nächstgelegene markierte Fläche bestimmen.</li>
-<li>Entfernung zum höheren Gelände und Entfernung zum Gipfelpunkt vergleichen.</li>
+<li>Die kürzeste Entfernung <strong>vom Gipfel zum höheren Gelände</strong> bestimmen.</li>
 </ul>
 <p><strong>Entscheidend ist höheres Gelände. Ein Gipfelpunktverzeichnis allein reicht dafür nicht.</strong></p>
+<div class="small">
+<p><strong>Anschluss:</strong> Arbeitsblatt, Schritt <strong>3</strong> · höhere Rasterzellen für A oder B markieren; Entfernungsbestimmung optional.</p>
+</div>
 <aside class="notes">
 <p>h_A ist im Rasterausdruck durch den Höhenwert zu ersetzen. Höhe und Gipfelposition konsistent aus demselben DEM entnehmen. Für eine Rasterberechnung kann GDAL Proximity mit Zielwert 1 und georeferenzierten Einheiten verwendet werden. Es misst zwischen Pixelzentren. Geeignetes metrisches CRS verwenden. Die Maske bezieht sich immer auf genau die Höhe des untersuchten Gipfels.</p>
 <style type="text/css">
@@ -1134,19 +1143,35 @@ display:block!important;
 <p>Bei <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>h</mi><mi>A</mi></msub><mo>=</mo><mn>2000</mn><mspace width="0.167em"></mspace><mi mathvariant="normal">m</mi></mrow><annotation encoding="application/x-tex">h_A=2000\,\mathrm{m}</annotation></semantics></math> ergibt die beste dieser Verbindungen:</p>
 <p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>p</mi><mi>A</mi></msub><mo>=</mo><mn>2000</mn><mo>−</mo><mn>1750</mn><mo>=</mo><mn>250</mn><mspace width="0.167em"></mspace><mi mathvariant="normal">m</mi></mrow><annotation encoding="application/x-tex">p_A=2000-1750=250\,\mathrm{m}</annotation></semantics></math></p>
 <div class="small">
-<p>Schematisches Beispiel. 1750 m ist erst dann die maßgebliche Schartenhöhe, wenn keine noch höher verlaufende Verbindung existiert.</p>
+<p>Schematisches Beispiel, <strong>keine Höhenwerte aus dem Arbeitsgebiet</strong>. 1750 m ist erst dann die maßgebliche Schartenhöhe, wenn keine noch höher verlaufende Verbindung existiert.</p>
 </div>
+<aside class="notes">
+<p><strong>Anschluss:</strong> Arbeitsblatt, Schritt <strong>4</strong> · nicht nur eine einzelne Gratverbindung prüfen, sondern alternative Wege zu höherem Gelände berücksichtigen.</p>
+<style type="text/css">
+span.MJX_Assistive_MathML {
+position:absolute!important;
+clip: rect(1px, 1px, 1px, 1px);
+padding: 1px 0 0 0!important;
+border: 0!important;
+height: 1px!important;
+width: 1px!important;
+overflow: hidden!important;
+display:block!important;
+}</style></aside>
 </section>
-<section id="qgis-den-übergang-sichtbar-machen" class="slide level2">
-<h2>QGIS: den Übergang sichtbar machen</h2>
-<p><strong>Arbeitsauftrag zur Schartensuche</strong></p>
+<section id="höhenstufen-den-übergang-sichtbar-machen" class="slide level2">
+<h2>Höhenstufen: den Übergang sichtbar machen</h2>
+<p><strong>Vom Konzept zur räumlichen Prüfung</strong></p>
 <ul>
-<li>Erzeugt mehrere Masken mit <code>&quot;DEM@1&quot; &gt; s</code>.</li>
+<li>Erzeugt mehrere Masken mit <code>&quot;DGM_10m – Analysegrundlage@1&quot; &gt; s</code>.</li>
 <li>Verfolgt jeweils die zusammenhängende Fläche des untersuchten Gipfels.</li>
 <li>Prüft, ob diese bereits Gelände oberhalb seiner Gipfelhöhe enthält.</li>
 <li>Grenzt den Wechsel zwischen „getrennt“ und „verbunden“ mit kleineren Höhenschritten ein.</li>
 </ul>
-<p><strong>Dokumentation:</strong> zwei Masken beiderseits des Übergangs, das Höhenintervall und offene Alternativen am Kartenrand.</p>
+<p><strong>Merke:</strong> Die erste gefundene Verbindung ist nicht automatisch die maßgebliche.</p>
+<div class="small">
+<p><strong>Anschluss:</strong> Arbeitsblatt, Schritt <strong>4</strong> · mehrere Höhenstufen prüfen; die konkrete QGIS-Anleitung steht dort.</p>
+</div>
 <aside class="notes">
 <p>s jeweils durch eine konkrete Suchhöhe ersetzen. Bei Bedarf binäre Masken polygonisieren und zusammenhängende Teile getrennt betrachten. 4er- oder 8er-Nachbarschaft konsistent festlegen. Einzelne manuelle Höhenstufen verdeutlichen das Prinzip, sind allein kein Vollständigkeitsnachweis. Ein Profil entlang eines gewählten Grates ist ebenfalls nur ein Kandidat.</p>
 <style type="text/css">
@@ -1161,42 +1186,21 @@ overflow: hidden!important;
 display:block!important;
 }</style></aside>
 </section>
-<section id="das-repository-als-prüfbarer-ablauf" class="slide level2">
-<h2>Das Repository als prüfbarer Ablauf</h2>
-<table class="caption-top">
-<thead>
-<tr class="header">
-<th style="text-align: left;">Manuell nachvollzogener Schritt</th>
-<th style="text-align: left;">Funktion in <code>perfectPeak</code></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">Höheres Gelände und Entfernung prüfen</td>
-<td style="text-align: left;"><code>calculateDominance.R</code></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Zusammenhang über Höhenstufen prüfen</td>
-<td style="text-align: left;"><code>calculateProminence.R</code></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Kennzahlen zum E-Wert verknüpfen</td>
-<td style="text-align: left;"><code>calculateIndependence.R</code></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Berechnung für mehrere Gipfel steuern</td>
-<td style="text-align: left;"><code>Rpeak.R</code></td>
-</tr>
-</tbody>
-</table>
-<p><strong>Algorithmischer Auftrag:</strong> alle relevanten Alternativen berücksichtigen und erst bei erfülltem Zielkriterium sowie ausreichender Höhengenauigkeit abbrechen.</p>
-<p><strong>Zunächst geben wir die Gipfelposition vor.</strong> Automatische Gipfelerkennung und Namenszuordnung folgen als Erweiterung.</p>
+<section id="aussagegrenzen-gehören-zum-ergebnis" class="slide level2">
+<h2>Aussagegrenzen gehören zum Ergebnis</h2>
+<p>Mit gesicherter Schartenhöhe und Dominanz berechnen wir den E-Wert anhand der <strong>bereits analysierten Formel</strong>.</p>
+<p><strong>Für die Auswertung:</strong> Karte mit geprüften Beziehungen, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>h</mi><annotation encoding="application/x-tex">h</annotation></semantics></math>, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>h</mi><mi>s</mi></msub><annotation encoding="application/x-tex">h_s</annotation></semantics></math>, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>p</mi><annotation encoding="application/x-tex">p</annotation></semantics></math>, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>d</mi><annotation encoding="application/x-tex">d</annotation></semantics></math> und gegebenenfalls <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>E</mi><annotation encoding="application/x-tex">E</annotation></semantics></math> – jeweils mit Begründung und räumlicher Gültigkeit.</p>
+<p>Bleibt eine entscheidende Alternative ungeprüft, kennzeichnen wir das Ergebnis als <strong>vorläufig</strong>. Der höchste Rasterpunkt <strong>D</strong> lässt sich innerhalb des DGM nicht gegenüber höherem Gelände außerhalb des Ausschnitts abschließend bewerten.</p>
 <div class="small">
-<p>Quellcode: <a href="https://github.com/gisma/perfectPeak">gisma/perfectPeak</a>, untersuchter Stand <code>37b49f1</code> vom 03.02.2016. Prüfung des Codes, kein vollständiger Lauf der historischen GIS-Umgebung.</p>
+<p><strong>Anschluss:</strong> Arbeitsblatt, Schritt <strong>5</strong> · Ergebnisse gegenseitig prüfen, Gegenhypothesen festhalten und Datenrand beachten.</p>
+</div>
+<div class="small">
+<p>Grundlage: C. Rauch (2012), „Der perfekte Gipfel“, DAV Panorama 2/2012, S. 112–117. <a href="https://github.com/gisma/perfectPeak/tree/37b49f1">Repository</a> · <a href="https://documentation.qgis.org/3.44/en/docs/user_manual/processing_algs/gdal/rasteranalysis.html#proximity-raster-distance">QGIS: Rasterentfernung</a></p>
 </div>
 </section>
-<section id="diagnose-regel-und-implementierung" class="slide level2">
-<h2>Diagnose: Regel und Implementierung</h2>
+<section id="und-jetzt-das-qgis-arbeitsblatt" class="slide level2">
+<h2>Und jetzt: das QGIS-Arbeitsblatt</h2>
+<p><strong>Die Konzepte sind der Maßstab für die praktische Arbeit – das Arbeitsblatt enthält die Werkzeuge.</strong></p>
 <table class="caption-top">
 <colgroup>
 <col style="width: 50%">
@@ -1204,28 +1208,37 @@ display:block!important;
 </colgroup>
 <thead>
 <tr class="header">
-<th style="text-align: left;">Befund im untersuchten Code</th>
-<th style="text-align: left;">Arbeitsfrage</th>
+<th style="text-align: left;">Konzeptionelle Frage</th>
+<th style="text-align: left;">Schritt im Arbeitsblatt</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;">Prominenz: Die Zusammenhangsfläche muss mehr als einen Gipfel enthalten. Höhere Gipfel werden nicht eigens ausgewählt.</td>
-<td style="text-align: left;">Kann ein niedrigerer Nebengipfel den Abbruch auslösen?</td>
+<td style="text-align: left;">Wo sind Gipfel, Weg und vermutete Scharte?</td>
+<td style="text-align: left;"><strong>0–2</strong> · DGM ansehen, Punkte und Linien erfassen</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">E-Wert: Der Dominanzterm wird oberhalb von 100 km verwendet und darunter weggelassen.</td>
-<td style="text-align: left;">Entspricht das der Regel im Artikel?</td>
+<td style="text-align: left;">Wo beginnt höheres Gelände?</td>
+<td style="text-align: left;"><strong>3</strong> · Dominanz prüfen</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">Dominanz: Die Höhenmaske verwendet <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">⌈</mo><mi>h</mi><mo>+</mo><mtext mathvariant="monospace">𝚎𝚡𝚊𝚌𝚝.𝚎𝚗𝚘𝚞𝚐𝚑</mtext><mi>/</mi><mn>2</mn><mo stretchy="false" form="postfix">⌉</mo></mrow><annotation encoding="application/x-tex">\lceil h+\texttt{exact.enough}/2\rceil</annotation></semantics></math>.</td>
-<td style="text-align: left;">Welche Wirkung hat diese zusätzliche Höhenschwelle?</td>
+<td style="text-align: left;">Welche Scharte ist maßgeblich?</td>
+<td style="text-align: left;"><strong>4</strong> · Höhenstufen und Alternativen</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Welche Aussage ist belastbar?</td>
+<td style="text-align: left;"><strong>5</strong> · Ergebnis und Gegenprüfung</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Welche Regeln braucht die automatische Suche?</td>
+<td style="text-align: left;"><strong>6</strong> · Vom Vorgehen zum Algorithmus</td>
 </tr>
 </tbody>
 </table>
-<p><strong>Ergebnis:</strong> fehlerhafte oder zusätzliche Regel benennen, Wirkung erklären und eine Korrektur formulieren.</p>
+<p><strong>Abgegeben wird ein gespeichertes QGIS-Projekt</strong> mit digitalen Markierungen und Begründungen, kein Kartenausdruck.</p>
+<p><a href="Der_perfekte_Gipfel_QGIS_Arbeitsauftrag.html"><strong>Arbeitsblatt „Der perfekte Gipfel“ öffnen</strong></a></p>
 <aside class="notes">
-<p>Fundstellen: R/calculateProminence.R, R/calculateIndependence.R und R/calculateDominance.R im genannten Commit. Das gesamte Repository wird hier nicht repariert. Die Implementierungsanalyse bleibt an die zuvor entwickelten räumlichen Definitionen gebunden.</p>
+<p>Das Arbeitsblatt führt die konkreten Werkzeuge (Digitalisierung, Rasterrechner, GDAL Proximity) aus. Stapelverarbeitung und grafischer Modellierer sind dort als Exkurs enthalten. Die Detaildiagnose einzelner perfectPeak-Funktionen gehört nicht in den konzeptionellen Warm-up-Foliensatz.</p>
 <style type="text/css">
 span.MJX_Assistive_MathML {
 position:absolute!important;
@@ -1237,15 +1250,6 @@ width: 1px!important;
 overflow: hidden!important;
 display:block!important;
 }</style></aside>
-</section>
-<section id="ergebnis-und-aussagegrenze" class="slide level2">
-<h2>Ergebnis und Aussagegrenze</h2>
-<p>Mit gesicherter Schartenhöhe und Dominanz berechnen wir den E-Wert anhand der <strong>bereits analysierten Formel</strong>.</p>
-<p><strong>Abgabe:</strong> Karte mit geprüften Beziehungen, Tabelle mit <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>h</mi><annotation encoding="application/x-tex">h</annotation></semantics></math>, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>h</mi><mi>s</mi></msub><annotation encoding="application/x-tex">h_s</annotation></semantics></math>, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>p</mi><annotation encoding="application/x-tex">p</annotation></semantics></math>, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>d</mi><annotation encoding="application/x-tex">d</annotation></semantics></math> und gegebenenfalls <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>E</mi><annotation encoding="application/x-tex">E</annotation></semantics></math> sowie eine begründete Aussage zur räumlichen Gültigkeit.</p>
-<p>Bleibt eine entscheidende Alternative ungeprüft, kennzeichnen wir das Ergebnis als <strong>vorläufig</strong>.</p>
-<div class="small">
-<p>Grundlage: C. Rauch (2012), „Der perfekte Gipfel“, DAV Panorama 2/2012, S. 112–117. <a href="https://github.com/gisma/perfectPeak/tree/37b49f1">Repository</a> · <a href="https://documentation.qgis.org/3.44/en/docs/user_manual/processing_algs/gdal/rasteranalysis.html#proximity-raster-distance">QGIS: Rasterentfernung</a></p>
-</div>
 
 
 </section>

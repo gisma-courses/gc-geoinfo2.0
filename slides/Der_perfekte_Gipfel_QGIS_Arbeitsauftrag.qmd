@@ -26,7 +26,7 @@ Ihr arbeitet vollständig **digital in QGIS**. Die gefundenen Gipfel werden als 
 
 ## Abgabe
 
-Gebt euer **gespeichertes QGIS-Arbeitsprojekt** mit den bearbeiteten Layern ab und erläutert euren ausgewählten Gipfel kurz anhand der Karte. Dazu gehören eure Gipfelregel, die Prüfung des höheren Geländes, die Schartenhypothese, die ermittelten Werte und der Status der Aussage. **Ein Ausdruck oder eine Papierkarte ist nicht erforderlich.**
+Speichert euer **gespeichertes QGIS-Arbeitsprojekt** mit den bearbeiteten Layern ab und erläutert euren ausgewählten Gipfel kurz anhand der Karte. Dazu gehören eure Gipfelregel, die Prüfung des höheren Geländes, die Schartenhypothese, die ermittelten Werte und der Status der Aussage. **Ein Ausdruck oder eine Papierkarte ist nicht erforderlich.**
 
 # QGIS-Workflow
 
@@ -210,6 +210,26 @@ Ein Modell automatisiert nur die **eingebauten Schritte**: Es entscheidet nicht 
 **Wo beginnt ein eigener Algorithmus?** Für eine vollständige Prominenzberechnung müsste das Verfahren die **zusammenhängende Fläche des Zielgipfels** bei wechselnden Höhenschwellen verfolgen, prüfen, wann sie höheres Gelände erreicht, die **maßgebliche Schartenhöhe** bestimmen und mögliche Verbindungen über den **Datenrand** erkennen. Dabei muss die Raster-Nachbarschaft (4er oder 8er) festgelegt sein. Das erfordert zusätzliche Logik, etwa in einem **PyQGIS-Processing-Skript** oder im untersuchten `perfectPeak`-Ansatz. Erst danach können Prominenz und E-Wert auf Grundlage geprüfter Ergebnisse berechnet werden.
 
 **Dokumentation:** [QGIS-Stapelverarbeitung](https://docs.qgis.org/3.44/en/docs/user_manual/processing/batch.html) · [Grafischer Modellierer](https://docs.qgis.org/3.44/en/docs/user_manual/processing/modeler.html) · [GDAL Proximity](https://docs.qgis.org/3.44/en/docs/user_manual/processing_algs/gdal/rasteranalysis.html).
+
+# Exkurs · Wie das QGIS-Projekt vorbereitet wurde
+
+Das QGIS-Projekt enthält **ein Höhenmodell als Datengrundlage** und mehrere daraus abgeleitete Darstellungen und Arbeitslayer. Diese wurden vor dem Seminar vorbereitet, damit die Analyse direkt im Gelände beginnen kann. Schummerung, Höhenlinien und farbiges Relief sind **keine zusätzlichen Höhenmessungen**, sondern unterschiedliche Darstellungen desselben DGM.
+
+1. **Ausgangsdaten übernehmen.** Verwendet wurde `inst/data/demo.asc` aus [`gisma/perfectPeak` (Commit `37b49f1`)](https://github.com/gisma/perfectPeak/tree/37b49f1). Das ASCII-Höhenmodell enthält **324 × 360 Rasterzellen** mit **10 m Zellweite**. Es wurde als GeoTIFF (`DGM_10m – Analysegrundlage`) bereitgestellt. Weil die ASCII-Datei kein eigenes Koordinatensystem mitliefert, wurde ihr entsprechend der Repository-Dokumentation **EPSG:31254 (MGI / Austria GK West)** zugewiesen – **ohne** die Rasterzellen neu zu projizieren oder ihre Höhenwerte neu zu berechnen.
+2. **Schummerung ableiten.** Aus den Höhenunterschieden benachbarter DGM-Zellen wurde eine künstlich beleuchtete Geländedarstellung erzeugt. Die Beleuchtung kommt aus **315° (Nordwest)** bei einem **Höhenwinkel von 45°**. Dadurch treten Grate, Hänge und Täler deutlicher hervor. In QGIS lässt sich das über die **Verarbeitungswerkzeugkiste → GDAL → Rasteranalyse → Schummerung** nachvollziehen. Die hellen und dunklen Werte zeigen Beleuchtung, **nicht** Gelände- oder Schartenhöhen.
+3. **Höhenlinien erzeugen.** Aus dem DGM wurden Linien im **25-m-Höhenabstand** abgeleitet. Das entsprechende QGIS-Werkzeug heißt **GDAL → Rasterextraktion → Höhenlinien (Contour)**; dort ist das Intervall **25** einzutragen. Die Linien verbinden interpolierte Stellen gleicher Höhe und sind ein **Vektorprodukt aus demselben Raster**, keine unabhängig vermessenen Höhenlinien.
+4. **Farbiges Relief herstellen.** Höhenfarben und Schummerung wurden für den Layer **„Relief – Höhenfarbe mit Schummerung“** zu einer gut lesbaren Orientierungskarte kombiniert. Dieser Layer ist bereits als Bild gerendert: Er dient dem Erkennen von Geländeformen, **nicht** dem Auslesen oder Berechnen von Höhen. Für alle Zahlenwerte bleibt das DGM maßgeblich. Die konkrete Farbskala und Überblendungsmethode sind in der vorliegenden Beschreibung nicht dokumentiert.
+5. **Gipfelkandidaten vorbereiten.** Im DGM wurden lokale Höhenmaxima in einer **31 × 31-Zellen-Nachbarschaft** betrachtet. Daraus wurden die sechs Beispiele **A–F** ausgewählt und als Punktlayer mit Höhenangaben gespeichert. Diese Auswahl dient der Lehre; sie ist **keine vollständige oder amtliche Gipfelkartierung**.
+6. **Arbeitslayer ergänzen.** In `daten/arbeit.gpkg` wurden die Gipfelpunkte, der **Datenrand**, das **Startfenster** sowie leere Vektorlayer für **eigene Verbindungen (Linien)** und **Schartenkandidaten (Punkte)** bereitgestellt. Die Startansicht konzentriert sich auf A und B; per „Auf Layer zoomen“ lässt sich der vollständige DGM-Ausschnitt anzeigen.
+7. **Projekt zusammenstellen.** Raster- und Vektorlayer wurden mit passenden Darstellungen in `Perfekter_Gipfel.qgz` (zusätzlich `.qgs`) zusammengeführt. Die Datenquellen sind **relativ zur Projektdatei** gespeichert, damit der vollständig entpackte Ordner auf anderen Rechnern funktioniert. Quellen- und Lizenzinformationen stehen unter `quellen/`.
+
+::: {.callout-note title="Zur Einordnung der Vorverarbeitung"}
+**Gemessen bzw. geliefert:** DGM-Höhenwerte. **Aus dem DGM berechnet:** Schummerung und Höhenlinien. **Für die Lehre ausgewählt:** Gipfelkandidaten A–F. **Für eure Arbeit angelegt:** leere Punkt- und Linienlayer.
+
+Die **10-m-Zellweite** beschreibt die räumliche Auflösung, nicht die Höhengenauigkeit. Auch das **Zoomen** auf den Startausschnitt ändert nur die Ansicht, nicht die Daten oder die berechneten Höhenwerte.
+:::
+
+Zum Nachvollziehen in QGIS: [GDAL-Schummerung](https://docs.qgis.org/3.44/de/docs/user_manual/processing_algs/gdal/rasteranalysis.html) und [GDAL-Höhenlinien](https://docs.qgis.org/3.44/de/docs/user_manual/processing_algs/gdal/rasterextraction.html).
 
 # Datengrundlage und Hinweise
 
