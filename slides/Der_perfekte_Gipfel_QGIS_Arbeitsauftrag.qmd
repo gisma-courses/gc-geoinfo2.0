@@ -1,0 +1,188 @@
+---
+title: "Der perfekte Gipfel"
+subtitle: "QGIS-Arbeitsprojekt: von der Geländehypothese zur räumlichen Prüfung"
+lang: de
+format:
+  html:
+    toc: true
+    toc-depth: 2
+    number-sections: false
+    code-copy: true
+execute:
+  echo: true
+---
+
+# Arbeitsauftrag
+
+**Ziel:** Bestimmt die Gipfel im Untersuchungsgebiet. Wählt einen Gipfel aus und versucht, seine **Dominanz**, **Prominenz** und den **Eigenständigkeitswert E** anhand der Definitionen aus der Artikelanalyse zu ermitteln. Entscheidend ist nicht nur ein Zahlenwert, sondern die Frage, **welche räumlichen Beziehungen ihr tatsächlich nachweisen könnt**.
+
+Ihr arbeitet vollständig **digital in QGIS**. Die gefundenen Gipfel werden als Punkte gespeichert, mögliche Verbindungen als Linien und Scharten als Punkte. Eure geometrischen Einträge und Begründungen bleiben im QGIS-Projekt erhalten.
+
+1. **Gipfel bestimmen.** Untersucht Höhenmodell, Schummerung und Höhenlinien. Erfasst die von euch angenommenen Gipfel als Punkte, lest ihre Höhen aus dem DGM ab und formuliert eure Aufnahmeregel. Vergleicht eure Auswahl mit einer anderen Gruppe: Wo gibt es Unterschiede und warum?
+2. **Einen Gipfel untersuchen.** Bestimmt Gipfelhöhe, Dominanz, maßgebliche Schartenhöhe, Prominenz und – soweit begründbar – den E-Wert. Verwendet eigene Punkte und Linien, um eure Hypothesen räumlich festzuhalten.
+3. **Ergebnis überprüfen.** Eine andere Gruppe sucht gezielt nach näher gelegenem höherem Gelände, alternativen Verbindungen oder Problemen am Datenrand. Überarbeitet die Berechnung, wenn nötig.
+4. **Aussagegrenzen benennen.** Unterscheidet zwischen bestimmt, auf den Datenausschnitt beschränkt und noch offen. Ein begründet vorläufiges Ergebnis ist zulässig; zeigt, welche Information fehlt.
+5. **Vom Vorgehen zum Algorithmus.** Beschreibt, wie ein Programm Gipfel finden, Verbindungen prüfen, eine Suche beenden und unvollständige Daten erkennen müsste. 
+
+## Abgabe
+
+Speichert eure Arbeit im QGIS-Arbeitsprojekt mit den bearbeiteten Layern ab und erläutert euren ausgewählten Gipfel kurz anhand der Karte. Dazu gehören eure Gipfelregel, die Prüfung des höheren Geländes, die Schartenhypothese, die ermittelten Werte und der Status der Aussage. **Ein Ausdruck oder eine Papierkarte ist nicht erforderlich.**
+
+# QGIS-Workflow
+
+## 0 · Projekt starten
+
+1. [`Perfekter_Gipfel_QGIS.zip`](assets/data/Perfekter_Gipfel_QGIS.zip) herunterladen und **vollständig entpacken**.
+2. Eine **Arbeitskopie des entpackten Ordners** erstellen. Projektdatei und Unterordner zusammenlassen.
+3. In QGIS 3.x `Perfekter_Gipfel.qgz` öffnen (alternativ `.qgs`). Die Startansicht zeigt die Umgebung der Gipfelkandidaten **A und B**.
+4. Über den Layerbaum zwischen **Relief**, **Höhenlinien**, **Schummerung** und **DGM** wechseln. Den Layer **„Gipfelkandidaten A–F“** zunächst ausblenden, um das Relief selbst einzuschätzen.
+
+::: {.callout-tip title="QGIS: Was bedeutet hier markieren oder einzeichnen?"}
+**Markieren** heißt: Mit dem Werkzeug **„Punktobjekt hinzufügen“** einen neuen Punkt in einem **editierbaren Vektorlayer** speichern – beispielsweise einen Gipfel oder eine vermutete Scharte.
+
+**Einzeichnen** heißt: Mit **„Linienobjekt hinzufügen“** mehrere Punkte anklicken und daraus eine gespeicherte Linie erzeugen – beispielsweise eine vermutete Geländeverbindung.
+
+**Dokumentieren** heißt: Im anschließend geöffneten **Attributformular** eine Kennung und eine kurze Begründung eintragen.
+
+Das ist **nicht** dasselbe wie ein Objekt mit der Maus nur auszuwählen oder mit einem Zeichenwerkzeug eine vorübergehende Skizze über die Karte zu legen. Eure Ergebnisse gehören in die Vektorlayer und müssen gespeichert werden.
+:::
+
+::: {.callout-note title="QGIS: So speichert ihr eine neue Geometrie"}
+1. Den richtigen Layer im **Layerfenster anklicken**.
+2. Über das **Stiftsymbol „Bearbeitungsmodus umschalten“** die Bearbeitung einschalten.
+3. **„Punktobjekt hinzufügen“** bzw. **„Linienobjekt hinzufügen“** wählen.
+4. **Punkt:** einmal in die Karte klicken. **Linie:** mit Linksklicks Stützpunkte setzen, **mit Rechtsklick abschließen**.
+5. Im Attributformular Kennung und Begründung eintragen und bestätigen.
+6. **Layeränderungen speichern** und den Bearbeitungsmodus beenden. Zusätzlich das **QGIS-Projekt speichern** (`Strg+S`).
+
+Wenn die Werkzeuge fehlen: `Ansicht → Werkzeugkästen → Digitalisierung` einschalten. **Layeränderungen** (Geometrien/Attribute) und **Projektänderungen** (Ansicht/Darstellung) sind zwei verschiedene Speicherungen.
+:::
+
+## 1 · Lokale Hypothese: A und B
+
+Untersucht zuerst den Startausschnitt. Wo vermutet ihr die beiden Gipfel und auf welchem Weg könnte man von einem zum anderen gelangen, ohne unnötig tief abzusteigen? Blendet danach **„Gipfelkandidaten A–F“** ein und betrachtet A (**2564,26 m**) und B (**2592,12 m**) als Vergleichspunkte.
+
+- Zeichnet einen möglichen Verbindungsweg zwischen den Bereichen A und B.
+- Markiert eine vermutete **Scharte** auf dieser Verbindung.
+- Haltet fest, warum diese Verbindung und diese Scharte für euch plausibel sind.
+- **Noch keinen endgültigen E-Wert berechnen.** Die räumliche Umgebung ist noch nicht vollständig geprüft.
+
+::: {.callout-tip title="QGIS: Verbindung als Linie und Scharte als Punkt einzeichnen"}
+**Verbindung:** Layer **„Eigene Verbindungen und Hypothesen“** aktivieren → Bearbeitungsmodus einschalten → **Linienobjekt hinzufügen** → Verlauf mit mehreren Linksklicks nachzeichnen → mit **Rechtsklick beenden** → Begründung im Attributformular eintragen → speichern.
+
+**Scharte:** Layer **„Eigene Schartenkandidaten“** aktivieren → Bearbeitungsmodus einschalten → **Punktobjekt hinzufügen** → auf die vermutete tiefste Stelle der Verbindung klicken → Attribute ergänzen → speichern.
+
+Diese Linie ist zunächst **eine Hypothese**, kein automatisch berechneter optimaler Höhenweg. Und ein markierter Schartenpunkt ist noch **kein Nachweis**, dass es sich um die maßgebliche Scharte handelt.
+:::
+
+## 2 · Das gesamte Gelände und eigene Gipfel erfassen
+
+Rechtsklick auf **„DGM_10m – Analysegrundlage“** → **„Auf Layer zoomen“**. Das DGM muss dazu nicht sichtbar sein. Untersucht nun den gesamten **3,24 × 3,60 km** großen Ausschnitt. Betrachtet Relief, Schummerung und Höhenlinien und schaltet die vorbereiteten Gipfelkandidaten bei Bedarf wieder aus.
+
+Erstellt einen **eigenen Punktlayer** und erfasst die Geländestellen, die ihr nach eurer Regel als Gipfel bewertet. Gebt jedem Gipfel eine Kennung und einen Höhenwert aus dem DGM. Vergleicht erst danach mit den vorbereiteten Kandidaten A–F und mit einer anderen Gruppe. Die sechs Kandidaten sind **keine vollständige Gipfelliste**.
+
+::: {.callout-tip title="QGIS: Eigenen Gipfel-Punktlayer anlegen und Punkte erfassen"}
+1. `Layer → Layer erstellen → Neuer GeoPackage-Layer…` öffnen.
+2. Als Datenbank in **eurem entpackten Arbeitsordner** z. B. `daten/eigene_ergebnisse.gpkg` anlegen; Tabellenname **`eigene_gipfel`**.
+3. **Geometrietyp: Punkt**; **KBS: EPSG:31254**.
+4. Felder ergänzen: **`kennung`** (Text), **`hoehe_m`** (Dezimalzahl), **`regel`** (Text). Den neuen Layer anlegen.
+5. Layer aktivieren → Bearbeitungsmodus → **Punktobjekt hinzufügen** → auf jede als Gipfel bewertete Stelle klicken → Kennung und Regel eintragen.
+6. Für die Höhe **„DGM_10m – Analysegrundlage“** sichtbar und aktiv schalten, Werkzeug **„Objekte abfragen“** (`i`) wählen und die betreffende Rasterzelle anklicken. Den Bandwert in **`hoehe_m`** des Gipfelpunkts eintragen; anschließend wieder zum Gipfellayer wechseln.
+7. Änderungen speichern. Der gespeicherte Punkt ist eure digitale Markierung.
+
+**Wichtig:** Rasterwert und Punktlage müssen zur **gleichen DGM-Zelle** gehören. Für eine automatisierte und reproduzierbare Übertragung der Werte könnt ihr stattdessen das QGIS-Werkzeug **„Rasterwerte abtasten“** verwenden; dessen Ausgabelayer ist dann als Ergebnis dauerhaft zu speichern.
+:::
+
+::: {.callout-note title="Prüffrage: Was zählt für euch als Gipfel?"}
+Zählt bereits jede Zelle, die höher ist als ihre direkten Nachbarn? Oder muss ein Gipfel eine deutlich größere Umgebung überragen? Formuliert eure Regel so, dass eine andere Gruppe sie auf dieselben Daten anwenden könnte. Die vorbereiteten A–F wurden aus lokalen Maxima einer **31 × 31-Zellen-Nachbarschaft** ausgewählt; das ist eine Beispielauswahl, keine verbindliche Definition.
+:::
+
+## 3 · Für einen Gipfel höheres Gelände finden
+
+Wählt einen eurer Gipfel als Ziel. **B** eignet sich besonders, um die Rolle des südlicher gelegenen **C (2659,54 m)** und des höchsten Rasterpunkts **D (2716,06 m)** zu prüfen.
+
+Ermittelt zunächst, wo es **höheres Gelände** als euren Zielgipfel gibt. Untersucht anschließend, welches dieser höheren Gebiete am nächsten liegt – dabei ist wichtig, ob der Rand des DGM eure Suche einschränkt.
+
+::: {.callout-tip title="QGIS: Höheres Gelände als Rastermaske sichtbar machen"}
+Im Menü `Raster → Rasterrechner…` eine Bedingung für die Gipfelhöhe formulieren. Für A lautet sie beispielsweise:
+
+```text
+"DGM_10m – Analysegrundlage@1" > 2564.257080078125
+```
+
+Den **tatsächlichen Bandnamen** in der Rasterbandliste prüfen. Für einen anderen Gipfel seine Höhe einsetzen. Als Ausgabeausdehnung das **DGM**, als Rastergröße **324 × 360 Zellen** und als KBS **EPSG:31254** verwenden. Ergebnis als Rasterdatei **im Arbeitsordner** speichern.
+
+Die Zellen mit **1** sind höher als A; die mit **0** nicht. Stellt **0 transparent** und **1 farbig** dar. So erkennt ihr höheres Gelände auf der Reliefkarte.
+
+**Optional für die Dominanz:** Im Verarbeitungswerkzeug **GDAL → Proximity (Rasterentfernung)** für die Maske den **Zielwert 1** wählen und die Entfernungen in **georeferenzierten Koordinaten (Meter)** ausgeben. Den Wert der Gipfelzelle prüfen. Gemessen wird zwischen Rasterzellzentren – und nur zu Zellen **innerhalb des Ausschnitts**.
+:::
+
+## 4 · Scharten und Verbindungen über Höhenstufen prüfen
+
+Die **nächste höhere Stelle** und die **maßgebliche Scharte** beantworten verschiedene Fragen. Eine eingezeichnete Verbindung zwischen zwei Gipfeln ist noch kein Nachweis, dass es keine günstigere Verbindung gibt.
+
+Prüft deshalb mehrere Höhenstufen: Welche zusammenhängenden Flächen bleiben oberhalb einer gewählten Höhe bestehen? Ab welcher Stufe hängt die Fläche eures Zielgipfels mit einer Fläche zusammen, die **höher als euer Zielgipfel** ist?
+
+::: {.callout-tip title="QGIS: Verbindung über eine Höhenstufe untersuchen"}
+Erstellt mit `Raster → Rasterrechner…` zunächst beispielsweise:
+
+```text
+"DGM_10m – Analysegrundlage@1" > 2500
+```
+
+**2500 m ist ein frei gewählter Prüfwert, kein Ergebnis.** Wiederholt die Berechnung mit anderen Höhenwerten und vergleicht, wie die zusammenhängenden Bereiche wachsen oder zerfallen. Beurteilt dabei die Verbindung zu **höherem Gelände**, nicht lediglich zu irgendeinem weiteren Gipfel.
+
+Wenn ihr Rasterflächen polygonisiert oder Zusammenhangsflächen berechnet, dokumentiert die zugrunde gelegte **4er- oder 8er-Nachbarschaft**. An diagonalen Zellkontakten entstehen unterschiedliche Ergebnisse.
+
+Neue mögliche Verbindungswege zeichnet ihr wieder in **„Eigene Verbindungen und Hypothesen“** ein; zusätzliche Scharten in **„Eigene Schartenkandidaten“**. Ergänzt die jeweilige Begründung im Attributformular.
+:::
+
+## 5 · Werte festhalten und gegenseitig prüfen
+
+Übertragt die Ergebnisse für den gewählten Gipfel in eure Dokumentation. Die Felder **`scharte_m`**, **`dominanz_m`**, **`prominenz_m`** und **`e_wert`** sind im vorbereiteten Gipfelkandidatenlayer zunächst leer. Falls ihr mit einem **eigenen Gipfellayer** arbeitet, legt die entsprechenden Felder dort an. Tragt einen Zahlenwert erst dann ein, wenn ihr dessen räumliche Grundlage erklären könnt. Verwendet für **E** die Formel aus der Artikelanalyse.
+
+| Gesuchte Größe | Euer Ergebnis | Begründung oder offene Prüfung |
+|:--|:--|:--|
+| Gipfelhöhe | | |
+| Dominanz | | |
+| Maßgebliche Schartenhöhe | | |
+| Prominenz | | |
+| Eigenständigkeitswert E | | |
+| Status: vorläufig / ausschnittsbezogen / räumlich abgesichert | | |
+
+Tauscht eure Karten mit einer anderen Gruppe. Diese versucht **eine konkrete Gegenhypothese** zu finden: näher gelegenes höheres Gelände, eine bessere Verbindung oder ein Datenrand, hinter dem die Suche weitergehen müsste. Ergänzt die Alternative **als Punkt oder Linie im passenden Arbeitslayer** und besprecht, welche Zahl sich dadurch ändert.
+
+::: {.callout-warning title="QGIS: Ein nicht bestimmbarer Wert ist keine Null"}
+**D** ist der höchste Punkt des vorliegenden DGM. Im Ausschnitt liegt daher **kein höherer Rasterpunkt**, der seine Dominanz oder die maßgebliche Verbindung zu höherem Gelände abschließend bestimmen könnte. Das ist **keine Dominanz von 0 m** und kein Beleg für maximale Eigenständigkeit.
+
+Für jeden Gipfel gilt: Ein außerhalb des Ausschnitts liegender höherer Punkt oder Verbindungsweg kann das Ergebnis verändern. Kennzeichnet die Aussage dann als **vorläufig** oder **auf den Datenausschnitt beschränkt**. Eine offene Berechnung mit klar benannter fehlender Information ist ein gültiges Ergebnis.
+:::
+
+## 6 · Den eigenen Lösungsweg als Algorithmus formulieren
+
+Schreibt euren Arbeitsablauf als kurze Folge eindeutiger Regeln auf:
+
+1. Wie werden Gipfelkandidaten gefunden und nach welcher Nachbarschaftsregel ausgewählt?
+2. Wie bestimmt das Verfahren das nächste höhere Gelände und prüft mögliche Verbindungen bzw. Scharten?
+3. Unter welchen Bedingungen ist die Suche abgeschlossen?
+4. Wie meldet das Programm, dass der Datenausschnitt keine abgesicherte Aussage erlaubt?
+
+Prüft dann das Repository [`gisma/perfectPeak` (Commit `37b49f1`)](https://github.com/gisma/perfectPeak/tree/37b49f1). **Welche eurer Entscheidungen und Abbruchbedingungen erkennt ihr im Code wieder – welche nicht?**
+
+# Datengrundlage und Hinweise
+
+| Bestandteil | Bedeutung |
+|:--|:--|
+| **DGM_10m – Analysegrundlage** | Höhenwerte im GeoTIFF, 10-m-Raster; zentrale Berechnungsgrundlage |
+| **Relief – Höhenfarbe mit Schummerung** | Gerenderte Orientierungskarte; nicht als Höhenraster verwenden |
+| **Schummerung** und **Höhenlinien – 25 m** | Orientierung über Geländeform |
+| **Gipfelkandidaten A–F** | Sechs vorbereitete lokale Maxima zum Vergleichen, kein vollständiges Inventar |
+| **Eigene Verbindungen und Hypothesen** | Bereits angelegter, leerer **Linienlayer** zum Digitalisieren |
+| **Eigene Schartenkandidaten** | Bereits angelegter, leerer **Punktlayer** zum Digitalisieren |
+| **Datenumfang und Startfenster** | Rand des verfügbaren DGM und lokaler Einstiegsausschnitt |
+
+Das Gelände liegt in den **Tiroler Alpen, Raum Stubai** (ungefähr **11,378° E / 47,118° N**). Das DGM umfasst **324 × 360 Zellen** bei **10 m Rasterweite** (ca. **3,24 × 3,60 km**) im KBS **MGI / Austria GK West (EPSG:31254)**. Die Rasterweite ist **keine Angabe zur Höhengenauigkeit**. Aufnahmejahr, vertikaler Höhenbezug und Höhenfehler sind in der mitgelieferten Beschreibung nicht spezifiziert.
+
+Das Paket enthält die notwendigen Daten und Arbeitslayer; eine Internetverbindung oder ein zusätzliches SAGA-/GRASS-Plugin ist für das Grundprojekt nicht erforderlich. Die Datenquellen sind relativ zur Projektdatei referenziert. Vorhandene Quelldokumentation und Prüfsummen liegen unter `quellen/`.
+
+**Datennachweis:** Land Tirol (aus Laserscandaten abgeleitetes DGM), bereitgestellt über `perfectPeak`, Chris Reudenbach. Lizenz laut Repository: [CC BY 3.0 AT](https://creativecommons.org/licenses/by/3.0/at/). [DEM-Dokumentation](https://github.com/gisma/perfectPeak/blob/37b49f1/man/DEM.Rd) · [Nutzungsbedingungen Land Tirol](https://www.tirol.gv.at/data/nutzungsbedingungen/).

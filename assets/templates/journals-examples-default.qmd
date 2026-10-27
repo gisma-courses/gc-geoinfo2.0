@@ -1,0 +1,106 @@
+---
+title: |-
+  Skalen in Geographie und Ökologie \
+  Eine unendliche Geschichte 
+lang: de
+subtitle: Ein Überblick über Sinn und Unsinn
+short-tilte: Unsinnige Skalen
+
+published: "Zur Überprüfung bei *OGERhub AsLo*"
+code-repo: "Zugriff auf den Code, die Daten und die Analyse unter <https://github.com/OGERhub/aslo>"
+correspondence-prefix: "Korrespondenz zu diesem Artikel ist zu richten an"
+author:
+  - name: Per Petterson
+    email: pepe@gemail.com
+
+    attributes:
+      corresponding: true
+  - name: Peter Pan
+    email: pp@gemail.com
+
+Zusammenfassung: |
+ Maßstäbe sind ein wesentliches Konzept in der Geografie, das sich auf das Verhältnis zwischen der Größe eines Objekts oder Phänomens auf dem Boden und seiner Darstellung auf einer Karte bezieht. Geografische Maßstäbe können vom globalen über den regionalen bis hin zum lokalen Maßstab reichen und werden verwendet, um die räumliche Ausdehnung und Auflösung geografischer Daten zu vermitteln. Die Wahl eines geeigneten Maßstabs ist für das Verständnis und die Analyse räumlicher Zusammenhänge von entscheidender Bedeutung, da er die Genauigkeit und Präzision von Geodaten beeinflusst. Geografische Maßstäbe sind auch für verschiedene Bereiche der Geografie von Bedeutung, darunter Humangeografie, physische Geografie und geografische Informationswissenschaft. Das Verständnis von Maßstäben ist von grundlegender Bedeutung für die effektive Kommunikation und Interpretation geografischer Informationen sowie für die Entwicklung wirksamer Instrumente für die räumliche Analyse und Entscheidungsfindung. Diese Zusammenfassung hebt die Bedeutung von Maßstäben in der Geographie hervor und unterstreicht ihre Rolle bei der Gestaltung unseres Verständnisses der räumlichen Dimensionen der uns umgebenden Welt.
+
+keywords:
+  - theory 
+  - concept
+  - spatial thinking
+date: March 24, 2023
+# epigraph:
+#   - text: War is good for business. 
+#     source: Ferengi Rule of Acquisition 34
+#   - text: Peace is good for business. 
+#     source: Ferengi Rule of Acquisition 35
+bibliography: references.bib
+# format:
+#   pdf: default
+#   bj-pdf:
+#     keep-tex: true  
+  ## Project definition
+format: inrae-html
+# format:
+#   html:
+#     number-sections: true
+#     highlight-style: github
+
+# format:
+#   docx:
+#     number-sections: true
+#     highlight-style: github
+    
+# format:
+#   hikmah-pdf: default
+#   hikmah-manuscript-docx: default
+#   hikmah-manuscript-odt: default
+#   hikmah-manuscript-pdf: default
+---
+
+# Einführung
+Die Ökologie befasst sich mit der Frage, wie Organismen miteinander und mit ihrer Umwelt interagieren. Skalen und Prozesse sind zwei grundlegende Konzepte in der Ökologie, die verwendet werden, um ökologische Muster und Dynamik zu verstehen.
+
+Skalen in der Ökologie beziehen sich auf die räumlichen und zeitlichen Dimensionen ökologischer Phänomene. Ökologische Phänomene treten in verschiedenen Maßstäben auf, die von einzelnen Organismen bis zu ganzen Ökosystemen und von Sekunden bis zu Jahrtausenden reichen. Das Verständnis der geeigneten Skala ist entscheidend für das Verständnis der ökologischen Prozesse, die innerhalb dieser Skala ablaufen. Die Wahl eines geeigneten Maßstabs beeinflusst auch die Genauigkeit und Präzision ökologischer Daten und die Interpretation ökologischer Muster.
+
+Prozesse in der Ökologie beziehen sich auf die biologischen und physikalischen Mechanismen, die ökologischen Phänomenen zugrunde liegen. Ökologische Prozesse treten in verschiedenen Maßstäben auf, die von der molekularen Ebene bis zur Landschaftsebene reichen. Zu den ökologischen Prozessen gehören biotische Interaktionen wie Konkurrenz, Räuber und Gegenseitigkeit sowie abiotische Interaktionen wie Klima, Nährstoffkreislauf und Störungen. Das Verständnis der zugrundeliegenden Prozesse ist unerlässlich für die Vorhersage, wie ökologische Systeme auf veränderte Bedingungen reagieren werden, und für die Entwicklung wirksamer Erhaltungs- und Bewirtschaftungsstrategien.
+
+Insgesamt sind Größenordnungen und Prozesse wesentliche Konzepte in der Ökologie, die dazu dienen, die komplexen Wechselwirkungen zwischen Organismen und ihrer Umwelt zu verstehen.
+
+# Fragestellung
+Toblers erstes geographisches Gesetz besagt, dass "alles mit allem zusammenhängt, aber nahe Dinge mehr als entfernte Dinge". Dieses Gesetz unterstreicht die Bedeutung räumlicher Beziehungen für das Verständnis geografischer Phänomene, da Objekte oder Phänomene, die räumlich näher beieinander liegen, tendenziell stärker miteinander verbunden sind als solche, die weiter voneinander entfernt sind.
+
+Obwohl Toblers erstes Gesetz ein grundlegendes Konzept in der Geografie ist, wurde es auch kritisiert. Ein Kritikpunkt ist, dass das Gesetz die Komplexität der räumlichen Beziehungen zu stark vereinfacht und davon ausgeht, dass die räumliche Nähe der einzige Faktor ist, der die Stärke der Beziehungen zwischen geografischen Phänomenen beeinflusst. Darüber hinaus berücksichtigt das Gesetz nicht die verschiedenen Möglichkeiten, wie räumliche Beziehungen definiert und gemessen werden können, z. B. durch Netzwerkanalysen oder Gravitationsmodelle. Ein weiterer Kritikpunkt ist, dass das Gesetz von einem statischen, euklidischen Raum ausgeht, anstatt die dynamische und nicht-euklidische Natur vieler geografischer Phänomene zu berücksichtigen. Trotz dieser Kritik bleibt Toblers erstes Gesetz ein Schlüsselkonzept der Geographie, das die Bedeutung räumlicher Beziehungen für das Verständnis der uns umgebenden Welt hervorhebt [@Tobler:1970], [@Peuquet:1988]. 
+
+
+
+# Methoden
+
+Jede Studie, die die Auswirkungen flächenbezogener Attribute auf individuelle Verhaltensweisen oder Ergebnisse untersucht, sieht sich neben dem Problem der modifizierbaren Flächeneinheit (MAUP) einem weiteren grundlegenden methodischen Problem gegenüber. Es handelt sich dabei um das Problem, dass die Ergebnisse zu diesen Effekten davon beeinflusst werden können, wie kontextuelle Einheiten oder Nachbarschaften geografisch abgegrenzt werden und in welchem Ausmaß diese Gebietseinheiten vom wahren geografischen Kontext abweichen. Das Problem ergibt sich aus der räumlichen Unbestimmtheit der tatsächlichen Gebiete, die die untersuchten kontextuellen Einflüsse ausüben, und der zeitlichen Unbestimmtheit des Zeitpunkts und der Dauer, in der Individuen diese kontextuellen Einflüsse erfahren haben. Ausgehend von der Forschung zu Nachbarschaftseffekten und umweltbedingter Gesundheit werden in diesem Artikel die Art und die Ursachen dieses Problems erläutert, das als Problem des unsicheren geografischen Kontexts (UGCoP) bezeichnet wird. Er hebt einige der Folgerungsfehler hervor, die das UGCoP verursachen kann, und erörtert einige Möglichkeiten zur Abschwächung des Problems. Er überprüft neuere Studien, um zu zeigen, dass sowohl Kontextvariablen als auch Forschungsergebnisse empfindlich auf unterschiedliche Abgrenzungen von Kontexteinheiten reagieren. Der Artikel argumentiert, dass das UGCoP ein ebenso grundlegendes Problem wie das MAUP darstellt, aber eine andere Art von Problem ist. Zukünftige Forschungen müssen explizit auf die möglichen verwirrenden Auswirkungen auf die Forschungsergebnisse und auf Methoden zur Abschwächung des Problems achten [@Kwan:2012]. 
+
+
+# Ergebnisse
+Die Zeit kann in der Geografie einen erheblichen Einfluss auf den Maßstab haben. Dies liegt daran, dass sich räumliche Beziehungen und Muster im Laufe der Zeit ändern können und sich dadurch auch der geeignete Maßstab für die Untersuchung eines Phänomens ändern kann. So kann sich beispielsweise der geeignete Maßstab für die Untersuchung einer Naturkatastrophe wie eines Wirbelsturms ändern, wenn sich der Sturm nähert und verstärkt, und dann wieder, wenn er an Land geht und ins Landesinnere zieht. In ähnlicher Weise kann sich der geeignete Maßstab für die Untersuchung des städtischen Wachstums im Laufe der Zeit ändern, wenn sich die Stadt ausdehnt und neue Stadtteile oder Vorstädte entstehen.
+
+Darüber hinaus kann sich auch der zeitliche Maßstab, in dem Daten gesammelt und analysiert werden, auf das Verständnis geografischer Phänomene auswirken. So kann die Untersuchung der Bevölkerungsentwicklung über ein Jahrzehnt hinweg andere Muster und Trends aufzeigen als die Untersuchung von Veränderungen in einem einzigen Jahr.
+
+Insgesamt ist die Zeit ein wichtiger Faktor bei der Bestimmung des geeigneten Maßstabs für die Untersuchung eines Phänomens und bei der Interpretation der Ergebnisse geografischer Analysen. Um ein umfassendes Verständnis geografischer Phänomene zu erlangen, ist es unerlässlich, zu berücksichtigen, wie sich räumliche Muster und Beziehungen im Laufe der Zeit verändern, und Daten in geeigneten zeitlichen Maßstäben zu sammeln und zu analysieren.
+
+
+## Diskussion
+Ja, es gibt in der Geographie mehrere Theorien, die sich auf die Auswirkungen der Zeit auf den Maßstab beziehen. Eine der bekanntesten ist das Konzept des zeitlichen Maßstabs, das von dem Geographen David Harvey entwickelt wurde. Nach Harvey bezieht sich der zeitliche Maßstab auf die Länge der Zeit, über die ein Phänomen beobachtet werden kann, und er ist ein wichtiger Faktor für das Verständnis der räumlichen Beziehungen und Muster, die in einem bestimmten geografischen Kontext bestehen. Darüber hinaus argumentiert Harvey, dass der zeitliche Maßstab, in dem Daten erhoben und analysiert werden, einen erheblichen Einfluss auf die Schlussfolgerungen haben kann, die aus den Daten gezogen werden können.
+
+Eine weitere Theorie, die sich auf die Auswirkungen der Zeit auf den Maßstab bezieht, ist das von dem Geographen David Harvey und anderen entwickelte Konzept der Zeit-Raum-Kompression. Diese Theorie besagt, dass Fortschritte in Technologie und Kommunikation zu einer Kompression von Zeit und Raum geführt haben, wodurch die Welt kleiner und vernetzter erscheint. Infolgedessen können geografische Phänomene von Faktoren beeinflusst werden, die in verschiedenen räumlichen und zeitlichen Maßstäben existieren, und es ist wichtig, diese Faktoren bei der Analyse und Interpretation von geografischen Daten zu berücksichtigen.
+
+Insgesamt verdeutlichen die Theorien zu den Auswirkungen der Zeit auf den Maßstab in der Geographie die komplexen und dynamischen Beziehungen zwischen räumlichen und zeitlichen Phänomenen und die Bedeutung der Berücksichtigung dieser Beziehungen in geographischen Analysen [@harvey:1996].
+
+
+
+## Schlussfolgerungen
+Zeit-Raum-Kompression ist ein Konzept, das von mehreren Geographen entwickelt und ausgearbeitet wurde, darunter David Harvey, Doreen Massey und Henri Lefebvre. Im Kern bezieht sich die Zeit-Raum-Kompression auf die Idee, dass Fortschritte in der Transport- und Kommunikationstechnologie ein Gefühl des "Schrumpfens" in Bezug auf die Zeit und den Raum geschaffen haben, die für soziale und wirtschaftliche Interaktionen erforderlich sind.
+
+Die Zeit-Raum-Kompression manifestiert sich unter anderem in der zunehmenden Geschwindigkeit und Leichtigkeit von Transport und Kommunikation. Flugreisen, Hochgeschwindigkeitszüge und das Internet haben es beispielsweise möglich gemacht, Waren, Menschen und Informationen in relativ kurzer Zeit über große Entfernungen zu transportieren. Dies hat zu einer Verwischung der traditionellen räumlichen Grenzen und zur Entstehung globaler Netzwerke für Austausch und Interaktion geführt.
+
+Die Verdichtung von Zeit und Raum ist jedoch kein neutraler oder einheitlicher Prozess, und seine Auswirkungen werden von verschiedenen Menschen und an verschiedenen Orten unterschiedlich empfunden. So kann die zunehmende Geschwindigkeit des globalen Handels einigen Menschen und Gemeinschaften zugute kommen, während sie anderen schadet, und die Intensivierung globaler Netzwerke kann bei einigen Menschen zu einem Gefühl der Dislokation oder Desorientierung führen.
+
+Insgesamt ist die Zeit-Raum-Kompression ein wichtiges Konzept in der Geografie, weil es hilft zu erklären, wie die räumlichen Beziehungen und Muster, die in einem bestimmten geografischen Kontext bestehen, durch technologischen Wandel und Globalisierung geformt und verändert werden.
+
+# Literatur
+

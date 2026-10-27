@@ -1,0 +1,9 @@
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('p').forEach(p => {
+        p.textContent = p.textContent.replace(/rate: (\d)/g, function(match, rating) {
+            return '⭐'.repeat(rating) + '☆'.repeat(5 - rating);
+        });
+    });
+});
+</script>

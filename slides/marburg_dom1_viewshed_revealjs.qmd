@@ -1,0 +1,299 @@
+---
+title: "Sichtachsen und tote Winkel an der Lahnwiese - DOM1-basierte Viewshed-Analyse mit QGIS"
+subtitle: "Ersatzsitzung Thema 2"
+format:
+  revealjs:
+    theme: [metropolis.scss]
+    toc: false
+    toc-depth: 2
+    chalkboard: true
+    menu: false
+    slide-number: true
+lightbox: true
+bibliography: ../assets/geoinfo.bib
+lang: de
+---
+
+## Projektfrage
+
+**Welche Bereiche der Lahnwiese sind von drei Beobachtungspunkten aus sichtbar?**
+
+Untersucht werden:
+
+- Wege entlang der Lahn
+- Wiesenflächen
+- Brückenumfeld
+- Baum- und Uferkanten
+
+Ziel ist **keine Sicherheitsaussage**, sondern eine modellierte Analyse geometrischer Einsehbarkeit.
+
+---
+
+## Untersuchungsraum
+
+**Raum:** Lahnwiese Marburg
+
+Der Bereich ist geeignet, weil dort mehrere Sichtbarrieren zusammenkommen:
+
+- offene Wiesenflächen
+- Baumkronen und Ufervegetation
+- Brücken und Böschungen
+- angrenzende Gebäude- und Stadtkanten
+
+Dadurch entstehen gut sichtbare Bereiche und mögliche tote Winkel.
+
+---
+
+## Daten und Werkzeuge
+
+**Primärdaten**
+
+- DOM1 Hessen für Marburg
+
+**Kontextdaten**
+
+- OSM-Wege
+- OSM-Gebäude
+- OSM-Grünflächen
+
+**Werkzeuge**
+
+- QGIS
+- GRASS `r.viewshed`
+- optional: Div. Plugins
+
+---
+
+## Gesamtworkflow
+
+```text
+DOM1-ZIP herunterladen
+        ↓
+DOM1-Kacheln in QGIS laden
+        ↓
+CRS prüfen: EPSG:25832
+        ↓
+Kacheln mosaikieren
+        ↓
+auf Lahnwiese zuschneiden
+        ↓
+3 Beobachtungspunkte setzen
+        ↓
+r.viewshed je Punkt berechnen
+        ↓
+Sichtfelder addieren
+        ↓
+tote Winkel ableiten
+        ↓
+Karten + Methodenkritik
+
+```
+
+---
+
+## CRS prüfen
+
+Für Viewshed muss das Raster **metrisch projiziert** sein.
+
+Für Marburg sinnvoll:
+
+**EPSG:25832**  
+**ETRS89 / UTM Zone 32N**
+
+Klickweg:
+
+1. Rechtsklick auf Raster
+2. **Eigenschaften**
+3. **Information**
+4. **KBS / CRS prüfen**
+
+Wenn nötig:
+
+**Raster → Projektionen → Warpen / Reprojizieren**
+
+Ziel-KBS: **EPSG:25832**
+
+---
+
+## DOM1 laden und mosaikieren
+
+DOM1-ZIP entpacken.
+
+Raster laden:
+
+**Layer → Layer hinzufügen → Rasterlayer hinzufügen**
+
+Dann Mosaik erstellen:
+
+**Raster → Sonstiges → Zusammenführen**
+
+Eingabe:
+
+- alle DOM1-Kacheln
+
+Ausgabe:
+
+`DOM1_Lahnwiese_Mosaik.tif`
+
+---
+
+## Untersuchungsgebiet zuschneiden
+
+AOI-Polygon um die Lahnwiese anlegen.
+
+Dann:
+
+**Raster → Extraktion → Raster nach Maskenlayer zuschneiden**
+
+Eingabe:
+
+`DOM1_Lahnwiese_Mosaik.tif`
+
+Maske:
+
+`AOI_Lahnwiese`
+
+Ausgabe:
+
+`DOM1_Lahnwiese_clip.tif`
+
+Kontrolle:
+
+Hillshade erzeugen und prüfen, ob Brücken, Bäume und Gebäudekanten sichtbar sind.
+
+---
+
+## Beobachtungspunkte anlegen
+
+Neuen Punktlayer erstellen:
+
+**Layer → Layer erstellen → Neuer GeoPackage-Layer**
+
+Einstellungen:
+
+- Geometrie: Punkt
+- CRS: EPSG:25832
+
+Felder:
+
+- `id`, `name` `typ`, `obs_h`, `target_h`, `radius_m`, `begründung`
+
+## Drei Beobachtungspunkte
+
+**P01: Brücke**, Erhöhte Querung mit Überblick, **P02: Zentraler Weg** Bodennaher Alltagsblick entlang der Lahnwiese, **P03: Randpunkt** Baum- oder Gebäudekante als Test für Abschirmung.
+
+Standardwerte:
+
+- Beobachterhöhe: 1,70 m
+- Zielhöhe: 1,50 m
+- Radius: 300 m
+
+---
+
+
+
+## Drei Viewshed-Werkzeuge in QGIS
+
+| Werkzeug | Rolle im Projekt | Geeignet für |
+|---|---|---|
+| [QGIS-Core / GDAL Viewshed](https://medium.com/data-science/running-visibility-analysis-in-qgis-d8fbdd8b02c5) | eingebautes Processing-Werkzeug | erster Einzelpunkt-Test |
+| [GRASS `r.viewshed`](https://www.thinkwhere.com/viewsheds-and-visibility-analysis-in-qgis/) | GRASS-Werkzeug über QGIS | robuste Einzelpunkt-Viewsheds |
+| [Visibility Analysis Plugin](https://landscapearchaeology.org/2020/viewshed-tutorial/) | zusätzliches Plugin | mehrere Punkte, kumulative Sichtbarkeit, Intervisibility |
+
+Manuals:
+
+[GRASS `r.viewshed` Manual](https://grass.osgeo.org/grass-stable/manuals/r.viewshed.html)  
+[Visibility Analysis Plugin Manual](https://landscapearchaeology.org/qgis-visibility-analysis-manual/)
+
+
+---
+
+## QGIS-Processing: Viewshed
+
+Ohne Zusatzplugin nutzen wir das eingebaundene Processing-Werkzeug:
+
+**Verarbeitung → Werkzeugkiste → GDAL → Raster miscellaneous → Viewshed**
+
+Parameter:
+
+- Höhenraster: `DOM1_Lahnwiese_clip.tif`
+- Beobachter-X: X-Koordinate von P01
+- Beobachter-Y: Y-Koordinate von P01
+- Beobachterhöhe: 1,70
+- Zielhöhe: 1,50
+- Maximaldistanz: 300
+- Ausgabe: `viewshed_P01.tif`
+
+Für P02 und P03 wiederholen.
+
+---
+
+## GRASS r.viewshed ausführen
+
+Werkzeug öffnen:
+
+**Verarbeitung → Werkzeugkiste → r.viewshed**
+
+Falls GRASS fehlt:
+
+**Einstellungen → Optionen → Verarbeitung → Anbieter → GRASS GIS aktivieren**
+
+Parameter:
+
+- Höhenraster: `DOM1_Lahnwiese_clip.tif`
+- Beobachterkoordinate: X/Y von P01
+- Beobachterhöhe: 1,70
+- Zielhöhe: 1,50
+- maximale Distanz: 300
+- Ausgabe: `viewshed_P01.tif`
+
+Für P02 und P03 wiederholen.
+
+---
+
+## Sichtfelder überlagern
+
+Rasterrechner öffnen:
+
+**Raster → Rasterrechner**
+
+Ausdruck:
+
+```text
+viewshed_P01 + viewshed_P02 + viewshed_P03
+```
+
+Ausgabe:
+
+`sichtbarkeit_summe.tif`
+
+---
+
+## Interpretation:
+
+* 0 = von keinem Punkt sichtbar
+* 1 = von einem Punkt sichtbar
+* 2 = von zwei Punkten sichtbar
+* 3 = von drei Punkten sichtbar
+
+Tote Winkel:
+
+```text
+sichtbarkeit_summe = 0
+```
+
+Ausgabe:
+
+`tote_winkel_lahnwiese.tif`
+
+---
+
+## Ergebnis 
+
+Ergebnisprodukte:
+
+* Karte der drei Beobachtungspunkte
+* Karte der kumulierten Sichtbarkeit
+* Karte der toten Winkel
+* kurze Methodenkritik
+

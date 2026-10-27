@@ -1,0 +1,185 @@
+---
+title: "Stadtwärme in Marburg modellieren"
+subtitle: "Von der Erwartung über die räumliche Struktur zum Hotspot-Abgleich"
+author: "KlimaResilienzSchule"
+date: "2026-10-22"
+format:
+  revealjs:
+    theme: [default, metropolis.scss]
+    toc: false
+    chalkboard: true
+    menu: false
+    slide-number: true
+    transition: fade
+    incremental: false
+    smaller: false
+    navigation-mode: vertical
+    controls: true
+    hash: true
+execute:
+  echo: false
+  warning: false
+  message: false
+---
+
+# Ziel
+
+Eine einfache GIS-Modellierung für **Marburg**:
+
+**Luftbild → begründete Erwartung → räumliche Struktur → Landsat-Wärmebild**
+
+Zwei Rasterbilder. Eine selbst gezeichnete Erwartung. Ein sichtbarer Abgleich.
+
+## Leitfrage
+
+**Wo erwarten wir in Marburg warme Oberflächen – und was zeigt der Satellit?**
+
+Wir modellieren keine Lufttemperatur und keine vollständige Wärmebelastung. Wir prüfen eine begründete Erwartung mit einem thermischen Satellitenbild.
+
+# Teil 1 · Das konzeptionelle Modell
+
+## 1. Erwartung aus Oberflächen ableiten
+
+Vor dem Wärmebild fragen wir: **Welche Oberfläche nimmt viel Energie auf, speichert sie oder kann wenig über Verdunstung kühlen?**
+
+| Sichtbare Oberfläche | Erwartung für einen sonnigen Sommertag |
+|---|---|
+| Asphalt, große Dächer, Parkplatz, Platz | eher warm |
+| Baumkronen, schattiger Park, feuchte Vegetation | eher kühl |
+| Lahn oder Teich | häufig kühlere Tagesoberfläche, thermisch träge |
+| trockene Wiese, Schotter, Baustelle | offen: möglicher Grenzfall |
+
+![Die Oberflächenklassen bündeln sichtbare Stadtflächen zu einem einfachen Arbeitsmodell.](../images/figures/fig03_vier_oberflaechenklassen.png){width="75%"}
+
+## 2. Stadtstruktur lesen
+
+Es geht nicht nur darum, **welche** Oberfläche vorliegt. Wir betrachten auch, wie sie im Raum angeordnet ist:
+
+- bilden Dächer, Straßen und Parkplätze einen zusammenhängenden warmen Block?
+- verlaufen Grünzüge als kühlere Achsen durch die Bebauung?
+- liegt ein großer Platz direkt neben Schatten oder Wasser?
+- werden warme Bereiche am Stadtrand durch offene Landschaft unterbrochen?
+
+Für Marburg können Innenstadt und Lahn, Bahnhofsumfeld, größere Parkplätze, Gewerbegebiete, Lahnberge und bewaldete Hänge als unterschiedliche Vergleichsräume dienen.
+
+## 3. Tatsächliche Hotspots abgleichen
+
+Erst jetzt kommt die LST-Karte hinzu. Wir prüfen dieselben Flächen erneut:
+
+1. **Treffer:** Erwarteter warmer Bereich ist im Satellitenbild warm.
+2. **Abweichung:** Eine erwartete warme Fläche erscheint weniger warm oder umgekehrt.
+3. **Erklärung:** Schatten, Feuchte, Material, Aufnahmezeit, Wolkenrest oder Mischpixel könnten eine Rolle spielen.
+
+![Vom sichtbaren Muster zum thermischen Test.](../images/figures/fig05_unterrichtsablauf.png){width="76%"}
+
+## Modellbeziehung
+
+$$
+\text{Oberfläche} + \text{Schatten / Feuchte} + \text{räumliche Nachbarschaft}
+\;\longrightarrow\;
+\text{erwartete Oberflächentemperatur}
+\;\longrightarrow\;
+\text{Abgleich mit Landsat}
+$$
+
+Das ist ein **Erklärungsmodell**. Es sagt, wo wir genauer hinschauen sollten. Es garantiert nicht, dass jedes Dach oder jeder Parkplatz heiß ist.
+
+## Was heißt „wirklich“ heiß?
+
+„Tatsächlich“ heißt hier: **im gewählten Landsat-Aufnahmetermin mit hoher Oberflächentemperatur abgebildet**.
+
+LST = *Land Surface Temperature*. Sie beschreibt die Temperatur der Oberfläche, nicht die Lufttemperatur in zwei Metern Höhe. Die thermischen Landsat-Pixel sind grob: Bei Landsat 8/9 wird die Thermalaufnahme mit 100 m erfasst und auf ein 30-m-Raster gebracht.
+
+# Teil 2 · Der manuelle QGIS-Weg
+
+## Zwei Daten, ein Projekt
+
+**Raster 1 – Luftbild:** Hessisches DOP RGB, zur Oberflächeninterpretation.
+
+**Raster 2 – Wärmebild:** Landsat Collection 2 Level-2 `ST_B10`, in QGIS nach °C umgerechnet.
+
+Alles Weitere – Erwartungsflächen, Notizen und Kartenlayout – wird in QGIS von Hand erstellt.
+
+## Schritt 1 · Luftbild von Marburg
+
+1. Hessischen RGB-Orthofoto-WMS in QGIS verbinden.
+2. Ausschnitt wählen: z. B. Innenstadt und Lahn oder ein Schulumfeld.
+3. Sichtbaren Ausschnitt als GeoTIFF speichern.
+4. Quellenangabe ergänzen: **© HVBG – Hessische Verwaltung für Bodenmanagement und Geoinformation**.
+
+WMS: `https://www.gds-srv.hessen.de/cgi-bin/lika-services/ogc-free-images.ows`
+
+Layer: `he_dop20_rgb` · Projekt-KBS: `EPSG:25832`
+
+## Schritt 2 · Landsat-Szene auswählen
+
+Auf [USGS EarthExplorer](https://earthexplorer.usgs.gov/) Marburg suchen und einen möglichst wolkenarmen Sommertermin auswählen:
+
+- Datensatz: **Landsat 8-9 OLI/TIRS C2 L2**
+- Produkt: **Surface Temperature (`ST_B10`)**
+- Datum, Szenen-ID und gemeldeten Wolkenanteil notieren
+
+Nur das ST-Band ist für die Minimalübung nötig. Es ist ein Einzeltermin, kein Mehrjahres- oder Zehn-Szenen-Komposit.
+
+## Schritt 3 · In Grad Celsius umrechnen
+
+Im QGIS-Rasterrechner aus `ST_B10` ein Float-Raster erzeugen:
+
+$$
+T_{°C} = DN \times 0{,}00341802 + 149{,}0 - 273{,}15
+$$
+
+Mit dem tatsächlichen Aufnahmedatum speichern, zum Beispiel `marburg_lst_[Datum]_celsius.tif`.
+
+```text
+if("ST_B10@1" = 0, 0 / 0,
+   "ST_B10@1" * 0.00341802 + 149.0 - 273.15)
+```
+
+Den vollständigen Bandnamen aus der Rasterrechner-Liste einsetzen. `0 / 0` markiert Fill-Werte (DN = 0) als NoData. Danach mit **Einkanal-Pseudofarbe** und beschrifteter °C-Legende darstellen.
+
+## Schritt 4 · Erwartungsflächen digitalisieren
+
+Auf dem Luftbild zunächst die Wärmekarte ausblenden. In QGIS einen GeoPackage-Polygonlayer erstellen und diese Felder anlegen:
+
+| Feld | Inhalt |
+|---|---|
+| `erwartung` | warm / mittel / kühl |
+| `oberflaeche` | Dach, Straße, Grün, Wasser, Mischfläche … |
+| `grund` | Versiegelung, Schatten, Verdunstung, Feuchte … |
+
+Zeichne etwa fünf größere Vergleichsflächen. Folge den sichtbaren Oberflächen und zeichne keine Grenzen genauer, als das 100-m-Thermalbild es sinnvoll hergibt.
+
+## Schritt 5 · Muster testen
+
+Wärmebild wieder einschalten und die digitalisierten Flächen transparent darüberlegen.
+
+Notiere pro Fläche: **Erwartung · Beobachtung · mögliche Erklärung der Abweichung**.
+
+Fragen für die Auswertung:
+
+- Sind erwartete warme Flächen Teil zusammenhängender Hotspot-Zonen?
+- Unterbrechen Lahn und Grünräume diese Zonen?
+- Welche Abweichung ist überraschend?
+- Was lässt sich aus dem einzelnen Aufnahmetermin nicht ableiten?
+
+## Was wurde gegenüber der Automatik reduziert?
+
+| Automatisiertes Lehrkräftepaket | Manueller Einstieg |
+|---|---|
+| Suche und Auswahl von zehn heißen Landsat-Szenen | Auswahl eines einzelnen klaren Sommertermins |
+| LST-Berechnung und pixelweises q90-Komposit | eine LST-Szene aus `ST_B10` in °C |
+| automatische DOP-CIR-Klassifikation | sichtbare Interpretation des RGB-Luftbilds |
+| automatisch erzeugtes QGIS-Projekt und Printlayouts | ein Projekt, manuell digitalisierte Erwartungsflächen |
+
+**Wichtig:** Ein einzelner Landsat-Termin bildet nicht dasselbe ab wie das automatisierte Hot-q90-Komposit. Er macht aber den Modellgedanken, die Datenumrechnung und den GIS-Vergleich direkt nachvollziehbar.
+
+## Quellen und Links
+
+- [Digitale Orthophotos Hessen (HVBG)](https://hvbg.hessen.de/landesvermessung/geotopographie/luftbilder/digitale-orthophotos-true-orthophoto)
+- [WMS-Dienste und Capabilities Hessen (HVBG)](https://hvbg.hessen.de/geoinformation/geodateninfrastruktur/geoportal-hessen/geodatendienste-im-originaeren-format)
+- [Landsat Level-2 Datenzugang (USGS)](https://www.usgs.gov/landsat-missions/landsat-collection-2-level-2-science-products)
+- [Landsat ST-Skalierung (USGS)](https://www.usgs.gov/landsat-missions/landsat-collection-2-surface-temperature)
+- [QA_PIXEL und Wolkeninformation (USGS)](https://www.usgs.gov/landsat-missions/landsat-collection-2-quality-assessment-bands)
+
+Ausführliche Klick-für-Klick-Schritte: [Technische QGIS-Anleitung](handreichung-lst-stadtklima-technisch.qmd).

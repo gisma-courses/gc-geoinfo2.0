@@ -1,0 +1,54 @@
+---
+title: "Grundlagen der räumlichen Analyse"
+open-graph:
+  description: "Geoinformatik (QGIS)"
+  image: assets/images/splash-geoinformatik.jpg
+twitter-card:
+  description: "Geoinformatik (QGIS)"
+  image: assets/images/splash-geoinformatik.jpg
+  
+title-block-banner: assets/images/splash-geoinformatik.jpg
+title-block-banner-color: "#0E87CC"
+
+format:
+  html:
+    css: styles.css
+---
+
+```{=html}
+<style>
+  body {
+  background-image: url("");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+  
+</style>
+```
+
+Grundlagenkurs der räumlichen Analyse im [Bachelor Geographie (B.Sc.)](https://www.uni-marburg.de/de/fb19/studium/studiengaenge/bsc_geographie) an der Philipps-Universität Marburg.
+
+Raum-zeitliche Daten und deren Verarbeitung, Analyse und Darstellung sind wissenschaftliche Grundelemente der Geographie. Sie ermöglichen es, reale Räume nicht nur zu beschreiben, sondern räumliche Muster, Beziehungen, Prozesse und Entscheidungen nachvollziehbar zu untersuchen. Analysen bilden damit eine Grundlage für Erkenntnisgewinn in Forschung und Praxis; Karten, Diagramme, Modelle und andere Geomedien sind zentrale Mittel, um diese Erkenntnisse zu kommunizieren.
+
+Daten, Datenanalyse und die Modellierung räumlicher Zusammenhänge sind daher integraler Bestandteil geographischen Arbeitens. Der grundlegende Umgang mit Geodaten, ihre Aufbereitung, visuelle Erkundung, Analyse und Präsentation stellt eine zentrale Kernkompetenz für das Berufsbild der Geographin und des Geographen dar.
+
+Der Kurs führt in grundlegende Konzepte und Methoden der Geoinformatik ein. Im Mittelpunkt stehen nicht einzelne Softwarefunktionen, sondern die fachlich begründete Arbeit mit räumlichen Daten: Raumkonzepte, Datenmodelle, Koordinaten und Projektionen, Vektor- und Rasterdaten, Attribut- und Raumabfragen, digitale Geländemodelle, Sichtfeld- und Ableitungsanalysen, Multikriterienanalysen sowie die Entwicklung reproduzierbarer Workflows.
+
+## Lernziele
+
+Am Ende dieses Moduls sind die Studierenden in der Lage,
+
+- grundlegende räumliche Datentypen zu klassifizieren, zu kategorisieren und angemessen zu visualisieren,
+- ausgewählte Faktoren, Funktionen und Prozesse in realen Räumen mit Hilfe von Geodaten darzustellen, zu beschreiben und zu erklären,
+- grundlegende räumliche Analysen von Raster- und Vektordaten durchzuführen,
+- räumliche Fragestellungen in geeignete GIS-Operationen zu übersetzen,
+- eine eigenständige Analyse zu entwickeln und in Form einer kleinen wissenschaftlichen Studie nachvollziehbar zu kommunizieren.
+
+
+## Arbeitsverständnis
+
+Mein Selbstverständnis als Kursleiter ist das eines Coaches. Ich kann Ihnen die Arbeit mit Raum, Daten und Methoden nicht abnehmen. Ich kann meine Erfahrung, meine Perspektive und meine Kritik einbringen; lernen, üben, entscheiden und begründen müssen Sie selbst.
+
+Damit dieser Weg für Sie erfolgreich werden kann, müssen Sie kritisch reflektieren, was ich einbringe, was Sie in Diskussionen mit Ihren Kommilitoninnen und Kommilitonen lernen, was Sie lesen, was Sie ausprobieren und was Sie glauben, sicher verstanden zu haben. Bildung hängt zu einem großen Teil davon ab, was Sie selbst investieren. Wenn Sie nicht deutlich mehr tun, als nur anwesend zu sein, können Sie davon ausgehen, dass dieser Kurs für Sie Zeitverschwendung ist.
+
+Wissenschaftliches Arbeiten bedeutet, auf der Arbeit anderer aufzubauen, eigene Wege zu prüfen, Fehler zu erkennen, neu anzusetzen und Ergebnisse nachvollziehbar zu begründen. Also fangen Sie an: Denken Sie, reflektieren und diskutieren Sie, laufen Sie in Sackgassen, beginnen Sie erneut, sammeln und vergleichen Sie Erfahrungen und entwickeln Sie Ihre eigene Art, mit Raum, Daten und Wissen zu arbeiten.

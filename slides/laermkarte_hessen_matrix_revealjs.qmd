@@ -1,0 +1,234 @@
+---
+title: "Strategische Lärmkarte Hessen"
+subtitle: "Parameter, Prozess, Abgrenzung zur OSM-Übung"
+format:
+  revealjs:
+    theme: [metropolis.scss]
+    toc: false
+    toc-depth: 2
+    chalkboard: true
+    menu: false
+    slide-number: true
+    transition: fade
+    incremental: false
+    smaller: false
+    navigation-mode: vertical
+    controls: true
+    controls-layout: edges
+    controls-tutorial: true
+    hash: true
+lightbox: true
+bibliography: ../assets/geoinfo.bib
+execute:
+  echo: false
+  warning: false
+  message: false
+---
+
+# Leitidee
+
+Strategische Lärmkarten sind **Modellkarten**.
+
+Sie zeigen berechnete Umgebungslärmbelastung.
+
+Nicht gemessen wird an jedem Ort.
+
+Modellkette:
+
+```text
+Quelle → Emission → Ausbreitung → Immission → Betroffenheit
+```
+
+## Technik / Quelle {.smaller}
+
+Amtliche Grundlage:
+
+- 34. BImSchV
+- EU-Umgebungslärmrichtlinie
+- HLNUG Umgebungslärmkartierung 2022
+
+Hessen:
+
+- zentrale Modellumgebung: ODEN
+- Rechenkern: ODEN/LimA V2022
+- Verfahren: BUB, BUF, BEB
+
+# Prozessmatrix
+
+| Schritt | Eingang | Prozess | Ergebnis |
+|---|---|---|---|
+| Quelle | Straße, Schiene, Flug, Industrie | Quellmodell | Lärmquelle |
+| Emission | Verkehr, Tempo, Lkw, Oberfläche | Emissionsrechnung | Schallleistung |
+| Ausbreitung | Gelände, Gebäude, Wände | Ausbreitungsrechnung | Pegel im Raum |
+| Immission | Raster, Fassadenpunkte | Pegelberechnung | `LDEN`, `LNight` |
+| Betroffenheit | Gebäude, Bevölkerung | BEB-Auswertung | Belastetenzahlen |
+
+## Lesart der Matrix {.smaller}
+
+Die Karte entsteht nicht aus einem einfachen Puffer.
+
+Jeder Schritt verändert die Aussage:
+
+- Quellenwahl bestimmt, was überhaupt vorkommt.
+- Emission bestimmt die Stärke.
+- Ausbreitung bestimmt die räumliche Wirkung.
+- Immission bestimmt die Kartenwerte.
+- Betroffenheit bestimmt die Statistik.
+
+# Parameter: Straße
+
+Zentrale Straßenparameter:
+
+- Verkehrsmenge: DTV / DTV5
+- Lkw-Anteil
+- Geschwindigkeit
+- Straßenoberfläche
+- Straßengeometrie
+- ggf. Lärmschutzanlagen
+
+## Einordnung {.smaller}
+
+Diese Parameter fehlen in einer OSM-only-Übung weitgehend.
+
+OSM liefert meist:
+
+- Straßentyp
+- Geometrie
+- teils Geschwindigkeit
+- teils Oberfläche
+
+Daher kann OSM nur einen **Lärmverdacht** modellieren.
+
+# Parameter: Raum
+
+Ausbreitung hängt ab von:
+
+- Digitalem Geländemodell
+- Gebäuden
+- Abschirmung
+- Reflexion
+- Abstand
+- Berechnungshöhe
+
+Pflichtlogik:
+
+- nahe Gebäudepunkte: 4 m über Boden
+- flächenhafte Darstellung: Raster 50 m × 50 m oder feiner
+
+## Unterschied zur Kursübung {.smaller}
+
+Amtlich:
+
+```text
+Akustische Ausbreitung mit Gelände, Gebäuden, Reflexion
+```
+
+Kursmodell:
+
+```text
+Straßentyp + Distanz + Nutzung
+```
+
+Das Kursmodell ist ein Suchmodell.
+
+# Lärmindizes
+
+Ausgegeben werden vor allem:
+
+| Index | Bedeutung |
+|---|---|
+| `LDEN` | Tag-Abend-Nacht-Pegel |
+| `LNight` | Nachtpegel |
+
+Besonderheit:
+
+- Abend wird stärker gewichtet.
+- Nacht wird noch stärker gewichtet.
+
+## Pegelbänder {.smaller}
+
+Pflichtdarstellung nach 34. BImSchV:
+
+- `LDEN` ab 55 dB(A)
+- `LNight` ab 50 dB(A)
+- optional `LNight` ab 45 dB(A)
+
+Die Karte zeigt Pegelbänder.
+
+Sie zeigt keine Momentanlautstärke.
+
+# Hessen 2022
+
+HLNUG-Kartierung 2022:
+
+- landesweites Basismodell
+- Verkehrsmodell
+- Geländemodell
+- Gebäudemodell
+- Bevölkerungszahlen
+- kommunale Ergänzungen
+
+## ODEN {.smaller}
+
+ODEN ist der Web-Service Lärm des HLNUG.
+
+Funktion:
+
+- Eingangsdaten prüfen
+- Modelldaten editieren
+- Lärmberechnungen durchführen
+- Maßnahmen simulieren
+
+Beispiel:
+
+- Geschwindigkeitsreduzierung
+- Lärmschutzwand
+
+# Amtlich vs. OSM-Übung
+
+| Amtliche Lärmkarte | OSM-Kursmodell |
+|---|---|
+| berechnete dB-Werte | Verdachtsindex |
+| Verkehrsdaten nötig | Straßentyp reicht |
+| Gebäudeabschirmung | meist nicht berücksichtigt |
+| `LDEN`, `LNight` | `LK = Q + D + R` |
+| rechtlich relevant | didaktisches Suchinstrument |
+
+## Merksatz {.smaller}
+
+Die OSM-Karte ist keine Lärmkarte.
+
+Sie zeigt:
+
+```text
+Wo könnten Lärmquelle, Nähe und Nutzung zusammentreffen?
+```
+
+Nicht:
+
+```text
+Wie laut ist es dort in dB(A)?
+```
+
+# Webseiten
+
+HLNUG: Umgebungslärmkartierung 2022  
+https://www.hlnug.de/themen/laerm/umgebungslaerm/umgebungslaermkartierung-2022
+
+HLNUG: Lärmviewer Hessen  
+https://umweltdaten.hessen.de/laerm
+
+HLNUG: Geodienste Lärm  
+https://www.hlnug.de/themen/geografische-informationssysteme/geodienste/laerm
+
+34. BImSchV  
+https://www.gesetze-im-internet.de/bimschv_34/34._BImSchV.pdf
+
+
+
+Die beste Webseite zum Zeigen ist der **Lärmviewer Hessen**.
+
+Die beste Webseite zum Erklären ist die **HLNUG-Seite zur Umgebungslärmkartierung 2022**.
+
+Der beste technische Hintergrund ist der **Abschlussbericht Umgebungslärmkartierung Hessen 2022**.
+

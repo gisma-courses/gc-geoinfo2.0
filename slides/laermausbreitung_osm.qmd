@@ -1,0 +1,491 @@
+---
+title: "Lärmausbreitung"
+subtitle: "OSM-only-Übung in QGIS"
+format:
+  revealjs:
+    theme: [metropolis.scss]
+    toc: false
+    toc-depth: 2
+    chalkboard: true
+    menu: false
+    slide-number: true
+    transition: fade
+    incremental: false
+    smaller: false
+    navigation-mode: vertical
+    controls: true
+    controls-layout: edges
+    controls-tutorial: true
+    hash: true
+lightbox: true
+bibliography: ../assets/geoinfo.bib
+execute:
+  echo: false
+  warning: false
+  message: false
+---
+
+# Ziel
+
+Erstellt wird eine Suchkarte für **potenzielle Lärm-Konflikträume**.
+
+Genutzt werden nur OSM-Daten:
+
+- Straßen
+- Abstand zur Straße
+- Nutzungsorte
+
+Abgabe: **Karte + fünf Sätze**.
+
+## Technik: Projekt öffnen {.smaller}
+
+QGIS öffnen.
+
+Werkzeug / Menü:
+
+- **Layer → Layer hinzufügen → Vektorlayer hinzufügen**
+- Datei: `osm_ueberlagerung.gpkg`
+
+Benötigte Layer:
+
+- `study_area`
+- `grid_100m`
+- `pressure_points`
+- `noise_roads`
+
+Projekt-CRS: `EPSG:25832`.
+
+# Leitfrage
+
+**Wo treffen Straßenlärm-Verdacht und Nutzung zusammen?**
+
+Der Index heißt:
+
+$$
+LK = Q + D + R
+$$
+
+`LK` = **Lärm-Konfliktindex**.
+
+## Technik: Bedeutung der Kürzel {.smaller}
+
+Die Kürzel stehen für deutsche Begriffe:
+
+| Kürzel | Bedeutung | QGIS-Feld |
+|---|---|---|
+| `Q` | Quellenwert der Straße | `Q` |
+| `D` | Distanzwert zur Straße | `D` |
+| `R` | Relevanzwert der Nutzung | `R` |
+| `LK` | Lärm-Konfliktindex | `LK` |
+
+Merksatz:
+
+```text
+Lärm-Konflikt = Quelle + Distanz + Nutzung
+```
+
+# Konzept
+
+Lärm wird hier nicht gemessen.
+
+Modelliert wird ein **räumlicher Verdacht**:
+
+| Baustein | Frage |
+|---|---|
+| Quelle | Welche Straße kann Lärm erzeugen? |
+| Distanz | Wie nah liegt die Rasterzelle daran? |
+| Relevanz | Gibt es dort Nutzungsorte? |
+
+## Technik: Grundmodell {.smaller}
+
+Diese Übung berechnet keine dB-Werte.
+
+Die QGIS-Operationen sind:
+
+1. Straßen auswählen
+2. Straßen bewerten
+3. Abstand zum Raster berechnen
+4. Punkte im Raster zählen
+5. Indexfeld berechnen
+
+Wichtig: Das Ergebnis ist eine **Suchkarte**, keine Lärmkarte.
+
+# Daten
+
+Benötigte Layer im GeoPackage:
+
+| Layer | Inhalt |
+|---|---|
+| `study_area` | Untersuchungsgebiet |
+| `grid_100m` | 100-m-Raster |
+| `noise_roads` | relevante Straßenlinien |
+| `pressure_points` | Nutzungsorte |
+
+## Technik: fehlenden Straßenlayer erzeugen {.smaller}
+
+Wenn `noise_roads` fehlt:
+
+Menü / Werkzeug:
+
+- **Vektor → QuickOSM → QuickOSM**
+
+Abfrage:
+
+```text
+Key: highway
+Value: *
+In: Canvas extent
+```
+
+Nur Linien behalten.
+
+Danach:
+
+- **Verarbeitung → Werkzeugkiste → Nach Ausdruck extrahieren**
+- Ausgabe als `noise_roads` speichern.
+
+# Schritt 1: Straßen auswählen
+
+`noise_roads` enthält nur Straßen, die als einfache Lärmquellen genutzt werden.
+
+Auswahl:
+
+- trunk
+- primary
+- secondary
+- tertiary
+- residential
+
+## Technik: Ausdruck für Straßenfilter {.smaller}
+
+Werkzeug:
+
+- **Verarbeitung → Werkzeugkiste → Nach Ausdruck extrahieren**
+
+Eingabelayer: OSM-`highway`-Linien
+
+Ausdruck:
+
+```text
+"highway" IN (
+  'trunk',
+  'primary',
+  'secondary',
+  'tertiary',
+  'residential'
+)
+```
+
+Danach:
+
+- **Verarbeitung → Werkzeugkiste → Zuschneiden**
+- Overlay-Layer: `study_area`
+
+# Schritt 2: Quellenwert `Q`
+
+`Q` bewertet die potenzielle Quellstärke nach Straßentyp.
+
+| Straßentyp | `Q` |
+|---|---:|
+| trunk / primary | 2 |
+| secondary / tertiary | 1 |
+| residential | 0 |
+
+## Technik: Feld `Q` berechnen {.smaller}
+
+Werkzeug / Menü:
+
+- Attributtabelle von `noise_roads` öffnen
+- **Feldrechner öffnen**
+- Neues Feld anlegen
+
+Feld:
+
+```text
+Name: Q
+Typ: Ganzzahl
+```
+
+Ausdruck:
+
+```text
+CASE
+WHEN "highway" IN ('trunk','primary') THEN 2
+WHEN "highway" IN ('secondary','tertiary') THEN 1
+ELSE 0
+END
+```
+
+# Schritt 3: Distanz zur Quelle
+
+Jede Rasterzelle erhält:
+
+- den nächsten Straßenwert `Q`
+- die Distanz zur nächsten Straße
+
+Ergebnislayer:
+
+`grid_road`
+
+## Technik: nächste Straße verknüpfen {.smaller}
+
+Werkzeug:
+
+- **Verarbeitung → Werkzeugkiste → Attribute nach nächstem Nachbarn verknüpfen**
+
+Einstellungen:
+
+| Parameter | Wert |
+|---|---|
+| Eingabelayer | `grid_100m` |
+| Join-Layer | `noise_roads` |
+| Maximale Anzahl nächster Nachbarn | `1` |
+| zu übernehmendes Feld | `Q` |
+| Distanzfeld | `road_dist` |
+| Ausgabe | `grid_road` |
+
+Einheit: Meter.
+
+# Schritt 4: Distanzwert `D`
+
+`D` übersetzt Abstand in einen Belastungswert.
+
+| Abstand zur Straße | `D` |
+|---|---:|
+| bis 50 m | 2 |
+| 50 bis 150 m | 1 |
+| über 150 m | 0 |
+
+## Technik: Feld `D` berechnen {.smaller}
+
+Werkzeug / Menü:
+
+- Attributtabelle von `grid_road` öffnen
+- **Feldrechner öffnen**
+- Neues Feld anlegen
+
+Feld:
+
+```text
+Name: D
+Typ: Ganzzahl
+```
+
+Ausdruck:
+
+```text
+CASE
+WHEN "road_dist" <= 50 THEN 2
+WHEN "road_dist" <= 150 THEN 1
+ELSE 0
+END
+```
+
+# Schritt 5: Relevanz über Nutzung
+
+`pressure_points` markiert Nutzungsorte.
+
+Beispiele:
+
+- Schulen
+- Läden
+- Haltestellen
+- Gastronomie
+- öffentliche Einrichtungen
+
+Gezählt wird je Rasterzelle.
+
+## Technik: Punkte im Raster zählen {.smaller}
+
+Werkzeug:
+
+- **Verarbeitung → Werkzeugkiste → Punkte in Polygon zählen**
+
+Einstellungen:
+
+| Parameter | Wert |
+|---|---|
+| Polygone | `grid_road` |
+| Punkte | `pressure_points` |
+| Zählfeldname | `R_count` |
+| Ausgabe | `grid_noise` |
+
+Das Ergebnis enthält die Anzahl der Nutzungsorte je Rasterzelle.
+
+# Schritt 6: Relevanzwert `R`
+
+`R` übersetzt die Anzahl der Nutzungsorte in einen Score.
+
+| Nutzungsorte | `R` |
+|---|---:|
+| 0 | 0 |
+| 1 bis 3 | 1 |
+| mehr als 3 | 2 |
+
+## Technik: Feld `R` berechnen {.smaller}
+
+Werkzeug / Menü:
+
+- Attributtabelle von `grid_noise` öffnen
+- **Feldrechner öffnen**
+- Neues Feld anlegen
+
+Feld:
+
+```text
+Name: R
+Typ: Ganzzahl
+```
+
+Ausdruck:
+
+```text
+CASE
+WHEN "R_count" = 0 THEN 0
+WHEN "R_count" <= 3 THEN 1
+ELSE 2
+END
+```
+
+# Schritt 7: Index `LK`
+
+Der Lärm-Konfliktindex addiert die drei Werte.
+
+$$
+LK = Q + D + R
+$$
+
+Wertebereich: `0` bis `6`.
+
+Hohe Werte markieren Konfliktverdacht.
+
+## Technik: Feld `LK` berechnen {.smaller}
+
+Werkzeug / Menü:
+
+- Attributtabelle von `grid_noise` öffnen
+- **Feldrechner öffnen**
+- Neues Feld anlegen
+
+Feld:
+
+```text
+Name: LK
+Typ: Ganzzahl
+```
+
+Ausdruck:
+
+```text
+coalesce("Q",0) + coalesce("D",0) + coalesce("R",0)
+```
+
+`coalesce()` verhindert leere Werte im Index.
+
+# Schritt 8: Karte darstellen
+
+Darstellung nach Feld:
+
+`LK`
+
+Titel:
+
+**Potenzielle Lärm-Konflikträume**
+
+## Technik: Symbolisierung {.smaller}
+
+Menü / Dialog:
+
+- Rechtsklick auf `grid_noise`
+- **Eigenschaften → Symbolisierung**
+
+Einstellungen:
+
+| Einstellung | Wert |
+|---|---|
+| Darstellung | **Abgestuft** |
+| Wert | `LK` |
+| Klassen | `3` |
+| Methode | manuell oder gleiches Intervall |
+
+Klassen sinnvoll benennen:
+
+- 0–1 gering
+- 2–4 mittel
+- 5–6 hoch
+
+# Interpretation
+
+Unter die Karte kommen fünf Sätze.
+
+Pflichtinhalt:
+
+- Gebiet
+- Straßenproxy
+- Distanzproxy
+- Nutzungsproxy
+- Unsicherheit
+
+## Technik: Textvorlage {.smaller}
+
+Textbaustein:
+
+1. Das Untersuchungsgebiet umfasst ...
+2. `Q` beschreibt ...
+3. `D` beschreibt ...
+4. `R` beschreibt ...
+5. Unsicher bleibt ...
+
+Maximal fünf Sätze.
+
+# Kontrolle
+
+Der Index ist ein Suchinstrument.
+
+Zu prüfen:
+
+- Verkehrsmengen fehlen.
+- Geschwindigkeit fehlt.
+- Gebäudeabschirmung fehlt.
+- OSM-Vollständigkeit variiert.
+
+## Technik: Plausibilitätscheck {.smaller}
+
+Werkzeuge / Dialoge:
+
+- **Objekte abfragen**
+- **Attributtabelle öffnen**
+- Basiskarte einblenden
+
+Ablauf:
+
+1. Rasterzelle mit hohem `LK` anklicken.
+2. `Q`, `D`, `R` prüfen.
+3. Straße und Nutzungsorte visuell kontrollieren.
+4. Plausibel oder Artefakt notieren.
+
+
+# Daten und Werkzeuge
+
+OpenStreetMap Map Features  
+https://wiki.openstreetmap.org/wiki/Map_features
+
+Geofabrik  
+https://download.geofabrik.de/
+
+BBBike Extracts  
+https://extract.bbbike.org/
+
+QuickOSM  
+https://plugins.qgis.org/plugins/QuickOSM/
+
+## Technik: Navigation {.smaller}
+
+Navigation:
+
+- Pfeil rechts/links: Hauptfolien
+- Pfeil runter: technische Folie
+- Pfeil hoch: zurück
+- `Esc`: Übersicht
+
+Die technischen Folien liegen jeweils direkt unter der Hauptfolie.

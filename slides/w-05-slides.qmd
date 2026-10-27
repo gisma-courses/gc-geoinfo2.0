@@ -1,0 +1,86 @@
+---
+title: "Der Perfekte Gipfel"
+subtitle: "Wie dekonstruiere ich ein Problem?"
+author:  Chris Reudenbach
+#title-slide-attributes: 
+#  data-background-image: ../images/title-uni2.png
+ # data-background-size: contain
+  #data-background-opacity: "0.7"
+ # center-title-slide: true
+format:
+  revealjs:
+    theme: [metropolis.scss]
+    toc: false
+    toc-depth: 2
+    chalkboard: true
+    menu: false
+lightbox: true
+---
+
+## Motivation Fragestellung
+
+::: {layout-align="center"}
+[![](../assets/images/pp/agis-workflow1.png){valign="center" width="60%" fig-align="center"}](../assets/pdf/DAV_Panorama_2_2012.pdf)
+:::
+
+## Formale Abstraktion
+
+![](../assets/images/pp/formel.png)
+
+Source: [thehighrisepages](https://www.thehighrisepages.de/bergtouren/na_orogr.htm#BK)
+
+## Modellbildung und Abstraktion
+
+::: {layout-ncol="2" layout-valign="center"}
+![](../assets/images/pp/agis-concept1.png){width="50%"}
+
+-   Gipfel (Höhe/Position)
+
+-   Dominanz
+
+-   Prominenz/Schartenhöhe
+
+-   Eigenständigkeit
+
+    ![](../assets/images/pp/agis-concept2.png){width="120%"}
+:::
+
+## Problemlösungs-Fähigkeit
+
+![](../assets/images/pp/slide1png.png){width="90%" fig-align="center"}
+
+## Das Problemlösungs-Handwerk
+
+![](../assets/images/pp/slide2png.png){width="90%" fig-align="center"}
+
+## Interaktives GI-Handwerk
+
+![](../assets/images/pp/slide3.png){width="90%" fig-align="center"}
+
+## Komanndozeilen GI-Handwerk
+
+![](../assets/images/pp/slide4.png){width="90%" fig-align="center"}
+
+## Programmierung für Nicht-Proammierer\*innen
+
+![](../assets/images/pp/slide5.png){width="90%" fig-align="center"}
+
+## Übersetzung in die technischen GI-Erfordernisse
+
+![](../assets/images/pp/slide6.png){width="90%" fig-align="center"}
+
+## Wie soll das gehen?
+
+![](../assets/images/pp/slide7.png){width="90%" fig-align="center"}
+
+## Beispiel Fluten zur Ermittlung der Prominenz
+
+![](../assets/images/pp/flood0.png)
+
+## Wie geht das schneller - Binäre Suche
+
+![](../assets/images/pp/flood1.png)
+
+## Wie geht das schneller - Binäre Suche Abbruchkriterium
+
+![](../assets/images/pp/flood2.png)

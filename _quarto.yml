@@ -1,0 +1,192 @@
+project:
+  type: website
+  output-dir: docs/
+  render:
+    - "*.qmd"
+
+website:
+  favicon: /images/logo.png
+  bread-crumbs: false
+  open-graph: true
+  page-navigation: true
+  title: "Grundlagenkurs GI-S (QGIS)"
+  site-url: https://gisma-courses.github.io/gc-geoinfo2.0
+  repo-url: https://github.com/gisma-courses/gc-geoinfo2.0
+  repo-actions: [edit, issue]
+  repo-branch: master
+  search:
+    location: navbar
+    type: textbox
+  twitter-card:
+    creator: "@gisma"
+  comments: false
+
+  navbar:
+    logo: /images/logo.png
+    right:
+      - text: "Formales"
+        menu:
+          - icon: exclamation-square-fill
+            href: unit00/unit00-02-formales.qmd
+          - icon: clipboard-check
+            href: unit00/unit00-03-formales.qmd
+
+
+  sidebar:
+    - title: "Willkommen"
+      style: "docked"
+      collapse-level: 1
+      pinned: true
+      contents:
+        - href: index.qmd
+        - text: "---"
+        - text: "---"
+        # - section: Arbeitsblätter
+        #   contents:
+        #     - href: unit09/unit09-01.qmd
+        #       text: A1 - Warm Up QGIS
+        #     - href: unit09/unit09-02.qmd
+        #       text: A2 - Geometrien und Attribute
+        #     - href: unit09/unit09-03.qmd
+        #       text: A3 - Analysen und Ableitungen
+        #     - href: unit09/unit09-04.qmd
+        #       text: A4 - Kosten und Kriterien
+        #     - href: unit09/unit09-05.qmd
+        #       text: A5 - Reproduzierbarkeit und Workflows
+        #   #  - href: unit09/unit09-06.qmd
+        #   #    text: A6 - Die Projektarbeit
+        # - text: "---"
+        # - text: "---"
+        # - section: Reader Geographische Raumkonzepte
+        #   contents:
+        #     - unit01/unit01-01.qmd
+        #     - unit01/unit01-02.qmd
+        #     - unit01/unit01-03.qmd
+        #     - unit01/unit01-04.qmd
+        #     - unit01/unit01-05.qmd
+        # - text: "---"
+        # - section: Reader GI Raumkonzepte
+        #   contents:
+        #     - href: unit02/unit02-01.qmd
+        #     - href: unit02/unit02-02.qmd
+        #     - href: unit02/unit02-03.qmd
+        #     - href: unit02/unit02-04.qmd
+        #     - href: unit02/unit02-05.qmd
+        #     - href: unit02/unit02-06.qmd
+        # - text: "---"
+        # - section: "Reader Vektordaten & Attributtabellen"
+        #   contents:
+        #     - href: unit03/unit03-01.qmd
+        #       text: Fragen und Antworten
+        #     - href: unit03/unit03-02.qmd
+        #       text: Thematische Abfragen
+        #     - href: unit03/unit03-03.qmd
+        #       text: Geometrische Abfragen
+        #     - href: unit03/unit03-04.qmd
+        #       text: Topologische Abfragen
+        #     - href: unit03/unit03-05.qmd
+        #       text: Zusammnfassung Fragen und Antworten
+        # - text: "---"
+        # - section: "Reader Räumliche Ableitungen aus Geodaten"
+        #   contents:
+        #     - href: unit04/unit04-01.qmd
+        #     #  text: Räumliche Analysemethoden
+        #     - href: unit04/unit04-02.qmd
+        #     #  text: Voronoi Polygone
+        #     - href: unit04/unit04-03.qmd
+        #       text: Informationsloser Raum
+        #     - href: unit04/unit04-04.qmd
+        #       text: Digitale Geländemodelle
+        #     - href: unit04/unit04-05.qmd
+        #       text: Sichtweite und Sichtfeld
+        #     - href: unit04/unit04-06.qmd
+        #       text: Prozeßbasierte Ableitungen
+        # - text: "---"
+        # - section: "Reader Räumliche Kriterien, Eignung und Entscheidung"
+        #   contents:
+        #     - href: unit05/unit05-01.qmd
+        #       text: Multikriterien-Analysen
+        #     - href: unit05/unit05-02.qmd
+        #       text: Eignungsanalysen
+        #     - href: unit05/unit05-03.qmd
+        #       text: Kombination unterschiedlicher Kriterien
+        #     - href: unit05/unit05-04.qmd
+        #       text: Multikriterien-Multiziel-Analyse
+        #     - href: unit05/unit05-05.qmd
+        #       text: Kostenanalyse              
+        # - text: "---"
+        - section: " Der Perfekte Gipfel "
+          contents:
+            - href: slides/perfekter_gipfel_gesamtrahmen.qmd
+              text: Der Perfekte Gipfel - Das Konzept
+            - href: slides/perfekter_gipfel_analyse.qmd
+              text: Schritt 1 - Der Perfekte Gipfel - Die Analyse  
+            - href: slides/perfekter_gipfel_reveal.qmd
+              text: Schritt 2 - Die technische Umsetzung
+            - href: slides/Der_perfekte_Gipfel_QGIS_Arbeitsauftrag.qmd
+              text: Der perfekte Gipfel - QGIS-Arbeitsprojekt  
+              
+        # - text: "---"
+        # - section: "Reader Projektarbeit "
+        #   contents:
+        #     - href: unit06/unit06-01.qmd
+        #       text: Die Projektarbeit
+        #     - href: unit06/unit06-02.qmd
+        #       text: Wie entwickle ich ein Projekt?
+        #     - href: unit06/unit06-03.qmd
+        #       text: Das Exposé
+        - text: "---"
+        - text: "---"
+        # - section: Foliensätze zu den Readern
+        #   contents:
+        #     - href: slides/unit01_geographischer_raum.qmd
+        #       text: Geographische Raumkonzepte
+        #     - href: slides/unit02_gi_raumkonzepte.qmd
+        #       text: GI Raumkonzepte
+        #     - href: slides/unit03_abfragen_vektordaten.qmd
+        #       text: Vektordaten
+        #     - href: slides/unit04_raeumliche_ableitungen.qmd
+        #       text: Räumliche Ableitungen               
+        #     - href: slides/unit05_raeumliche_bewertung_entscheidung.qmd
+        #       text: Eignungen, Entscheidungen und Kosten
+        #     - href: slides/laermausbreitung_osm.qmd
+        #       text: Lärmausbreitung
+        #     - href: slides/marburg_dom1_viewshed_revealjs.qmd
+        #       text: Viewshed Analyse
+        # - section: Addon Perfekter Gipfel 
+        #   contents:
+        #     - href: slides/perfekter_gipfel_gesamtrahmen.qmd
+        #       text: Der Perfekte Gipfel - Das Konzept
+        #     - href: slides/perfekter_gipfel_analyse.qmd
+        #       text: Der Perfekte Gipfel - Die Analyse    
+        #     - href: slides/modellierung_luftbild_lst.qmd
+        #       text: Sommer in der Stadt - Die Folien             
+        #     - href: slides/handreichung-lst-stadtklima-technisch.qmd
+        #       text: Sommer in der Stadt - Die Anleitung    
+        #       
+
+
+execute:
+  freeze: auto
+  echo: false
+  message: false
+  warning: false
+  cache: false
+
+format:
+  html:
+    include-after-body: css/banner-footer.html
+    include-in-header: css/banner-style.html
+    code-overflow: wrap
+    toc-title: "Inhalt"
+    number-sections: false
+    highlight-style: github
+    theme:
+      light: cerulean
+      dark: [lumen, css/theme-dark.scss]
+    code-copy: true
+    css: css/styles.css
+    toc: true
+    link-external-icon: false
+    link-external-newwindow: true
+    link-external-filter: '^(?:http:|https:)\/\/www\.quarto\.org\/custom'

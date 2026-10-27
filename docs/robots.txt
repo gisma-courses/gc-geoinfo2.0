@@ -1,0 +1,1 @@
+Sitemap: https://gisma-courses.github.io/gc-geoinfo2.0/sitemap.xml

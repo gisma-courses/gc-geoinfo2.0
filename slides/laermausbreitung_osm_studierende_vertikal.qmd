@@ -1,0 +1,406 @@
+---
+title: "Lärmausbreitung"
+subtitle: "OSM-only-Übung in QGIS"
+format:
+  revealjs:
+    theme: [metropolis.scss]
+    toc: false
+    toc-depth: 2
+    chalkboard: true
+    menu: false
+    slide-number: true
+    transition: fade
+    incremental: false
+    smaller: false
+    navigation-mode: vertical
+    controls: true
+    controls-layout: edges
+    controls-tutorial: true
+    hash: true
+lightbox: true
+bibliography: ../assets/geoinfo.bib
+execute:
+  echo: false
+  warning: false
+  message: false
+---
+
+# Ziel
+
+Erstellt wird eine Suchkarte für **potenziell lärmbelastete Nutzungsräume**.
+
+Kombiniert werden:
+
+- Straßen als Lärmquellen
+- Abstand als Ausbreitungsproxy
+- Nutzungsorte als Relevanzproxy
+
+Abgabe: **eine Karte und fünf Sätze**.
+
+## Technik: Projekt öffnen {.smaller}
+
+QGIS öffnen.
+
+`osm_ueberlagerung.gpkg` laden.
+
+Benötigte Layer:
+
+- `study_area`
+- `grid_100m`
+- `pressure_points`
+- zusätzlich: `noise_roads`
+
+Projekt-CRS prüfen: metrisch, z. B. `EPSG:25832`.
+
+# Leitfrage
+
+**Wo treffen potenzielle Verkehrslärmeinwirkung und Nutzung zusammen?**
+
+Der Index:
+
+$$
+LK = Q + D + R
+$$
+
+`LK` ist ein **Lärm-Konfliktindex**.
+
+## Technik: Layer prüfen {.smaller}
+
+Vor dem Rechnen prüfen:
+
+- Raster liegt im Untersuchungsgebiet.
+- Zellen sind ca. 100 × 100 m groß.
+- `noise_roads` enthält Linien.
+- `pressure_points` enthält Punkte.
+
+Wenn `noise_roads` fehlt: aus OSM-Straßen herstellen.
+
+# Konzept
+
+Lärm wird hier als einfache räumliche Wirkbeziehung modelliert.
+
+| Baustein | Bedeutung | Proxy |
+|---|---|---|
+| Quelle | Verkehrslärm entsteht an Straßen | Straßentyp |
+| Ausbreitung | Wirkung nimmt mit Entfernung ab | Abstand |
+| Relevanz | Nutzung macht Belastung bedeutsam | Nutzungsorte |
+
+## Technik: Grundmodell {.smaller}
+
+Die Übung berechnet keine dB-Werte.
+
+Modelliert wird ein **Verdachtsraum**:
+
+```text
+Straßentyp + Nähe + Nutzungsorte
+```
+
+Gebäude, Verkehrsmengen, Topographie und Wind bleiben Kontrollfragen.
+
+# Daten
+
+| Layer | Inhalt |
+|---|---|
+| `study_area` | Untersuchungsgebiet |
+| `grid_100m` | 100-m-Raster |
+| `noise_roads` | relevante Straßenlinien |
+| `pressure_points` | Nutzungsorte |
+
+## Technik: Datenwege {.smaller}
+
+OSM reicht für diese Übung.
+
+Stabile Wege:
+
+- vorbereitete Datei: `osm_ueberlagerung.gpkg`
+- Geofabrik: Regionaldownload
+- BBBike: eigener Ausschnitt
+- QuickOSM: schneller Live-Download
+
+# Schritt 1: Straßen
+
+Ziel: relevante Straßen als Lärmquellen auswählen.
+
+Ergebnislayer:
+
+`noise_roads`
+
+Straßentypen ersetzen keine Verkehrszählung.
+
+## Technik: `noise_roads` herstellen {.smaller}
+
+QuickOSM-Abfragen oder Filter auf OSM-Linien:
+
+```text
+highway IN (
+  'trunk',
+  'primary',
+  'secondary',
+  'tertiary',
+  'residential'
+)
+```
+
+Nur Linien behalten.
+
+Mit `study_area` clippen.
+
+# Schritt 2: Quelle `Q`
+
+Ziel: Straßen nach potenzieller Quellstärke bewerten.
+
+| Straßentyp | `Q` |
+|---|---:|
+| trunk / primary | 2 |
+| secondary / tertiary | 1 |
+| residential | 0 |
+
+## Technik: Feld `Q` anlegen {.smaller}
+
+Feldrechner in `noise_roads`.
+
+Neues Ganzzahlfeld: `Q`
+
+```text
+CASE
+WHEN "highway" IN ('trunk','primary') THEN 2
+WHEN "highway" IN ('secondary','tertiary') THEN 1
+ELSE 0
+END
+```
+
+Speichern.
+
+# Schritt 3: Abstand `D`
+
+Ziel: jeder Rasterzelle die nächste Straße zuweisen.
+
+Ergebnisfelder:
+
+- `road_dist`
+- `Q`
+
+Große Nähe erhöht den Ausbreitungsverdacht.
+
+## Technik: nächste Straße {.smaller}
+
+Werkzeug: **Attribute nach nächstem Nachbarn verknüpfen**
+
+- Eingabelayer: `grid_100m`
+- Join-Layer: `noise_roads`
+- nächste Nachbarn: `1`
+- zu übernehmendes Feld: `Q`
+- Distanzfeld erzeugen: `road_dist`
+- Ergebnis: `grid_road`
+
+Einheit: Meter.
+
+# Schritt 4: Distanzscore
+
+`road_dist` wird in einen Score übersetzt.
+
+| Abstand | `D` |
+|---|---:|
+| bis 50 m | 2 |
+| 50 bis 150 m | 1 |
+| über 150 m | 0 |
+
+## Technik: Feld `D` anlegen {.smaller}
+
+Feldrechner in `grid_road`.
+
+Neues Ganzzahlfeld: `D`
+
+```text
+CASE
+WHEN "road_dist" <= 50 THEN 2
+WHEN "road_dist" <= 150 THEN 1
+ELSE 0
+END
+```
+
+Schwellenwerte sind Modellentscheidungen.
+
+# Schritt 5: Nutzungsorte `R`
+
+Ziel: Nutzungsorte je Rasterzelle zählen.
+
+Ergebnisfeld:
+
+`R_count`
+
+Nutzung macht potenzielle Lärmeinwirkung relevanter.
+
+## Technik: Punkte zählen {.smaller}
+
+Werkzeug: **Punkte in Polygon zählen**
+
+- Polygonlayer: `grid_road`
+- Punktlayer: `pressure_points`
+- Zählfeld: `R_count`
+- Ergebnis: `grid_noise`
+
+# Schritt 6: Nutzungsscore
+
+`R_count` wird in einen Score übersetzt.
+
+| Nutzungsorte | `R` |
+|---|---:|
+| 0 | 0 |
+| 1 bis 3 | 1 |
+| mehr als 3 | 2 |
+
+## Technik: Feld `R` anlegen {.smaller}
+
+Feldrechner in `grid_noise`.
+
+Neues Ganzzahlfeld: `R`
+
+```text
+CASE
+WHEN "R_count" = 0 THEN 0
+WHEN "R_count" <= 3 THEN 1
+ELSE 2
+END
+```
+
+# Schritt 7: Index
+
+Der Lärm-Konfliktindex addiert die Scores.
+
+$$
+LK = Q + D + R
+$$
+
+Wertebereich: `0` bis `6`.
+
+Hohe Werte markieren verdichtete Konfliktlagen.
+
+## Technik: Feld `LK` berechnen {.smaller}
+
+Feldrechner öffnen.
+
+Neues Ganzzahlfeld: `LK`
+
+```text
+coalesce("Q",0) + coalesce("D",0) + coalesce("R",0)
+```
+
+Ergebnis speichern.
+
+# Schritt 8: Karte
+
+Darstellung nach Feld:
+
+`LK`
+
+Kartentitel:
+
+**Potenzielle Lärm-Konflikträume**
+
+## Technik: Symbolisierung {.smaller}
+
+Layer-Eigenschaften → **Symbolisierung**
+
+- Darstellung: **Abgestuft**
+- Spalte: `LK`
+- Klassen: `0–1`, `2–4`, `5–6`
+- hohe Klasse = starker Konfliktverdacht
+
+Legende verständlich benennen.
+
+# Interpretation
+
+Unter die Karte kommen fünf Sätze.
+
+Pflichtinhalt:
+
+- Gebiet
+- Straßenproxy
+- Distanzproxy
+- Nutzungsproxy
+- auffällig / fragwürdig
+
+## Technik: Textvorlage {.smaller}
+
+1. Das Untersuchungsgebiet umfasst ...
+2. Straßen werden als Proxy für ... genutzt.
+3. Ausbreitung wird über ... angenähert.
+4. Relevanz wird über ... erfasst.
+5. Auffällig ist ..., fragwürdig bleibt ...
+
+Maximal fünf Sätze.
+
+# Kritische Kontrolle
+
+Der Index bleibt ein Suchinstrument.
+
+Zu prüfen:
+
+- Verkehrsmengen fehlen.
+- Geschwindigkeit fehlt.
+- Gebäudeabschirmung fehlt.
+- OSM-Vollständigkeit variiert.
+- Nutzungsorte sind nur ein Proxy.
+
+## Technik: Plausibilitätscheck {.smaller}
+
+Eine Rasterzelle mit hohem `LK` auswählen.
+
+Dann:
+
+1. Basiskarte ansehen.
+2. `noise_roads` und `pressure_points` einzeln prüfen.
+3. Gebäuderiegel und Grünflächen visuell kontrollieren.
+4. Plausibel oder Artefakt entscheiden.
+5. Unsicherheit notieren.
+
+# Ergebnis
+
+Abzugeben sind:
+
+- Karte
+- Rasterlayer mit Feld `LK`
+- fünf Interpretationssätze
+- eine Unsicherheitsnotiz
+
+Die Karte zeigt Verdachtsräume.
+
+## Technik: Kartenexport {.smaller}
+
+Layout-Manager öffnen.
+
+Elemente:
+
+- Karte
+- Titel
+- Legende für `LK`
+- Maßstab
+- fünf Sätze als Textfeld
+
+Export: PDF oder PNG.
+
+# Datenquellen
+
+OpenStreetMap Map Features  
+https://wiki.openstreetmap.org/wiki/Map_features
+
+Geofabrik  
+https://download.geofabrik.de/
+
+BBBike Extracts  
+https://extract.bbbike.org/
+
+QuickOSM  
+https://plugins.qgis.org/plugins/QuickOSM/
+
+## Technik: Navigation {.smaller}
+
+In dieser Präsentation:
+
+- Pfeil rechts/links: Hauptfolien
+- Pfeil runter: technische Folie
+- Pfeil hoch: zurück
+- `Esc`: Übersicht
+
+Keine Klickfelder nötig.

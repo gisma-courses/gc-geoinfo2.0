@@ -1,0 +1,386 @@
+---
+title: "Räume der Überlagerung"
+subtitle: "OSM-only-Übung in QGIS"
+format:
+  revealjs:
+    theme: [metropolis.scss]
+    toc: false
+    toc-depth: 2
+    chalkboard: true
+    menu: false
+    slide-number: true
+    transition: fade
+    incremental: false
+    smaller: false
+    navigation-mode: vertical
+    controls: true
+    controls-layout: edges
+    controls-tutorial: true
+    hash: true
+lightbox: true
+bibliography: ../assets/geoinfo.bib
+execute:
+  echo: false
+  warning: false
+  message: false
+---
+
+# Ziel
+
+Erstellt wird eine Suchkarte für **Räume der Überlagerung**.
+
+Drei OSM-Proxies werden kombiniert:
+
+- Bebauungsdruck
+- Grünferne
+- Nutzungsdruck
+
+Abgabe: **eine Karte und fünf Sätze**.
+
+## Technik: Projekt öffnen {.smaller}
+
+QGIS öffnen.
+
+`osm_ueberlagerung.gpkg` laden.
+
+Benötigte Layer:
+
+- `study_area`
+- `grid_100m`
+- `buildings`
+- `green_areas`
+- `pressure_points`
+
+Projekt-CRS prüfen: metrisch, z. B. `EPSG:25832`.
+
+# Leitfrage
+
+**Wo überlagern sich Bebauungsdruck, geringe Grünnähe und Nutzungsdruck?**
+
+Der Index:
+
+$$
+K = B + G + N
+$$
+
+`K` ist ein **Suchinstrument**, keine fertige Diagnose.
+
+## Technik: Layer prüfen {.smaller}
+
+Vor dem Rechnen prüfen:
+
+- Raster liegt im Untersuchungsgebiet.
+- Zellen sind ca. 100 × 100 m groß.
+- `buildings` enthält Flächen.
+- `green_areas` enthält Flächen.
+- `pressure_points` enthält Punkte.
+
+# Daten
+
+| Layer | Inhalt |
+|---|---|
+| `study_area` | Untersuchungsgebiet |
+| `grid_100m` | 100-m-Raster |
+| `buildings` | Gebäude |
+| `green_areas` | Grünflächen |
+| `pressure_points` | Nutzungsorte |
+
+## Technik: fehlende Layer sichern {.smaller}
+
+Rechtsklick auf Layer → **Exportieren** → **Objekte speichern als...**
+
+- Format: `GeoPackage`
+- Datei: `osm_ueberlagerung.gpkg`
+- Layername: exakt wie in der Tabelle
+- CRS: Projekt-CRS
+
+Danach mit `study_area` clippen.
+
+# Proxylogik
+
+| Kürzel | Idee | OSM-Proxy |
+|---|---|---|
+| `B` | Bebauungsdruck | Gebäude je Rasterzelle |
+| `G` | Grünferne | Abstand zur nächsten Grünfläche |
+| `N` | Nutzungsdruck | Nutzungsorte je Rasterzelle |
+
+Ein Proxy ist ein messbarer Hinweis, kein direkter Beweis.
+
+## Technik: OSM-Layer herstellen {.smaller}
+
+QuickOSM-Abfragen:
+
+```text
+building = *
+leisure = park
+landuse = grass
+natural = wood
+amenity = *
+shop = *
+highway = bus_stop
+```
+
+Gebäude und Grünflächen: Polygone behalten.
+
+Nutzungsorte: Punkte behalten; Flächen bei Bedarf zu Zentroiden umwandeln.
+
+# Schritt 1: `B`
+
+Ziel: Gebäude je Rasterzelle zählen.
+
+Ergebnisfeld:
+
+`B_count`
+
+Viele Gebäude können auf hohe bauliche Dichte hinweisen.
+
+## Technik: `B_count` berechnen {.smaller}
+
+Werkzeug: **Attribute nach Position verknüpfen (Zusammenfassung)**
+
+- Eingabelayer: `grid_100m`
+- Join-Layer: `buildings`
+- Prädikat: `intersects`
+- Zusammenfassung: `count`
+- Ergebnis: `grid_B`
+
+# Schritt 2: `G`
+
+Ziel: Abstand zur nächsten Grünfläche berechnen.
+
+Ergebnisfeld:
+
+`G_dist`
+
+Großer Abstand bedeutet stärkere Grünferne.
+
+## Technik: `G_dist` berechnen {.smaller}
+
+Werkzeug: **Attribute nach nächstem Nachbarn verknüpfen**
+
+- Eingabelayer: `grid_B`
+- Join-Layer: `green_areas`
+- nächste Nachbarn: `1`
+- Distanzfeld erzeugen
+- Ergebnis: `grid_BG`
+
+Einheit: Meter.
+
+# Schritt 3: `N`
+
+Ziel: Nutzungsorte je Rasterzelle zählen.
+
+Ergebnisfeld:
+
+`N_count`
+
+Viele Nutzungsorte können auf hohe Nutzungsintensität hinweisen.
+
+## Technik: `N_count` berechnen {.smaller}
+
+Werkzeug: **Punkte in Polygon zählen**
+
+- Polygonlayer: `grid_BG`
+- Punktlayer: `pressure_points`
+- Zählfeld: `N_count`
+- Ergebnis: `grid_BGN`
+
+# Schritt 4: Scores
+
+Rohwerte werden in drei Klassen übersetzt.
+
+| Score | Bedeutung |
+|---|---|
+| 0 | unauffällig |
+| 1 | mittel |
+| 2 | auffällig |
+
+Schwellenwerte sind Modellentscheidungen.
+
+## Technik: Score-Felder anlegen {.smaller}
+
+Feldrechner öffnen.
+
+Neue Ganzzahlfelder: `B`, `G`, `N`
+
+```text
+B:
+CASE WHEN "B_count" <= 5 THEN 0
+WHEN "B_count" <= 20 THEN 1
+ELSE 2 END
+
+G:
+CASE WHEN "G_dist" <= 100 THEN 0
+WHEN "G_dist" <= 250 THEN 1
+ELSE 2 END
+
+N:
+CASE WHEN "N_count" = 0 THEN 0
+WHEN "N_count" <= 3 THEN 1
+ELSE 2 END
+```
+
+# Schritt 5: Index
+
+Der Überlagerungsindex addiert die Scores.
+
+$$
+K = B + G + N
+$$
+
+Wertebereich: `0` bis `6`.
+
+Hohe Werte markieren starke Indikatorüberlagerung.
+
+## Technik: Feld `K` berechnen {.smaller}
+
+Feldrechner öffnen.
+
+Neues Ganzzahlfeld: `K`
+
+```text
+"B" + "G" + "N"
+```
+
+Ergebnis speichern.
+
+# Schritt 6: Karte
+
+Darstellung nach Feld:
+
+`K`
+
+Kartentitel:
+
+**Räume hoher Indikatorüberlagerung**
+
+Nicht: **Problemräume**.
+
+## Technik: Symbolisierung {.smaller}
+
+Layer-Eigenschaften → **Symbolisierung**
+
+- Darstellung: **Abgestuft**
+- Spalte: `K`
+- Klassen: `0–1`, `2–4`, `5–6`
+- hohe Klasse = starke Überlagerung
+
+Legende verständlich benennen.
+
+# Interpretation
+
+Unter die Karte kommen fünf Sätze.
+
+Pflichtinhalt:
+
+- Gebiet
+- Bebauungsproxy
+- Grünferneproxy
+- Nutzungsdruckproxy
+- auffällig / fragwürdig
+
+## Technik: Textvorlage {.smaller}
+
+1. Das Untersuchungsgebiet umfasst ...
+2. Gebäude werden als Proxy für ... genutzt.
+3. Grünferne wird über ... erfasst.
+4. Nutzungsdruck wird über ... angenähert.
+5. Auffällig ist ..., fragwürdig bleibt ...
+
+Maximal fünf Sätze.
+
+# Kritische Kontrolle
+
+Eine hohe Summe ist noch keine Diagnose.
+
+Zu prüfen:
+
+- OSM-Vollständigkeit
+- doppelte Zählung
+- Rastergröße
+- Schwellenwerte
+- lokale Bedeutung von Nutzungsdruck
+
+## Technik: Plausibilitätscheck {.smaller}
+
+Eine Rasterzelle mit hohem `K` auswählen.
+
+Dann:
+
+1. Basiskarte ansehen.
+2. Layer einzeln ein- und ausschalten.
+3. Plausibel oder Artefakt entscheiden.
+4. Unsicherheit notieren.
+
+# Ergebnis
+
+Abzugeben sind:
+
+- Karte
+- Rasterlayer mit Feld `K`
+- fünf Interpretationssätze
+- eine Unsicherheitsnotiz
+
+Die Karte ist ein Suchinstrument.
+
+## Technik: Kartenexport {.smaller}
+
+Layout-Manager öffnen.
+
+Elemente:
+
+- Karte
+- Titel
+- Legende für `K`
+- Maßstab
+- fünf Sätze als Textfeld
+
+Export: PDF oder PNG.
+
+# Datenquellen
+
+OpenStreetMap Map Features  
+https://wiki.openstreetmap.org/wiki/Map_features
+
+Geofabrik  
+https://download.geofabrik.de/
+
+BBBike Extracts  
+https://extract.bbbike.org/
+
+Urban Atlas, optional  
+https://land.copernicus.eu/en/products/urban-atlas
+
+## Technik: Datenwege {.smaller}
+
+Für diese Übung genügt OSM.
+
+- QuickOSM: schnell, Overpass-abhängig
+- Geofabrik: stabiler Regionaldownload
+- BBBike: eigener Ausschnitt
+- Urban Atlas: optional, nicht nötig
+
+# Werkzeuge
+
+QGIS  
+https://qgis.org/download/
+
+QuickOSM  
+https://plugins.qgis.org/plugins/QuickOSM/
+
+Overpass Turbo  
+https://overpass-turbo.eu/
+
+QGIS-Dokumentation  
+https://docs.qgis.org/latest/en/docs/user_manual/processing_algs/qgis/
+
+## Technik: Navigation {.smaller}
+
+In dieser Präsentation:
+
+- Pfeil rechts/links: Hauptfolien
+- Pfeil runter: technische Folie
+- Pfeil hoch: zurück
+- `Esc`: Übersicht
+
+Keine Klickfelder nötig.
