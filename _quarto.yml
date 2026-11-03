@@ -2,10 +2,14 @@ project:
   type: website
   output-dir: docs/
   render:
-    - "*.qmd"
+    - index.qmd
+    - content/perfekter-gipfel/slides/01-konzept.qmd
+    - content/perfekter-gipfel/slides/02-analyse.qmd
+    - content/perfekter-gipfel/slides/03-technische-umsetzung.qmd
+    - content/perfekter-gipfel/arbeitsblatt/arbeitsauftrag.qmd
 
 website:
-  favicon: /images/logo.png
+  favicon: images/logo.png
   bread-crumbs: false
   open-graph: true
   page-navigation: true
@@ -22,14 +26,7 @@ website:
   comments: false
 
   navbar:
-    logo: /images/logo.png
-    right:
-      - text: "Formales"
-        menu:
-          - icon: exclamation-square-fill
-            href: unit00/unit00-02-formales.qmd
-          - icon: clipboard-check
-            href: unit00/unit00-03-formales.qmd
+    logo: images/logo.png
 
 
   sidebar:
@@ -115,16 +112,16 @@ website:
         #     - href: unit05/unit05-05.qmd
         #       text: Kostenanalyse              
         # - text: "---"
-        - section: " Der Perfekte Gipfel "
+        - section: "Der perfekte Gipfel"
           contents:
-            - href: slides/perfekter_gipfel_gesamtrahmen.qmd
-              text: Der Perfekte Gipfel - Das Konzept
-            - href: slides/perfekter_gipfel_analyse.qmd
-              text: Schritt 1 - Der Perfekte Gipfel - Die Analyse  
-            - href: slides/perfekter_gipfel_reveal.qmd
-              text: Schritt 2 - Die technische Umsetzung
-            - href: slides/Der_perfekte_Gipfel_QGIS_Arbeitsauftrag.qmd
-              text: Der perfekte Gipfel - QGIS-Arbeitsprojekt  
+            - href: content/perfekter-gipfel/slides/01-konzept.qmd
+              text: "Block 1 – Konzept"
+            - href: content/perfekter-gipfel/slides/02-analyse.qmd
+              text: "Block 2 – Analyse"
+            - href: content/perfekter-gipfel/slides/03-technische-umsetzung.qmd
+              text: "Block 3 – Technische Umsetzung"
+            - href: content/perfekter-gipfel/arbeitsblatt/arbeitsauftrag.qmd
+              text: "QGIS-Arbeitsauftrag"
               
         # - text: "---"
         # - section: "Reader Projektarbeit "

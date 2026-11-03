@@ -4,6 +4,14 @@
 
 This course is part of [gisma spatial science ressources](https://gisma-courses.github.io/gc/) of the [Department of Geography](https://www.uni-marburg.de/fb19).
 
+## Aktueller Kursbestand
+
+Der veröffentlichte Kursbestand umfasst das Fallbeispiel **„Der perfekte Gipfel“**:
+drei aufeinander aufbauende Blöcke (Konzept, Analyse, technische Umsetzung) und
+einen begleitenden QGIS-Arbeitsauftrag. Die Quellen liegen in
+`content/perfekter-gipfel/`; frühere Materialien liegen nachvollziehbar in
+`archive/` und werden nicht gerendert.
+
 
 
 The [course content](https://gisma-courses.github.io/geoinfo-basis-qgis/) is developed and hosted on Github. 

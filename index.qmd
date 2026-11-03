@@ -1,54 +1,50 @@
 ---
-title: "Grundlagen der räumlichen Analyse"
-open-graph:
-  description: "Geoinformatik (QGIS)"
-  image: assets/images/splash-geoinformatik.jpg
-twitter-card:
-  description: "Geoinformatik (QGIS)"
-  image: assets/images/splash-geoinformatik.jpg
-  
-title-block-banner: assets/images/splash-geoinformatik.jpg
-title-block-banner-color: "#0E87CC"
-
+title: "Geoinformatik Basiskurs"
+subtitle: ""
+order: 10
+title-block-banner: ../images/placeholder.png
+title-block-banner-color: black
+#page-layout: full
+format-links: [html]
 format:
   html:
-    css: styles.css
+    toc: false
+    code-fold: false
+    number-sections: false
+
+execute:
+  echo: false
+  warning: false
+  message: false
 ---
 
-```{=html}
-<style>
-  body {
-  background-image: url("");
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-  
-</style>
-```
+## Konzept
 
-Grundlagenkurs der räumlichen Analyse im [Bachelor Geographie (B.Sc.)](https://www.uni-marburg.de/de/fb19/studium/studiengaenge/bsc_geographie) an der Philipps-Universität Marburg.
+Wie werden aus geographischen Fragen räumliche Modelle – und welche Aussagen lassen sich daraus ableiten? Im Seminar untersuchen wir, wie die Wahl von Daten, Maßstab, Stellvertretergrößen (Proxys) und Parametern die Ergebnisse beeinflusst. QGIS dient dabei als Werkzeug, um diese Entscheidungen sichtbar zu machen und ihre Folgen zu prüfen.
 
-Raum-zeitliche Daten und deren Verarbeitung, Analyse und Darstellung sind wissenschaftliche Grundelemente der Geographie. Sie ermöglichen es, reale Räume nicht nur zu beschreiben, sondern räumliche Muster, Beziehungen, Prozesse und Entscheidungen nachvollziehbar zu untersuchen. Analysen bilden damit eine Grundlage für Erkenntnisgewinn in Forschung und Praxis; Karten, Diagramme, Modelle und andere Geomedien sind zentrale Mittel, um diese Erkenntnisse zu kommunizieren.
+Ausgehend von einer zunächst einfachen Frage entwickeln wir ein Modell, vergleichen Varianten und begründen seine Aussagegrenzen.
 
-Daten, Datenanalyse und die Modellierung räumlicher Zusammenhänge sind daher integraler Bestandteil geographischen Arbeitens. Der grundlegende Umgang mit Geodaten, ihre Aufbereitung, visuelle Erkundung, Analyse und Präsentation stellt eine zentrale Kernkompetenz für das Berufsbild der Geographin und des Geographen dar.
+## Drei Themenblöcke
 
-Der Kurs führt in grundlegende Konzepte und Methoden der Geoinformatik ein. Im Mittelpunkt stehen nicht einzelne Softwarefunktionen, sondern die fachlich begründete Arbeit mit räumlichen Daten: Raumkonzepte, Datenmodelle, Koordinaten und Projektionen, Vektor- und Rasterdaten, Attribut- und Raumabfragen, digitale Geländemodelle, Sichtfeld- und Ableitungsanalysen, Multikriterienanalysen sowie die Entwicklung reproduzierbarer Workflows.
+| Block | Leitfrage | Inhalte |
+|:--|:--|:--|
+| **1 · Gipfel / Seven Summits** | Was zählt als eigenständiger Gipfel? | Digitale Geländemodelle, Auflösung und Maßstab; lokale Maxima, Scharten und Prominenz; Vergleich unterschiedlicher Gipfeldefinitionen. |
+| **2 · Grünzugang / 15-Minuten-Stadt** | Bedeutet räumliche Nähe auch Zugang? | Luftlinien- und Netzwerkentfernungen, Zugänge und Barrieren; Datenverfügbarkeit, Proxys und die Grenzen von Aussagen über tatsächliche Nutzung. |
+| **3 · Raumkonstruktion** | Wie entstehen unterschiedliche Räume durch Wahrnehmung, Nutzung und Modellierung? | Sichtbarkeit, Erreichbarkeit und Angsträume; Einfluss von Sichtlinien, Barrieren und bewerteten Widerständen. Vergleich verschiedener Perspektiven und Annahmen. |
 
-## Lernziele
+## Ablauf und Arbeitsweise
 
-Am Ende dieses Moduls sind die Studierenden in der Lage,
+Das Präsenzseminar umfasst **4 SWS und zwölf Kerntermine**: einen Auftakt, je drei Sitzungen pro Themenblock sowie je einen Termin für Diagnose-Training und Synthese. Weitere Semestertermine dienen als Werkstatt und Puffer.
 
-- grundlegende räumliche Datentypen zu klassifizieren, zu kategorisieren und angemessen zu visualisieren,
-- ausgewählte Faktoren, Funktionen und Prozesse in realen Räumen mit Hilfe von Geodaten darzustellen, zu beschreiben und zu erklären,
-- grundlegende räumliche Analysen von Raster- und Vektordaten durchzuführen,
-- räumliche Fragestellungen in geeignete GIS-Operationen zu übersetzen,
-- eine eigenständige Analyse zu entwickeln und in Form einer kleinen wissenschaftlichen Studie nachvollziehbar zu kommunizieren.
+Jeder Block folgt demselben Ablauf:
 
+1. **Frage und Modell:** Eine erste Antwort prüfen, Begriffe klären und Annahmen zu Objekt, Maßstab und Daten festlegen.
+2. **Umsetzung in QGIS:** Ein vorbereitetes Projekt bearbeiten, Parameter verändern und Ergebnisse sichern.
+3. **Vergleich und Einordnung:** Varianten auswerten, Fehler erkennen und begründen, welche Aussagen das Modell trägt.
 
-## Arbeitsverständnis
+Angeleitete Übungen und kurze studentische Impulse begleiten die Arbeit. Unterstützung bei der Bedienung und optionale Vertiefungen mit Skripten ermöglichen unterschiedliche Einstiege. Im Mittelpunkt steht das Verständnis der Modellentscheidungen.
 
-Mein Selbstverständnis als Kursleiter ist das eines Coaches. Ich kann Ihnen die Arbeit mit Raum, Daten und Methoden nicht abnehmen. Ich kann meine Erfahrung, meine Perspektive und meine Kritik einbringen; lernen, üben, entscheiden und begründen müssen Sie selbst.
+## Studienleistung und Prüfung
 
-Damit dieser Weg für Sie erfolgreich werden kann, müssen Sie kritisch reflektieren, was ich einbringe, was Sie in Diskussionen mit Ihren Kommilitoninnen und Kommilitonen lernen, was Sie lesen, was Sie ausprobieren und was Sie glauben, sicher verstanden zu haben. Bildung hängt zu einem großen Teil davon ab, was Sie selbst investieren. Wenn Sie nicht deutlich mehr tun, als nur anwesend zu sein, können Sie davon ausgehen, dass dieser Kurs für Sie Zeitverschwendung ist.
-
-Wissenschaftliches Arbeiten bedeutet, auf der Arbeit anderer aufzubauen, eigene Wege zu prüfen, Fehler zu erkennen, neu anzusetzen und Ergebnisse nachvollziehbar zu begründen. Also fangen Sie an: Denken Sie, reflektieren und diskutieren Sie, laufen Sie in Sackgassen, beginnen Sie erneut, sammeln und vergleichen Sie Erfahrungen und entwickeln Sie Ihre eigene Art, mit Raum, Daten und Wissen zu arbeiten.
+- **Portfolio (bestanden / nicht bestanden):** Je Block ein kurzes Modellierungsartefakt mit Karte oder Screenshot, dokumentierten Parametern, Variantenvergleich und einer knappen Einordnung der Aussagegrenzen.
+- **Klausur (benotet, auf Papier):** Materialien aus den drei Themenblöcken – etwa Karten, Tabellen und Methodenbeschreibungen – analysieren, Ergebnisse erklären und Modellannahmen sowie Aussagegrenzen beurteilen. Kurze Diagnoseaufgaben während des Seminars und ein gemeinsamer Übungstermin bereiten darauf vor.

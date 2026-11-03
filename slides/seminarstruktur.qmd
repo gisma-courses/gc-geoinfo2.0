@@ -1,0 +1,71 @@
+---
+title: "Geoinformatik Basiskurs"
+subtitle: "Seminarstruktur"
+lang: de
+format:
+  revealjs:
+    theme: [theme.scss]
+    title-slide: false
+    slide-level: 2
+    slide-number: c/t
+    center: false
+    transition: fade
+    width: 1280
+    height: 720
+    margin: 0.08
+    embed-resources: true
+    footer: "Geoinformatik Basiskurs"
+execute:
+  echo: false
+  warning: false
+  message: false
+---
+
+## Konzept: Geographische Modellierung
+
+**Wie beeinflussen unsere Entscheidungen das Ergebnis einer räumlichen Analyse?**
+
+- Geographische Fragen in räumliche Modelle übersetzen
+- Daten, Maßstab und Stellvertretergrößen begründet auswählen
+- Mit QGIS Varianten vergleichen und Aussagegrenzen erkennen
+
+## Drei Themenblöcke
+
+| Block | Leitfrage | Schwerpunkt |
+|:--|:--|:--|
+| **Gipfel / Seven Summits** | Was zählt als Gipfel? | Geländemodell, Auflösung, Scharten und Prominenz |
+| **Grünzugang / 15-Minuten-Stadt** | Ist Nähe gleich Zugang? | Wege, Barrieren und Grenzen von Proxys |
+| **Raumkonstruktion** | Wie entstehen unterschiedliche Räume? | Sichtbarkeit, Erreichbarkeit und Angsträume |
+
+## Semesterablauf
+
+**4 SWS Präsenz · 12 Kerntermine**
+
+| Phase | Termine |
+|:--|:--:|
+| Auftakt mit Modellierungsbeispiel | 1 |
+| Drei Themenblöcke | je 3 |
+| Diagnose-Training | 1 |
+| Synthese und Klausurvorbereitung | 1 |
+
+Weitere Semestertermine dienen als Werkstatt und Puffer.
+
+## Arbeitsweise pro Block
+
+1. **Frage klären:** Erste Antworten prüfen und Modellannahmen festlegen.
+2. **In QGIS arbeiten:** Vorbereitete Projekte bearbeiten, Parameter verändern und Ergebnisse sichern.
+3. **Varianten beurteilen:** Unterschiede erklären und zulässige Aussagen begründen.
+
+Angeleitete Übungen und kurze studentische Impulse begleiten die Arbeit. Skripte und Reproduzierbarkeit sind optionale Vertiefungen.
+
+## Studienleistung und Prüfung
+
+### Portfolio · bestanden / nicht bestanden
+
+Je Block eine Karte oder ein Screenshot mit Parametern, kurzem Variantenvergleich und Aussagegrenzen.
+
+### Klausur · benotet, auf Papier
+
+Materialien aus den drei Blöcken analysieren: Karten, Tabellen und Methodenbeschreibungen auswerten, Ergebnisse erklären und Modellannahmen beurteilen.
+
+Kurze Diagnoseaufgaben und ein Übungstermin bereiten darauf vor.
