@@ -393,6 +393,10 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<section id="das-grundmuster-jeder-räumlichen-analyse" class="level2">
+<h2 class="anchored" data-anchor-id="das-grundmuster-jeder-räumlichen-analyse">Das Grundmuster jeder räumlichen Analyse</h2>
+<p><strong>Alltags- oder Fachbegriff</strong> → <strong>Kriterien</strong> → <strong>Modellannahmen</strong> → <strong>Datenmodell</strong> → <strong>GIS-Operationen</strong> → <strong>Ergebnis</strong> → <strong>Prüfung und Geltungsgrenze</strong></p>
+<p>„Der perfekte Gipfel“ ist kein Sonderfall. Das Beispiel verdichtet den gesamten Analyseprozess: Eine zunächst sprachliche Bewertung wird in explizite Entscheidungen übersetzt. Erst danach kann ein GIS rechnen. Das Resultat ist daher nie nur eine Zahl, sondern die nachvollziehbare Verbindung von Fachbegriff, Annahmen, Daten und Methode.</p>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 25%">
@@ -404,40 +408,47 @@ ul.task-list li input[type="checkbox"] {
 <tr class="header">
 <th style="text-align: left;">Ebene</th>
 <th style="text-align: left;">Erreicht</th>
-<th style="text-align: left;">Zu berücksichtigen</th>
+<th style="text-align: left;">Aussagegrenze / zu berücksichtigen</th>
 <th style="text-align: left;">Nächster Schritt</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;"><strong>Fachlicher Hintergrund</strong></td>
-<td style="text-align: left;">Dominanz, Prominenz und Eigenständigkeit sind nicht als Eigenschaften eines Gipfels gegeben, sondern werden aus Höhe, höherem Gelände und Verbindungen abgeleitet.</td>
-<td style="text-align: left;">Ein DGM-Ausschnitt kann höheres Gelände oder bessere Verbindungen außerhalb seines Rands ausschließen. Rasterweite ist keine Höhengenauigkeit.</td>
-<td style="text-align: left;">E-Wert und seine Gültigkeitsbedingungen als fachliche Regel eindeutig festlegen.</td>
+<td style="text-align: left;"><strong>Gesamtprozess</strong></td>
+<td style="text-align: left;">Die Abfolge Begriff → Kriterien → Modell → Operation → Ergebnis ist sichtbar und überprüfbar.</td>
+<td style="text-align: left;">Kein technischer Schritt kann eine ungeklärte fachliche Entscheidung ersetzen. Jede spätere GIS-Analyse hat dieselbe Struktur, auch wenn ihre Werkzeuge andere sind.</td>
+<td style="text-align: left;">Die Prozesskette bei jeder neuen Fragestellung zuerst formulieren, bevor Daten oder Werkzeuge gewählt werden.</td>
 </tr>
 <tr class="even">
+<td style="text-align: left;"><strong>Panoramaartikel → formale Aufgabe</strong></td>
+<td style="text-align: left;">Der Artikel liefert die Bewertungsabsicht: Höhe, Dominanz, Prominenz und Eigenständigkeit sollen die Stellung eines Gipfels beschreiben.</td>
+<td style="text-align: left;">Er legt keine vollständige Rechenvorschrift fest: Was genau als Gipfel zählt, wie ein Plateau behandelt wird, welches höhere Gelände relevant ist, wann eine Scharte als gefunden gilt und wann die Suche endet, bleibt offen.</td>
+<td style="text-align: left;">Die zusätzlichen Regeln ausdrücklich als <strong>eigene Modellannahmen</strong> dokumentieren, nicht als direkte Vorgabe des Artikels ausgeben.</td>
+</tr>
+<tr class="odd">
 <td style="text-align: left;"><strong>Zerlegung und Abstraktion</strong></td>
 <td style="text-align: left;">Die Frage ist in prüfbare Teile zerlegt: Gipfelkandidat → höheres Gelände → Distanz → Verbindung über Höhenstufen → Scharte → Aussagegrenze.</td>
 <td style="text-align: left;">„Gipfel“ ist eine fachliche Definition. Fenstergröße, Plateau-Regel, Nachbarschaft und Mindesthöhe müssen sichtbar bleiben.</td>
 <td style="text-align: left;">Eine begründete Gipfelmaske für den jeweiligen Untersuchungsraum formulieren.</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;"><strong>Technische Übersetzung</strong></td>
-<td style="text-align: left;">DGM, Gipfelmaske, Höhenmasken, Proximity und Zusammenhangsflächen bilden die fachlichen Teile als Daten und Operationen ab.</td>
-<td style="text-align: left;">4er-/8er-Nachbarschaft, Rastergitter, Höhentoleranz und Zellzentrumdistanz beeinflussen die Resultate.</td>
+<td style="text-align: left;">DGM, Gipfelmaske, Höhenmasken, Proximity und Zusammenhangsflächen bilden diese Annahmen als Daten und Operationen ab.</td>
+<td style="text-align: left;">4er-/8er-Nachbarschaft, Rastergitter, Höhentoleranz und Zellzentrumdistanz sind <strong>Entscheidungen der Übersetzung</strong>, nicht Eigenschaften des Panoramaartikels.</td>
 <td style="text-align: left;">Parameter je Analyse dokumentieren und für Vergleichbarkeit festsetzen.</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;"><strong>Derzeitige Realisation</strong></td>
 <td style="text-align: left;">Das QGIS-Projekt unterstützt die manuelle Hypothese; das PyQGIS-Tool verarbeitet Gipfelpunkte oder alle positiven Bereiche einer Gipfelmaske und liefert Dominanz, Scharten-/Prominenzintervall sowie Status.</td>
-<td style="text-align: left;"><code>edge_relevant</code>, <code>no_higher_terrain_in_dem</code> und ähnliche Status sind Ergebnisse, keine Fehler oder Nullwerte. Die Scharte bleibt zunächst ein Intervall.</td>
+<td style="text-align: left;">Die Ergebnisse gelten nur für die gewählte Maske, die Rasterauflösung, die Nachbarschaft und den vorhandenen DGM-Ausschnitt. <code>edge_relevant</code> oder <code>no_higher_terrain_in_dem</code> bedeuten: keine abschließende Aussage außerhalb dieses Ausschnitts. Ein E-Wert wird bewusst nicht ausgegeben.</td>
 <td style="text-align: left;">Tool in QGIS einfügen, an einer fachlich begründeten Maske anwenden und Ergebnislayer sichern.</td>
 </tr>
 </tbody>
 </table>
+</section>
 <section id="fazit" class="level2">
 <h2 class="anchored" data-anchor-id="fazit">Fazit</h2>
-<p>Der Kurs ersetzt nicht die fachliche Entscheidung durch Automatisierung. Er macht sie explizit: Die Maske definiert, was als Gipfel gilt; der Workflow zeigt, welche Kennwerte daraus unter den gegebenen Datenbedingungen folgen. Ein belastbares Ergebnis besteht daher immer aus <strong>Wert, Parametern und Aussagegrenze</strong>.</p>
+<p>Der Kurs übersetzt den Panoramaartikel in ein <strong>prüfbares Modell</strong>, nicht in eine behauptete endgültige Bergklassifikation. Genau darin liegt seine grundsätzliche Bedeutung: Die gleiche Kette verbindet auch Eignungsanalyse, Erreichbarkeit, Gefährdung, Flächenbewertung oder Modellierung. Die Maske definiert, was als Gipfel gilt; der Workflow berechnet Kennwerte unter diesen Annahmen. Ein belastbares Ergebnis besteht deshalb aus <strong>Wert, Parametern und Aussagegrenze</strong> – nicht aus einer Zahl allein.</p>
 
 
 </section>

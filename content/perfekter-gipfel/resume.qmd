@@ -7,13 +7,20 @@ format:
     toc: false
 ---
 
-| Ebene | Erreicht | Zu berücksichtigen | Nächster Schritt |
+## Das Grundmuster jeder räumlichen Analyse
+
+**Alltags- oder Fachbegriff** → **Kriterien** → **Modellannahmen** → **Datenmodell** → **GIS-Operationen** → **Ergebnis** → **Prüfung und Geltungsgrenze**
+
+„Der perfekte Gipfel“ ist kein Sonderfall. Das Beispiel verdichtet den gesamten Analyseprozess: Eine zunächst sprachliche Bewertung wird in explizite Entscheidungen übersetzt. Erst danach kann ein GIS rechnen. Das Resultat ist daher nie nur eine Zahl, sondern die nachvollziehbare Verbindung von Fachbegriff, Annahmen, Daten und Methode.
+
+| Ebene | Erreicht | Aussagegrenze / zu berücksichtigen | Nächster Schritt |
 |:--|:--|:--|:--|
-| **Fachlicher Hintergrund** | Dominanz, Prominenz und Eigenständigkeit sind nicht als Eigenschaften eines Gipfels gegeben, sondern werden aus Höhe, höherem Gelände und Verbindungen abgeleitet. | Ein DGM-Ausschnitt kann höheres Gelände oder bessere Verbindungen außerhalb seines Rands ausschließen. Rasterweite ist keine Höhengenauigkeit. | E-Wert und seine Gültigkeitsbedingungen als fachliche Regel eindeutig festlegen. |
+| **Gesamtprozess** | Die Abfolge Begriff → Kriterien → Modell → Operation → Ergebnis ist sichtbar und überprüfbar. | Kein technischer Schritt kann eine ungeklärte fachliche Entscheidung ersetzen. Jede spätere GIS-Analyse hat dieselbe Struktur, auch wenn ihre Werkzeuge andere sind. | Die Prozesskette bei jeder neuen Fragestellung zuerst formulieren, bevor Daten oder Werkzeuge gewählt werden. |
+| **Panoramaartikel → formale Aufgabe** | Der Artikel liefert die Bewertungsabsicht: Höhe, Dominanz, Prominenz und Eigenständigkeit sollen die Stellung eines Gipfels beschreiben. | Er legt keine vollständige Rechenvorschrift fest: Was genau als Gipfel zählt, wie ein Plateau behandelt wird, welches höhere Gelände relevant ist, wann eine Scharte als gefunden gilt und wann die Suche endet, bleibt offen. | Die zusätzlichen Regeln ausdrücklich als **eigene Modellannahmen** dokumentieren, nicht als direkte Vorgabe des Artikels ausgeben. |
 | **Zerlegung und Abstraktion** | Die Frage ist in prüfbare Teile zerlegt: Gipfelkandidat → höheres Gelände → Distanz → Verbindung über Höhenstufen → Scharte → Aussagegrenze. | „Gipfel“ ist eine fachliche Definition. Fenstergröße, Plateau-Regel, Nachbarschaft und Mindesthöhe müssen sichtbar bleiben. | Eine begründete Gipfelmaske für den jeweiligen Untersuchungsraum formulieren. |
-| **Technische Übersetzung** | DGM, Gipfelmaske, Höhenmasken, Proximity und Zusammenhangsflächen bilden die fachlichen Teile als Daten und Operationen ab. | 4er-/8er-Nachbarschaft, Rastergitter, Höhentoleranz und Zellzentrumdistanz beeinflussen die Resultate. | Parameter je Analyse dokumentieren und für Vergleichbarkeit festsetzen. |
-| **Derzeitige Realisation** | Das QGIS-Projekt unterstützt die manuelle Hypothese; das PyQGIS-Tool verarbeitet Gipfelpunkte oder alle positiven Bereiche einer Gipfelmaske und liefert Dominanz, Scharten-/Prominenzintervall sowie Status. | `edge_relevant`, `no_higher_terrain_in_dem` und ähnliche Status sind Ergebnisse, keine Fehler oder Nullwerte. Die Scharte bleibt zunächst ein Intervall. | Tool in QGIS einfügen, an einer fachlich begründeten Maske anwenden und Ergebnislayer sichern. |
+| **Technische Übersetzung** | DGM, Gipfelmaske, Höhenmasken, Proximity und Zusammenhangsflächen bilden diese Annahmen als Daten und Operationen ab. | 4er-/8er-Nachbarschaft, Rastergitter, Höhentoleranz und Zellzentrumdistanz sind **Entscheidungen der Übersetzung**, nicht Eigenschaften des Panoramaartikels. | Parameter je Analyse dokumentieren und für Vergleichbarkeit festsetzen. |
+| **Derzeitige Realisation** | Das QGIS-Projekt unterstützt die manuelle Hypothese; das PyQGIS-Tool verarbeitet Gipfelpunkte oder alle positiven Bereiche einer Gipfelmaske und liefert Dominanz, Scharten-/Prominenzintervall sowie Status. | Die Ergebnisse gelten nur für die gewählte Maske, die Rasterauflösung, die Nachbarschaft und den vorhandenen DGM-Ausschnitt. `edge_relevant` oder `no_higher_terrain_in_dem` bedeuten: keine abschließende Aussage außerhalb dieses Ausschnitts. Ein E-Wert wird bewusst nicht ausgegeben. | Tool in QGIS einfügen, an einer fachlich begründeten Maske anwenden und Ergebnislayer sichern. |
 
 ## Fazit
 
-Der Kurs ersetzt nicht die fachliche Entscheidung durch Automatisierung. Er macht sie explizit: Die Maske definiert, was als Gipfel gilt; der Workflow zeigt, welche Kennwerte daraus unter den gegebenen Datenbedingungen folgen. Ein belastbares Ergebnis besteht daher immer aus **Wert, Parametern und Aussagegrenze**.
+Der Kurs übersetzt den Panoramaartikel in ein **prüfbares Modell**, nicht in eine behauptete endgültige Bergklassifikation. Genau darin liegt seine grundsätzliche Bedeutung: Die gleiche Kette verbindet auch Eignungsanalyse, Erreichbarkeit, Gefährdung, Flächenbewertung oder Modellierung. Die Maske definiert, was als Gipfel gilt; der Workflow berechnet Kennwerte unter diesen Annahmen. Ein belastbares Ergebnis besteht deshalb aus **Wert, Parametern und Aussagegrenze** – nicht aus einer Zahl allein.
