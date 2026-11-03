@@ -7,14 +7,14 @@ Input:  a projected DEM and either summit points or a summit mask.
 Output: summit points with raster-based dominance, a saddle interval, a
         prominence interval, and an explicit validity status.
 
-The algorithm intentionally does NOT calculate the historic perfectPeak
-independence (E) value. Its domain-specific rule must be documented before it
-is used in teaching or assessment.
+The algorithm calculates the article E interval and, separately, the actual
+branch implemented in the historic perfectPeak R code. Both remain visible so
+that the 100-km rule can be discussed instead of being silently inherited.
 """
 
 from bisect import bisect_right
 from collections import deque
-from math import floor, hypot
+from math import floor, hypot, log2
 
 from qgis.core import (
     QgsCoordinateTransform,
@@ -170,9 +170,15 @@ class PerfectPeakMetrics(QgsProcessingAlgorithm):
             ("scharte_hi", QVariant.Double),
             ("prom_lo_m", QVariant.Double),
             ("prom_hi_m", QVariant.Double),
+            ("e_art_lo", QVariant.Double),
+            ("e_art_hi", QVariant.Double),
+            ("e_code_lo", QVariant.Double),
+            ("e_code_hi", QVariant.Double),
+            ("e_note", QVariant.String),
             ("pp_status", QVariant.String),
         ):
-            out_fields.append(QgsField(name, field_type, "", 32, 3))
+            field_length = 96 if name == "e_note" else 32
+            out_fields.append(QgsField(name, field_type, "", field_length, 3))
 
         sink, destination = self.parameterAsSink(
             parameters,
@@ -284,6 +290,22 @@ class PerfectPeakMetrics(QgsProcessingAlgorithm):
             status = "edge_relevant" if touches_edge else "ok"
             return saddle_low, saddle_high, status, None
 
+        def e_value(height, dominance, prominence, historic_code=False):
+            """Calculate E from the article or the historic code branch.
+
+            Article/formula graphic: use the dominance term for d < 100 km.
+            Historic calculateIndependence.R executes the opposite branch.
+            """
+            if height <= 0 or dominance <= 0 or prominence <= 0:
+                return None
+            use_dominance = (
+                dominance > 100000.0 if historic_code else dominance < 100000.0
+            )
+            terms = [log2(height / 8848.0), log2(prominence / height)]
+            if use_dominance:
+                terms.insert(1, log2(dominance / 100000.0))
+            return -sum(terms) / 3.0
+
         def features_from_mask(mask_layer):
             """Create one summit point per connected positive mask component."""
             mask_provider = mask_layer.dataProvider()
@@ -356,6 +378,9 @@ class PerfectPeakMetrics(QgsProcessingAlgorithm):
             attributes = feature.attributes()
             peak_height = dominance = saddle_low = saddle_high = None
             prominence_low = prominence_high = None
+            e_article_low = e_article_high = None
+            e_code_low = e_code_high = None
+            e_note = "not_calculated"
             status = "invalid_geometry"
 
             if feature.hasGeometry() and not feature.geometry().isEmpty():
@@ -384,6 +409,23 @@ class PerfectPeakMetrics(QgsProcessingAlgorithm):
                                 prominence_low = max(0.0, peak_height - saddle_high)
                                 prominence_high = max(0.0, peak_height - saddle_low)
                                 status = saddle_status
+                                article_values = [
+                                    e_value(peak_height, dominance, prominence_low),
+                                    e_value(peak_height, dominance, prominence_high),
+                                ]
+                                code_values = [
+                                    e_value(peak_height, dominance, prominence_low, True),
+                                    e_value(peak_height, dominance, prominence_high, True),
+                                ]
+                                if None not in article_values:
+                                    e_article_low, e_article_high = sorted(article_values)
+                                    e_code_low, e_code_high = sorted(code_values)
+                                    if dominance < 100000.0:
+                                        e_note = "article_uses_d; historic_code_omits_d"
+                                    elif dominance > 100000.0:
+                                        e_note = "article_omits_d; historic_code_uses_d"
+                                    else:
+                                        e_note = "100km_boundary: article rule uses no d term"
 
             result.setAttributes(
                 attributes
@@ -395,6 +437,11 @@ class PerfectPeakMetrics(QgsProcessingAlgorithm):
                     saddle_high,
                     prominence_low,
                     prominence_high,
+                    e_article_low,
+                    e_article_high,
+                    e_code_low,
+                    e_code_high,
+                    e_note,
                     status,
                 ]
             )

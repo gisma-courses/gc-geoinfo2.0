@@ -211,11 +211,24 @@ Die Gipfelmaske ist keine technische Nebenbedingung, sondern die fachliche Defin
 | `dominanz_m` | Kürzeste Zellzentrumdistanz zu höherem Gelände innerhalb des DGM |
 | `scharte_lo` / `scharte_hi` | Untere bzw. obere Grenze der aus Rasterstufen bestimmten Schartenhöhe |
 | `prom_lo_m` / `prom_hi_m` | Daraus folgendes Prominenzintervall |
+| `e_art_lo` / `e_art_hi` | E-Wert-Intervall nach der Formel des Panoramaartikels |
+| `e_code_lo` / `e_code_hi` | E-Wert-Intervall nach der tatsächlich ausgeführten Verzweigung des historischen R-Codes |
+| `e_note` | Dokumentiert den Unterschied zwischen Artikel- und Code-Regel |
 | `pp_status` | Gültigkeit des Ergebnisses |
 
 `ok` bedeutet: Die ermittelte Zusammenhangsfläche berührt den DGM-Rand nicht. Bei `edge_relevant` ist das Ergebnis nur ausschnittsbezogen. `no_higher_terrain_in_dem`, `outside_dem` und `nodata_cell` sind keine Nullwerte, sondern begründete offene Ergebnisse.
 
-Das Tool berechnet bewusst **keinen E-Wert**. Erst wenn die E-Formel und ihre Gültigkeitsbedingungen fachlich festgelegt sind, kann sie als dokumentierter Folgeschritt ergänzt werden.
+## E-Wert: Formel und kritische Umsetzung
+
+Für $d < 100\,000\,m$ verwendet der Panoramaartikel:
+
+$$E=-\frac{\log_2(h/8848)+\log_2(d/100000)+\log_2(p/h)}{3}$$
+
+Für $d > 100\,000\,m$ entfällt dort der Dominanzterm. Das Tool berechnet diese Lesart als `e_art_lo` bis `e_art_hi`; das Intervall folgt aus dem Prominenzintervall.
+
+Der historische Code `calculateIndependence.R` verzweigt tatsächlich umgekehrt: Unter 100 km lässt er den Dominanzterm weg, oberhalb von 100 km nimmt er ihn auf. Deshalb liefert das Tool zusätzlich `e_code_lo` bis `e_code_hi`, aber **nicht** als maßgeblichen Wert. `e_note` macht die verwendete Regel je Gipfel sichtbar. Bei exakt 100 km ist die Artikelformel nicht explizit; das Tool verwendet dafür die Variante ohne Dominanzterm.
+
+Damit ist der E-Wert kein verborgenes Endergebnis: Er bleibt an Höhe, Dominanz, Prominenzintervall, Datenrand und die gewählte Formel gebunden.
 
 # Exkurs · Wie das QGIS-Projekt vorbereitet wurde
 

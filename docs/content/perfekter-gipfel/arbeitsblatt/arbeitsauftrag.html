@@ -102,6 +102,35 @@ ul.task-list li input[type="checkbox"] {
 
 </style>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../../../css/styles.css">
 <meta property="og:title" content="Der perfekte Gipfel – Grundlagenkurs GI-S (QGIS)">
@@ -394,6 +423,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#installation-in-qgis-3.44" id="toc-installation-in-qgis-3.44" class="nav-link" data-scroll-target="#installation-in-qgis-3.44">Installation in QGIS 3.44+</a></li>
   <li><a href="#ausführen" id="toc-ausführen" class="nav-link" data-scroll-target="#ausführen">Ausführen</a></li>
   <li><a href="#ergebnisfelder" id="toc-ergebnisfelder" class="nav-link" data-scroll-target="#ergebnisfelder">Ergebnisfelder</a></li>
+  <li><a href="#e-wert-formel-und-kritische-umsetzung" id="toc-e-wert-formel-und-kritische-umsetzung" class="nav-link" data-scroll-target="#e-wert-formel-und-kritische-umsetzung">E-Wert: Formel und kritische Umsetzung</a></li>
   </ul></li>
   <li><a href="#exkurs-wie-das-qgis-projekt-vorbereitet-wurde" id="toc-exkurs-wie-das-qgis-projekt-vorbereitet-wurde" class="nav-link" data-scroll-target="#exkurs-wie-das-qgis-projekt-vorbereitet-wurde">Exkurs · Wie das QGIS-Projekt vorbereitet wurde</a></li>
   <li><a href="#datengrundlage-und-hinweise" id="toc-datengrundlage-und-hinweise" class="nav-link" data-scroll-target="#datengrundlage-und-hinweise">Datengrundlage und Hinweise</a></li>
@@ -765,13 +795,32 @@ ul.task-list li input[type="checkbox"] {
 <td style="text-align: left;">Daraus folgendes Prominenzintervall</td>
 </tr>
 <tr class="even">
+<td style="text-align: left;"><code>e_art_lo</code> / <code>e_art_hi</code></td>
+<td style="text-align: left;">E-Wert-Intervall nach der Formel des Panoramaartikels</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><code>e_code_lo</code> / <code>e_code_hi</code></td>
+<td style="text-align: left;">E-Wert-Intervall nach der tatsächlich ausgeführten Verzweigung des historischen R-Codes</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>e_note</code></td>
+<td style="text-align: left;">Dokumentiert den Unterschied zwischen Artikel- und Code-Regel</td>
+</tr>
+<tr class="odd">
 <td style="text-align: left;"><code>pp_status</code></td>
 <td style="text-align: left;">Gültigkeit des Ergebnisses</td>
 </tr>
 </tbody>
 </table>
 <p><code>ok</code> bedeutet: Die ermittelte Zusammenhangsfläche berührt den DGM-Rand nicht. Bei <code>edge_relevant</code> ist das Ergebnis nur ausschnittsbezogen. <code>no_higher_terrain_in_dem</code>, <code>outside_dem</code> und <code>nodata_cell</code> sind keine Nullwerte, sondern begründete offene Ergebnisse.</p>
-<p>Das Tool berechnet bewusst <strong>keinen E-Wert</strong>. Erst wenn die E-Formel und ihre Gültigkeitsbedingungen fachlich festgelegt sind, kann sie als dokumentierter Folgeschritt ergänzt werden.</p>
+</section>
+<section id="e-wert-formel-und-kritische-umsetzung" class="level2">
+<h2 class="anchored" data-anchor-id="e-wert-formel-und-kritische-umsetzung">E-Wert: Formel und kritische Umsetzung</h2>
+<p>Für <span class="math inline">\(d &lt; 100\,000\,m\)</span> verwendet der Panoramaartikel:</p>
+<p><span class="math display">\[E=-\frac{\log_2(h/8848)+\log_2(d/100000)+\log_2(p/h)}{3}\]</span></p>
+<p>Für <span class="math inline">\(d &gt; 100\,000\,m\)</span> entfällt dort der Dominanzterm. Das Tool berechnet diese Lesart als <code>e_art_lo</code> bis <code>e_art_hi</code>; das Intervall folgt aus dem Prominenzintervall.</p>
+<p>Der historische Code <code>calculateIndependence.R</code> verzweigt tatsächlich umgekehrt: Unter 100 km lässt er den Dominanzterm weg, oberhalb von 100 km nimmt er ihn auf. Deshalb liefert das Tool zusätzlich <code>e_code_lo</code> bis <code>e_code_hi</code>, aber <strong>nicht</strong> als maßgeblichen Wert. <code>e_note</code> macht die verwendete Regel je Gipfel sichtbar. Bei exakt 100 km ist die Artikelformel nicht explizit; das Tool verwendet dafür die Variante ohne Dominanzterm.</p>
+<p>Damit ist der E-Wert kein verborgenes Endergebnis: Er bleibt an Höhe, Dominanz, Prominenzintervall, Datenrand und die gewählte Formel gebunden.</p>
 </section>
 </section>
 <section id="exkurs-wie-das-qgis-projekt-vorbereitet-wurde" class="level1">

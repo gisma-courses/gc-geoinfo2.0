@@ -421,7 +421,7 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 <tr class="even">
 <td style="text-align: left;"><strong>Panoramaartikel → formale Aufgabe</strong></td>
-<td style="text-align: left;">Der Artikel liefert die Bewertungsabsicht: Höhe, Dominanz, Prominenz und Eigenständigkeit sollen die Stellung eines Gipfels beschreiben.</td>
+<td style="text-align: left;">Der Artikel liefert die Bewertungsabsicht und die E-Formel: Höhe, Dominanz und Prominenz werden zu Eigenständigkeit verrechnet.</td>
 <td style="text-align: left;">Er legt keine vollständige Rechenvorschrift fest: Was genau als Gipfel zählt, wie ein Plateau behandelt wird, welches höhere Gelände relevant ist, wann eine Scharte als gefunden gilt und wann die Suche endet, bleibt offen.</td>
 <td style="text-align: left;">Die zusätzlichen Regeln ausdrücklich als <strong>eigene Modellannahmen</strong> dokumentieren, nicht als direkte Vorgabe des Artikels ausgeben.</td>
 </tr>
@@ -438,9 +438,15 @@ ul.task-list li input[type="checkbox"] {
 <td style="text-align: left;">Parameter je Analyse dokumentieren und für Vergleichbarkeit festsetzen.</td>
 </tr>
 <tr class="odd">
+<td style="text-align: left;"><strong>E-Wert: Artikel und Code</strong></td>
+<td style="text-align: left;">Das Tool berechnet ein E-Intervall nach der Artikelformel (<code>e_art_*</code>) und zusätzlich die tatsächlich ausgeführte historische Codevariante (<code>e_code_*</code>).</td>
+<td style="text-align: left;">Die 100-km-Regel ist der kritische Befund: Artikel/Formelgrafik verwenden den Dominanzterm unter 100 km, der historische R-Code dagegen darüber. Beide Werte sind deshalb sichtbar getrennt; der Codewert ist kein stillschweigend übernommener Standard.</td>
+<td style="text-align: left;">Die Abweichung im Unterricht diskutieren und die für eine Anwendung geltende Regel explizit entscheiden.</td>
+</tr>
+<tr class="even">
 <td style="text-align: left;"><strong>Derzeitige Realisation</strong></td>
-<td style="text-align: left;">Das QGIS-Projekt unterstützt die manuelle Hypothese; das PyQGIS-Tool verarbeitet Gipfelpunkte oder alle positiven Bereiche einer Gipfelmaske und liefert Dominanz, Scharten-/Prominenzintervall sowie Status.</td>
-<td style="text-align: left;">Die Ergebnisse gelten nur für die gewählte Maske, die Rasterauflösung, die Nachbarschaft und den vorhandenen DGM-Ausschnitt. <code>edge_relevant</code> oder <code>no_higher_terrain_in_dem</code> bedeuten: keine abschließende Aussage außerhalb dieses Ausschnitts. Ein E-Wert wird bewusst nicht ausgegeben.</td>
+<td style="text-align: left;">Das QGIS-Projekt unterstützt die manuelle Hypothese; das PyQGIS-Tool verarbeitet Gipfelpunkte oder alle positiven Bereiche einer Gipfelmaske und liefert Dominanz, Scharten-/Prominenzintervall, E-Intervalle und Status.</td>
+<td style="text-align: left;">Die Ergebnisse gelten nur für die gewählte Maske, die Rasterauflösung, die Nachbarschaft und den vorhandenen DGM-Ausschnitt. <code>edge_relevant</code> oder <code>no_higher_terrain_in_dem</code> bedeuten: keine abschließende Aussage außerhalb dieses Ausschnitts.</td>
 <td style="text-align: left;">Tool in QGIS einfügen, an einer fachlich begründeten Maske anwenden und Ergebnislayer sichern.</td>
 </tr>
 </tbody>
@@ -448,7 +454,7 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="fazit" class="level2">
 <h2 class="anchored" data-anchor-id="fazit">Fazit</h2>
-<p>Der Kurs übersetzt den Panoramaartikel in ein <strong>prüfbares Modell</strong>, nicht in eine behauptete endgültige Bergklassifikation. Genau darin liegt seine grundsätzliche Bedeutung: Die gleiche Kette verbindet auch Eignungsanalyse, Erreichbarkeit, Gefährdung, Flächenbewertung oder Modellierung. Die Maske definiert, was als Gipfel gilt; der Workflow berechnet Kennwerte unter diesen Annahmen. Ein belastbares Ergebnis besteht deshalb aus <strong>Wert, Parametern und Aussagegrenze</strong> – nicht aus einer Zahl allein.</p>
+<p>Der Kurs übersetzt den Panoramaartikel in ein <strong>prüfbares Modell</strong>, nicht in eine behauptete endgültige Bergklassifikation. Gerade die Abweichung zwischen Formel und historischem Code zeigt die Hauptaussage: Implementierungen treffen Regeln – auch dann, wenn sie unsichtbar bleiben. Die gleiche Kette verbindet auch Eignungsanalyse, Erreichbarkeit, Gefährdung, Flächenbewertung oder Modellierung. Ein belastbares Ergebnis besteht deshalb aus <strong>Wert, Parametern, implementierter Regel und Aussagegrenze</strong> – nicht aus einer Zahl allein.</p>
 
 
 </section>
