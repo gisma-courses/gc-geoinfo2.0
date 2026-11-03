@@ -1,0 +1,19 @@
+---
+title: "Resume: Der perfekte Gipfel"
+subtitle: "Vom fachlichen Begriff zum prüfbaren GIS-Workflow"
+lang: de
+format:
+  html:
+    toc: false
+---
+
+| Ebene | Erreicht | Zu berücksichtigen | Nächster Schritt |
+|:--|:--|:--|:--|
+| **Fachlicher Hintergrund** | Dominanz, Prominenz und Eigenständigkeit sind nicht als Eigenschaften eines Gipfels gegeben, sondern werden aus Höhe, höherem Gelände und Verbindungen abgeleitet. | Ein DGM-Ausschnitt kann höheres Gelände oder bessere Verbindungen außerhalb seines Rands ausschließen. Rasterweite ist keine Höhengenauigkeit. | E-Wert und seine Gültigkeitsbedingungen als fachliche Regel eindeutig festlegen. |
+| **Zerlegung und Abstraktion** | Die Frage ist in prüfbare Teile zerlegt: Gipfelkandidat → höheres Gelände → Distanz → Verbindung über Höhenstufen → Scharte → Aussagegrenze. | „Gipfel“ ist eine fachliche Definition. Fenstergröße, Plateau-Regel, Nachbarschaft und Mindesthöhe müssen sichtbar bleiben. | Eine begründete Gipfelmaske für den jeweiligen Untersuchungsraum formulieren. |
+| **Technische Übersetzung** | DGM, Gipfelmaske, Höhenmasken, Proximity und Zusammenhangsflächen bilden die fachlichen Teile als Daten und Operationen ab. | 4er-/8er-Nachbarschaft, Rastergitter, Höhentoleranz und Zellzentrumdistanz beeinflussen die Resultate. | Parameter je Analyse dokumentieren und für Vergleichbarkeit festsetzen. |
+| **Derzeitige Realisation** | Das QGIS-Projekt unterstützt die manuelle Hypothese; das PyQGIS-Tool verarbeitet Gipfelpunkte oder alle positiven Bereiche einer Gipfelmaske und liefert Dominanz, Scharten-/Prominenzintervall sowie Status. | `edge_relevant`, `no_higher_terrain_in_dem` und ähnliche Status sind Ergebnisse, keine Fehler oder Nullwerte. Die Scharte bleibt zunächst ein Intervall. | Tool in QGIS einfügen, an einer fachlich begründeten Maske anwenden und Ergebnislayer sichern. |
+
+## Fazit
+
+Der Kurs ersetzt nicht die fachliche Entscheidung durch Automatisierung. Er macht sie explizit: Die Maske definiert, was als Gipfel gilt; der Workflow zeigt, welche Kennwerte daraus unter den gegebenen Datenbedingungen folgen. Ein belastbares Ergebnis besteht daher immer aus **Wert, Parametern und Aussagegrenze**.

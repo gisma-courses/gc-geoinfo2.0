@@ -7,6 +7,7 @@ project:
     - content/perfekter-gipfel/slides/02-analyse.qmd
     - content/perfekter-gipfel/slides/03-technische-umsetzung.qmd
     - content/perfekter-gipfel/arbeitsblatt/arbeitsauftrag.qmd
+    - content/perfekter-gipfel/resume.qmd
 
 website:
   favicon: images/logo.png
@@ -122,6 +123,8 @@ website:
               text: "Block 3 – Technische Umsetzung"
             - href: content/perfekter-gipfel/arbeitsblatt/arbeitsauftrag.qmd
               text: "QGIS-Arbeitsauftrag"
+            - href: content/perfekter-gipfel/resume.qmd
+              text: "Resume und Ausblick"
               
         # - text: "---"
         # - section: "Reader Projektarbeit "
