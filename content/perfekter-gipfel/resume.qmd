@@ -13,6 +13,22 @@ format:
 
 „Der perfekte Gipfel“ ist kein Sonderfall. Das Beispiel verdichtet den gesamten Analyseprozess: Eine zunächst sprachliche Bewertung wird in explizite Entscheidungen übersetzt. Erst danach kann ein GIS rechnen. Das Resultat ist daher nie nur eine Zahl, sondern die nachvollziehbare Verbindung von Fachbegriff, Annahmen, Daten und Methode.
 
+## Was davon ist Grundlagenkurs Geoinformatik?
+
+Die [Kursübersicht](../../index.qmd) nennt das Ziel: verstehen, wie aus geographischen Fragen räumliche Modelle werden und wie die Wahl von Daten, Maßstab, Stellvertretergrößen und Parametern die Ergebnisse bestimmt. Der Gipfel zeigt das im Kleinen – und nichts davon ist an ein bestimmtes Programm gebunden.
+
+| Kursziel | Am perfekten Gipfel | Übertragbar auf jede GI-Analyse |
+|:--|:--|:--|
+| **Abstraktion** | „Eigenständigkeit“ wird zu Höhe, Dominanz, Prominenz und E-Formel. Was überhaupt als Gipfel gilt, legt eure Gipfelregel fest. | Ein Fachbegriff muss in prüfbare Kriterien übersetzt werden, bevor gerechnet werden kann. |
+| **Realität und Repräsentation** | Das DGM ist nicht das Gebirge: 10-m-Zellen, Zellzentren, 4er- oder 8er-Nachbarschaft und ein Ausschnitt mit Rand. | Jedes Datenmodell lässt etwas weg; das Ergebnis gilt zunächst für die Repräsentation. |
+| **Datenbeschaffung und Datenkritik** | Herkunft (Land Tirol über `perfectPeak`), Lizenz, nachträglich zugewiesenes KBS, unbekannte Höhengenauigkeit und Aufnahmezeit. | Wissen, woher Daten stammen – und was über sie nicht bekannt ist. |
+| **Methode** | Höhenmaske, Distanz, Suche über Höhenstufen mit Abbruchregel. Artikel und historischer Code setzen dabei unterschiedliche Regeln um. | Eine Methode ist eine begründete Regel, kein Werkzeugname. |
+| **Transparenz und Reproduzierbarkeit** | Gespeichertes Projekt, dokumentierte Parameter, Status jedes Werts und Gegenprüfung durch eine andere Gruppe. | Andere müssen den Weg nachvollziehen und das Ergebnis wiederholen können. |
+
+Wissenschaftliches Arbeiten mit Geodaten heißt deshalb: fachliche Frage und methodische Umsetzung **miteinander verschränken**. Die Fachfrage bestimmt, welche Daten und Regeln nötig sind; die Methode zeigt, welche Antwort sich daraus tatsächlich begründen lässt.
+
+## Im Einzelnen
+
 | Ebene | Erreicht | Aussagegrenze / zu berücksichtigen | Nächster Schritt |
 |:--|:--|:--|:--|
 | **Gesamtprozess** | Die Abfolge Begriff → Kriterien → Modell → Operation → Ergebnis ist sichtbar und überprüfbar. | Kein technischer Schritt kann eine ungeklärte fachliche Entscheidung ersetzen. Jede spätere GIS-Analyse hat dieselbe Struktur, auch wenn ihre Werkzeuge andere sind. | Die Prozesskette bei jeder neuen Fragestellung zuerst formulieren, bevor Daten oder Werkzeuge gewählt werden. |
@@ -21,6 +37,32 @@ format:
 | **Technische Übersetzung** | DGM, Gipfelmaske, Höhenmasken, Proximity und Zusammenhangsflächen bilden diese Annahmen als Daten und Operationen ab. | 4er-/8er-Nachbarschaft, Rastergitter, Höhentoleranz und Zellzentrumdistanz sind **Entscheidungen der Übersetzung**, nicht Eigenschaften des Panoramaartikels. | Parameter je Analyse dokumentieren und für Vergleichbarkeit festsetzen. |
 | **E-Wert: Artikel und Code** | Das Tool berechnet ein E-Intervall nach der Artikelformel (`e_art_*`) und zusätzlich die tatsächlich ausgeführte historische Codevariante (`e_code_*`). | Die 100-km-Regel ist der kritische Befund: Artikel/Formelgrafik verwenden den Dominanzterm unter 100 km, der historische R-Code dagegen darüber. Beide Werte sind deshalb sichtbar getrennt; der Codewert ist kein stillschweigend übernommener Standard. | Die Abweichung im Unterricht diskutieren und die für eine Anwendung geltende Regel explizit entscheiden. |
 | **Derzeitige Realisation** | Das QGIS-Projekt unterstützt die manuelle Hypothese; das PyQGIS-Tool verarbeitet Gipfelpunkte (auf die höchste Zelle im Fangradius gesetzt) oder als Vertiefung alle positiven Bereiche einer Gipfelmaske und liefert Dominanz, Scharten-/Prominenzintervall, E-Intervalle und Status. | Die Ergebnisse gelten nur für die gewählte Maske, die Rasterauflösung, die Nachbarschaft und den vorhandenen DGM-Ausschnitt. `edge_relevant` oder `no_higher_terrain_in_dem` bedeuten: keine abschließende Aussage außerhalb dieses Ausschnitts. | Tool in QGIS einfügen, an einer fachlich begründeten Maske anwenden und Ergebnislayer sichern. |
+
+## Und die Werkzeuge?
+
+Ohne QGIS ließe sich keine dieser Fragen beantworten. Die Bedienung ist Voraussetzung – aber nicht das Ziel. Jede Fertigkeit diente einer fachlichen Entscheidung:
+
+| Fertigkeit in QGIS | Wozu im Gipfelbeispiel |
+|:--|:--|
+| Daten laden, KBS und Rasterweite prüfen | wissen, worauf sich jede Zahl bezieht |
+| Digitalisieren, Attributformular | Hypothesen räumlich festhalten und begründen |
+| Objekte abfragen, Rasterwerte abtasten | Höhe und Lage aus derselben DGM-Zelle |
+| Rasterrechner | das Kriterium „höher als $h$“ als Maske |
+| GDAL Proximity | Dominanz als Distanz zum höheren Gelände |
+| Processing-Skript | dieselbe Regel für viele Gipfel wiederholen |
+| Projekt mit relativen Pfaden speichern | Nachvollziehbarkeit und Abgabe |
+
+Wer weiß, **wozu** ein Werkzeug eingesetzt wird, kann es sicher bedienen, Fehler erkennen – und es bei Bedarf durch ein anderes ersetzen. Die Methode bleibt dieselbe.
+
+## Derselbe Ablauf in jedem Themenblock
+
+Die Kursübersicht beschreibt für jeden Block drei Schritte. Beim Gipfel waren das:
+
+1. **Frage und Modell** – Teil 1: vom Bewertungsbegriff zu Kriterien und Modellannahmen.
+2. **Umsetzung in QGIS** – Arbeitsblatt und Teil 3: Hypothese, Maske, Distanz, Höhenstufen.
+3. **Vergleich und Einordnung** – Teil 2 und Schritte 5–6: Gegenprüfung, Status, Artikel gegen Code.
+
+Grünzugang und Raumkonstruktion folgen demselben Muster mit anderen Begriffen, Daten und Werkzeugen. Portfolio und Klausur prüfen genau diese Verbindung: nicht, ob ein Werkzeug bedient wurde, sondern ob Annahmen, Daten, Methode und Aussagegrenzen begründet sind.
 
 ## Fazit
 
