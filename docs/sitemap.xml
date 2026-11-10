@@ -1,20 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://gisma-courses.github.io/gc-geoinfo2.0/content/gruenzugang/arbeitsblatt/01-quellenanalyse.html</loc>
-    <lastmod>2026-11-10T12:33:26.857Z</lastmod>
+    <loc>https://gisma-courses.github.io/gc-geoinfo2.0/content/gruenzugang/arbeitsblatt/arbeitsauftrag.html</loc>
+    <lastmod>2026-11-10T12:40:09.357Z</lastmod>
   </url>
   <url>
     <loc>https://gisma-courses.github.io/gc-geoinfo2.0/content/gruenzugang/index.html</loc>
-    <lastmod>2026-11-10T12:33:25.928Z</lastmod>
+    <lastmod>2026-11-10T12:40:07.372Z</lastmod>
   </url>
   <url>
     <loc>https://gisma-courses.github.io/gc-geoinfo2.0/content/perfekter-gipfel/arbeitsblatt/arbeitsauftrag.html</loc>
-    <lastmod>2026-11-10T12:22:12.391Z</lastmod>
+    <lastmod>2026-11-10T12:40:05.229Z</lastmod>
   </url>
   <url>
     <loc>https://gisma-courses.github.io/gc-geoinfo2.0/content/perfekter-gipfel/slides/02-analyse.html</loc>
     <lastmod>2026-11-10T11:50:11.769Z</lastmod>
+  </url>
+  <url>
+    <loc>https://gisma-courses.github.io/gc-geoinfo2.0/content/perfekter-gipfel/index.html</loc>
+    <lastmod>2026-11-10T12:40:03.286Z</lastmod>
   </url>
   <url>
     <loc>https://gisma-courses.github.io/gc-geoinfo2.0/index.html</loc>
@@ -26,7 +30,7 @@
   </url>
   <url>
     <loc>https://gisma-courses.github.io/gc-geoinfo2.0/content/perfekter-gipfel/slides/03-technische-umsetzung.html</loc>
-    <lastmod>2026-11-10T11:50:11.769Z</lastmod>
+    <lastmod>2026-11-10T12:40:06.405Z</lastmod>
   </url>
   <url>
     <loc>https://gisma-courses.github.io/gc-geoinfo2.0/content/perfekter-gipfel/resume.html</loc>
@@ -34,6 +38,6 @@
   </url>
   <url>
     <loc>https://gisma-courses.github.io/gc-geoinfo2.0/content/gruenzugang/slides/01-quellen-abstraktion.html</loc>
-    <lastmod>2026-11-10T12:33:28.056Z</lastmod>
+    <lastmod>2026-11-10T12:40:08.796Z</lastmod>
   </url>
 </urlset>

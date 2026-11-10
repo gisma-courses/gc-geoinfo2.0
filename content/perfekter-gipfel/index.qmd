@@ -1,0 +1,41 @@
+---
+title: "Themenblock 1 · Der perfekte Gipfel"
+subtitle: "Was zählt als eigenständiger Gipfel?"
+title-block-banner: ../../images/banner-pp.png
+title-block-banner-color: black
+lang: de
+format:
+  html:
+    toc: true
+    toc-depth: 2
+    number-sections: false
+---
+
+[← Kursübersicht](../../index.qmd) · [Teil 1 – Folien](slides/01-konzept.qmd) · [Umsetzung](arbeitsblatt/arbeitsauftrag.qmd)
+
+## Worum es geht
+
+Ein [Artikel im DAV-Panorama (2/2012)](../../assets/pdf/DAV_Panorama_2_2012.pdf) bewertet Gipfel danach, wie eigenständig sie sind: Neben der Höhe zählen die **Dominanz** – die Entfernung zum nächsten höheren Gelände – und die **Prominenz** – wie tief man mindestens absteigen muss, um höheres Gelände zu erreichen. Eine Formel verrechnet beides zu einem Eigenständigkeitswert **E**.
+
+Das klingt nach einer Rechenvorschrift. Was genau als Gipfel gilt, wie die maßgebliche Scharte gefunden wird und wann die Suche endet, lässt der Artikel aber offen. Diese Lücken schließen wir selbst – und prüfen in QGIS, welche Aussagen sich am Geländemodell tatsächlich begründen lassen.
+
+## Ablauf
+
+Zu jeder Sitzung gibt es einen Foliensatz (Teil 1–3); gearbeitet wird durchgehend auf einer Seite: der [Umsetzung](arbeitsblatt/arbeitsauftrag.qmd) mit den Schritten 0–6.
+
+| Teil | Frage | Ergebnis |
+|:--|:--|:--|
+| **1 · Konzept** | Wie wird aus dem Bewertungsbegriff ein prüfbares Modell? Was lässt der Artikel offen? | Kriterien und offene Modellentscheidungen |
+| **2 · Modellkritik** | Welche Regeln setzen Artikel und historischer Code tatsächlich um – und wo weichen sie ab? | Gipfelregel, Dominanz- und Prominenzregel, E-Wert im Vergleich |
+| **3 · QGIS-Workflow** | Wie lassen sich Hypothese, Prüfung und Ergebnis in QGIS festhalten? | Gespeichertes Projekt mit Werten, Status und Gegenprüfung |
+
+Den Abschluss bildet das [Resume](resume.qmd): Was davon ist Grundlagenkurs Geoinformatik – und was ist nur Werkzeug?
+
+## Material
+
+- [Panoramaartikel (DAV Panorama 2/2012, S. 112–117)](../../assets/pdf/DAV_Panorama_2_2012.pdf)
+- [QGIS-Projekt `Perfekter_Gipfel_QGIS.zip`](../../assets/data/Perfekter_Gipfel_QGIS.zip) mit Geländemodell, Schummerung, Höhenlinien und PyQGIS-Tool – Anleitung in der [Umsetzung](arbeitsblatt/arbeitsauftrag.qmd)
+
+## Portfolio
+
+Das gespeicherte QGIS-Arbeitsprojekt mit den bearbeiteten Layern und eine kurze Einordnung eines ausgewählten Gipfels: Screenshot der Karte, Gipfelregel und Parameter, Prüfung des höheren Geländes, Schartenhypothese, ermittelte Werte, Vergleich mit einer Variante und Status der Aussage. Die Einzelheiten stehen unter [Abgabe](arbeitsblatt/arbeitsauftrag.qmd#abgabe).

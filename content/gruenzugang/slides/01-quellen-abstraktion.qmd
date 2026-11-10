@@ -211,4 +211,4 @@ Die Prognose wird in Sitzung 3 überprüft. Ohne Erwartung vor dem Rechnen gibt 
 Ein Ansatz ist erst dann klar, wenn man ihn rechnen kann. **Was er bedeutet, zeigt der Vergleich.**
 :::
 
-[**Arbeitsauftrag Sitzung 1 öffnen**](../arbeitsblatt/01-quellenanalyse.html)
+[**Umsetzung, Teil A öffnen**](../arbeitsblatt/arbeitsauftrag.html#teil-a-lesarten-und-abstraktion-sitzung-1)

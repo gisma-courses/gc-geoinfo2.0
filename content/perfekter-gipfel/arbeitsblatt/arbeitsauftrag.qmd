@@ -1,5 +1,5 @@
 ---
-title: "Der perfekte Gipfel"
+title: "Der perfekte Gipfel · Umsetzung"
 subtitle: "QGIS 3.44+: von der Geländehypothese zur räumlichen Prüfung"
 title-block-banner: ../../../images/banner-pp.png
 title-block-banner-color: black
@@ -13,6 +13,8 @@ format:
 execute:
   echo: true
 ---
+
+[← Überblick](../index.qmd) · [Folien Teil 3](../slides/03-technische-umsetzung.qmd)
 
 # Arbeitsauftrag
 

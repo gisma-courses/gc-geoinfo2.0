@@ -3,6 +3,7 @@ project:
   output-dir: docs/
   render:
     - index.qmd
+    - content/perfekter-gipfel/index.qmd
     - content/perfekter-gipfel/slides/01-konzept.qmd
     - content/perfekter-gipfel/slides/02-analyse.qmd
     - content/perfekter-gipfel/slides/03-technische-umsetzung.qmd
@@ -10,7 +11,7 @@ project:
     - content/perfekter-gipfel/resume.qmd
     - content/gruenzugang/index.qmd
     - content/gruenzugang/slides/01-quellen-abstraktion.qmd
-    - content/gruenzugang/arbeitsblatt/01-quellenanalyse.qmd
+    - content/gruenzugang/arbeitsblatt/arbeitsauftrag.qmd
 
 website:
   favicon: images/logo.png
@@ -118,6 +119,8 @@ website:
         # - text: "---"
         - section: "Der perfekte Gipfel"
           contents:
+            - href: content/perfekter-gipfel/index.qmd
+              text: "Überblick"
             - href: content/perfekter-gipfel/slides/01-konzept.qmd
               text: "Teil 1 – Konzept"
             - href: content/perfekter-gipfel/slides/02-analyse.qmd
@@ -125,7 +128,7 @@ website:
             - href: content/perfekter-gipfel/slides/03-technische-umsetzung.qmd
               text: "Teil 3 – QGIS-Workflow"
             - href: content/perfekter-gipfel/arbeitsblatt/arbeitsauftrag.qmd
-              text: "QGIS-Arbeitsauftrag"
+              text: "Umsetzung"
             - href: content/perfekter-gipfel/resume.qmd
               text: "Resume und Ausblick"
         - section: "Grünzugang"
@@ -134,8 +137,8 @@ website:
               text: "Überblick"
             - href: content/gruenzugang/slides/01-quellen-abstraktion.qmd
               text: "Teil 1 – Lesarten und Abstraktion"
-            - href: content/gruenzugang/arbeitsblatt/01-quellenanalyse.qmd
-              text: "Arbeitsauftrag Sitzung 1"
+            - href: content/gruenzugang/arbeitsblatt/arbeitsauftrag.qmd
+              text: "Umsetzung"
               
         # - text: "---"
         # - section: "Reader Projektarbeit "

@@ -11,7 +11,7 @@ format:
     number-sections: false
 ---
 
-[← Kursübersicht](../../index.qmd) · [Teil 1 – Folien](slides/01-quellen-abstraktion.qmd) · [Arbeitsauftrag Sitzung 1](arbeitsblatt/01-quellenanalyse.qmd)
+[← Kursübersicht](../../index.qmd) · [Teil 1 – Folien](slides/01-quellen-abstraktion.qmd) · [Umsetzung](arbeitsblatt/arbeitsauftrag.qmd)
 
 ## Worum es geht
 
@@ -44,6 +44,8 @@ Damit der Vergleich etwas aussagt, gelten zwei Regeln:
 | Vergleich | Gegenprüfung durch eine andere Gruppe | alle Ansätze für dieselbe Stadt; Übereinstimmungskarte für Marburg |
 
 ## Ablauf
+
+Zu jeder Sitzung gibt es einen Foliensatz (Teil 1–3); gearbeitet wird durchgehend auf einer Seite: der [Umsetzung](arbeitsblatt/arbeitsauftrag.qmd) mit den Teilen A–C.
 
 | Sitzung | Frage und Modell → Umsetzung → Vergleich | Ergebnis |
 |:--|:--|:--|

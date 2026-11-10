@@ -2,8 +2,8 @@
 .Rhistory
 .RData
 .Ruserdata
-
 /.quarto/
 **/*.quarto_ipynb
 *~
 archive
+_patches_perfect_peak
