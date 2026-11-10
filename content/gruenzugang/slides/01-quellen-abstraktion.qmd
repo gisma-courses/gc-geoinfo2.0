@@ -1,0 +1,214 @@
+---
+title: "Grünzugang"
+subtitle: "Teil 1 – Lesarten und Abstraktion"
+author: Chris Reudenbach
+lang: de
+format:
+  revealjs:
+    theme: [../../perfekter-gipfel/slides/theme.scss]
+    toc: false
+    chalkboard: true
+    menu: false
+    slide-number: true
+---
+
+## Worum es geht
+
+::: {.process}
+**Quelle** → **Begriffe** → **Kriterien** → **Daten und Operationen** → **Ergebnis mit Aussagegrenze**
+:::
+
+Leitfrage des Blocks: **Bedeutet räumliche Nähe auch Zugang?**
+
+Heute bauen wir noch nichts in QGIS. Heute klären wir, **was die Ansätze eigentlich meinen** – so genau, dass man es rechnen kann.
+
+## Eine Empfehlung, die eindeutig klingt
+
+::: {.framebox}
+Von jeder Wohnung aus soll eine Grünfläche von **mindestens 0,5 Hektar** in **höchstens 300 Metern Luftlinie** liegen.
+:::
+
+::: {.keyline}
+So wird die WHO-Empfehlung häufig wiedergegeben. Zwei Zahlen, eine klare Schwelle – ist das schon ein Modell?
+:::
+
+::: {.small}
+Wiedergabe nach [ISGlobal (2021)](https://www.isglobal.org/en/-/isglobal-presenta-el-ranking-de-las-ciudades-europeas-con-mayor-mortalidad-atribuible-a-la-falta-de-espacios-verdes) zur Studie von [Pereira Barboza et al. (2021)](https://doi.org/10.1016/S2542-5196(21)00229-1).
+:::
+
+## Schon „die WHO“ gibt es zweimal
+
+| | wie häufig zitiert | wie der Indikator entwickelt wurde |
+|:--|:--|:--|
+| Quelle | ISGlobal 2021 | van den Bosch et al. 2016 |
+| Grünfläche | ≥ 0,5 ha | ≥ 1 ha (Standard) |
+| Entfernung | 300 m Luftlinie | 300 m Luftlinie **bis zum Flächenrand** |
+| Ergebnis | – | Anteil der Bevölkerung innerhalb dieser Entfernung |
+
+::: {.keyline}
+Dieselbe Empfehlung, zwei Rechenvorschriften. Welche ist „die WHO“?
+:::
+
+::: {.small}
+[van den Bosch et al. 2016](https://doi.org/10.1177/1403494815615444) · [ISGlobal 2021](https://www.isglobal.org/en/-/isglobal-presenta-el-ranking-de-las-ciudades-europeas-con-mayor-mortalidad-atribuible-a-la-falta-de-espacios-verdes)
+:::
+
+## Dieselbe Absicht, andere Regeln
+
+| Ansatz | Grünfläche | Entfernung |
+|:--|:--|:--|
+| WHO, wie zitiert | ≥ 0,5 ha | 300 m Luftlinie |
+| WHO-Indikator | ≥ 1 ha | 300 m Luftlinie zum Rand |
+| 3-30-300-Regel | öffentlich, keine Mindestgröße | 300 m zur nächsten Fläche |
+| BBSR 2018 | ≥ 1 ha / ≥ 10 ha | 300 m / 700 m Luftlinie |
+| BfN 2024 | insgesamt > 1 ha | ≤ 500 m Fußweg |
+| BfN 2024 / Berlin | 6 m² pro Einwohner | im Einzugsbereich |
+
+::: {.small}
+[Konijnendijk 2023](https://doi.org/10.1007/s11676-022-01523-z) · [BBSR 2018, S. 26](https://epflicht.ulb.uni-bonn.de/download/pdf/372854) · [Blum et al. 2024](https://doi.org/10.19217/brs242) · [Umweltatlas Berlin](https://www.berlin.de/umweltatlas/nutzung/oeffentliche-gruenanlagen/2020/einleitung/)
+:::
+
+## Unsere Frage
+
+::: {.framebox}
+Klingt gut. Ist gut gemeint. **Aber was heißt das in Marburg?**
+:::
+
+Wir prüfen **nicht**, ob die Schwellen fachlich gut begründet sind – das ist die Arbeit der Kolleginnen und Kollegen, die sie aufgestellt haben.
+
+Wir prüfen, **was herauskommt, wenn man sie beim Wort nimmt**: gleiche Stadt, gleiche Daten, andere Regel.
+
+## Aus dem perfekten Gipfel
+
+::: {.docgrid}
+::: {.doccard}
+**Dort**
+
+Artikelformel und historischer Code setzen dieselbe Idee verschieden um – für dieselben Gipfel ergeben sich verschiedene E-Werte.
+:::
+::: {.doccard}
+**Hier**
+
+Fünf Ansätze setzen dieselbe Absicht verschieden um – für dieselbe Stadt ergeben sich verschiedene Versorgungsgrade.
+:::
+:::
+
+::: {.keyline}
+Erst die Umsetzung zeigt, was eine Regel tatsächlich bedeutet.
+:::
+
+## Die Referenz, durchdekliniert
+
+**WHO-Indikator nach van den Bosch et al. (2016)**
+
+| | Begriff | Kriterium | Repräsentation | Operation |
+|:--|:--|:--|:--|:--|
+| **Grün** | städtische Grünfläche | öffentlich, ≥ 1 ha | OSM-Polygone ausgewählter Klassen | Ausdruck, Fläche, Filter |
+| **Entfernung** | Nähe | 300 m Luftlinie bis zum Rand | Pufferzone um die Flächen | Puffer 300 m |
+| **Bevölkerung** | Bewohnerinnen und Bewohner | Wohnort innerhalb der Zone | Zensus-Gitterzellen 100 m | Lage-Abfrage Zellmittelpunkt |
+| **Ergebnis** | Zugang | Anteil der Bevölkerung | Summe der Einwohner | versorgt / alle |
+
+## Was auch die Referenz offenlässt
+
+::: {.docgrid}
+::: {.doccard}
+**Grün**
+
+Welche OSM-Klassen? Park, Wald, Friedhof, Kleingarten?
+:::
+::: {.doccard}
+**Bevölkerung**
+
+Zählt eine Zelle, wenn ihr Mittelpunkt oder wenn ein Teil in der Zone liegt?
+:::
+::: {.doccard}
+**Raum**
+
+Zählt die Grünfläche jenseits der Stadtgrenze?
+:::
+::: {.doccard}
+**Öffentlich**
+
+Wie erkennt man in den Daten, ob eine Fläche zugänglich ist?
+:::
+:::
+
+::: {.keyline}
+Diese Punkte setzen wir **einmal gemeinsam** – und alle Ansätze übernehmen die Setzung, wenn sie selbst nichts anderes sagen.
+:::
+
+## Proxys: Wofür steht was?
+
+| Im Modell | steht für … | … und lässt weg |
+|:--|:--|:--|
+| Grünpolygon | Erholungsraum | Qualität, Ausstattung, Öffnungszeiten |
+| Rasterzelle mit Einwohnerzahl | Wohnort der Menschen | wo genau sie in der Zelle wohnen |
+| Puffer um die Fläche | Nähe | ob man dort tatsächlich hinkommt |
+| Weg im Netz | begehbarer Zugang | Steigung, Sicherheit, Barrierefreiheit |
+
+::: {.keyline}
+Ein Proxy ist eine bewusste Vereinfachung. Er bestimmt mit, was das Ergebnis überhaupt bedeuten kann.
+:::
+
+## Die Stadtgrenze ist ein Datenrand
+
+::: {.framebox}
+**Aus dem perfekten Gipfel:** Am Rand des DGM ließ sich nicht ausschließen, dass höheres Gelände außerhalb liegt. Das Ergebnis war ausschnittsbezogen.
+:::
+
+Wer am Stadtrand wohnt, geht vielleicht in den Wald der Nachbargemeinde. Endet unser Datensatz an der Stadtgrenze, erscheint diese Person als unversorgt.
+
+**Gemeinsame Setzung:** Das Rechengebiet reicht um die größte vorkommende Distanz über Marburg hinaus.
+
+## Gleiche Daten, andere Regel
+
+::: {.process}
+gleiche Stadt · gleiche Daten · gleiche Setzungen → **nur die Regel des Ansatzes wechselt**
+:::
+
+Nur so lässt sich am Ende sagen, dass ein Unterschied **aus dem Ansatz** kommt – und nicht aus einer anderen Datenquelle oder einer anderen Auswahl von Grünflächen.
+
+::: {.small}
+Dasselbe Prinzip hatte der Gipfel: ein DGM, mehrere Gipfeldefinitionen.
+:::
+
+## Ein Ansatz pro Gruppe
+
+| Gruppe | Ansatz | Was sich gegenüber der Referenz ändert |
+|:--|:--|:--|
+| 1 | WHO, wie zitiert | Mindestgröße |
+| 2 | 3-30-300-Regel | keine Mindestgröße; Entfernungsmaß nicht festgelegt |
+| 3 | BBSR 2018 | zwei Stufen: 1 ha / 300 m und 10 ha / 700 m |
+| 4 | BfN – Erreichbarkeit | Fußweg statt Luftlinie; Flächen werden summiert |
+| 5 | BfN – Versorgung | Quadratmeter pro Einwohner statt ja/nein |
+
+::: {.small}
+Gibt es mehr Gruppen als Ansätze, wird ein Ansatz doppelt vergeben und **unabhängig** umgesetzt. Weichen beide Ergebnisse ab, ist das ein Befund zur Reproduzierbarkeit.
+:::
+
+## Ergebnis heute
+
+::: {.docgrid}
+::: {.doccard}
+**Regelblatt**
+
+Was euer Ansatz festlegt – mit Fundstelle –, was er offenlässt und wie ihr es setzt.
+:::
+::: {.doccard}
+**Prognose**
+
+Weist euer Ansatz in Marburg mehr oder weniger Menschen als versorgt aus als die Referenz? Warum?
+:::
+:::
+
+::: {.keyline}
+Die Prognose wird in Sitzung 3 überprüft. Ohne Erwartung vor dem Rechnen gibt es hinterher nichts zu prüfen.
+:::
+
+## Merksatz
+
+::: {.process}
+Ein Ansatz ist erst dann klar, wenn man ihn rechnen kann. **Was er bedeutet, zeigt der Vergleich.**
+:::
+
+[**Arbeitsauftrag Sitzung 1 öffnen**](../arbeitsblatt/01-quellenanalyse.html)

@@ -1,0 +1,70 @@
+---
+title: "Themenblock 2 · Grünzugang"
+subtitle: "Klingt gut. Ist gut gemeint. Aber was heißt das in Marburg?"
+title-block-banner: ../../images/banner-gz.png
+title-block-banner-color: black
+lang: de
+format:
+  html:
+    toc: true
+    toc-depth: 2
+    number-sections: false
+---
+
+[← Kursübersicht](../../index.qmd) · [Teil 1 – Folien](slides/01-quellen-abstraktion.qmd) · [Arbeitsauftrag Sitzung 1](arbeitsblatt/01-quellenanalyse.qmd)
+
+## Worum es geht
+
+Grün in Wohnungsnähe ist ein erklärtes Ziel von Gesundheitsforschung und Stadtplanung. Die Konzepte dazu klingen eindeutig – und sind es nicht. Schon „die WHO-Empfehlung“ kursiert in zwei Fassungen: [ISGlobal](https://www.isglobal.org/en/-/isglobal-presenta-el-ranking-de-las-ciudades-europeas-con-mayor-mortalidad-atribuible-a-la-falta-de-espacios-verdes) gibt sie im Zusammenhang mit der Studie von [Pereira Barboza et al. (2021)](https://doi.org/10.1016/S2542-5196(21)00229-1) mit einer Grünfläche von mindestens 0,5 Hektar in höchstens 300 Metern Luftlinie wieder; die Arbeit, mit der dieser WHO-Indikator entwickelt wurde, empfiehlt als Standard dagegen mindestens 1 Hektar und misst die 300 Meter bis zum Rand der Fläche ([van den Bosch et al. 2016](https://doi.org/10.1177/1403494815615444)).
+
+Die deutsche Planungspraxis setzt wieder andere Werte an: Eine Studie im Auftrag des [BBSR (2018)](https://epflicht.ulb.uni-bonn.de/download/pdf/372854) nennt Grünflächen ab einem Hektar in 300 Metern Luftlinie, die Orientierungswerte des [Bundesamts für Naturschutz (Blum et al. 2024)](https://doi.org/10.19217/brs242) Grünflächen von insgesamt über einem Hektar in höchstens 500 Metern **Fußweg**, und der [Berliner Umweltatlas](https://www.berlin.de/umweltatlas/nutzung/oeffentliche-gruenanlagen/2020/einleitung/) misst die Versorgung in Quadratmetern Grün pro Einwohner. Die [3-30-300-Regel](https://doi.org/10.1007/s11676-022-01523-z) verlangt höchstens 300 Meter bis zur nächsten öffentlichen Grünfläche – ohne Mindestgröße. Verwandt ist die Idee der 15-Minuten-Stadt, nach der Alltagsziele in einer Viertelstunde zu Fuß oder mit dem Rad erreichbar sein sollen ([Moreno et al. 2021](https://doi.org/10.3390/smartcities4010006)).
+
+Alle meinen ungefähr dasselbe. **Was sie genau meinen, zeigt sich erst, wenn man sie anwendet.** Genau das tun wir: Wir diskutieren nicht, ob die Schwellen fachlich gut begründet sind. Wir nehmen die Ansätze beim Wort, setzen sie für **Marburg** um und vergleichen, was dabei herauskommt.
+
+## Wie wir vorgehen
+
+**Ein Ansatz wird vollständig durchdekliniert** – der WHO-Indikator nach van den Bosch et al. (2016) als **Referenz**: vom Satz in der Quelle über Kriterien und Daten bis zur Verarbeitungskette in QGIS. Diese Kette ist das gemeinsame Gerüst.
+
+**Jede Gruppe übernimmt dann einen anderen Ansatz** und baut die Referenzkette so um, dass sie genau das rechnet, was ihr Ansatz verlangt – nicht mehr und nicht weniger.
+
+**Die eigentliche Aufgabe ist der Vergleich:** Wie viele Menschen in Marburg gelten je nach Ansatz als versorgt? Wo sind sich alle Ansätze einig, und wo hängt das Urteil allein davon ab, welcher Ansatz gilt?
+
+Damit der Vergleich etwas aussagt, gelten zwei Regeln:
+
+1. **Gleiche Daten für alle.** Alle Gruppen rechnen mit derselben Datengrundlage. Sonst wüsste niemand, ob ein Unterschied aus dem Ansatz oder aus den Daten kommt.
+2. **Was ein Ansatz offenlässt, wird wie in der Referenz gesetzt.** So entstehen Unterschiede nur dort, wo die Ansätze tatsächlich Verschiedenes sagen.
+
+## Was diesmal anders ist
+
+| | Der perfekte Gipfel | Grünzugang |
+|:--|:--|:--|
+| Daten | fertiges QGIS-Paket | gemeinsamer Datenplan, Daten selbst beschaffen und prüfen |
+| Regel | Gipfelregel formulieren | Regel des eigenen Ansatzes aus der Quelle herauslesen und als QGIS-Ausdruck schreiben |
+| Automatisierung | fertiges Skript nutzen | Referenzkette im grafischen Modellierer nachbauen und für den eigenen Ansatz umbauen |
+| Vergleich | Gegenprüfung durch eine andere Gruppe | alle Ansätze für dieselbe Stadt; Übereinstimmungskarte für Marburg |
+
+## Ablauf
+
+| Sitzung | Frage und Modell → Umsetzung → Vergleich | Ergebnis |
+|:--|:--|:--|
+| **1 · Lesarten und Abstraktion** | Die Referenz gemeinsam durchdeklinieren; den eigenen Ansatz beim Wort nehmen: Was legt er fest, was lässt er offen? | Regelblatt des eigenen Ansatzes, gemeinsamer Datenplan, Prognose |
+| **2 · Umsetzung** | Daten nach Datenplan beschaffen; Referenzkette im Modellierer bauen; für den eigenen Ansatz umbauen | gespeichertes Projekt mit Modell und Ergebnis im gemeinsamen Format |
+| **3 · Vergleich für Marburg** | Ergebnistabelle aller Ansätze, Übereinstimmungskarte, Abgleich mit der Prognose | Vergleich, Status, Aussagegrenze |
+
+Zwischen den Sitzungen liegen Werkstatttermine für Datenbeschaffung und Umsetzung. Wer möchte, wendet die eigene Kette anschließend auf eine andere Stadt an.
+
+## Was ihr aus dem perfekten Gipfel mitbringt
+
+| Beim Gipfel | Beim Grünzugang |
+|:--|:--|
+| Artikelformel und historischer Code setzen dieselbe Idee verschieden um – und liefern für dieselben Gipfel verschiedene E-Werte. | WHO-Zitat, WHO-Indikator, BBSR, BfN und 3-30-300 setzen dieselbe Absicht verschieden um – und liefern für dieselbe Stadt verschiedene Versorgungsgrade. |
+| Der Panoramaartikel liefert Begriffe und eine Formel, aber keine vollständige Rechenvorschrift. | Jeder Ansatz liefert Schwellen, aber keine vollständige Definition von Grün, Zugang oder Bevölkerung. |
+| Die Gipfelregel ist die fachliche Definition dessen, was als Gipfel gilt. | Die Grünflächenregel ist die fachliche Definition dessen, was als Grünfläche gilt. |
+| Dominanz als Distanz zu höherem Gelände | Luftlinie als Distanz zur nächsten Grünfläche |
+| Höhenstufen: Erst die Verbindung entscheidet. | Fußweg: Erst der begehbare Weg entscheidet. |
+| Datenrand: Außerhalb des DGM kann höheres Gelände liegen. | Stadtgrenze: Außerhalb der Stadt kann die nächste Grünfläche liegen. |
+| Ein unbestimmter Wert ist keine Null. | Eine nicht erreichbare Fläche ist kein Beleg für Nicht-Nutzung – und umgekehrt. |
+
+## Portfolio
+
+Ein gespeichertes QGIS-Projekt mit eurem Modell für euren Ansatz, das Regelblatt, euer Ergebnis im gemeinsamen Format, der Vergleich mit der Referenz und mindestens einem weiteren Ansatz sowie eine knappe Modellaussage: Was sagt euer Ansatz über Marburg – und was nicht?

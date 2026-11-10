@@ -1,0 +1,48 @@
+---
+title: "Grünzugang"
+subtitle: "Teil 3 – Vergleich für Marburg"
+author: Chris Reudenbach
+lang: de
+draft: true
+format:
+  revealjs:
+    theme: [../../perfekter-gipfel/slides/theme.scss]
+    toc: false
+    chalkboard: true
+    menu: false
+    slide-number: true
+---
+
+<!-- ENTWURF – Struktur steht, Inhalte folgen. -->
+
+## Wie gut ist Marburg versorgt?
+
+<!-- Ergebnistabelle: Ansatz → Anteil versorgter Bevölkerung. Spannweite über alle Ansätze. -->
+
+## Die Übereinstimmungskarte
+
+<!-- Je Gitterzelle: in wie vielen Ansätzen versorgt? 0 = alle sagen nein, n = alle sagen ja; dazwischen hängt das Urteil am Ansatz. -->
+
+## Wo die Ansätze auseinandergehen
+
+<!-- Welche Stadtteile kippen? Welche Regel ist dafür verantwortlich: Mindestgröße, Luftlinie gegen Fußweg, Summe gegen Einzelfläche, Ja/Nein gegen m² pro Einwohner? -->
+
+## Prognose gegen Ergebnis
+
+<!-- Jede Gruppe: Was haben wir erwartet, was kam heraus, warum? -->
+
+## Doppelt umgesetzt
+
+<!-- Falls ein Ansatz zweimal vergeben wurde: Stimmen die Ergebnisse überein? Wenn nicht – welche Setzung unterscheidet sich? Reproduzierbarkeit. -->
+
+## Aus dem perfekten Gipfel
+
+<!-- Artikelformel gegen historischen Code: gleiche Gipfel, andere E. Hier: gleiche Stadt, andere Versorgungsgrade. -->
+
+## Zugang ist nicht Nutzung
+
+<!-- Was keiner der Ansätze beantwortet; Bezug zu Masterson et al. 2022. -->
+
+## Modellaussage
+
+<!-- „Marburg ist gut versorgt“ – nach welchem Ansatz? Was darf eine Stadt nach diesem Vergleich über ihre Grünversorgung sagen? Beobachtung, Modellkonstruktion, Prüfung, Aussagegrenze. -->

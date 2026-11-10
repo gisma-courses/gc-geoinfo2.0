@@ -1,178 +1,415 @@
 [
   {
-    "objectID": "content/perfekter-gipfel/resume.html",
-    "href": "content/perfekter-gipfel/resume.html",
-    "title": "Resume: Der perfekte Gipfel",
+    "objectID": "content/gruenzugang/arbeitsblatt/01-quellenanalyse.html",
+    "href": "content/gruenzugang/arbeitsblatt/01-quellenanalyse.html",
+    "title": "Grünzugang · Sitzung 1",
     "section": "",
-    "text": "Alltags- oder Fachbegriff → Kriterien → Modellannahmen → Datenmodell → GIS-Operationen → Ergebnis → Prüfung und Geltungsgrenze\n„Der perfekte Gipfel“ ist kein Sonderfall. Das Beispiel verdichtet den gesamten Analyseprozess: Eine zunächst sprachliche Bewertung wird in explizite Entscheidungen übersetzt. Erst danach kann ein GIS rechnen. Das Resultat ist daher nie nur eine Zahl, sondern die nachvollziehbare Verbindung von Fachbegriff, Annahmen, Daten und Methode.",
+    "text": "← Themenblock 2 · Folien Teil 1",
     "crumbs": [
-      "Der perfekte Gipfel",
-      "Resume und Ausblick"
+      "Grünzugang",
+      "Arbeitsauftrag Sitzung 1"
     ]
   },
   {
-    "objectID": "content/perfekter-gipfel/resume.html#das-grundmuster-jeder-räumlichen-analyse",
-    "href": "content/perfekter-gipfel/resume.html#das-grundmuster-jeder-räumlichen-analyse",
-    "title": "Resume: Der perfekte Gipfel",
+    "objectID": "content/gruenzugang/arbeitsblatt/01-quellenanalyse.html#vorbereitung-auf-sitzung-2",
+    "href": "content/gruenzugang/arbeitsblatt/01-quellenanalyse.html#vorbereitung-auf-sitzung-2",
+    "title": "Grünzugang · Sitzung 1",
+    "section": "Vorbereitung auf Sitzung 2",
+    "text": "Vorbereitung auf Sitzung 2\n\nIn QGIS das Plugin QuickOSM installieren: Erweiterungen → Erweiterungen verwalten und installieren → QuickOSM.\nRegelblatt und Änderungsliste so speichern, dass ihr sie in Sitzung 2 neben QGIS geöffnet habt.",
+    "crumbs": [
+      "Grünzugang",
+      "Arbeitsauftrag Sitzung 1"
+    ]
+  },
+  {
+    "objectID": "content/gruenzugang/arbeitsblatt/01-quellenanalyse.html#hintergrund-nicht-gegenstand-der-sitzung",
+    "href": "content/gruenzugang/arbeitsblatt/01-quellenanalyse.html#hintergrund-nicht-gegenstand-der-sitzung",
+    "title": "Grünzugang · Sitzung 1",
+    "section": "Hintergrund (nicht Gegenstand der Sitzung)",
+    "text": "Hintergrund (nicht Gegenstand der Sitzung)\n\nWHO-Regionalbüro Europa (2016): Urban green spaces and health. A review of evidence – Evidenz zu Gesundheitswirkungen und Herleitung des Indikators.\nMasterson et al. (2022): Use of the natural outdoor environment in different populations in Europe in relation to access: Implications for policy – ob Zugang auch zu Nutzung führt; wichtig für die Aussagegrenze in Sitzung 3.",
+    "crumbs": [
+      "Grünzugang",
+      "Arbeitsauftrag Sitzung 1"
+    ]
+  },
+  {
+    "objectID": "content/gruenzugang/index.html",
+    "href": "content/gruenzugang/index.html",
+    "title": "Themenblock 2 · Grünzugang",
     "section": "",
-    "text": "Alltags- oder Fachbegriff → Kriterien → Modellannahmen → Datenmodell → GIS-Operationen → Ergebnis → Prüfung und Geltungsgrenze\n„Der perfekte Gipfel“ ist kein Sonderfall. Das Beispiel verdichtet den gesamten Analyseprozess: Eine zunächst sprachliche Bewertung wird in explizite Entscheidungen übersetzt. Erst danach kann ein GIS rechnen. Das Resultat ist daher nie nur eine Zahl, sondern die nachvollziehbare Verbindung von Fachbegriff, Annahmen, Daten und Methode.",
+    "text": "← Kursübersicht · Teil 1 – Folien · Arbeitsauftrag Sitzung 1",
     "crumbs": [
-      "Der perfekte Gipfel",
-      "Resume und Ausblick"
+      "Grünzugang",
+      "Überblick"
     ]
   },
   {
-    "objectID": "content/perfekter-gipfel/resume.html#was-davon-ist-grundlagenkurs-geoinformatik",
-    "href": "content/perfekter-gipfel/resume.html#was-davon-ist-grundlagenkurs-geoinformatik",
-    "title": "Resume: Der perfekte Gipfel",
-    "section": "Was davon ist Grundlagenkurs Geoinformatik?",
-    "text": "Was davon ist Grundlagenkurs Geoinformatik?\nDie Kursübersicht nennt das Ziel: verstehen, wie aus geographischen Fragen räumliche Modelle werden und wie die Wahl von Daten, Maßstab, Stellvertretergrößen und Parametern die Ergebnisse bestimmt. Der Gipfel zeigt das im Kleinen – und nichts davon ist an ein bestimmtes Programm gebunden.\n\n\n\n\n\n\n\n\nKursziel\nAm perfekten Gipfel\nÜbertragbar auf jede GI-Analyse\n\n\n\n\nAbstraktion\n„Eigenständigkeit“ wird zu Höhe, Dominanz, Prominenz und E-Formel. Was überhaupt als Gipfel gilt, legt eure Gipfelregel fest.\nEin Fachbegriff muss in prüfbare Kriterien übersetzt werden, bevor gerechnet werden kann.\n\n\nRealität und Repräsentation\nDas DGM ist nicht das Gebirge: 10-m-Zellen, Zellzentren, 4er- oder 8er-Nachbarschaft und ein Ausschnitt mit Rand.\nJedes Datenmodell lässt etwas weg; das Ergebnis gilt zunächst für die Repräsentation.\n\n\nDatenbeschaffung und Datenkritik\nHerkunft (Land Tirol über perfectPeak), Lizenz, nachträglich zugewiesenes KBS, unbekannte Höhengenauigkeit und Aufnahmezeit.\nWissen, woher Daten stammen – und was über sie nicht bekannt ist.\n\n\nMethode\nHöhenmaske, Distanz, Suche über Höhenstufen mit Abbruchregel. Artikel und historischer Code setzen dabei unterschiedliche Regeln um.\nEine Methode ist eine begründete Regel, kein Werkzeugname.\n\n\nTransparenz und Reproduzierbarkeit\nGespeichertes Projekt, dokumentierte Parameter, Status jedes Werts und Gegenprüfung durch eine andere Gruppe.\nAndere müssen den Weg nachvollziehen und das Ergebnis wiederholen können.\n\n\n\nWissenschaftliches Arbeiten mit Geodaten heißt deshalb: fachliche Frage und methodische Umsetzung miteinander verschränken. Die Fachfrage bestimmt, welche Daten und Regeln nötig sind; die Methode zeigt, welche Antwort sich daraus tatsächlich begründen lässt.",
+    "objectID": "content/gruenzugang/index.html#worum-es-geht",
+    "href": "content/gruenzugang/index.html#worum-es-geht",
+    "title": "Themenblock 2 · Grünzugang",
+    "section": "Worum es geht",
+    "text": "Worum es geht\nGrün in Wohnungsnähe ist ein erklärtes Ziel von Gesundheitsforschung und Stadtplanung. Die Konzepte dazu klingen eindeutig – und sind es nicht. Schon „die WHO-Empfehlung“ kursiert in zwei Fassungen: ISGlobal gibt sie im Zusammenhang mit der Studie von Pereira Barboza et al. (2021) mit einer Grünfläche von mindestens 0,5 Hektar in höchstens 300 Metern Luftlinie wieder; die Arbeit, mit der dieser WHO-Indikator entwickelt wurde, empfiehlt als Standard dagegen mindestens 1 Hektar und misst die 300 Meter bis zum Rand der Fläche (van den Bosch et al. 2016).\nDie deutsche Planungspraxis setzt wieder andere Werte an: Eine Studie im Auftrag des BBSR (2018) nennt Grünflächen ab einem Hektar in 300 Metern Luftlinie, die Orientierungswerte des Bundesamts für Naturschutz (Blum et al. 2024) Grünflächen von insgesamt über einem Hektar in höchstens 500 Metern Fußweg, und der Berliner Umweltatlas misst die Versorgung in Quadratmetern Grün pro Einwohner. Die 3-30-300-Regel verlangt höchstens 300 Meter bis zur nächsten öffentlichen Grünfläche – ohne Mindestgröße. Verwandt ist die Idee der 15-Minuten-Stadt, nach der Alltagsziele in einer Viertelstunde zu Fuß oder mit dem Rad erreichbar sein sollen (Moreno et al. 2021).\nAlle meinen ungefähr dasselbe. Was sie genau meinen, zeigt sich erst, wenn man sie anwendet. Genau das tun wir: Wir diskutieren nicht, ob die Schwellen fachlich gut begründet sind. Wir nehmen die Ansätze beim Wort, setzen sie für Marburg um und vergleichen, was dabei herauskommt.",
     "crumbs": [
-      "Der perfekte Gipfel",
-      "Resume und Ausblick"
+      "Grünzugang",
+      "Überblick"
     ]
   },
   {
-    "objectID": "content/perfekter-gipfel/resume.html#im-einzelnen",
-    "href": "content/perfekter-gipfel/resume.html#im-einzelnen",
-    "title": "Resume: Der perfekte Gipfel",
-    "section": "Im Einzelnen",
-    "text": "Im Einzelnen\n\n\n\n\n\n\n\n\n\nEbene\nErreicht\nAussagegrenze / zu berücksichtigen\nNächster Schritt\n\n\n\n\nGesamtprozess\nDie Abfolge Begriff → Kriterien → Modell → Operation → Ergebnis ist sichtbar und überprüfbar.\nKein technischer Schritt kann eine ungeklärte fachliche Entscheidung ersetzen. Jede spätere GIS-Analyse hat dieselbe Struktur, auch wenn ihre Werkzeuge andere sind.\nDie Prozesskette bei jeder neuen Fragestellung zuerst formulieren, bevor Daten oder Werkzeuge gewählt werden.\n\n\nPanoramaartikel → formale Aufgabe\nDer Artikel liefert die Bewertungsabsicht und die E-Formel: Höhe, Dominanz und Prominenz werden zu Eigenständigkeit verrechnet.\nEr legt keine vollständige Rechenvorschrift fest: Was genau als Gipfel zählt, wie ein Plateau behandelt wird, welches höhere Gelände relevant ist, wann eine Scharte als gefunden gilt und wann die Suche endet, bleibt offen.\nDie zusätzlichen Regeln ausdrücklich als eigene Modellannahmen dokumentieren, nicht als direkte Vorgabe des Artikels ausgeben.\n\n\nZerlegung und Abstraktion\nDie Frage ist in prüfbare Teile zerlegt: Gipfelkandidat → höheres Gelände → Distanz → Verbindung über Höhenstufen → Scharte → Aussagegrenze.\n„Gipfel“ ist eine fachliche Definition. Fenstergröße, Plateau-Regel, Nachbarschaft und Mindesthöhe müssen sichtbar bleiben.\nEine begründete Gipfelmaske für den jeweiligen Untersuchungsraum formulieren.\n\n\nTechnische Übersetzung\nDGM, Gipfelmaske, Höhenmasken, Proximity und Zusammenhangsflächen bilden diese Annahmen als Daten und Operationen ab.\n4er-/8er-Nachbarschaft, Rastergitter, Höhentoleranz und Zellzentrumdistanz sind Entscheidungen der Übersetzung, nicht Eigenschaften des Panoramaartikels.\nParameter je Analyse dokumentieren und für Vergleichbarkeit festsetzen.\n\n\nE-Wert: Artikel und Code\nDas Tool berechnet ein E-Intervall nach der Artikelformel (e_art_*) und zusätzlich die tatsächlich ausgeführte historische Codevariante (e_code_*).\nDie 100-km-Regel ist der kritische Befund: Artikel/Formelgrafik verwenden den Dominanzterm unter 100 km, der historische R-Code dagegen darüber. Beide Werte sind deshalb sichtbar getrennt; der Codewert ist kein stillschweigend übernommener Standard.\nDie Abweichung im Unterricht diskutieren und die für eine Anwendung geltende Regel explizit entscheiden.\n\n\nDerzeitige Realisation\nDas QGIS-Projekt unterstützt die manuelle Hypothese; das PyQGIS-Tool verarbeitet Gipfelpunkte (auf die höchste Zelle im Fangradius gesetzt) oder als Vertiefung alle positiven Bereiche einer Gipfelmaske und liefert Dominanz, Scharten-/Prominenzintervall, E-Intervalle und Status.\nDie Ergebnisse gelten nur für die gewählte Maske, die Rasterauflösung, die Nachbarschaft und den vorhandenen DGM-Ausschnitt. edge_relevant oder no_higher_terrain_in_dem bedeuten: keine abschließende Aussage außerhalb dieses Ausschnitts.\nTool in QGIS einfügen, an einer fachlich begründeten Maske anwenden und Ergebnislayer sichern.",
+    "objectID": "content/gruenzugang/index.html#wie-wir-vorgehen",
+    "href": "content/gruenzugang/index.html#wie-wir-vorgehen",
+    "title": "Themenblock 2 · Grünzugang",
+    "section": "Wie wir vorgehen",
+    "text": "Wie wir vorgehen\nEin Ansatz wird vollständig durchdekliniert – der WHO-Indikator nach van den Bosch et al. (2016) als Referenz: vom Satz in der Quelle über Kriterien und Daten bis zur Verarbeitungskette in QGIS. Diese Kette ist das gemeinsame Gerüst.\nJede Gruppe übernimmt dann einen anderen Ansatz und baut die Referenzkette so um, dass sie genau das rechnet, was ihr Ansatz verlangt – nicht mehr und nicht weniger.\nDie eigentliche Aufgabe ist der Vergleich: Wie viele Menschen in Marburg gelten je nach Ansatz als versorgt? Wo sind sich alle Ansätze einig, und wo hängt das Urteil allein davon ab, welcher Ansatz gilt?\nDamit der Vergleich etwas aussagt, gelten zwei Regeln:\n\nGleiche Daten für alle. Alle Gruppen rechnen mit derselben Datengrundlage. Sonst wüsste niemand, ob ein Unterschied aus dem Ansatz oder aus den Daten kommt.\nWas ein Ansatz offenlässt, wird wie in der Referenz gesetzt. So entstehen Unterschiede nur dort, wo die Ansätze tatsächlich Verschiedenes sagen.",
     "crumbs": [
-      "Der perfekte Gipfel",
-      "Resume und Ausblick"
+      "Grünzugang",
+      "Überblick"
     ]
   },
   {
-    "objectID": "content/perfekter-gipfel/resume.html#und-die-werkzeuge",
-    "href": "content/perfekter-gipfel/resume.html#und-die-werkzeuge",
-    "title": "Resume: Der perfekte Gipfel",
-    "section": "Und die Werkzeuge?",
-    "text": "Und die Werkzeuge?\nOhne QGIS ließe sich keine dieser Fragen beantworten. Die Bedienung ist Voraussetzung – aber nicht das Ziel. Jede Fertigkeit diente einer fachlichen Entscheidung:\n\n\n\n\n\n\n\nFertigkeit in QGIS\nWozu im Gipfelbeispiel\n\n\n\n\nDaten laden, KBS und Rasterweite prüfen\nwissen, worauf sich jede Zahl bezieht\n\n\nDigitalisieren, Attributformular\nHypothesen räumlich festhalten und begründen\n\n\nObjekte abfragen, Rasterwerte abtasten\nHöhe und Lage aus derselben DGM-Zelle\n\n\nRasterrechner\ndas Kriterium „höher als \\(h\\)“ als Maske\n\n\nGDAL Proximity\nDominanz als Distanz zum höheren Gelände\n\n\nProcessing-Skript\ndieselbe Regel für viele Gipfel wiederholen\n\n\nProjekt mit relativen Pfaden speichern\nNachvollziehbarkeit und Abgabe\n\n\n\nWer weiß, wozu ein Werkzeug eingesetzt wird, kann es sicher bedienen, Fehler erkennen – und es bei Bedarf durch ein anderes ersetzen. Die Methode bleibt dieselbe.",
+    "objectID": "content/gruenzugang/index.html#was-diesmal-anders-ist",
+    "href": "content/gruenzugang/index.html#was-diesmal-anders-ist",
+    "title": "Themenblock 2 · Grünzugang",
+    "section": "Was diesmal anders ist",
+    "text": "Was diesmal anders ist\n\n\n\n\n\n\n\n\n\nDer perfekte Gipfel\nGrünzugang\n\n\n\n\nDaten\nfertiges QGIS-Paket\ngemeinsamer Datenplan, Daten selbst beschaffen und prüfen\n\n\nRegel\nGipfelregel formulieren\nRegel des eigenen Ansatzes aus der Quelle herauslesen und als QGIS-Ausdruck schreiben\n\n\nAutomatisierung\nfertiges Skript nutzen\nReferenzkette im grafischen Modellierer nachbauen und für den eigenen Ansatz umbauen\n\n\nVergleich\nGegenprüfung durch eine andere Gruppe\nalle Ansätze für dieselbe Stadt; Übereinstimmungskarte für Marburg",
     "crumbs": [
-      "Der perfekte Gipfel",
-      "Resume und Ausblick"
+      "Grünzugang",
+      "Überblick"
     ]
   },
   {
-    "objectID": "content/perfekter-gipfel/resume.html#derselbe-ablauf-in-jedem-themenblock",
-    "href": "content/perfekter-gipfel/resume.html#derselbe-ablauf-in-jedem-themenblock",
-    "title": "Resume: Der perfekte Gipfel",
-    "section": "Derselbe Ablauf in jedem Themenblock",
-    "text": "Derselbe Ablauf in jedem Themenblock\nDie Kursübersicht beschreibt für jeden Block drei Schritte. Beim Gipfel waren das:\n\nFrage und Modell – Teil 1: vom Bewertungsbegriff zu Kriterien und Modellannahmen.\nUmsetzung in QGIS – Arbeitsblatt und Teil 3: Hypothese, Maske, Distanz, Höhenstufen.\nVergleich und Einordnung – Teil 2 und Schritte 5–6: Gegenprüfung, Status, Artikel gegen Code.\n\nGrünzugang und Raumkonstruktion folgen demselben Muster mit anderen Begriffen, Daten und Werkzeugen. Portfolio und Klausur prüfen genau diese Verbindung: nicht, ob ein Werkzeug bedient wurde, sondern ob Annahmen, Daten, Methode und Aussagegrenzen begründet sind.",
+    "objectID": "content/gruenzugang/index.html#ablauf",
+    "href": "content/gruenzugang/index.html#ablauf",
+    "title": "Themenblock 2 · Grünzugang",
+    "section": "Ablauf",
+    "text": "Ablauf\n\n\n\n\n\n\n\n\nSitzung\nFrage und Modell → Umsetzung → Vergleich\nErgebnis\n\n\n\n\n1 · Lesarten und Abstraktion\nDie Referenz gemeinsam durchdeklinieren; den eigenen Ansatz beim Wort nehmen: Was legt er fest, was lässt er offen?\nRegelblatt des eigenen Ansatzes, gemeinsamer Datenplan, Prognose\n\n\n2 · Umsetzung\nDaten nach Datenplan beschaffen; Referenzkette im Modellierer bauen; für den eigenen Ansatz umbauen\ngespeichertes Projekt mit Modell und Ergebnis im gemeinsamen Format\n\n\n3 · Vergleich für Marburg\nErgebnistabelle aller Ansätze, Übereinstimmungskarte, Abgleich mit der Prognose\nVergleich, Status, Aussagegrenze\n\n\n\nZwischen den Sitzungen liegen Werkstatttermine für Datenbeschaffung und Umsetzung. Wer möchte, wendet die eigene Kette anschließend auf eine andere Stadt an.",
     "crumbs": [
-      "Der perfekte Gipfel",
-      "Resume und Ausblick"
+      "Grünzugang",
+      "Überblick"
     ]
   },
   {
-    "objectID": "content/perfekter-gipfel/resume.html#fazit",
-    "href": "content/perfekter-gipfel/resume.html#fazit",
-    "title": "Resume: Der perfekte Gipfel",
-    "section": "Fazit",
-    "text": "Fazit\nDer Kurs übersetzt den Panoramaartikel in ein prüfbares Modell, nicht in eine behauptete endgültige Bergklassifikation. Gerade die Abweichung zwischen Formel und historischem Code zeigt die Hauptaussage: Implementierungen treffen Regeln – auch dann, wenn sie unsichtbar bleiben. Die gleiche Kette verbindet auch Eignungsanalyse, Erreichbarkeit, Gefährdung, Flächenbewertung oder Modellierung. Ein belastbares Ergebnis besteht deshalb aus Wert, Parametern, implementierter Regel und Aussagegrenze – nicht aus einer Zahl allein.",
+    "objectID": "content/gruenzugang/index.html#was-ihr-aus-dem-perfekten-gipfel-mitbringt",
+    "href": "content/gruenzugang/index.html#was-ihr-aus-dem-perfekten-gipfel-mitbringt",
+    "title": "Themenblock 2 · Grünzugang",
+    "section": "Was ihr aus dem perfekten Gipfel mitbringt",
+    "text": "Was ihr aus dem perfekten Gipfel mitbringt\n\n\n\n\n\n\n\nBeim Gipfel\nBeim Grünzugang\n\n\n\n\nArtikelformel und historischer Code setzen dieselbe Idee verschieden um – und liefern für dieselben Gipfel verschiedene E-Werte.\nWHO-Zitat, WHO-Indikator, BBSR, BfN und 3-30-300 setzen dieselbe Absicht verschieden um – und liefern für dieselbe Stadt verschiedene Versorgungsgrade.\n\n\nDer Panoramaartikel liefert Begriffe und eine Formel, aber keine vollständige Rechenvorschrift.\nJeder Ansatz liefert Schwellen, aber keine vollständige Definition von Grün, Zugang oder Bevölkerung.\n\n\nDie Gipfelregel ist die fachliche Definition dessen, was als Gipfel gilt.\nDie Grünflächenregel ist die fachliche Definition dessen, was als Grünfläche gilt.\n\n\nDominanz als Distanz zu höherem Gelände\nLuftlinie als Distanz zur nächsten Grünfläche\n\n\nHöhenstufen: Erst die Verbindung entscheidet.\nFußweg: Erst der begehbare Weg entscheidet.\n\n\nDatenrand: Außerhalb des DGM kann höheres Gelände liegen.\nStadtgrenze: Außerhalb der Stadt kann die nächste Grünfläche liegen.\n\n\nEin unbestimmter Wert ist keine Null.\nEine nicht erreichbare Fläche ist kein Beleg für Nicht-Nutzung – und umgekehrt.",
     "crumbs": [
-      "Der perfekte Gipfel",
-      "Resume und Ausblick"
+      "Grünzugang",
+      "Überblick"
     ]
   },
   {
-    "objectID": "content/perfekter-gipfel/slides/03-technische-umsetzung.html#der-ablauf-im-arbeitsblatt",
-    "href": "content/perfekter-gipfel/slides/03-technische-umsetzung.html#der-ablauf-im-arbeitsblatt",
+    "objectID": "content/gruenzugang/index.html#portfolio",
+    "href": "content/gruenzugang/index.html#portfolio",
+    "title": "Themenblock 2 · Grünzugang",
+    "section": "Portfolio",
+    "text": "Portfolio\nEin gespeichertes QGIS-Projekt mit eurem Modell für euren Ansatz, das Regelblatt, euer Ergebnis im gemeinsamen Format, der Vergleich mit der Referenz und mindestens einem weiteren Ansatz sowie eine knappe Modellaussage: Was sagt euer Ansatz über Marburg – und was nicht?",
+    "crumbs": [
+      "Grünzugang",
+      "Überblick"
+    ]
+  },
+  {
+    "objectID": "content/perfekter-gipfel/arbeitsblatt/arbeitsauftrag.html",
+    "href": "content/perfekter-gipfel/arbeitsblatt/arbeitsauftrag.html",
     "title": "Der perfekte Gipfel",
-    "section": "Der Ablauf im Arbeitsblatt",
-    "text": "Der Ablauf im Arbeitsblatt\n\n0–1 lokale Hypothese → 2 Suchraum und Gipfelregel → 3 Dominanz → 4 Schartenintervall → 5 Gegenprüfung und Status → 6 Algorithmus\n\nDie Reihenfolge ist absichtlich: Erst eine begründete Vermutung, dann ihre systematische Prüfung.",
+    "section": "",
+    "text": "Ziel: Bestimmt die Gipfel im Untersuchungsgebiet. Wählt einen Gipfel aus und versucht, seine Dominanz, Prominenz und den Eigenständigkeitswert E anhand der Definitionen aus der Artikelanalyse zu ermitteln. Entscheidend ist nicht nur ein Zahlenwert, sondern die Frage, welche räumlichen Beziehungen ihr tatsächlich nachweisen könnt.\nIhr arbeitet vollständig digital in QGIS. Die gefundenen Gipfel werden als Punkte gespeichert, mögliche Verbindungen als Linien und Scharten als Punkte. Eure geometrischen Einträge und Begründungen bleiben im QGIS-Projekt erhalten.\n\nGipfel bestimmen (Schritte 0–2). Untersucht Höhenmodell, Schummerung und Höhenlinien. Erfasst die von euch angenommenen Gipfel als Punkte, lest ihre Höhen aus dem DGM ab und formuliert eure Aufnahmeregel. Vergleicht eure Auswahl mit einer anderen Gruppe: Wo gibt es Unterschiede und warum?\nEinen Gipfel untersuchen (Schritte 3–4). Bestimmt Gipfelhöhe, Dominanz, maßgebliche Schartenhöhe, Prominenz und – soweit begründbar – den E-Wert. Verwendet eigene Punkte und Linien, um eure Hypothesen räumlich festzuhalten.\nErgebnis überprüfen (Schritt 5). Eine andere Gruppe sucht gezielt nach näher gelegenem höherem Gelände, alternativen Verbindungen oder Problemen am Datenrand. Überarbeitet die Berechnung, wenn nötig.\nAussagegrenzen benennen (Schritt 5). Unterscheidet zwischen bestimmt, auf den Datenausschnitt beschränkt und noch offen. Ein begründet vorläufiges Ergebnis ist zulässig; zeigt, welche Information fehlt.\nVom Vorgehen zum Algorithmus (Schritt 6). Beschreibt, wie ein Programm Gipfel finden, Verbindungen prüfen, eine Suche beenden und unvollständige Daten erkennen müsste. Vergleicht euren Ablauf danach mit dem Repository perfectPeak.\n\n\n\nAbgegeben wird das gespeicherte QGIS-Arbeitsprojekt mit den bearbeiteten Layern. Für das Portfolio ergänzt ihr eine kurze Einordnung eures ausgewählten Gipfels: einen Screenshot der Karte, eure Gipfelregel und die verwendeten Parameter, die Prüfung des höheren Geländes, die Schartenhypothese, die ermittelten Werte, einen Vergleich mit einer Variante (etwa der Gipfelregel einer anderen Gruppe oder 4er- statt 8er-Nachbarschaft) und den Status der Aussage. Ein Ausdruck oder eine Papierkarte ist nicht erforderlich.",
     "crumbs": [
       "Der perfekte Gipfel",
-      "Teil 3 – QGIS-Workflow"
+      "QGIS-Arbeitsauftrag"
     ]
   },
   {
-    "objectID": "content/perfekter-gipfel/slides/03-technische-umsetzung.html#gelände-lesen-und-hypothese-speichern",
-    "href": "content/perfekter-gipfel/slides/03-technische-umsetzung.html#gelände-lesen-und-hypothese-speichern",
+    "objectID": "content/perfekter-gipfel/arbeitsblatt/arbeitsauftrag.html#abgabe",
+    "href": "content/perfekter-gipfel/arbeitsblatt/arbeitsauftrag.html#abgabe",
     "title": "Der perfekte Gipfel",
-    "section": "0–1 · Gelände lesen und Hypothese speichern",
-    "text": "0–1 · Gelände lesen und Hypothese speichern\n\n\n\n\n\n\n\n\nEingabe\nHandlung\nErgebnislayer\n\n\n\n\nRelief, Schummerung, Höhenlinien\nA und B zunächst ohne Kandidatenlayer beurteilen\nlokale Beobachtung\n\n\nKandidaten A–F\nA und B vergleichen\nbegründete Hypothese\n\n\nArbeitslayer\nVerbindung und Scharte digitalisieren\nLinie und Punkt mit Begründung\n\n\n\nDie erste Verbindung ist kein Nachweis einer maßgeblichen Scharte.",
+    "section": "",
+    "text": "Abgegeben wird das gespeicherte QGIS-Arbeitsprojekt mit den bearbeiteten Layern. Für das Portfolio ergänzt ihr eine kurze Einordnung eures ausgewählten Gipfels: einen Screenshot der Karte, eure Gipfelregel und die verwendeten Parameter, die Prüfung des höheren Geländes, die Schartenhypothese, die ermittelten Werte, einen Vergleich mit einer Variante (etwa der Gipfelregel einer anderen Gruppe oder 4er- statt 8er-Nachbarschaft) und den Status der Aussage. Ein Ausdruck oder eine Papierkarte ist nicht erforderlich.",
     "crumbs": [
       "Der perfekte Gipfel",
-      "Teil 3 – QGIS-Workflow"
+      "QGIS-Arbeitsauftrag"
     ]
   },
   {
-    "objectID": "content/perfekter-gipfel/slides/03-technische-umsetzung.html#suchraum-und-gipfeldefinition-erweitern",
-    "href": "content/perfekter-gipfel/slides/03-technische-umsetzung.html#suchraum-und-gipfeldefinition-erweitern",
+    "objectID": "content/perfekter-gipfel/arbeitsblatt/arbeitsauftrag.html#projekt-starten",
+    "href": "content/perfekter-gipfel/arbeitsblatt/arbeitsauftrag.html#projekt-starten",
     "title": "Der perfekte Gipfel",
-    "section": "2 · Suchraum und Gipfeldefinition erweitern",
-    "text": "2 · Suchraum und Gipfeldefinition erweitern\nZoomt auf dgm_10m. Erst jetzt werden C, D und der Datenrand Teil der Frage.\n\nEigene Gipfelregel: Welche lokalen Maxima zählen? Die Entscheidung wird als Punktlayer oder als Gipfelmaske dokumentiert – nicht nur als mündliche Vermutung.",
+    "section": "0 · Projekt starten",
+    "text": "0 · Projekt starten\n\nPerfekter_Gipfel_QGIS.zip herunterladen und vollständig entpacken.\nEine Arbeitskopie des entpackten Ordners erstellen. Projektdatei und Unterordner zusammenlassen.\nIn QGIS 3.44 oder neuer Perfekter_Gipfel.qgz öffnen (alternativ .qgs). Die Startansicht zeigt die Umgebung der Gipfelkandidaten A und B.\nÜber den Layerbaum zwischen Relief, Höhenlinien, Schummerung und DGM wechseln. Der Layer „Gipfelkandidaten A–F (DEM-Maxima)“ ist beim Öffnen ausgeblendet. Lasst ihn zunächst aus und schätzt das Relief selbst ein.\n\n\n\n\n\n\n\nTippQGIS: Was bedeutet hier markieren oder einzeichnen?\n\n\n\nMarkieren: Punktobjekt in einem editierbaren Vektorlayer speichern. Einzeichnen: Linienobjekt mit mehreren Stützpunkten speichern. Danach im Attributformular die Felder ausfüllen – in den vorbereiteten Arbeitslayern typ (z. B. „Verbindung A–B“), begruendung und status.\nEine Auswahl oder temporäre Skizze ist kein Ergebnis. Ergebnisse liegen als gespeicherte Objekte in den Arbeitslayern vor.\n\n\n\n\n\n\n\n\nHinweisQGIS: So speichert ihr eine neue Geometrie\n\n\n\n\nDen richtigen Layer im Layerfenster anklicken.\nÜber das Stiftsymbol „Bearbeitungsmodus umschalten“ die Bearbeitung einschalten.\n„Punktobjekt hinzufügen“ bzw. „Linienobjekt hinzufügen“ wählen.\nPunkt: einmal in die Karte klicken. Linie: mit Linksklicks Stützpunkte setzen, mit Rechtsklick abschließen.\nIm Attributformular typ und begruendung eintragen (in eigenen Layern die dort angelegten Felder) und bestätigen.\nLayeränderungen speichern und den Bearbeitungsmodus beenden. Zusätzlich das QGIS-Projekt speichern (Strg+S).\n\nWenn die Werkzeuge fehlen: Ansicht → Werkzeugkästen → Digitalisierung einschalten. Layeränderungen und Projektänderungen sind zwei verschiedene Speicherungen.",
     "crumbs": [
       "Der perfekte Gipfel",
-      "Teil 3 – QGIS-Workflow"
+      "QGIS-Arbeitsauftrag"
     ]
   },
   {
-    "objectID": "content/perfekter-gipfel/slides/03-technische-umsetzung.html#dominanz-als-höhenmaske-und-distanz",
-    "href": "content/perfekter-gipfel/slides/03-technische-umsetzung.html#dominanz-als-höhenmaske-und-distanz",
+    "objectID": "content/perfekter-gipfel/arbeitsblatt/arbeitsauftrag.html#lokale-hypothese-a-und-b",
+    "href": "content/perfekter-gipfel/arbeitsblatt/arbeitsauftrag.html#lokale-hypothese-a-und-b",
     "title": "Der perfekte Gipfel",
-    "section": "3 · Dominanz als Höhenmaske und Distanz",
-    "text": "3 · Dominanz als Höhenmaske und Distanz\n\"dgm_10m@1\" &gt; h_A\n\nHöheres Gelände als 0/1-Maske erzeugen.\nFür die Dominanz: GDAL → Proximity (Rasterentfernung) mit Zielwert 1 und Meter-Einheiten.\nDen Distanzwert an der Gipfelzelle ablesen und den DGM-Rand prüfen.\n\n\nDer Wert ist eine Rasterzellzentrumdistanz innerhalb des vorhandenen DGM.",
+    "section": "1 · Lokale Hypothese: A und B",
+    "text": "1 · Lokale Hypothese: A und B\nUntersucht zuerst den Startausschnitt. Blendet danach „Gipfelkandidaten A–F (DEM-Maxima)“ ein und betrachtet A (2564,26 m) und B (2592,12 m) als Vergleichspunkte.\n\nZeichnet einen möglichen Verbindungsweg zwischen den Bereichen A und B.\nMarkiert eine vermutete Scharte auf dieser Verbindung.\nHaltet fest, warum diese Verbindung und diese Scharte für euch plausibel sind.\nNoch keinen endgültigen E-Wert berechnen. Die räumliche Umgebung ist noch nicht vollständig geprüft.\n\n\n\n\n\n\n\nTippQGIS: Verbindung als Linie und Scharte als Punkt einzeichnen\n\n\n\nVerbindung: Layer „Eigene Verbindungen und Hypothesen“ aktivieren → Bearbeitungsmodus einschalten → Linienobjekt hinzufügen → Verlauf mit mehreren Linksklicks nachzeichnen → mit Rechtsklick beenden → Begründung im Attributformular eintragen → speichern.\nScharte: Layer „Eigene Schartenkandidaten“ aktivieren → Bearbeitungsmodus einschalten → Punktobjekt hinzufügen → auf die vermutete tiefste Stelle der Verbindung klicken → Attribute ergänzen → speichern.\nDie Linie und Scharte sind nur eine lokale Hypothese. Für B liegt das relevante höhere Gelände nicht im Paar A–B; eine endgültige Bewertung folgt erst nach Schritt 3–4.",
     "crumbs": [
       "Der perfekte Gipfel",
-      "Teil 3 – QGIS-Workflow"
+      "QGIS-Arbeitsauftrag"
     ]
   },
   {
-    "objectID": "content/perfekter-gipfel/slides/03-technische-umsetzung.html#scharte-als-intervall-bestimmen",
-    "href": "content/perfekter-gipfel/slides/03-technische-umsetzung.html#scharte-als-intervall-bestimmen",
+    "objectID": "content/perfekter-gipfel/arbeitsblatt/arbeitsauftrag.html#das-gesamte-gelände-und-eigene-gipfel-erfassen",
+    "href": "content/perfekter-gipfel/arbeitsblatt/arbeitsauftrag.html#das-gesamte-gelände-und-eigene-gipfel-erfassen",
     "title": "Der perfekte Gipfel",
-    "section": "4 · Scharte als Intervall bestimmen",
-    "text": "4 · Scharte als Intervall bestimmen\n\"dgm_10m@1\" &gt; s\nPrüft Höhenstufen zuerst grob in 25 m, dann nahe des Übergangs in 10 m. Haltet fest:\n\nletzte getrennte Stufe,\nerste verbundene Stufe,\ngewählte 4er-/8er-Nachbarschaft,\nmögliche Verbindung über den Datenrand.\n\nSo entsteht ein Scharten- und Prominenzintervall statt einer scheinbar exakten Zahl.",
+    "section": "2 · Das gesamte Gelände und eigene Gipfel erfassen",
+    "text": "2 · Das gesamte Gelände und eigene Gipfel erfassen\nRechtsklick auf „dgm_10m“ → „Auf Layer zoomen“. Das DGM muss dazu nicht sichtbar sein. Untersucht nun den gesamten 3,24 × 3,60 km großen Ausschnitt. Betrachtet Relief, Schummerung und Höhenlinien und schaltet die vorbereiteten Gipfelkandidaten bei Bedarf wieder aus.\nErstellt einen eigenen Punktlayer und erfasst die Geländestellen, die ihr nach eurer Regel als Gipfel bewertet. Gebt jedem Gipfel eine Kennung und einen Höhenwert aus dem DGM. Vergleicht erst danach mit den vorbereiteten Kandidaten A–F und mit einer anderen Gruppe. Die sechs Kandidaten sind keine vollständige Gipfelliste.\n\n\n\n\n\n\nTippQGIS: Eigenen Gipfel-Punktlayer anlegen und Punkte erfassen\n\n\n\n\nLayer → Layer erstellen → Neuer GeoPackage-Layer… öffnen.\nAls Datenbank in eurem entpackten Arbeitsordner z. B. daten/eigene_ergebnisse.gpkg anlegen; Tabellenname eigene_gipfel.\nGeometrietyp: Punkt; KBS: EPSG:31254.\nFelder ergänzen: kennung (Text), hoehe_m (Dezimalzahl), regel (Text). Den neuen Layer anlegen.\nLayer aktivieren → Bearbeitungsmodus → Punktobjekt hinzufügen → auf jede als Gipfel bewertete Stelle klicken → Kennung und Regel eintragen.\nFür die Höhe „dgm_10m“ sichtbar und aktiv schalten, das Werkzeug „Objekte abfragen“ aus der Attributwerkzeugleiste wählen und die betreffende Rasterzelle anklicken. Den Bandwert in hoehe_m des Gipfelpunkts eintragen; anschließend wieder zum Gipfellayer wechseln.\nÄnderungen speichern. Der gespeicherte Punkt ist eure digitale Markierung.\n\nWichtig: Rasterwert und Punktlage müssen zur gleichen DGM-Zelle gehören. Für eine automatisierte und reproduzierbare Übertragung der Werte könnt ihr stattdessen das QGIS-Werkzeug „Rasterwerte abtasten“ verwenden; dessen Ausgabelayer ist dann als Ergebnis dauerhaft zu speichern.\n\n\n\n\n\n\n\n\nHinweisPrüffrage: Was zählt für euch als Gipfel?\n\n\n\nZählt bereits jede Zelle, die höher ist als ihre direkten Nachbarn? Oder muss ein Gipfel eine deutlich größere Umgebung überragen? Formuliert eure Regel so, dass eine andere Gruppe sie auf dieselben Daten anwenden könnte. Die vorbereiteten A–F wurden aus lokalen Maxima einer 31 × 31-Zellen-Nachbarschaft ausgewählt; das ist eine Beispielauswahl, keine verbindliche Definition.",
     "crumbs": [
       "Der perfekte Gipfel",
-      "Teil 3 – QGIS-Workflow"
+      "QGIS-Arbeitsauftrag"
     ]
   },
   {
-    "objectID": "content/perfekter-gipfel/slides/03-technische-umsetzung.html#ergebnis-ist-wert-plus-status",
-    "href": "content/perfekter-gipfel/slides/03-technische-umsetzung.html#ergebnis-ist-wert-plus-status",
+    "objectID": "content/perfekter-gipfel/arbeitsblatt/arbeitsauftrag.html#für-einen-gipfel-höheres-gelände-finden",
+    "href": "content/perfekter-gipfel/arbeitsblatt/arbeitsauftrag.html#für-einen-gipfel-höheres-gelände-finden",
     "title": "Der perfekte Gipfel",
-    "section": "5 · Ergebnis ist Wert plus Status",
-    "text": "5 · Ergebnis ist Wert plus Status\n\n\n\n\n\n\n\nKennwert\nNur eintragen, wenn …\n\n\n\n\nDominanz\nhöheres Gelände im DGM geprüft wurde\n\n\nScharte / Prominenz\ndie Verbindung über Höhenstufen eingegrenzt wurde\n\n\nE-Wert\nFormelvariante und Eingangsintervalle dokumentiert sind\n\n\nStatus\nDatenrand und offene Alternativen benannt sind\n\n\n\nedge_relevant und no_higher_terrain_in_dem sind Ergebnisse, keine Fehlermeldungen.",
+    "section": "3 · Für einen Gipfel höheres Gelände finden",
+    "text": "3 · Für einen Gipfel höheres Gelände finden\nWählt einen eurer Gipfel als Ziel. B eignet sich besonders, um die Rolle des südlicher gelegenen C (2659,54 m) und des höchsten Rasterpunkts D (2716,06 m) zu prüfen.\nErmittelt zunächst, wo es höheres Gelände als euren Zielgipfel gibt. Untersucht anschließend, welches dieser höheren Gebiete am nächsten liegt – dabei ist wichtig, ob der Rand des DGM eure Suche einschränkt.\n\n\n\n\n\n\nTippQGIS: Höheres Gelände als Rastermaske sichtbar machen\n\n\n\nIm Menü Raster → Rasterrechner… eine Bedingung für die Gipfelhöhe formulieren. Für A lautet sie beispielsweise:\n\"dgm_10m@1\" &gt; 2564.257080078125\nDen tatsächlichen Bandnamen in der Rasterbandliste prüfen. Für einen anderen Gipfel seine Höhe einsetzen. Als Ausgabeausdehnung das DGM, als Rastergröße 324 × 360 Zellen und als KBS EPSG:31254 verwenden. Ergebnis als Rasterdatei im Arbeitsordner speichern.\nDie Zellen mit 1 sind höher als A; die mit 0 nicht. Stellt 0 transparent und 1 farbig dar. So erkennt ihr höheres Gelände auf der Reliefkarte.\nOptional für die Dominanz: Im Verarbeitungswerkzeug GDAL → Proximity (Rasterentfernung) für die Maske den Zielwert 1 wählen und die Entfernungen in georeferenzierten Koordinaten (Meter) ausgeben. Den Wert der Gipfelzelle prüfen. Gemessen wird zwischen Rasterzellzentren – und nur zu Zellen innerhalb des Ausschnitts.",
     "crumbs": [
       "Der perfekte Gipfel",
-      "Teil 3 – QGIS-Workflow"
+      "QGIS-Arbeitsauftrag"
     ]
   },
   {
-    "objectID": "content/perfekter-gipfel/slides/03-technische-umsetzung.html#vom-klick-zum-algorithmus",
-    "href": "content/perfekter-gipfel/slides/03-technische-umsetzung.html#vom-klick-zum-algorithmus",
+    "objectID": "content/perfekter-gipfel/arbeitsblatt/arbeitsauftrag.html#scharten-und-verbindungen-über-höhenstufen-prüfen",
+    "href": "content/perfekter-gipfel/arbeitsblatt/arbeitsauftrag.html#scharten-und-verbindungen-über-höhenstufen-prüfen",
     "title": "Der perfekte Gipfel",
-    "section": "6 · Vom Klick zum Algorithmus",
-    "text": "6 · Vom Klick zum Algorithmus\n\nGipfelmaske → höheres Gelände → Distanz → Zusammenhang über Höhenstufen → Prominenz → E-Formel → Status\n\nDer Algorithmus muss dieselben Entscheidungen offenlegen wie die manuelle Analyse. Automatisierung ersetzt weder Gipfeldefinition noch Aussagegrenze.",
+    "section": "4 · Scharten und Verbindungen über Höhenstufen prüfen",
+    "text": "4 · Scharten und Verbindungen über Höhenstufen prüfen\nDie nächste höhere Stelle und die maßgebliche Scharte beantworten verschiedene Fragen. Eine eingezeichnete Verbindung zwischen zwei Gipfeln ist noch kein Nachweis, dass es keine günstigere Verbindung gibt.\nPrüft deshalb mehrere Höhenstufen: Welche zusammenhängenden Flächen bleiben oberhalb einer gewählten Höhe bestehen? Ab welcher Stufe hängt die Fläche eures Zielgipfels mit einer Fläche zusammen, die höher als euer Zielgipfel ist?\n\n\n\n\n\n\nTippQGIS: Verbindung über eine Höhenstufe untersuchen\n\n\n\nErstellt mit Raster → Rasterrechner… zunächst beispielsweise:\n\"dgm_10m@1\" &gt; 2500\n2500 m ist ein Startwert, kein Ergebnis. Prüft zunächst grob in 25-m-Stufen und grenzt den Übergang danach in 10-m-Stufen ein. Dokumentiert die letzte getrennte und die erste verbundene Stufe; die Schartenhöhe liegt innerhalb dieses Intervalls. Beurteilt dabei nur die Verbindung zu höherem Gelände.\nWenn ihr Rasterflächen polygonisiert oder Zusammenhangsflächen berechnet, dokumentiert die zugrunde gelegte 4er- oder 8er-Nachbarschaft. An diagonalen Zellkontakten entstehen unterschiedliche Ergebnisse.\nNeue mögliche Verbindungswege zeichnet ihr wieder in „Eigene Verbindungen und Hypothesen“ ein; zusätzliche Scharten in „Eigene Schartenkandidaten“. Ergänzt die jeweilige Begründung im Attributformular.",
     "crumbs": [
       "Der perfekte Gipfel",
-      "Teil 3 – QGIS-Workflow"
+      "QGIS-Arbeitsauftrag"
     ]
   },
   {
-    "objectID": "content/perfekter-gipfel/slides/03-technische-umsetzung.html#automatisierung-im-processing-tool",
-    "href": "content/perfekter-gipfel/slides/03-technische-umsetzung.html#automatisierung-im-processing-tool",
+    "objectID": "content/perfekter-gipfel/arbeitsblatt/arbeitsauftrag.html#werte-festhalten-und-gegenseitig-prüfen",
+    "href": "content/perfekter-gipfel/arbeitsblatt/arbeitsauftrag.html#werte-festhalten-und-gegenseitig-prüfen",
     "title": "Der perfekte Gipfel",
-    "section": "Automatisierung im Processing-Tool",
-    "text": "Automatisierung im Processing-Tool\nDas PyQGIS-Tool verarbeitet Gipfelpunkte – vorbereitet oder selbst erfasst – und setzt sie auf die höchste Zelle im Fangradius. Eine Gipfelmaske ist als Vertiefung möglich. Es erzeugt:\n\nHöhe, Fangverschiebung snap_m, Abstand zum DGM-Rand rand_m,\nDominanz und Scharten-/Prominenzintervall,\ne_art_* nach Artikelformel,\ne_code_* nach historischer Codeverzweigung,\nStatus für Datenrand, NoData, fehlendes höheres Gelände und Punkte, die kein lokales Maximum sind.\n\n\nInstallation, Eingaben und Felddefinitionen stehen im Automatisierungskapitel des Arbeitsblatts.",
+    "section": "5 · Werte festhalten und gegenseitig prüfen",
+    "text": "5 · Werte festhalten und gegenseitig prüfen\nÜbertragt die Ergebnisse für den gewählten Gipfel in eure Dokumentation. Die Felder scharte_m, dominanz_m, prominenz_m und e_wert sind im vorbereiteten Gipfelkandidatenlayer zunächst leer. Falls ihr mit einem eigenen Gipfellayer arbeitet, legt die entsprechenden Felder dort an. Tragt einen Zahlenwert erst dann ein, wenn ihr dessen räumliche Grundlage erklären könnt. Notiert die Kennung des Zielgipfels auch in der begruendung der zugehörigen Linie und Scharte. Verwendet für E die Formel aus der Artikelanalyse und lest den Wert richtig herum: Je kleiner E, desto eigenständiger der Gipfel; der Mount Everest hat E = 0.\n\n\n\nGesuchte Größe\nEuer Ergebnis\nBegründung oder offene Prüfung\n\n\n\n\nGipfelhöhe\n\n\n\n\nDominanz\n\n\n\n\nMaßgebliche Schartenhöhe\n\n\n\n\nProminenz\n\n\n\n\nEigenständigkeitswert E\n\n\n\n\nStatus: vorläufig / ausschnittsbezogen / räumlich abgesichert\n\n\n\n\n\nTauscht eure Karten mit einer anderen Gruppe. Diese versucht eine konkrete Gegenhypothese zu finden: näher gelegenes höheres Gelände, eine bessere Verbindung oder ein Datenrand, hinter dem die Suche weitergehen müsste. Ergänzt die Alternative als Punkt oder Linie im passenden Arbeitslayer und besprecht, welche Zahl sich dadurch ändert.\n\n\n\n\n\n\nWarnungQGIS: Ein nicht bestimmbarer Wert ist keine Null\n\n\n\nD ist der höchste Punkt des vorliegenden DGM. Im Ausschnitt liegt daher kein höherer Rasterpunkt, der seine Dominanz oder die maßgebliche Verbindung zu höherem Gelände abschließend bestimmen könnte. Das ist keine Dominanz von 0 m und kein Beleg für maximale Eigenständigkeit.\nFür jeden Gipfel gilt: Ein außerhalb des Ausschnitts liegender höherer Punkt oder Verbindungsweg kann das Ergebnis verändern. Kennzeichnet die Aussage dann als vorläufig oder auf den Datenausschnitt beschränkt. Eine offene Berechnung mit klar benannter fehlender Information ist ein gültiges Ergebnis.",
     "crumbs": [
       "Der perfekte Gipfel",
-      "Teil 3 – QGIS-Workflow"
+      "QGIS-Arbeitsauftrag"
     ]
   },
   {
-    "objectID": "content/perfekter-gipfel/slides/03-technische-umsetzung.html#abgabe-und-reflexion",
-    "href": "content/perfekter-gipfel/slides/03-technische-umsetzung.html#abgabe-und-reflexion",
+    "objectID": "content/perfekter-gipfel/arbeitsblatt/arbeitsauftrag.html#den-eigenen-lösungsweg-als-algorithmus-formulieren",
+    "href": "content/perfekter-gipfel/arbeitsblatt/arbeitsauftrag.html#den-eigenen-lösungsweg-als-algorithmus-formulieren",
     "title": "Der perfekte Gipfel",
-    "section": "Abgabe und Reflexion",
-    "text": "Abgabe und Reflexion\nAbgegeben wird ein gespeichertes QGIS-Projekt mit Ergebnislayern, digitalen Hypothesen und einer kurzen Begründung:\n\nWelcher Wert folgt aus welcher Regel, welchen Daten und welcher räumlichen Grenze?\n\nArbeitsblatt „Der perfekte Gipfel“ öffnen",
+    "section": "6 · Den eigenen Lösungsweg als Algorithmus formulieren",
+    "text": "6 · Den eigenen Lösungsweg als Algorithmus formulieren\nSchreibt euren Arbeitsablauf als kurze Folge eindeutiger Regeln auf:\n\nWie werden Gipfelkandidaten gefunden und nach welcher Nachbarschaftsregel ausgewählt?\nWie bestimmt das Verfahren das nächste höhere Gelände und prüft mögliche Verbindungen bzw. Scharten?\nUnter welchen Bedingungen ist die Suche abgeschlossen?\nWie meldet das Programm, dass der Datenausschnitt keine abgesicherte Aussage erlaubt?\n\nPrüft dann das Repository gisma/perfectPeak (Commit 37b49f1). Welche eurer Entscheidungen und Abbruchbedingungen erkennt ihr im Code wieder – welche nicht?",
     "crumbs": [
       "Der perfekte Gipfel",
-      "Teil 3 – QGIS-Workflow"
+      "QGIS-Arbeitsauftrag"
+    ]
+  },
+  {
+    "objectID": "content/perfekter-gipfel/arbeitsblatt/arbeitsauftrag.html#exkurs-automatisierung-in-qgis-stapelverarbeitung-und-modelle",
+    "href": "content/perfekter-gipfel/arbeitsblatt/arbeitsauftrag.html#exkurs-automatisierung-in-qgis-stapelverarbeitung-und-modelle",
+    "title": "Der perfekte Gipfel",
+    "section": "Exkurs · Automatisierung in QGIS: Stapelverarbeitung und Modelle",
+    "text": "Exkurs · Automatisierung in QGIS: Stapelverarbeitung und Modelle\nStapelverarbeitung wiederholt denselben Schritt für mehrere Gipfel; der grafische Modellierer verbindet Schritte. Beides eignet sich für Maske → Proximity → Rasterwert am Gipfel.\nDie maßgebliche Scharte wird dadurch nicht automatisch bestimmt: Dafür muss ein Verfahren Zusammenhangsflächen über Höhenstufen, Raster-Nachbarschaft und den Datenrand auswerten. Das ist ein eigener Algorithmus, nicht Teil dieses Arbeitsauftrags.\nDokumentation: QGIS-Stapelverarbeitung · Grafischer Modellierer · GDAL Proximity.",
+    "crumbs": [
+      "Der perfekte Gipfel",
+      "QGIS-Arbeitsauftrag"
+    ]
+  },
+  {
+    "objectID": "content/perfekter-gipfel/arbeitsblatt/arbeitsauftrag.html#installation-in-qgis-3.44",
+    "href": "content/perfekter-gipfel/arbeitsblatt/arbeitsauftrag.html#installation-in-qgis-3.44",
+    "title": "Der perfekte Gipfel",
+    "section": "Installation in QGIS 3.44+",
+    "text": "Installation in QGIS 3.44+\n\nDie Datei perfect_peak_metrics.py herunterladen.\nIn QGIS Verarbeitung → Werkzeugkiste öffnen.\nOben in der Werkzeugkiste auf das Python-Symbol klicken und Skript zur Werkzeugkiste hinzufügen… wählen; die heruntergeladene Datei auswählen.\nAlternativ: Neues Skript erstellen…, den gesamten Inhalt der Datei einfügen und als perfect_peak_metrics.py speichern.\nDas neue Werkzeug erscheint unter Skripte → Perfect Peak → Perfect Peak: Dominanz und Prominenzintervall.\n\nFür Gipfelpunkte ist keine Zusatzinstallation von R, SAGA oder GRASS erforderlich.",
+    "crumbs": [
+      "Der perfekte Gipfel",
+      "QGIS-Arbeitsauftrag"
+    ]
+  },
+  {
+    "objectID": "content/perfekter-gipfel/arbeitsblatt/arbeitsauftrag.html#ausführen",
+    "href": "content/perfekter-gipfel/arbeitsblatt/arbeitsauftrag.html#ausführen",
+    "title": "Der perfekte Gipfel",
+    "section": "Ausführen",
+    "text": "Ausführen\n\n\n\n\n\n\n\nEingabe\nEinstellung für dieses Projekt\n\n\n\n\nDGM\ndgm_10m\n\n\nGipfelpunkte\nGipfelkandidaten A–F (DEM-Maxima) oder euer Layer eigene_gipfel\n\n\nGipfelmaske\nLeer lassen (Vertiefung, siehe unten)\n\n\nFangradius\n3 Zellen: Punkte werden auf die höchste Zelle im Umkreis von 30 m gesetzt\n\n\nMindesthöhenunterschied\n0 m; nur bei begründeter Höhentoleranz erhöhen\n\n\nRaster-Nachbarschaft\n8er-Nachbarschaft, sofern diagonale Verbindungen gelten sollen\n\n\nAusgabe\nGeoPackage im Arbeitsordner, z. B. daten/perfect_peak_ergebnis.gpkg\n\n\n\nEin geklickter Gipfelpunkt trifft selten genau die höchste Rasterzelle. Liegt er nur eine Zelle daneben, wäre die Nachbarzelle „höheres Gelände“ in 10 m Entfernung. Das Tool setzt jeden Punkt deshalb auf die höchste Zelle im Fangradius und gibt die Verschiebung als snap_m aus; der Ausgabepunkt liegt auf der analysierten Zelle. Ist auch diese Zelle kein lokales Maximum, lautet der Status not_local_maximum: Punkt prüfen oder Fangradius begründet erhöhen.\n\n\n\n\n\n\nHinweisVertiefung: Gipfelmaske statt Punkte\n\n\n\n\n\nStatt einzelner Punkte kann das Tool alle positiven Bereiche einer Gipfelmaske auswerten; zusammenhängende Zellen werden zu einem Kandidaten mit der höchsten Zelle als Gipfelpunkt zusammengefasst. Wenn beide Eingaben gesetzt sind, haben die Punkte Vorrang.\nDie Maske ist keine technische Nebenbedingung, sondern die fachliche Definition: Welche lokalen Maxima, Mindesthöhen, Plateaus oder Ausschlüsse gelten? Für lokale Maxima braucht ihr einen Maximumfilter, etwa GRASS → r.neighbors mit Methode maximum und Fenstergröße 31 (sofern der GRASS-Anbieter in eurer QGIS-Installation verfügbar ist). Anschließend markiert der Rasterrechner die Zellen, deren Höhe dem gefilterten Maximum entspricht. DGM und Maske müssen dasselbe Rastergitter besitzen.\n\n\n\nAlle Daten benötigen ein projiziertes KBS mit Meter-Einheiten; Gipfelpunkte müssen auf gültigen DGM-Zellen liegen.",
+    "crumbs": [
+      "Der perfekte Gipfel",
+      "QGIS-Arbeitsauftrag"
+    ]
+  },
+  {
+    "objectID": "content/perfekter-gipfel/arbeitsblatt/arbeitsauftrag.html#ergebnisfelder",
+    "href": "content/perfekter-gipfel/arbeitsblatt/arbeitsauftrag.html#ergebnisfelder",
+    "title": "Der perfekte Gipfel",
+    "section": "Ergebnisfelder",
+    "text": "Ergebnisfelder\n\n\n\n\n\n\n\nFeld\nBedeutung\n\n\n\n\npp_id\nVom Tool vergebene Kennung; bei Maskeneingabe die einzige Kandidatenkennung\n\n\nsnap_m\nVerschiebung vom eingegebenen Punkt zur analysierten Gipfelzelle\n\n\npeak_h_m\nHöhe der Gipfelzelle im DGM\n\n\nrand_m\nEntfernung der Gipfelzelle zum DGM-Rand\n\n\ndominanz_m\nKürzeste Zellzentrumdistanz zu höherem Gelände innerhalb des DGM\n\n\nscharte_lo / scharte_hi\nUntere bzw. obere Grenze der aus Rasterstufen bestimmten Schartenhöhe\n\n\nprom_lo_m / prom_hi_m\nDaraus folgendes Prominenzintervall\n\n\ne_art_lo / e_art_hi\nE-Wert-Intervall nach der Formel des Panoramaartikels\n\n\ne_code_lo / e_code_hi\nE-Wert-Intervall nach der tatsächlich ausgeführten Verzweigung des historischen R-Codes\n\n\ne_note\nDokumentiert den Unterschied zwischen Artikel- und Code-Regel\n\n\npp_status\nGültigkeit des Ergebnisses\n\n\n\nok bedeutet: Dominanz und Scharte sind innerhalb des DGM bestimmt. edge_relevant bedeutet: Die Fläche des Gipfels knapp oberhalb der Scharte berührt den DGM-Rand, oder der Rand liegt näher als das gefundene höhere Gelände (rand_m &lt; dominanz_m). Außerhalb der Daten könnte dann eine höhere Verbindung oder näheres höheres Gelände liegen; das Ergebnis ist nur ausschnittsbezogen. no_higher_terrain_in_dem, not_local_maximum, outside_dem und nodata_cell sind keine Nullwerte, sondern begründete offene Ergebnisse.",
+    "crumbs": [
+      "Der perfekte Gipfel",
+      "QGIS-Arbeitsauftrag"
+    ]
+  },
+  {
+    "objectID": "content/perfekter-gipfel/arbeitsblatt/arbeitsauftrag.html#e-wert-formel-und-kritische-umsetzung",
+    "href": "content/perfekter-gipfel/arbeitsblatt/arbeitsauftrag.html#e-wert-formel-und-kritische-umsetzung",
+    "title": "Der perfekte Gipfel",
+    "section": "E-Wert: Formel und kritische Umsetzung",
+    "text": "E-Wert: Formel und kritische Umsetzung\nFür \\(d &lt; 100\\,000\\,m\\) verwendet der Panoramaartikel:\n\\[E=-\\frac{\\log_2(h/8848)+\\log_2(d/100000)+\\log_2(p/h)}{3}\\]\nFür \\(d &gt; 100\\,000\\,m\\) entfällt dort der Dominanzterm. Das Tool berechnet diese Lesart als e_art_lo bis e_art_hi; das Intervall folgt aus dem Prominenzintervall.\nDer historische Code calculateIndependence.R verzweigt tatsächlich umgekehrt: Unter 100 km lässt er den Dominanzterm weg, oberhalb von 100 km nimmt er ihn auf. Deshalb liefert das Tool zusätzlich e_code_lo bis e_code_hi, aber nicht als maßgeblichen Wert. e_note macht die verwendete Regel je Gipfel sichtbar. Bei exakt 100 km ist die Artikelformel nicht explizit; das Tool verwendet dafür die Variante ohne Dominanzterm.\nJe kleiner E, desto eigenständiger der Gipfel. Damit ist der E-Wert kein verborgenes Endergebnis: Er bleibt an Höhe, Dominanz, Prominenzintervall, Datenrand und die gewählte Formel gebunden.",
+    "crumbs": [
+      "Der perfekte Gipfel",
+      "QGIS-Arbeitsauftrag"
+    ]
+  },
+  {
+    "objectID": "content/perfekter-gipfel/slides/02-analyse.html#analyse-heißt-regeln-sichtbar-machen",
+    "href": "content/perfekter-gipfel/slides/02-analyse.html#analyse-heißt-regeln-sichtbar-machen",
+    "title": "Der perfekte Gipfel",
+    "section": "Analyse heißt: Regeln sichtbar machen",
+    "text": "Analyse heißt: Regeln sichtbar machen\n\nPanoramaartikel → fachliche Ergänzungen → GIS-Operationen → Code → prüfbares Ergebnis\n\nDie entscheidende Frage lautet nicht nur, ob ein Wert berechnet wird. Sie lautet: Welche Regel wurde dabei tatsächlich umgesetzt?",
+    "crumbs": [
+      "Der perfekte Gipfel",
+      "Teil 2 – Modellkritik"
+    ]
+  },
+  {
+    "objectID": "content/perfekter-gipfel/slides/02-analyse.html#lokale-hypothese-und-vollständige-suche",
+    "href": "content/perfekter-gipfel/slides/02-analyse.html#lokale-hypothese-und-vollständige-suche",
+    "title": "Der perfekte Gipfel",
+    "section": "Lokale Hypothese und vollständige Suche",
+    "text": "Lokale Hypothese und vollständige Suche\n\n\n\n\n\n\n\nLokale Beobachtung\nErforderliche Prüfung\n\n\n\n\nA und B scheinen verbunden.\nGibt es eine höhere Verbindung zu anderem Gelände?\n\n\nEin Nachbar wirkt entscheidend.\nLiegt höheres Gelände näher?\n\n\nEine Scharte ist sichtbar.\nIst sie die höchste mögliche Verbindungsscharte?\n\n\n\nDie Hypothese ist der Einstieg. Die Analyse erweitert den Suchraum, bis eine Aussage begründet oder ihre Grenze benannt ist.",
+    "crumbs": [
+      "Der perfekte Gipfel",
+      "Teil 2 – Modellkritik"
+    ]
+  },
+  {
+    "objectID": "content/perfekter-gipfel/slides/02-analyse.html#dominanz-eine-klare-aber-bedingte-regel",
+    "href": "content/perfekter-gipfel/slides/02-analyse.html#dominanz-eine-klare-aber-bedingte-regel",
+    "title": "Der perfekte Gipfel",
+    "section": "Dominanz: eine klare, aber bedingte Regel",
+    "text": "Dominanz: eine klare, aber bedingte Regel\n\\[d_A=\\min_{x:\\,z(x)&gt;h_A}\\operatorname{dist}(A,x)\\]\n\nUmsetzung: Höhenmaske über \\(h_A\\) → Distanz zum nächsthöheren Rasterpixel.\nBedingung: Der DGM-Ausschnitt enthält das relevante höhere Gelände. Sonst ist Dominanz nicht „0“, sondern offen bzw. ausschnittsbezogen.",
+    "crumbs": [
+      "Der perfekte Gipfel",
+      "Teil 2 – Modellkritik"
+    ]
+  },
+  {
+    "objectID": "content/perfekter-gipfel/slides/02-analyse.html#prominenz-eine-suchaufgabe",
+    "href": "content/perfekter-gipfel/slides/02-analyse.html#prominenz-eine-suchaufgabe",
+    "title": "Der perfekte Gipfel",
+    "section": "Prominenz: eine Suchaufgabe",
+    "text": "Prominenz: eine Suchaufgabe\n\\[p_A=h_A-h_{s,A}\\]\nDie Schartenhöhe \\(h_{s,A}\\) ist die höchste Schwelle, bei der die Fläche von \\(A\\) mit höherem Gelände verbunden wird.\n\nDas Ergebnis ist zunächst ein Intervall: letzte getrennte Stufe / erste verbundene Stufe. Rastergitter und Nachbarschaft bestimmen seine Auflösung.",
+    "crumbs": [
+      "Der perfekte Gipfel",
+      "Teil 2 – Modellkritik"
+    ]
+  },
+  {
+    "objectID": "content/perfekter-gipfel/slides/02-analyse.html#prominenz-im-historischen-code",
+    "href": "content/perfekter-gipfel/slides/02-analyse.html#prominenz-im-historischen-code",
+    "title": "Der perfekte Gipfel",
+    "section": "Prominenz im historischen Code",
+    "text": "Prominenz im historischen Code\nDer Code flutet das DGM und bricht ab, sobald die Fläche des Zielgipfels mehr als einen Gipfel enthält.\n\nArbeitsfrage: Ist das dieselbe Regel wie „Verbindung zu höherem Gelände“? Was passiert, wenn zuerst ein niedrigerer Nebengipfel angeschlossen wird?\n\n\nFundstelle: R/calculateProminence.R, Commit 37b49f1.",
+    "crumbs": [
+      "Der perfekte Gipfel",
+      "Teil 2 – Modellkritik"
+    ]
+  },
+  {
+    "objectID": "content/perfekter-gipfel/slides/02-analyse.html#die-gipfelmaske-ist-fachlicher-kern",
+    "href": "content/perfekter-gipfel/slides/02-analyse.html#die-gipfelmaske-ist-fachlicher-kern",
+    "title": "Der perfekte Gipfel",
+    "section": "Die Gipfelmaske ist fachlicher Kern",
+    "text": "Die Gipfelmaske ist fachlicher Kern\n\n\n\n\n\n\n\nEntscheidung\nWirkung auf das Ergebnis\n\n\n\n\nFenstergröße lokaler Maxima\nAnzahl und Lage der Kandidaten\n\n\nPlateau-Regel\nein Gipfel oder mehrere Kandidaten\n\n\nMindesthöhe / Ausschlüsse\nwelche Formen überhaupt analysiert werden\n\n\n4er- oder 8er-Nachbarschaft\nwann Flächen als verbunden gelten\n\n\n\nDie Maske ist daher keine technische Vorstufe, sondern die explizite Definition dessen, was im Modell als Gipfel gilt.",
+    "crumbs": [
+      "Der perfekte Gipfel",
+      "Teil 2 – Modellkritik"
+    ]
+  },
+  {
+    "objectID": "content/perfekter-gipfel/slides/02-analyse.html#e-wert-artikel-und-historischer-code",
+    "href": "content/perfekter-gipfel/slides/02-analyse.html#e-wert-artikel-und-historischer-code",
+    "title": "Der perfekte Gipfel",
+    "section": "E-Wert: Artikel und historischer Code",
+    "text": "E-Wert: Artikel und historischer Code\nFür \\(d&lt;100\\,000\\,m\\) zeigt die Artikelformel drei Terme: Höhe, Dominanz und Prominenz. Oberhalb davon entfällt der Dominanzterm.\n\nDer historische Code calculateIndependence.R verzweigt umgekehrt: Er lässt den Dominanzterm unter 100 km weg und nimmt ihn darüber auf.\n\nDas Processing-Tool gibt deshalb beide E-Intervalle getrennt aus: e_art_* für die Artikelformel und e_code_* für die historische Implementierung.\n\nLesart: Je kleiner \\(E\\), desto eigenständiger der Gipfel; der Mount Everest hat \\(E = 0\\).",
+    "crumbs": [
+      "Der perfekte Gipfel",
+      "Teil 2 – Modellkritik"
+    ]
+  },
+  {
+    "objectID": "content/perfekter-gipfel/slides/02-analyse.html#was-der-vergleich-lehrt",
+    "href": "content/perfekter-gipfel/slides/02-analyse.html#was-der-vergleich-lehrt",
+    "title": "Der perfekte Gipfel",
+    "section": "Was der Vergleich lehrt",
+    "text": "Was der Vergleich lehrt\n\n\nArtikel\nliefert Begriffe, Formel und Bewertungsabsicht.\n\n\nModell\nergänzt Maske, Toleranz, Nachbarschaft und Suchende.\n\n\nUmsetzung\nführt diese Regeln auf einem endlichen DGM aus.\n\n\nErgebnis\nenthält Wert, Parameter, Status und Geltungsbereich.",
+    "crumbs": [
+      "Der perfekte Gipfel",
+      "Teil 2 – Modellkritik"
+    ]
+  },
+  {
+    "objectID": "content/perfekter-gipfel/slides/02-analyse.html#übergang-zur-umsetzung",
+    "href": "content/perfekter-gipfel/slides/02-analyse.html#übergang-zur-umsetzung",
+    "title": "Der perfekte Gipfel",
+    "section": "Übergang zur Umsetzung",
+    "text": "Übergang zur Umsetzung\nDas Arbeitsblatt und das Processing-Tool beantworten nicht die Frage „Welcher Wert ist wahr?“. Sie beantworten transparent: Welcher Wert folgt aus diesen Regeln und diesen Daten?\n\nNächster Block: die konkreten QGIS-Schritte, Ergebnislayer und Statuswerte.",
+    "crumbs": [
+      "Der perfekte Gipfel",
+      "Teil 2 – Modellkritik"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Geoinformatik Basiskurs",
+    "section": "",
+    "text": "Wie werden aus geographischen Fragen räumliche Modelle – und welche Aussagen lassen sich daraus ableiten? Im Seminar untersuchen wir, wie die Wahl von Daten, Maßstab, Stellvertretergrößen (Proxys) und Parametern die Ergebnisse beeinflusst. QGIS dient dabei als Werkzeug, um diese Entscheidungen sichtbar zu machen und ihre Folgen zu prüfen.\nAusgehend von einer zunächst einfachen Frage entwickeln wir ein Modell, vergleichen Varianten und begründen seine Aussagegrenzen.",
+    "crumbs": [
+      "Geoinformatik Basiskurs"
+    ]
+  },
+  {
+    "objectID": "index.html#konzept",
+    "href": "index.html#konzept",
+    "title": "Geoinformatik Basiskurs",
+    "section": "",
+    "text": "Wie werden aus geographischen Fragen räumliche Modelle – und welche Aussagen lassen sich daraus ableiten? Im Seminar untersuchen wir, wie die Wahl von Daten, Maßstab, Stellvertretergrößen (Proxys) und Parametern die Ergebnisse beeinflusst. QGIS dient dabei als Werkzeug, um diese Entscheidungen sichtbar zu machen und ihre Folgen zu prüfen.\nAusgehend von einer zunächst einfachen Frage entwickeln wir ein Modell, vergleichen Varianten und begründen seine Aussagegrenzen.",
+    "crumbs": [
+      "Geoinformatik Basiskurs"
+    ]
+  },
+  {
+    "objectID": "index.html#drei-themenblöcke",
+    "href": "index.html#drei-themenblöcke",
+    "title": "Geoinformatik Basiskurs",
+    "section": "Drei Themenblöcke",
+    "text": "Drei Themenblöcke\n\n\n\n\n\n\n\n\nBlock\nLeitfrage\nInhalte\n\n\n\n\n1 · Gipfel / Seven Summits\nWas zählt als eigenständiger Gipfel?\nDigitale Geländemodelle, Auflösung und Maßstab; lokale Maxima, Scharten und Prominenz; Vergleich unterschiedlicher Gipfeldefinitionen.\n\n\n2 · Grünzugang / 15-Minuten-Stadt\nBedeutet räumliche Nähe auch Zugang?\nLuftlinien- und Netzwerkentfernungen, Zugänge und Barrieren; Datenverfügbarkeit, Proxys und die Grenzen von Aussagen über tatsächliche Nutzung.\n\n\n3 · Raumkonstruktion\nWie entstehen unterschiedliche Räume durch Wahrnehmung, Nutzung und Modellierung?\nSichtbarkeit, Erreichbarkeit und Angsträume; Einfluss von Sichtlinien, Barrieren und bewerteten Widerständen. Vergleich verschiedener Perspektiven und Annahmen.",
+    "crumbs": [
+      "Geoinformatik Basiskurs"
+    ]
+  },
+  {
+    "objectID": "index.html#ablauf-und-arbeitsweise",
+    "href": "index.html#ablauf-und-arbeitsweise",
+    "title": "Geoinformatik Basiskurs",
+    "section": "Ablauf und Arbeitsweise",
+    "text": "Ablauf und Arbeitsweise\nDas Präsenzseminar umfasst 4 SWS und zwölf Kerntermine: einen Auftakt, je drei Sitzungen pro Themenblock sowie je einen Termin für Diagnose-Training und Synthese. Weitere Semestertermine dienen als Werkstatt und Puffer.\nJeder Block folgt demselben Ablauf:\n\nFrage und Modell: Eine erste Antwort prüfen, Begriffe klären und Annahmen zu Objekt, Maßstab und Daten festlegen.\nUmsetzung in QGIS: Ein vorbereitetes Projekt bearbeiten, Parameter verändern und Ergebnisse sichern.\nVergleich und Einordnung: Varianten auswerten, Fehler erkennen und begründen, welche Aussagen das Modell trägt.\n\nAngeleitete Übungen und kurze studentische Impulse begleiten die Arbeit. Unterstützung bei der Bedienung und optionale Vertiefungen mit Skripten ermöglichen unterschiedliche Einstiege. Im Mittelpunkt steht das Verständnis der Modellentscheidungen.",
+    "crumbs": [
+      "Geoinformatik Basiskurs"
+    ]
+  },
+  {
+    "objectID": "index.html#studienleistung-und-prüfung",
+    "href": "index.html#studienleistung-und-prüfung",
+    "title": "Geoinformatik Basiskurs",
+    "section": "Studienleistung und Prüfung",
+    "text": "Studienleistung und Prüfung\n\nPortfolio (bestanden / nicht bestanden): Je Block ein kurzes Modellierungsartefakt mit Karte oder Screenshot, dokumentierten Parametern, Variantenvergleich und einer knappen Einordnung der Aussagegrenzen.\nKlausur (benotet, auf Papier): Materialien aus den drei Themenblöcken – etwa Karten, Tabellen und Methodenbeschreibungen – analysieren, Ergebnisse erklären und Modellannahmen sowie Aussagegrenzen beurteilen. Kurze Diagnoseaufgaben während des Seminars und ein gemeinsamer Übungstermin bereiten darauf vor.",
+    "crumbs": [
+      "Geoinformatik Basiskurs"
     ]
   },
   {
@@ -352,306 +589,333 @@
     ]
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Geoinformatik Basiskurs",
+    "objectID": "content/perfekter-gipfel/slides/03-technische-umsetzung.html#der-ablauf-im-arbeitsblatt",
+    "href": "content/perfekter-gipfel/slides/03-technische-umsetzung.html#der-ablauf-im-arbeitsblatt",
+    "title": "Der perfekte Gipfel",
+    "section": "Der Ablauf im Arbeitsblatt",
+    "text": "Der Ablauf im Arbeitsblatt\n\n0–1 lokale Hypothese → 2 Suchraum und Gipfelregel → 3 Dominanz → 4 Schartenintervall → 5 Gegenprüfung und Status → 6 Algorithmus\n\nDie Reihenfolge ist absichtlich: Erst eine begründete Vermutung, dann ihre systematische Prüfung.",
+    "crumbs": [
+      "Der perfekte Gipfel",
+      "Teil 3 – QGIS-Workflow"
+    ]
+  },
+  {
+    "objectID": "content/perfekter-gipfel/slides/03-technische-umsetzung.html#gelände-lesen-und-hypothese-speichern",
+    "href": "content/perfekter-gipfel/slides/03-technische-umsetzung.html#gelände-lesen-und-hypothese-speichern",
+    "title": "Der perfekte Gipfel",
+    "section": "0–1 · Gelände lesen und Hypothese speichern",
+    "text": "0–1 · Gelände lesen und Hypothese speichern\n\n\n\n\n\n\n\n\nEingabe\nHandlung\nErgebnislayer\n\n\n\n\nRelief, Schummerung, Höhenlinien\nA und B zunächst ohne Kandidatenlayer beurteilen\nlokale Beobachtung\n\n\nKandidaten A–F\nA und B vergleichen\nbegründete Hypothese\n\n\nArbeitslayer\nVerbindung und Scharte digitalisieren\nLinie und Punkt mit Begründung\n\n\n\nDie erste Verbindung ist kein Nachweis einer maßgeblichen Scharte.",
+    "crumbs": [
+      "Der perfekte Gipfel",
+      "Teil 3 – QGIS-Workflow"
+    ]
+  },
+  {
+    "objectID": "content/perfekter-gipfel/slides/03-technische-umsetzung.html#suchraum-und-gipfeldefinition-erweitern",
+    "href": "content/perfekter-gipfel/slides/03-technische-umsetzung.html#suchraum-und-gipfeldefinition-erweitern",
+    "title": "Der perfekte Gipfel",
+    "section": "2 · Suchraum und Gipfeldefinition erweitern",
+    "text": "2 · Suchraum und Gipfeldefinition erweitern\nZoomt auf dgm_10m. Erst jetzt werden C, D und der Datenrand Teil der Frage.\n\nEigene Gipfelregel: Welche lokalen Maxima zählen? Die Entscheidung wird als Punktlayer oder als Gipfelmaske dokumentiert – nicht nur als mündliche Vermutung.",
+    "crumbs": [
+      "Der perfekte Gipfel",
+      "Teil 3 – QGIS-Workflow"
+    ]
+  },
+  {
+    "objectID": "content/perfekter-gipfel/slides/03-technische-umsetzung.html#dominanz-als-höhenmaske-und-distanz",
+    "href": "content/perfekter-gipfel/slides/03-technische-umsetzung.html#dominanz-als-höhenmaske-und-distanz",
+    "title": "Der perfekte Gipfel",
+    "section": "3 · Dominanz als Höhenmaske und Distanz",
+    "text": "3 · Dominanz als Höhenmaske und Distanz\n\"dgm_10m@1\" &gt; h_A\n\nHöheres Gelände als 0/1-Maske erzeugen.\nFür die Dominanz: GDAL → Proximity (Rasterentfernung) mit Zielwert 1 und Meter-Einheiten.\nDen Distanzwert an der Gipfelzelle ablesen und den DGM-Rand prüfen.\n\n\nDer Wert ist eine Rasterzellzentrumdistanz innerhalb des vorhandenen DGM.",
+    "crumbs": [
+      "Der perfekte Gipfel",
+      "Teil 3 – QGIS-Workflow"
+    ]
+  },
+  {
+    "objectID": "content/perfekter-gipfel/slides/03-technische-umsetzung.html#scharte-als-intervall-bestimmen",
+    "href": "content/perfekter-gipfel/slides/03-technische-umsetzung.html#scharte-als-intervall-bestimmen",
+    "title": "Der perfekte Gipfel",
+    "section": "4 · Scharte als Intervall bestimmen",
+    "text": "4 · Scharte als Intervall bestimmen\n\"dgm_10m@1\" &gt; s\nPrüft Höhenstufen zuerst grob in 25 m, dann nahe des Übergangs in 10 m. Haltet fest:\n\nletzte getrennte Stufe,\nerste verbundene Stufe,\ngewählte 4er-/8er-Nachbarschaft,\nmögliche Verbindung über den Datenrand.\n\nSo entsteht ein Scharten- und Prominenzintervall statt einer scheinbar exakten Zahl.",
+    "crumbs": [
+      "Der perfekte Gipfel",
+      "Teil 3 – QGIS-Workflow"
+    ]
+  },
+  {
+    "objectID": "content/perfekter-gipfel/slides/03-technische-umsetzung.html#ergebnis-ist-wert-plus-status",
+    "href": "content/perfekter-gipfel/slides/03-technische-umsetzung.html#ergebnis-ist-wert-plus-status",
+    "title": "Der perfekte Gipfel",
+    "section": "5 · Ergebnis ist Wert plus Status",
+    "text": "5 · Ergebnis ist Wert plus Status\n\n\n\n\n\n\n\nKennwert\nNur eintragen, wenn …\n\n\n\n\nDominanz\nhöheres Gelände im DGM geprüft wurde\n\n\nScharte / Prominenz\ndie Verbindung über Höhenstufen eingegrenzt wurde\n\n\nE-Wert\nFormelvariante und Eingangsintervalle dokumentiert sind\n\n\nStatus\nDatenrand und offene Alternativen benannt sind\n\n\n\nedge_relevant und no_higher_terrain_in_dem sind Ergebnisse, keine Fehlermeldungen.",
+    "crumbs": [
+      "Der perfekte Gipfel",
+      "Teil 3 – QGIS-Workflow"
+    ]
+  },
+  {
+    "objectID": "content/perfekter-gipfel/slides/03-technische-umsetzung.html#vom-klick-zum-algorithmus",
+    "href": "content/perfekter-gipfel/slides/03-technische-umsetzung.html#vom-klick-zum-algorithmus",
+    "title": "Der perfekte Gipfel",
+    "section": "6 · Vom Klick zum Algorithmus",
+    "text": "6 · Vom Klick zum Algorithmus\n\nGipfelmaske → höheres Gelände → Distanz → Zusammenhang über Höhenstufen → Prominenz → E-Formel → Status\n\nDer Algorithmus muss dieselben Entscheidungen offenlegen wie die manuelle Analyse. Automatisierung ersetzt weder Gipfeldefinition noch Aussagegrenze.",
+    "crumbs": [
+      "Der perfekte Gipfel",
+      "Teil 3 – QGIS-Workflow"
+    ]
+  },
+  {
+    "objectID": "content/perfekter-gipfel/slides/03-technische-umsetzung.html#automatisierung-im-processing-tool",
+    "href": "content/perfekter-gipfel/slides/03-technische-umsetzung.html#automatisierung-im-processing-tool",
+    "title": "Der perfekte Gipfel",
+    "section": "Automatisierung im Processing-Tool",
+    "text": "Automatisierung im Processing-Tool\nDas PyQGIS-Tool verarbeitet Gipfelpunkte – vorbereitet oder selbst erfasst – und setzt sie auf die höchste Zelle im Fangradius. Eine Gipfelmaske ist als Vertiefung möglich. Es erzeugt:\n\nHöhe, Fangverschiebung snap_m, Abstand zum DGM-Rand rand_m,\nDominanz und Scharten-/Prominenzintervall,\ne_art_* nach Artikelformel,\ne_code_* nach historischer Codeverzweigung,\nStatus für Datenrand, NoData, fehlendes höheres Gelände und Punkte, die kein lokales Maximum sind.\n\n\nInstallation, Eingaben und Felddefinitionen stehen im Automatisierungskapitel des Arbeitsblatts.",
+    "crumbs": [
+      "Der perfekte Gipfel",
+      "Teil 3 – QGIS-Workflow"
+    ]
+  },
+  {
+    "objectID": "content/perfekter-gipfel/slides/03-technische-umsetzung.html#abgabe-und-reflexion",
+    "href": "content/perfekter-gipfel/slides/03-technische-umsetzung.html#abgabe-und-reflexion",
+    "title": "Der perfekte Gipfel",
+    "section": "Abgabe und Reflexion",
+    "text": "Abgabe und Reflexion\nAbgegeben wird ein gespeichertes QGIS-Projekt mit Ergebnislayern, digitalen Hypothesen und einer kurzen Begründung:\n\nWelcher Wert folgt aus welcher Regel, welchen Daten und welcher räumlichen Grenze?\n\nArbeitsblatt „Der perfekte Gipfel“ öffnen",
+    "crumbs": [
+      "Der perfekte Gipfel",
+      "Teil 3 – QGIS-Workflow"
+    ]
+  },
+  {
+    "objectID": "content/perfekter-gipfel/resume.html",
+    "href": "content/perfekter-gipfel/resume.html",
+    "title": "Resume: Der perfekte Gipfel",
     "section": "",
-    "text": "Wie werden aus geographischen Fragen räumliche Modelle – und welche Aussagen lassen sich daraus ableiten? Im Seminar untersuchen wir, wie die Wahl von Daten, Maßstab, Stellvertretergrößen (Proxys) und Parametern die Ergebnisse beeinflusst. QGIS dient dabei als Werkzeug, um diese Entscheidungen sichtbar zu machen und ihre Folgen zu prüfen.\nAusgehend von einer zunächst einfachen Frage entwickeln wir ein Modell, vergleichen Varianten und begründen seine Aussagegrenzen.",
+    "text": "Alltags- oder Fachbegriff → Kriterien → Modellannahmen → Datenmodell → GIS-Operationen → Ergebnis → Prüfung und Geltungsgrenze\n„Der perfekte Gipfel“ ist kein Sonderfall. Das Beispiel verdichtet den gesamten Analyseprozess: Eine zunächst sprachliche Bewertung wird in explizite Entscheidungen übersetzt. Erst danach kann ein GIS rechnen. Das Resultat ist daher nie nur eine Zahl, sondern die nachvollziehbare Verbindung von Fachbegriff, Annahmen, Daten und Methode.",
     "crumbs": [
-      "Geoinformatik Basiskurs"
+      "Der perfekte Gipfel",
+      "Resume und Ausblick"
     ]
   },
   {
-    "objectID": "index.html#konzept",
-    "href": "index.html#konzept",
-    "title": "Geoinformatik Basiskurs",
+    "objectID": "content/perfekter-gipfel/resume.html#das-grundmuster-jeder-räumlichen-analyse",
+    "href": "content/perfekter-gipfel/resume.html#das-grundmuster-jeder-räumlichen-analyse",
+    "title": "Resume: Der perfekte Gipfel",
     "section": "",
-    "text": "Wie werden aus geographischen Fragen räumliche Modelle – und welche Aussagen lassen sich daraus ableiten? Im Seminar untersuchen wir, wie die Wahl von Daten, Maßstab, Stellvertretergrößen (Proxys) und Parametern die Ergebnisse beeinflusst. QGIS dient dabei als Werkzeug, um diese Entscheidungen sichtbar zu machen und ihre Folgen zu prüfen.\nAusgehend von einer zunächst einfachen Frage entwickeln wir ein Modell, vergleichen Varianten und begründen seine Aussagegrenzen.",
-    "crumbs": [
-      "Geoinformatik Basiskurs"
-    ]
-  },
-  {
-    "objectID": "index.html#drei-themenblöcke",
-    "href": "index.html#drei-themenblöcke",
-    "title": "Geoinformatik Basiskurs",
-    "section": "Drei Themenblöcke",
-    "text": "Drei Themenblöcke\n\n\n\n\n\n\n\n\nBlock\nLeitfrage\nInhalte\n\n\n\n\n1 · Gipfel / Seven Summits\nWas zählt als eigenständiger Gipfel?\nDigitale Geländemodelle, Auflösung und Maßstab; lokale Maxima, Scharten und Prominenz; Vergleich unterschiedlicher Gipfeldefinitionen.\n\n\n2 · Grünzugang / 15-Minuten-Stadt\nBedeutet räumliche Nähe auch Zugang?\nLuftlinien- und Netzwerkentfernungen, Zugänge und Barrieren; Datenverfügbarkeit, Proxys und die Grenzen von Aussagen über tatsächliche Nutzung.\n\n\n3 · Raumkonstruktion\nWie entstehen unterschiedliche Räume durch Wahrnehmung, Nutzung und Modellierung?\nSichtbarkeit, Erreichbarkeit und Angsträume; Einfluss von Sichtlinien, Barrieren und bewerteten Widerständen. Vergleich verschiedener Perspektiven und Annahmen.",
-    "crumbs": [
-      "Geoinformatik Basiskurs"
-    ]
-  },
-  {
-    "objectID": "index.html#ablauf-und-arbeitsweise",
-    "href": "index.html#ablauf-und-arbeitsweise",
-    "title": "Geoinformatik Basiskurs",
-    "section": "Ablauf und Arbeitsweise",
-    "text": "Ablauf und Arbeitsweise\nDas Präsenzseminar umfasst 4 SWS und zwölf Kerntermine: einen Auftakt, je drei Sitzungen pro Themenblock sowie je einen Termin für Diagnose-Training und Synthese. Weitere Semestertermine dienen als Werkstatt und Puffer.\nJeder Block folgt demselben Ablauf:\n\nFrage und Modell: Eine erste Antwort prüfen, Begriffe klären und Annahmen zu Objekt, Maßstab und Daten festlegen.\nUmsetzung in QGIS: Ein vorbereitetes Projekt bearbeiten, Parameter verändern und Ergebnisse sichern.\nVergleich und Einordnung: Varianten auswerten, Fehler erkennen und begründen, welche Aussagen das Modell trägt.\n\nAngeleitete Übungen und kurze studentische Impulse begleiten die Arbeit. Unterstützung bei der Bedienung und optionale Vertiefungen mit Skripten ermöglichen unterschiedliche Einstiege. Im Mittelpunkt steht das Verständnis der Modellentscheidungen.",
-    "crumbs": [
-      "Geoinformatik Basiskurs"
-    ]
-  },
-  {
-    "objectID": "index.html#studienleistung-und-prüfung",
-    "href": "index.html#studienleistung-und-prüfung",
-    "title": "Geoinformatik Basiskurs",
-    "section": "Studienleistung und Prüfung",
-    "text": "Studienleistung und Prüfung\n\nPortfolio (bestanden / nicht bestanden): Je Block ein kurzes Modellierungsartefakt mit Karte oder Screenshot, dokumentierten Parametern, Variantenvergleich und einer knappen Einordnung der Aussagegrenzen.\nKlausur (benotet, auf Papier): Materialien aus den drei Themenblöcken – etwa Karten, Tabellen und Methodenbeschreibungen – analysieren, Ergebnisse erklären und Modellannahmen sowie Aussagegrenzen beurteilen. Kurze Diagnoseaufgaben während des Seminars und ein gemeinsamer Übungstermin bereiten darauf vor.",
-    "crumbs": [
-      "Geoinformatik Basiskurs"
-    ]
-  },
-  {
-    "objectID": "content/perfekter-gipfel/slides/02-analyse.html#analyse-heißt-regeln-sichtbar-machen",
-    "href": "content/perfekter-gipfel/slides/02-analyse.html#analyse-heißt-regeln-sichtbar-machen",
-    "title": "Der perfekte Gipfel",
-    "section": "Analyse heißt: Regeln sichtbar machen",
-    "text": "Analyse heißt: Regeln sichtbar machen\n\nPanoramaartikel → fachliche Ergänzungen → GIS-Operationen → Code → prüfbares Ergebnis\n\nDie entscheidende Frage lautet nicht nur, ob ein Wert berechnet wird. Sie lautet: Welche Regel wurde dabei tatsächlich umgesetzt?",
+    "text": "Alltags- oder Fachbegriff → Kriterien → Modellannahmen → Datenmodell → GIS-Operationen → Ergebnis → Prüfung und Geltungsgrenze\n„Der perfekte Gipfel“ ist kein Sonderfall. Das Beispiel verdichtet den gesamten Analyseprozess: Eine zunächst sprachliche Bewertung wird in explizite Entscheidungen übersetzt. Erst danach kann ein GIS rechnen. Das Resultat ist daher nie nur eine Zahl, sondern die nachvollziehbare Verbindung von Fachbegriff, Annahmen, Daten und Methode.",
     "crumbs": [
       "Der perfekte Gipfel",
-      "Teil 2 – Modellkritik"
+      "Resume und Ausblick"
     ]
   },
   {
-    "objectID": "content/perfekter-gipfel/slides/02-analyse.html#lokale-hypothese-und-vollständige-suche",
-    "href": "content/perfekter-gipfel/slides/02-analyse.html#lokale-hypothese-und-vollständige-suche",
-    "title": "Der perfekte Gipfel",
-    "section": "Lokale Hypothese und vollständige Suche",
-    "text": "Lokale Hypothese und vollständige Suche\n\n\n\n\n\n\n\nLokale Beobachtung\nErforderliche Prüfung\n\n\n\n\nA und B scheinen verbunden.\nGibt es eine höhere Verbindung zu anderem Gelände?\n\n\nEin Nachbar wirkt entscheidend.\nLiegt höheres Gelände näher?\n\n\nEine Scharte ist sichtbar.\nIst sie die höchste mögliche Verbindungsscharte?\n\n\n\nDie Hypothese ist der Einstieg. Die Analyse erweitert den Suchraum, bis eine Aussage begründet oder ihre Grenze benannt ist.",
+    "objectID": "content/perfekter-gipfel/resume.html#was-davon-ist-grundlagenkurs-geoinformatik",
+    "href": "content/perfekter-gipfel/resume.html#was-davon-ist-grundlagenkurs-geoinformatik",
+    "title": "Resume: Der perfekte Gipfel",
+    "section": "Was davon ist Grundlagenkurs Geoinformatik?",
+    "text": "Was davon ist Grundlagenkurs Geoinformatik?\nDie Kursübersicht nennt das Ziel: verstehen, wie aus geographischen Fragen räumliche Modelle werden und wie die Wahl von Daten, Maßstab, Stellvertretergrößen und Parametern die Ergebnisse bestimmt. Der Gipfel zeigt das im Kleinen – und nichts davon ist an ein bestimmtes Programm gebunden.\n\n\n\n\n\n\n\n\nKursziel\nAm perfekten Gipfel\nÜbertragbar auf jede GI-Analyse\n\n\n\n\nAbstraktion\n„Eigenständigkeit“ wird zu Höhe, Dominanz, Prominenz und E-Formel. Was überhaupt als Gipfel gilt, legt eure Gipfelregel fest.\nEin Fachbegriff muss in prüfbare Kriterien übersetzt werden, bevor gerechnet werden kann.\n\n\nRealität und Repräsentation\nDas DGM ist nicht das Gebirge: 10-m-Zellen, Zellzentren, 4er- oder 8er-Nachbarschaft und ein Ausschnitt mit Rand.\nJedes Datenmodell lässt etwas weg; das Ergebnis gilt zunächst für die Repräsentation.\n\n\nDatenbeschaffung und Datenkritik\nHerkunft (Land Tirol über perfectPeak), Lizenz, nachträglich zugewiesenes KBS, unbekannte Höhengenauigkeit und Aufnahmezeit.\nWissen, woher Daten stammen – und was über sie nicht bekannt ist.\n\n\nMethode\nHöhenmaske, Distanz, Suche über Höhenstufen mit Abbruchregel. Artikel und historischer Code setzen dabei unterschiedliche Regeln um.\nEine Methode ist eine begründete Regel, kein Werkzeugname.\n\n\nTransparenz und Reproduzierbarkeit\nGespeichertes Projekt, dokumentierte Parameter, Status jedes Werts und Gegenprüfung durch eine andere Gruppe.\nAndere müssen den Weg nachvollziehen und das Ergebnis wiederholen können.\n\n\n\nWissenschaftliches Arbeiten mit Geodaten heißt deshalb: fachliche Frage und methodische Umsetzung miteinander verschränken. Die Fachfrage bestimmt, welche Daten und Regeln nötig sind; die Methode zeigt, welche Antwort sich daraus tatsächlich begründen lässt.",
     "crumbs": [
       "Der perfekte Gipfel",
-      "Teil 2 – Modellkritik"
+      "Resume und Ausblick"
     ]
   },
   {
-    "objectID": "content/perfekter-gipfel/slides/02-analyse.html#dominanz-eine-klare-aber-bedingte-regel",
-    "href": "content/perfekter-gipfel/slides/02-analyse.html#dominanz-eine-klare-aber-bedingte-regel",
-    "title": "Der perfekte Gipfel",
-    "section": "Dominanz: eine klare, aber bedingte Regel",
-    "text": "Dominanz: eine klare, aber bedingte Regel\n\\[d_A=\\min_{x:\\,z(x)&gt;h_A}\\operatorname{dist}(A,x)\\]\n\nUmsetzung: Höhenmaske über \\(h_A\\) → Distanz zum nächsthöheren Rasterpixel.\nBedingung: Der DGM-Ausschnitt enthält das relevante höhere Gelände. Sonst ist Dominanz nicht „0“, sondern offen bzw. ausschnittsbezogen.",
+    "objectID": "content/perfekter-gipfel/resume.html#im-einzelnen",
+    "href": "content/perfekter-gipfel/resume.html#im-einzelnen",
+    "title": "Resume: Der perfekte Gipfel",
+    "section": "Im Einzelnen",
+    "text": "Im Einzelnen\n\n\n\n\n\n\n\n\n\nEbene\nErreicht\nAussagegrenze / zu berücksichtigen\nNächster Schritt\n\n\n\n\nGesamtprozess\nDie Abfolge Begriff → Kriterien → Modell → Operation → Ergebnis ist sichtbar und überprüfbar.\nKein technischer Schritt kann eine ungeklärte fachliche Entscheidung ersetzen. Jede spätere GIS-Analyse hat dieselbe Struktur, auch wenn ihre Werkzeuge andere sind.\nDie Prozesskette bei jeder neuen Fragestellung zuerst formulieren, bevor Daten oder Werkzeuge gewählt werden.\n\n\nPanoramaartikel → formale Aufgabe\nDer Artikel liefert die Bewertungsabsicht und die E-Formel: Höhe, Dominanz und Prominenz werden zu Eigenständigkeit verrechnet.\nEr legt keine vollständige Rechenvorschrift fest: Was genau als Gipfel zählt, wie ein Plateau behandelt wird, welches höhere Gelände relevant ist, wann eine Scharte als gefunden gilt und wann die Suche endet, bleibt offen.\nDie zusätzlichen Regeln ausdrücklich als eigene Modellannahmen dokumentieren, nicht als direkte Vorgabe des Artikels ausgeben.\n\n\nZerlegung und Abstraktion\nDie Frage ist in prüfbare Teile zerlegt: Gipfelkandidat → höheres Gelände → Distanz → Verbindung über Höhenstufen → Scharte → Aussagegrenze.\n„Gipfel“ ist eine fachliche Definition. Fenstergröße, Plateau-Regel, Nachbarschaft und Mindesthöhe müssen sichtbar bleiben.\nEine begründete Gipfelmaske für den jeweiligen Untersuchungsraum formulieren.\n\n\nTechnische Übersetzung\nDGM, Gipfelmaske, Höhenmasken, Proximity und Zusammenhangsflächen bilden diese Annahmen als Daten und Operationen ab.\n4er-/8er-Nachbarschaft, Rastergitter, Höhentoleranz und Zellzentrumdistanz sind Entscheidungen der Übersetzung, nicht Eigenschaften des Panoramaartikels.\nParameter je Analyse dokumentieren und für Vergleichbarkeit festsetzen.\n\n\nE-Wert: Artikel und Code\nDas Tool berechnet ein E-Intervall nach der Artikelformel (e_art_*) und zusätzlich die tatsächlich ausgeführte historische Codevariante (e_code_*).\nDie 100-km-Regel ist der kritische Befund: Artikel/Formelgrafik verwenden den Dominanzterm unter 100 km, der historische R-Code dagegen darüber. Beide Werte sind deshalb sichtbar getrennt; der Codewert ist kein stillschweigend übernommener Standard.\nDie Abweichung im Unterricht diskutieren und die für eine Anwendung geltende Regel explizit entscheiden.\n\n\nDerzeitige Realisation\nDas QGIS-Projekt unterstützt die manuelle Hypothese; das PyQGIS-Tool verarbeitet Gipfelpunkte (auf die höchste Zelle im Fangradius gesetzt) oder als Vertiefung alle positiven Bereiche einer Gipfelmaske und liefert Dominanz, Scharten-/Prominenzintervall, E-Intervalle und Status.\nDie Ergebnisse gelten nur für die gewählte Maske, die Rasterauflösung, die Nachbarschaft und den vorhandenen DGM-Ausschnitt. edge_relevant oder no_higher_terrain_in_dem bedeuten: keine abschließende Aussage außerhalb dieses Ausschnitts.\nTool in QGIS einfügen, an einer fachlich begründeten Maske anwenden und Ergebnislayer sichern.",
     "crumbs": [
       "Der perfekte Gipfel",
-      "Teil 2 – Modellkritik"
+      "Resume und Ausblick"
     ]
   },
   {
-    "objectID": "content/perfekter-gipfel/slides/02-analyse.html#prominenz-eine-suchaufgabe",
-    "href": "content/perfekter-gipfel/slides/02-analyse.html#prominenz-eine-suchaufgabe",
-    "title": "Der perfekte Gipfel",
-    "section": "Prominenz: eine Suchaufgabe",
-    "text": "Prominenz: eine Suchaufgabe\n\\[p_A=h_A-h_{s,A}\\]\nDie Schartenhöhe \\(h_{s,A}\\) ist die höchste Schwelle, bei der die Fläche von \\(A\\) mit höherem Gelände verbunden wird.\n\nDas Ergebnis ist zunächst ein Intervall: letzte getrennte Stufe / erste verbundene Stufe. Rastergitter und Nachbarschaft bestimmen seine Auflösung.",
+    "objectID": "content/perfekter-gipfel/resume.html#und-die-werkzeuge",
+    "href": "content/perfekter-gipfel/resume.html#und-die-werkzeuge",
+    "title": "Resume: Der perfekte Gipfel",
+    "section": "Und die Werkzeuge?",
+    "text": "Und die Werkzeuge?\nOhne QGIS ließe sich keine dieser Fragen beantworten. Die Bedienung ist Voraussetzung – aber nicht das Ziel. Jede Fertigkeit diente einer fachlichen Entscheidung:\n\n\n\n\n\n\n\nFertigkeit in QGIS\nWozu im Gipfelbeispiel\n\n\n\n\nDaten laden, KBS und Rasterweite prüfen\nwissen, worauf sich jede Zahl bezieht\n\n\nDigitalisieren, Attributformular\nHypothesen räumlich festhalten und begründen\n\n\nObjekte abfragen, Rasterwerte abtasten\nHöhe und Lage aus derselben DGM-Zelle\n\n\nRasterrechner\ndas Kriterium „höher als \\(h\\)“ als Maske\n\n\nGDAL Proximity\nDominanz als Distanz zum höheren Gelände\n\n\nProcessing-Skript\ndieselbe Regel für viele Gipfel wiederholen\n\n\nProjekt mit relativen Pfaden speichern\nNachvollziehbarkeit und Abgabe\n\n\n\nWer weiß, wozu ein Werkzeug eingesetzt wird, kann es sicher bedienen, Fehler erkennen – und es bei Bedarf durch ein anderes ersetzen. Die Methode bleibt dieselbe.",
     "crumbs": [
       "Der perfekte Gipfel",
-      "Teil 2 – Modellkritik"
+      "Resume und Ausblick"
     ]
   },
   {
-    "objectID": "content/perfekter-gipfel/slides/02-analyse.html#prominenz-im-historischen-code",
-    "href": "content/perfekter-gipfel/slides/02-analyse.html#prominenz-im-historischen-code",
-    "title": "Der perfekte Gipfel",
-    "section": "Prominenz im historischen Code",
-    "text": "Prominenz im historischen Code\nDer Code flutet das DGM und bricht ab, sobald die Fläche des Zielgipfels mehr als einen Gipfel enthält.\n\nArbeitsfrage: Ist das dieselbe Regel wie „Verbindung zu höherem Gelände“? Was passiert, wenn zuerst ein niedrigerer Nebengipfel angeschlossen wird?\n\n\nFundstelle: R/calculateProminence.R, Commit 37b49f1.",
+    "objectID": "content/perfekter-gipfel/resume.html#derselbe-ablauf-in-jedem-themenblock",
+    "href": "content/perfekter-gipfel/resume.html#derselbe-ablauf-in-jedem-themenblock",
+    "title": "Resume: Der perfekte Gipfel",
+    "section": "Derselbe Ablauf in jedem Themenblock",
+    "text": "Derselbe Ablauf in jedem Themenblock\nDie Kursübersicht beschreibt für jeden Block drei Schritte. Beim Gipfel waren das:\n\nFrage und Modell – Teil 1: vom Bewertungsbegriff zu Kriterien und Modellannahmen.\nUmsetzung in QGIS – Arbeitsblatt und Teil 3: Hypothese, Maske, Distanz, Höhenstufen.\nVergleich und Einordnung – Teil 2 und Schritte 5–6: Gegenprüfung, Status, Artikel gegen Code.\n\nGrünzugang und Raumkonstruktion folgen demselben Muster mit anderen Begriffen, Daten und Werkzeugen. Portfolio und Klausur prüfen genau diese Verbindung: nicht, ob ein Werkzeug bedient wurde, sondern ob Annahmen, Daten, Methode und Aussagegrenzen begründet sind.",
     "crumbs": [
       "Der perfekte Gipfel",
-      "Teil 2 – Modellkritik"
+      "Resume und Ausblick"
     ]
   },
   {
-    "objectID": "content/perfekter-gipfel/slides/02-analyse.html#die-gipfelmaske-ist-fachlicher-kern",
-    "href": "content/perfekter-gipfel/slides/02-analyse.html#die-gipfelmaske-ist-fachlicher-kern",
-    "title": "Der perfekte Gipfel",
-    "section": "Die Gipfelmaske ist fachlicher Kern",
-    "text": "Die Gipfelmaske ist fachlicher Kern\n\n\n\n\n\n\n\nEntscheidung\nWirkung auf das Ergebnis\n\n\n\n\nFenstergröße lokaler Maxima\nAnzahl und Lage der Kandidaten\n\n\nPlateau-Regel\nein Gipfel oder mehrere Kandidaten\n\n\nMindesthöhe / Ausschlüsse\nwelche Formen überhaupt analysiert werden\n\n\n4er- oder 8er-Nachbarschaft\nwann Flächen als verbunden gelten\n\n\n\nDie Maske ist daher keine technische Vorstufe, sondern die explizite Definition dessen, was im Modell als Gipfel gilt.",
+    "objectID": "content/perfekter-gipfel/resume.html#fazit",
+    "href": "content/perfekter-gipfel/resume.html#fazit",
+    "title": "Resume: Der perfekte Gipfel",
+    "section": "Fazit",
+    "text": "Fazit\nDer Kurs übersetzt den Panoramaartikel in ein prüfbares Modell, nicht in eine behauptete endgültige Bergklassifikation. Gerade die Abweichung zwischen Formel und historischem Code zeigt die Hauptaussage: Implementierungen treffen Regeln – auch dann, wenn sie unsichtbar bleiben. Die gleiche Kette verbindet auch Eignungsanalyse, Erreichbarkeit, Gefährdung, Flächenbewertung oder Modellierung. Ein belastbares Ergebnis besteht deshalb aus Wert, Parametern, implementierter Regel und Aussagegrenze – nicht aus einer Zahl allein.",
     "crumbs": [
       "Der perfekte Gipfel",
-      "Teil 2 – Modellkritik"
+      "Resume und Ausblick"
     ]
   },
   {
-    "objectID": "content/perfekter-gipfel/slides/02-analyse.html#e-wert-artikel-und-historischer-code",
-    "href": "content/perfekter-gipfel/slides/02-analyse.html#e-wert-artikel-und-historischer-code",
-    "title": "Der perfekte Gipfel",
-    "section": "E-Wert: Artikel und historischer Code",
-    "text": "E-Wert: Artikel und historischer Code\nFür \\(d&lt;100\\,000\\,m\\) zeigt die Artikelformel drei Terme: Höhe, Dominanz und Prominenz. Oberhalb davon entfällt der Dominanzterm.\n\nDer historische Code calculateIndependence.R verzweigt umgekehrt: Er lässt den Dominanzterm unter 100 km weg und nimmt ihn darüber auf.\n\nDas Processing-Tool gibt deshalb beide E-Intervalle getrennt aus: e_art_* für die Artikelformel und e_code_* für die historische Implementierung.\n\nLesart: Je kleiner \\(E\\), desto eigenständiger der Gipfel; der Mount Everest hat \\(E = 0\\).",
+    "objectID": "content/gruenzugang/slides/01-quellen-abstraktion.html#worum-es-geht",
+    "href": "content/gruenzugang/slides/01-quellen-abstraktion.html#worum-es-geht",
+    "title": "Grünzugang",
+    "section": "Worum es geht",
+    "text": "Worum es geht\n\nQuelle → Begriffe → Kriterien → Daten und Operationen → Ergebnis mit Aussagegrenze\n\nLeitfrage des Blocks: Bedeutet räumliche Nähe auch Zugang?\nHeute bauen wir noch nichts in QGIS. Heute klären wir, was die Ansätze eigentlich meinen – so genau, dass man es rechnen kann.",
     "crumbs": [
-      "Der perfekte Gipfel",
-      "Teil 2 – Modellkritik"
+      "Grünzugang",
+      "Teil 1 – Lesarten und Abstraktion"
     ]
   },
   {
-    "objectID": "content/perfekter-gipfel/slides/02-analyse.html#was-der-vergleich-lehrt",
-    "href": "content/perfekter-gipfel/slides/02-analyse.html#was-der-vergleich-lehrt",
-    "title": "Der perfekte Gipfel",
-    "section": "Was der Vergleich lehrt",
-    "text": "Was der Vergleich lehrt\n\n\nArtikel\nliefert Begriffe, Formel und Bewertungsabsicht.\n\n\nModell\nergänzt Maske, Toleranz, Nachbarschaft und Suchende.\n\n\nUmsetzung\nführt diese Regeln auf einem endlichen DGM aus.\n\n\nErgebnis\nenthält Wert, Parameter, Status und Geltungsbereich.",
+    "objectID": "content/gruenzugang/slides/01-quellen-abstraktion.html#eine-empfehlung-die-eindeutig-klingt",
+    "href": "content/gruenzugang/slides/01-quellen-abstraktion.html#eine-empfehlung-die-eindeutig-klingt",
+    "title": "Grünzugang",
+    "section": "Eine Empfehlung, die eindeutig klingt",
+    "text": "Eine Empfehlung, die eindeutig klingt\n\nVon jeder Wohnung aus soll eine Grünfläche von mindestens 0,5 Hektar in höchstens 300 Metern Luftlinie liegen.\n\n\nSo wird die WHO-Empfehlung häufig wiedergegeben. Zwei Zahlen, eine klare Schwelle – ist das schon ein Modell?\n\n\nWiedergabe nach ISGlobal (2021) zur Studie von Pereira Barboza et al. (2021).",
     "crumbs": [
-      "Der perfekte Gipfel",
-      "Teil 2 – Modellkritik"
+      "Grünzugang",
+      "Teil 1 – Lesarten und Abstraktion"
     ]
   },
   {
-    "objectID": "content/perfekter-gipfel/slides/02-analyse.html#übergang-zur-umsetzung",
-    "href": "content/perfekter-gipfel/slides/02-analyse.html#übergang-zur-umsetzung",
-    "title": "Der perfekte Gipfel",
-    "section": "Übergang zur Umsetzung",
-    "text": "Übergang zur Umsetzung\nDas Arbeitsblatt und das Processing-Tool beantworten nicht die Frage „Welcher Wert ist wahr?“. Sie beantworten transparent: Welcher Wert folgt aus diesen Regeln und diesen Daten?\n\nNächster Block: die konkreten QGIS-Schritte, Ergebnislayer und Statuswerte.",
+    "objectID": "content/gruenzugang/slides/01-quellen-abstraktion.html#schon-die-who-gibt-es-zweimal",
+    "href": "content/gruenzugang/slides/01-quellen-abstraktion.html#schon-die-who-gibt-es-zweimal",
+    "title": "Grünzugang",
+    "section": "Schon „die WHO“ gibt es zweimal",
+    "text": "Schon „die WHO“ gibt es zweimal\n\n\n\n\n\n\n\n\n\nwie häufig zitiert\nwie der Indikator entwickelt wurde\n\n\n\n\nQuelle\nISGlobal 2021\nvan den Bosch et al. 2016\n\n\nGrünfläche\n≥ 0,5 ha\n≥ 1 ha (Standard)\n\n\nEntfernung\n300 m Luftlinie\n300 m Luftlinie bis zum Flächenrand\n\n\nErgebnis\n–\nAnteil der Bevölkerung innerhalb dieser Entfernung\n\n\n\n\nDieselbe Empfehlung, zwei Rechenvorschriften. Welche ist „die WHO“?\n\n\nvan den Bosch et al. 2016 · ISGlobal 2021",
     "crumbs": [
-      "Der perfekte Gipfel",
-      "Teil 2 – Modellkritik"
+      "Grünzugang",
+      "Teil 1 – Lesarten und Abstraktion"
     ]
   },
   {
-    "objectID": "content/perfekter-gipfel/arbeitsblatt/arbeitsauftrag.html",
-    "href": "content/perfekter-gipfel/arbeitsblatt/arbeitsauftrag.html",
-    "title": "Der perfekte Gipfel",
-    "section": "",
-    "text": "Ziel: Bestimmt die Gipfel im Untersuchungsgebiet. Wählt einen Gipfel aus und versucht, seine Dominanz, Prominenz und den Eigenständigkeitswert E anhand der Definitionen aus der Artikelanalyse zu ermitteln. Entscheidend ist nicht nur ein Zahlenwert, sondern die Frage, welche räumlichen Beziehungen ihr tatsächlich nachweisen könnt.\nIhr arbeitet vollständig digital in QGIS. Die gefundenen Gipfel werden als Punkte gespeichert, mögliche Verbindungen als Linien und Scharten als Punkte. Eure geometrischen Einträge und Begründungen bleiben im QGIS-Projekt erhalten.\n\nGipfel bestimmen (Schritte 0–2). Untersucht Höhenmodell, Schummerung und Höhenlinien. Erfasst die von euch angenommenen Gipfel als Punkte, lest ihre Höhen aus dem DGM ab und formuliert eure Aufnahmeregel. Vergleicht eure Auswahl mit einer anderen Gruppe: Wo gibt es Unterschiede und warum?\nEinen Gipfel untersuchen (Schritte 3–4). Bestimmt Gipfelhöhe, Dominanz, maßgebliche Schartenhöhe, Prominenz und – soweit begründbar – den E-Wert. Verwendet eigene Punkte und Linien, um eure Hypothesen räumlich festzuhalten.\nErgebnis überprüfen (Schritt 5). Eine andere Gruppe sucht gezielt nach näher gelegenem höherem Gelände, alternativen Verbindungen oder Problemen am Datenrand. Überarbeitet die Berechnung, wenn nötig.\nAussagegrenzen benennen (Schritt 5). Unterscheidet zwischen bestimmt, auf den Datenausschnitt beschränkt und noch offen. Ein begründet vorläufiges Ergebnis ist zulässig; zeigt, welche Information fehlt.\nVom Vorgehen zum Algorithmus (Schritt 6). Beschreibt, wie ein Programm Gipfel finden, Verbindungen prüfen, eine Suche beenden und unvollständige Daten erkennen müsste. Vergleicht euren Ablauf danach mit dem Repository perfectPeak.\n\n\n\nAbgegeben wird das gespeicherte QGIS-Arbeitsprojekt mit den bearbeiteten Layern. Für das Portfolio ergänzt ihr eine kurze Einordnung eures ausgewählten Gipfels: einen Screenshot der Karte, eure Gipfelregel und die verwendeten Parameter, die Prüfung des höheren Geländes, die Schartenhypothese, die ermittelten Werte, einen Vergleich mit einer Variante (etwa der Gipfelregel einer anderen Gruppe oder 4er- statt 8er-Nachbarschaft) und den Status der Aussage. Ein Ausdruck oder eine Papierkarte ist nicht erforderlich.",
+    "objectID": "content/gruenzugang/slides/01-quellen-abstraktion.html#dieselbe-absicht-andere-regeln",
+    "href": "content/gruenzugang/slides/01-quellen-abstraktion.html#dieselbe-absicht-andere-regeln",
+    "title": "Grünzugang",
+    "section": "Dieselbe Absicht, andere Regeln",
+    "text": "Dieselbe Absicht, andere Regeln\n\n\n\n\n\n\n\n\nAnsatz\nGrünfläche\nEntfernung\n\n\n\n\nWHO, wie zitiert\n≥ 0,5 ha\n300 m Luftlinie\n\n\nWHO-Indikator\n≥ 1 ha\n300 m Luftlinie zum Rand\n\n\n3-30-300-Regel\nöffentlich, keine Mindestgröße\n300 m zur nächsten Fläche\n\n\nBBSR 2018\n≥ 1 ha / ≥ 10 ha\n300 m / 700 m Luftlinie\n\n\nBfN 2024\ninsgesamt &gt; 1 ha\n≤ 500 m Fußweg\n\n\nBfN 2024 / Berlin\n6 m² pro Einwohner\nim Einzugsbereich\n\n\n\n\nKonijnendijk 2023 · BBSR 2018, S. 26 · Blum et al. 2024 · Umweltatlas Berlin",
     "crumbs": [
-      "Der perfekte Gipfel",
-      "QGIS-Arbeitsauftrag"
+      "Grünzugang",
+      "Teil 1 – Lesarten und Abstraktion"
     ]
   },
   {
-    "objectID": "content/perfekter-gipfel/arbeitsblatt/arbeitsauftrag.html#abgabe",
-    "href": "content/perfekter-gipfel/arbeitsblatt/arbeitsauftrag.html#abgabe",
-    "title": "Der perfekte Gipfel",
-    "section": "",
-    "text": "Abgegeben wird das gespeicherte QGIS-Arbeitsprojekt mit den bearbeiteten Layern. Für das Portfolio ergänzt ihr eine kurze Einordnung eures ausgewählten Gipfels: einen Screenshot der Karte, eure Gipfelregel und die verwendeten Parameter, die Prüfung des höheren Geländes, die Schartenhypothese, die ermittelten Werte, einen Vergleich mit einer Variante (etwa der Gipfelregel einer anderen Gruppe oder 4er- statt 8er-Nachbarschaft) und den Status der Aussage. Ein Ausdruck oder eine Papierkarte ist nicht erforderlich.",
+    "objectID": "content/gruenzugang/slides/01-quellen-abstraktion.html#unsere-frage",
+    "href": "content/gruenzugang/slides/01-quellen-abstraktion.html#unsere-frage",
+    "title": "Grünzugang",
+    "section": "Unsere Frage",
+    "text": "Unsere Frage\n\nKlingt gut. Ist gut gemeint. Aber was heißt das in Marburg?\n\nWir prüfen nicht, ob die Schwellen fachlich gut begründet sind – das ist die Arbeit der Kolleginnen und Kollegen, die sie aufgestellt haben.\nWir prüfen, was herauskommt, wenn man sie beim Wort nimmt: gleiche Stadt, gleiche Daten, andere Regel.",
     "crumbs": [
-      "Der perfekte Gipfel",
-      "QGIS-Arbeitsauftrag"
+      "Grünzugang",
+      "Teil 1 – Lesarten und Abstraktion"
     ]
   },
   {
-    "objectID": "content/perfekter-gipfel/arbeitsblatt/arbeitsauftrag.html#projekt-starten",
-    "href": "content/perfekter-gipfel/arbeitsblatt/arbeitsauftrag.html#projekt-starten",
-    "title": "Der perfekte Gipfel",
-    "section": "0 · Projekt starten",
-    "text": "0 · Projekt starten\n\nPerfekter_Gipfel_QGIS.zip herunterladen und vollständig entpacken.\nEine Arbeitskopie des entpackten Ordners erstellen. Projektdatei und Unterordner zusammenlassen.\nIn QGIS 3.44 oder neuer Perfekter_Gipfel.qgz öffnen (alternativ .qgs). Die Startansicht zeigt die Umgebung der Gipfelkandidaten A und B.\nÜber den Layerbaum zwischen Relief, Höhenlinien, Schummerung und DGM wechseln. Der Layer „Gipfelkandidaten A–F (DEM-Maxima)“ ist beim Öffnen ausgeblendet. Lasst ihn zunächst aus und schätzt das Relief selbst ein.\n\n\n\n\n\n\n\nTippQGIS: Was bedeutet hier markieren oder einzeichnen?\n\n\n\nMarkieren: Punktobjekt in einem editierbaren Vektorlayer speichern. Einzeichnen: Linienobjekt mit mehreren Stützpunkten speichern. Danach im Attributformular die Felder ausfüllen – in den vorbereiteten Arbeitslayern typ (z. B. „Verbindung A–B“), begruendung und status.\nEine Auswahl oder temporäre Skizze ist kein Ergebnis. Ergebnisse liegen als gespeicherte Objekte in den Arbeitslayern vor.\n\n\n\n\n\n\n\n\nHinweisQGIS: So speichert ihr eine neue Geometrie\n\n\n\n\nDen richtigen Layer im Layerfenster anklicken.\nÜber das Stiftsymbol „Bearbeitungsmodus umschalten“ die Bearbeitung einschalten.\n„Punktobjekt hinzufügen“ bzw. „Linienobjekt hinzufügen“ wählen.\nPunkt: einmal in die Karte klicken. Linie: mit Linksklicks Stützpunkte setzen, mit Rechtsklick abschließen.\nIm Attributformular typ und begruendung eintragen (in eigenen Layern die dort angelegten Felder) und bestätigen.\nLayeränderungen speichern und den Bearbeitungsmodus beenden. Zusätzlich das QGIS-Projekt speichern (Strg+S).\n\nWenn die Werkzeuge fehlen: Ansicht → Werkzeugkästen → Digitalisierung einschalten. Layeränderungen und Projektänderungen sind zwei verschiedene Speicherungen.",
+    "objectID": "content/gruenzugang/slides/01-quellen-abstraktion.html#aus-dem-perfekten-gipfel",
+    "href": "content/gruenzugang/slides/01-quellen-abstraktion.html#aus-dem-perfekten-gipfel",
+    "title": "Grünzugang",
+    "section": "Aus dem perfekten Gipfel",
+    "text": "Aus dem perfekten Gipfel\n\n\nDort\nArtikelformel und historischer Code setzen dieselbe Idee verschieden um – für dieselben Gipfel ergeben sich verschiedene E-Werte.\n\n\nHier\nFünf Ansätze setzen dieselbe Absicht verschieden um – für dieselbe Stadt ergeben sich verschiedene Versorgungsgrade.\n\n\n\nErst die Umsetzung zeigt, was eine Regel tatsächlich bedeutet.",
     "crumbs": [
-      "Der perfekte Gipfel",
-      "QGIS-Arbeitsauftrag"
+      "Grünzugang",
+      "Teil 1 – Lesarten und Abstraktion"
     ]
   },
   {
-    "objectID": "content/perfekter-gipfel/arbeitsblatt/arbeitsauftrag.html#lokale-hypothese-a-und-b",
-    "href": "content/perfekter-gipfel/arbeitsblatt/arbeitsauftrag.html#lokale-hypothese-a-und-b",
-    "title": "Der perfekte Gipfel",
-    "section": "1 · Lokale Hypothese: A und B",
-    "text": "1 · Lokale Hypothese: A und B\nUntersucht zuerst den Startausschnitt. Blendet danach „Gipfelkandidaten A–F (DEM-Maxima)“ ein und betrachtet A (2564,26 m) und B (2592,12 m) als Vergleichspunkte.\n\nZeichnet einen möglichen Verbindungsweg zwischen den Bereichen A und B.\nMarkiert eine vermutete Scharte auf dieser Verbindung.\nHaltet fest, warum diese Verbindung und diese Scharte für euch plausibel sind.\nNoch keinen endgültigen E-Wert berechnen. Die räumliche Umgebung ist noch nicht vollständig geprüft.\n\n\n\n\n\n\n\nTippQGIS: Verbindung als Linie und Scharte als Punkt einzeichnen\n\n\n\nVerbindung: Layer „Eigene Verbindungen und Hypothesen“ aktivieren → Bearbeitungsmodus einschalten → Linienobjekt hinzufügen → Verlauf mit mehreren Linksklicks nachzeichnen → mit Rechtsklick beenden → Begründung im Attributformular eintragen → speichern.\nScharte: Layer „Eigene Schartenkandidaten“ aktivieren → Bearbeitungsmodus einschalten → Punktobjekt hinzufügen → auf die vermutete tiefste Stelle der Verbindung klicken → Attribute ergänzen → speichern.\nDie Linie und Scharte sind nur eine lokale Hypothese. Für B liegt das relevante höhere Gelände nicht im Paar A–B; eine endgültige Bewertung folgt erst nach Schritt 3–4.",
+    "objectID": "content/gruenzugang/slides/01-quellen-abstraktion.html#die-referenz-durchdekliniert",
+    "href": "content/gruenzugang/slides/01-quellen-abstraktion.html#die-referenz-durchdekliniert",
+    "title": "Grünzugang",
+    "section": "Die Referenz, durchdekliniert",
+    "text": "Die Referenz, durchdekliniert\nWHO-Indikator nach van den Bosch et al. (2016)\n\n\n\n\n\n\n\n\n\n\n\nBegriff\nKriterium\nRepräsentation\nOperation\n\n\n\n\nGrün\nstädtische Grünfläche\nöffentlich, ≥ 1 ha\nOSM-Polygone ausgewählter Klassen\nAusdruck, Fläche, Filter\n\n\nEntfernung\nNähe\n300 m Luftlinie bis zum Rand\nPufferzone um die Flächen\nPuffer 300 m\n\n\nBevölkerung\nBewohnerinnen und Bewohner\nWohnort innerhalb der Zone\nZensus-Gitterzellen 100 m\nLage-Abfrage Zellmittelpunkt\n\n\nErgebnis\nZugang\nAnteil der Bevölkerung\nSumme der Einwohner\nversorgt / alle",
     "crumbs": [
-      "Der perfekte Gipfel",
-      "QGIS-Arbeitsauftrag"
+      "Grünzugang",
+      "Teil 1 – Lesarten und Abstraktion"
     ]
   },
   {
-    "objectID": "content/perfekter-gipfel/arbeitsblatt/arbeitsauftrag.html#das-gesamte-gelände-und-eigene-gipfel-erfassen",
-    "href": "content/perfekter-gipfel/arbeitsblatt/arbeitsauftrag.html#das-gesamte-gelände-und-eigene-gipfel-erfassen",
-    "title": "Der perfekte Gipfel",
-    "section": "2 · Das gesamte Gelände und eigene Gipfel erfassen",
-    "text": "2 · Das gesamte Gelände und eigene Gipfel erfassen\nRechtsklick auf „dgm_10m“ → „Auf Layer zoomen“. Das DGM muss dazu nicht sichtbar sein. Untersucht nun den gesamten 3,24 × 3,60 km großen Ausschnitt. Betrachtet Relief, Schummerung und Höhenlinien und schaltet die vorbereiteten Gipfelkandidaten bei Bedarf wieder aus.\nErstellt einen eigenen Punktlayer und erfasst die Geländestellen, die ihr nach eurer Regel als Gipfel bewertet. Gebt jedem Gipfel eine Kennung und einen Höhenwert aus dem DGM. Vergleicht erst danach mit den vorbereiteten Kandidaten A–F und mit einer anderen Gruppe. Die sechs Kandidaten sind keine vollständige Gipfelliste.\n\n\n\n\n\n\nTippQGIS: Eigenen Gipfel-Punktlayer anlegen und Punkte erfassen\n\n\n\n\nLayer → Layer erstellen → Neuer GeoPackage-Layer… öffnen.\nAls Datenbank in eurem entpackten Arbeitsordner z. B. daten/eigene_ergebnisse.gpkg anlegen; Tabellenname eigene_gipfel.\nGeometrietyp: Punkt; KBS: EPSG:31254.\nFelder ergänzen: kennung (Text), hoehe_m (Dezimalzahl), regel (Text). Den neuen Layer anlegen.\nLayer aktivieren → Bearbeitungsmodus → Punktobjekt hinzufügen → auf jede als Gipfel bewertete Stelle klicken → Kennung und Regel eintragen.\nFür die Höhe „dgm_10m“ sichtbar und aktiv schalten, das Werkzeug „Objekte abfragen“ aus der Attributwerkzeugleiste wählen und die betreffende Rasterzelle anklicken. Den Bandwert in hoehe_m des Gipfelpunkts eintragen; anschließend wieder zum Gipfellayer wechseln.\nÄnderungen speichern. Der gespeicherte Punkt ist eure digitale Markierung.\n\nWichtig: Rasterwert und Punktlage müssen zur gleichen DGM-Zelle gehören. Für eine automatisierte und reproduzierbare Übertragung der Werte könnt ihr stattdessen das QGIS-Werkzeug „Rasterwerte abtasten“ verwenden; dessen Ausgabelayer ist dann als Ergebnis dauerhaft zu speichern.\n\n\n\n\n\n\n\n\nHinweisPrüffrage: Was zählt für euch als Gipfel?\n\n\n\nZählt bereits jede Zelle, die höher ist als ihre direkten Nachbarn? Oder muss ein Gipfel eine deutlich größere Umgebung überragen? Formuliert eure Regel so, dass eine andere Gruppe sie auf dieselben Daten anwenden könnte. Die vorbereiteten A–F wurden aus lokalen Maxima einer 31 × 31-Zellen-Nachbarschaft ausgewählt; das ist eine Beispielauswahl, keine verbindliche Definition.",
+    "objectID": "content/gruenzugang/slides/01-quellen-abstraktion.html#was-auch-die-referenz-offenlässt",
+    "href": "content/gruenzugang/slides/01-quellen-abstraktion.html#was-auch-die-referenz-offenlässt",
+    "title": "Grünzugang",
+    "section": "Was auch die Referenz offenlässt",
+    "text": "Was auch die Referenz offenlässt\n\n\nGrün\nWelche OSM-Klassen? Park, Wald, Friedhof, Kleingarten?\n\n\nBevölkerung\nZählt eine Zelle, wenn ihr Mittelpunkt oder wenn ein Teil in der Zone liegt?\n\n\nRaum\nZählt die Grünfläche jenseits der Stadtgrenze?\n\n\nÖffentlich\nWie erkennt man in den Daten, ob eine Fläche zugänglich ist?\n\n\n\nDiese Punkte setzen wir einmal gemeinsam – und alle Ansätze übernehmen die Setzung, wenn sie selbst nichts anderes sagen.",
     "crumbs": [
-      "Der perfekte Gipfel",
-      "QGIS-Arbeitsauftrag"
+      "Grünzugang",
+      "Teil 1 – Lesarten und Abstraktion"
     ]
   },
   {
-    "objectID": "content/perfekter-gipfel/arbeitsblatt/arbeitsauftrag.html#für-einen-gipfel-höheres-gelände-finden",
-    "href": "content/perfekter-gipfel/arbeitsblatt/arbeitsauftrag.html#für-einen-gipfel-höheres-gelände-finden",
-    "title": "Der perfekte Gipfel",
-    "section": "3 · Für einen Gipfel höheres Gelände finden",
-    "text": "3 · Für einen Gipfel höheres Gelände finden\nWählt einen eurer Gipfel als Ziel. B eignet sich besonders, um die Rolle des südlicher gelegenen C (2659,54 m) und des höchsten Rasterpunkts D (2716,06 m) zu prüfen.\nErmittelt zunächst, wo es höheres Gelände als euren Zielgipfel gibt. Untersucht anschließend, welches dieser höheren Gebiete am nächsten liegt – dabei ist wichtig, ob der Rand des DGM eure Suche einschränkt.\n\n\n\n\n\n\nTippQGIS: Höheres Gelände als Rastermaske sichtbar machen\n\n\n\nIm Menü Raster → Rasterrechner… eine Bedingung für die Gipfelhöhe formulieren. Für A lautet sie beispielsweise:\n\"dgm_10m@1\" &gt; 2564.257080078125\nDen tatsächlichen Bandnamen in der Rasterbandliste prüfen. Für einen anderen Gipfel seine Höhe einsetzen. Als Ausgabeausdehnung das DGM, als Rastergröße 324 × 360 Zellen und als KBS EPSG:31254 verwenden. Ergebnis als Rasterdatei im Arbeitsordner speichern.\nDie Zellen mit 1 sind höher als A; die mit 0 nicht. Stellt 0 transparent und 1 farbig dar. So erkennt ihr höheres Gelände auf der Reliefkarte.\nOptional für die Dominanz: Im Verarbeitungswerkzeug GDAL → Proximity (Rasterentfernung) für die Maske den Zielwert 1 wählen und die Entfernungen in georeferenzierten Koordinaten (Meter) ausgeben. Den Wert der Gipfelzelle prüfen. Gemessen wird zwischen Rasterzellzentren – und nur zu Zellen innerhalb des Ausschnitts.",
+    "objectID": "content/gruenzugang/slides/01-quellen-abstraktion.html#proxys-wofür-steht-was",
+    "href": "content/gruenzugang/slides/01-quellen-abstraktion.html#proxys-wofür-steht-was",
+    "title": "Grünzugang",
+    "section": "Proxys: Wofür steht was?",
+    "text": "Proxys: Wofür steht was?\n\n\n\n\n\n\n\n\nIm Modell\nsteht für …\n… und lässt weg\n\n\n\n\nGrünpolygon\nErholungsraum\nQualität, Ausstattung, Öffnungszeiten\n\n\nRasterzelle mit Einwohnerzahl\nWohnort der Menschen\nwo genau sie in der Zelle wohnen\n\n\nPuffer um die Fläche\nNähe\nob man dort tatsächlich hinkommt\n\n\nWeg im Netz\nbegehbarer Zugang\nSteigung, Sicherheit, Barrierefreiheit\n\n\n\n\nEin Proxy ist eine bewusste Vereinfachung. Er bestimmt mit, was das Ergebnis überhaupt bedeuten kann.",
     "crumbs": [
-      "Der perfekte Gipfel",
-      "QGIS-Arbeitsauftrag"
+      "Grünzugang",
+      "Teil 1 – Lesarten und Abstraktion"
     ]
   },
   {
-    "objectID": "content/perfekter-gipfel/arbeitsblatt/arbeitsauftrag.html#scharten-und-verbindungen-über-höhenstufen-prüfen",
-    "href": "content/perfekter-gipfel/arbeitsblatt/arbeitsauftrag.html#scharten-und-verbindungen-über-höhenstufen-prüfen",
-    "title": "Der perfekte Gipfel",
-    "section": "4 · Scharten und Verbindungen über Höhenstufen prüfen",
-    "text": "4 · Scharten und Verbindungen über Höhenstufen prüfen\nDie nächste höhere Stelle und die maßgebliche Scharte beantworten verschiedene Fragen. Eine eingezeichnete Verbindung zwischen zwei Gipfeln ist noch kein Nachweis, dass es keine günstigere Verbindung gibt.\nPrüft deshalb mehrere Höhenstufen: Welche zusammenhängenden Flächen bleiben oberhalb einer gewählten Höhe bestehen? Ab welcher Stufe hängt die Fläche eures Zielgipfels mit einer Fläche zusammen, die höher als euer Zielgipfel ist?\n\n\n\n\n\n\nTippQGIS: Verbindung über eine Höhenstufe untersuchen\n\n\n\nErstellt mit Raster → Rasterrechner… zunächst beispielsweise:\n\"dgm_10m@1\" &gt; 2500\n2500 m ist ein Startwert, kein Ergebnis. Prüft zunächst grob in 25-m-Stufen und grenzt den Übergang danach in 10-m-Stufen ein. Dokumentiert die letzte getrennte und die erste verbundene Stufe; die Schartenhöhe liegt innerhalb dieses Intervalls. Beurteilt dabei nur die Verbindung zu höherem Gelände.\nWenn ihr Rasterflächen polygonisiert oder Zusammenhangsflächen berechnet, dokumentiert die zugrunde gelegte 4er- oder 8er-Nachbarschaft. An diagonalen Zellkontakten entstehen unterschiedliche Ergebnisse.\nNeue mögliche Verbindungswege zeichnet ihr wieder in „Eigene Verbindungen und Hypothesen“ ein; zusätzliche Scharten in „Eigene Schartenkandidaten“. Ergänzt die jeweilige Begründung im Attributformular.",
+    "objectID": "content/gruenzugang/slides/01-quellen-abstraktion.html#die-stadtgrenze-ist-ein-datenrand",
+    "href": "content/gruenzugang/slides/01-quellen-abstraktion.html#die-stadtgrenze-ist-ein-datenrand",
+    "title": "Grünzugang",
+    "section": "Die Stadtgrenze ist ein Datenrand",
+    "text": "Die Stadtgrenze ist ein Datenrand\n\nAus dem perfekten Gipfel: Am Rand des DGM ließ sich nicht ausschließen, dass höheres Gelände außerhalb liegt. Das Ergebnis war ausschnittsbezogen.\n\nWer am Stadtrand wohnt, geht vielleicht in den Wald der Nachbargemeinde. Endet unser Datensatz an der Stadtgrenze, erscheint diese Person als unversorgt.\nGemeinsame Setzung: Das Rechengebiet reicht um die größte vorkommende Distanz über Marburg hinaus.",
     "crumbs": [
-      "Der perfekte Gipfel",
-      "QGIS-Arbeitsauftrag"
+      "Grünzugang",
+      "Teil 1 – Lesarten und Abstraktion"
     ]
   },
   {
-    "objectID": "content/perfekter-gipfel/arbeitsblatt/arbeitsauftrag.html#werte-festhalten-und-gegenseitig-prüfen",
-    "href": "content/perfekter-gipfel/arbeitsblatt/arbeitsauftrag.html#werte-festhalten-und-gegenseitig-prüfen",
-    "title": "Der perfekte Gipfel",
-    "section": "5 · Werte festhalten und gegenseitig prüfen",
-    "text": "5 · Werte festhalten und gegenseitig prüfen\nÜbertragt die Ergebnisse für den gewählten Gipfel in eure Dokumentation. Die Felder scharte_m, dominanz_m, prominenz_m und e_wert sind im vorbereiteten Gipfelkandidatenlayer zunächst leer. Falls ihr mit einem eigenen Gipfellayer arbeitet, legt die entsprechenden Felder dort an. Tragt einen Zahlenwert erst dann ein, wenn ihr dessen räumliche Grundlage erklären könnt. Notiert die Kennung des Zielgipfels auch in der begruendung der zugehörigen Linie und Scharte. Verwendet für E die Formel aus der Artikelanalyse und lest den Wert richtig herum: Je kleiner E, desto eigenständiger der Gipfel; der Mount Everest hat E = 0.\n\n\n\nGesuchte Größe\nEuer Ergebnis\nBegründung oder offene Prüfung\n\n\n\n\nGipfelhöhe\n\n\n\n\nDominanz\n\n\n\n\nMaßgebliche Schartenhöhe\n\n\n\n\nProminenz\n\n\n\n\nEigenständigkeitswert E\n\n\n\n\nStatus: vorläufig / ausschnittsbezogen / räumlich abgesichert\n\n\n\n\n\nTauscht eure Karten mit einer anderen Gruppe. Diese versucht eine konkrete Gegenhypothese zu finden: näher gelegenes höheres Gelände, eine bessere Verbindung oder ein Datenrand, hinter dem die Suche weitergehen müsste. Ergänzt die Alternative als Punkt oder Linie im passenden Arbeitslayer und besprecht, welche Zahl sich dadurch ändert.\n\n\n\n\n\n\nWarnungQGIS: Ein nicht bestimmbarer Wert ist keine Null\n\n\n\nD ist der höchste Punkt des vorliegenden DGM. Im Ausschnitt liegt daher kein höherer Rasterpunkt, der seine Dominanz oder die maßgebliche Verbindung zu höherem Gelände abschließend bestimmen könnte. Das ist keine Dominanz von 0 m und kein Beleg für maximale Eigenständigkeit.\nFür jeden Gipfel gilt: Ein außerhalb des Ausschnitts liegender höherer Punkt oder Verbindungsweg kann das Ergebnis verändern. Kennzeichnet die Aussage dann als vorläufig oder auf den Datenausschnitt beschränkt. Eine offene Berechnung mit klar benannter fehlender Information ist ein gültiges Ergebnis.",
+    "objectID": "content/gruenzugang/slides/01-quellen-abstraktion.html#gleiche-daten-andere-regel",
+    "href": "content/gruenzugang/slides/01-quellen-abstraktion.html#gleiche-daten-andere-regel",
+    "title": "Grünzugang",
+    "section": "Gleiche Daten, andere Regel",
+    "text": "Gleiche Daten, andere Regel\n\ngleiche Stadt · gleiche Daten · gleiche Setzungen → nur die Regel des Ansatzes wechselt\n\nNur so lässt sich am Ende sagen, dass ein Unterschied aus dem Ansatz kommt – und nicht aus einer anderen Datenquelle oder einer anderen Auswahl von Grünflächen.\n\nDasselbe Prinzip hatte der Gipfel: ein DGM, mehrere Gipfeldefinitionen.",
     "crumbs": [
-      "Der perfekte Gipfel",
-      "QGIS-Arbeitsauftrag"
+      "Grünzugang",
+      "Teil 1 – Lesarten und Abstraktion"
     ]
   },
   {
-    "objectID": "content/perfekter-gipfel/arbeitsblatt/arbeitsauftrag.html#den-eigenen-lösungsweg-als-algorithmus-formulieren",
-    "href": "content/perfekter-gipfel/arbeitsblatt/arbeitsauftrag.html#den-eigenen-lösungsweg-als-algorithmus-formulieren",
-    "title": "Der perfekte Gipfel",
-    "section": "6 · Den eigenen Lösungsweg als Algorithmus formulieren",
-    "text": "6 · Den eigenen Lösungsweg als Algorithmus formulieren\nSchreibt euren Arbeitsablauf als kurze Folge eindeutiger Regeln auf:\n\nWie werden Gipfelkandidaten gefunden und nach welcher Nachbarschaftsregel ausgewählt?\nWie bestimmt das Verfahren das nächste höhere Gelände und prüft mögliche Verbindungen bzw. Scharten?\nUnter welchen Bedingungen ist die Suche abgeschlossen?\nWie meldet das Programm, dass der Datenausschnitt keine abgesicherte Aussage erlaubt?\n\nPrüft dann das Repository gisma/perfectPeak (Commit 37b49f1). Welche eurer Entscheidungen und Abbruchbedingungen erkennt ihr im Code wieder – welche nicht?",
+    "objectID": "content/gruenzugang/slides/01-quellen-abstraktion.html#ein-ansatz-pro-gruppe",
+    "href": "content/gruenzugang/slides/01-quellen-abstraktion.html#ein-ansatz-pro-gruppe",
+    "title": "Grünzugang",
+    "section": "Ein Ansatz pro Gruppe",
+    "text": "Ein Ansatz pro Gruppe\n\n\n\n\n\n\n\n\nGruppe\nAnsatz\nWas sich gegenüber der Referenz ändert\n\n\n\n\n1\nWHO, wie zitiert\nMindestgröße\n\n\n2\n3-30-300-Regel\nkeine Mindestgröße; Entfernungsmaß nicht festgelegt\n\n\n3\nBBSR 2018\nzwei Stufen: 1 ha / 300 m und 10 ha / 700 m\n\n\n4\nBfN – Erreichbarkeit\nFußweg statt Luftlinie; Flächen werden summiert\n\n\n5\nBfN – Versorgung\nQuadratmeter pro Einwohner statt ja/nein\n\n\n\n\nGibt es mehr Gruppen als Ansätze, wird ein Ansatz doppelt vergeben und unabhängig umgesetzt. Weichen beide Ergebnisse ab, ist das ein Befund zur Reproduzierbarkeit.",
     "crumbs": [
-      "Der perfekte Gipfel",
-      "QGIS-Arbeitsauftrag"
+      "Grünzugang",
+      "Teil 1 – Lesarten und Abstraktion"
     ]
   },
   {
-    "objectID": "content/perfekter-gipfel/arbeitsblatt/arbeitsauftrag.html#exkurs-automatisierung-in-qgis-stapelverarbeitung-und-modelle",
-    "href": "content/perfekter-gipfel/arbeitsblatt/arbeitsauftrag.html#exkurs-automatisierung-in-qgis-stapelverarbeitung-und-modelle",
-    "title": "Der perfekte Gipfel",
-    "section": "Exkurs · Automatisierung in QGIS: Stapelverarbeitung und Modelle",
-    "text": "Exkurs · Automatisierung in QGIS: Stapelverarbeitung und Modelle\nStapelverarbeitung wiederholt denselben Schritt für mehrere Gipfel; der grafische Modellierer verbindet Schritte. Beides eignet sich für Maske → Proximity → Rasterwert am Gipfel.\nDie maßgebliche Scharte wird dadurch nicht automatisch bestimmt: Dafür muss ein Verfahren Zusammenhangsflächen über Höhenstufen, Raster-Nachbarschaft und den Datenrand auswerten. Das ist ein eigener Algorithmus, nicht Teil dieses Arbeitsauftrags.\nDokumentation: QGIS-Stapelverarbeitung · Grafischer Modellierer · GDAL Proximity.",
+    "objectID": "content/gruenzugang/slides/01-quellen-abstraktion.html#ergebnis-heute",
+    "href": "content/gruenzugang/slides/01-quellen-abstraktion.html#ergebnis-heute",
+    "title": "Grünzugang",
+    "section": "Ergebnis heute",
+    "text": "Ergebnis heute\n\n\nRegelblatt\nWas euer Ansatz festlegt – mit Fundstelle –, was er offenlässt und wie ihr es setzt.\n\n\nPrognose\nWeist euer Ansatz in Marburg mehr oder weniger Menschen als versorgt aus als die Referenz? Warum?\n\n\n\nDie Prognose wird in Sitzung 3 überprüft. Ohne Erwartung vor dem Rechnen gibt es hinterher nichts zu prüfen.",
     "crumbs": [
-      "Der perfekte Gipfel",
-      "QGIS-Arbeitsauftrag"
+      "Grünzugang",
+      "Teil 1 – Lesarten und Abstraktion"
     ]
   },
   {
-    "objectID": "content/perfekter-gipfel/arbeitsblatt/arbeitsauftrag.html#installation-in-qgis-3.44",
-    "href": "content/perfekter-gipfel/arbeitsblatt/arbeitsauftrag.html#installation-in-qgis-3.44",
-    "title": "Der perfekte Gipfel",
-    "section": "Installation in QGIS 3.44+",
-    "text": "Installation in QGIS 3.44+\n\nDie Datei perfect_peak_metrics.py herunterladen.\nIn QGIS Verarbeitung → Werkzeugkiste öffnen.\nOben in der Werkzeugkiste auf das Python-Symbol klicken und Skript zur Werkzeugkiste hinzufügen… wählen; die heruntergeladene Datei auswählen.\nAlternativ: Neues Skript erstellen…, den gesamten Inhalt der Datei einfügen und als perfect_peak_metrics.py speichern.\nDas neue Werkzeug erscheint unter Skripte → Perfect Peak → Perfect Peak: Dominanz und Prominenzintervall.\n\nFür Gipfelpunkte ist keine Zusatzinstallation von R, SAGA oder GRASS erforderlich.",
+    "objectID": "content/gruenzugang/slides/01-quellen-abstraktion.html#merksatz",
+    "href": "content/gruenzugang/slides/01-quellen-abstraktion.html#merksatz",
+    "title": "Grünzugang",
+    "section": "Merksatz",
+    "text": "Merksatz\n\nEin Ansatz ist erst dann klar, wenn man ihn rechnen kann. Was er bedeutet, zeigt der Vergleich.\n\nArbeitsauftrag Sitzung 1 öffnen",
     "crumbs": [
-      "Der perfekte Gipfel",
-      "QGIS-Arbeitsauftrag"
-    ]
-  },
-  {
-    "objectID": "content/perfekter-gipfel/arbeitsblatt/arbeitsauftrag.html#ausführen",
-    "href": "content/perfekter-gipfel/arbeitsblatt/arbeitsauftrag.html#ausführen",
-    "title": "Der perfekte Gipfel",
-    "section": "Ausführen",
-    "text": "Ausführen\n\n\n\n\n\n\n\nEingabe\nEinstellung für dieses Projekt\n\n\n\n\nDGM\ndgm_10m\n\n\nGipfelpunkte\nGipfelkandidaten A–F (DEM-Maxima) oder euer Layer eigene_gipfel\n\n\nGipfelmaske\nLeer lassen (Vertiefung, siehe unten)\n\n\nFangradius\n3 Zellen: Punkte werden auf die höchste Zelle im Umkreis von 30 m gesetzt\n\n\nMindesthöhenunterschied\n0 m; nur bei begründeter Höhentoleranz erhöhen\n\n\nRaster-Nachbarschaft\n8er-Nachbarschaft, sofern diagonale Verbindungen gelten sollen\n\n\nAusgabe\nGeoPackage im Arbeitsordner, z. B. daten/perfect_peak_ergebnis.gpkg\n\n\n\nEin geklickter Gipfelpunkt trifft selten genau die höchste Rasterzelle. Liegt er nur eine Zelle daneben, wäre die Nachbarzelle „höheres Gelände“ in 10 m Entfernung. Das Tool setzt jeden Punkt deshalb auf die höchste Zelle im Fangradius und gibt die Verschiebung als snap_m aus; der Ausgabepunkt liegt auf der analysierten Zelle. Ist auch diese Zelle kein lokales Maximum, lautet der Status not_local_maximum: Punkt prüfen oder Fangradius begründet erhöhen.\n\n\n\n\n\n\nHinweisVertiefung: Gipfelmaske statt Punkte\n\n\n\n\n\nStatt einzelner Punkte kann das Tool alle positiven Bereiche einer Gipfelmaske auswerten; zusammenhängende Zellen werden zu einem Kandidaten mit der höchsten Zelle als Gipfelpunkt zusammengefasst. Wenn beide Eingaben gesetzt sind, haben die Punkte Vorrang.\nDie Maske ist keine technische Nebenbedingung, sondern die fachliche Definition: Welche lokalen Maxima, Mindesthöhen, Plateaus oder Ausschlüsse gelten? Für lokale Maxima braucht ihr einen Maximumfilter, etwa GRASS → r.neighbors mit Methode maximum und Fenstergröße 31 (sofern der GRASS-Anbieter in eurer QGIS-Installation verfügbar ist). Anschließend markiert der Rasterrechner die Zellen, deren Höhe dem gefilterten Maximum entspricht. DGM und Maske müssen dasselbe Rastergitter besitzen.\n\n\n\nAlle Daten benötigen ein projiziertes KBS mit Meter-Einheiten; Gipfelpunkte müssen auf gültigen DGM-Zellen liegen.",
-    "crumbs": [
-      "Der perfekte Gipfel",
-      "QGIS-Arbeitsauftrag"
-    ]
-  },
-  {
-    "objectID": "content/perfekter-gipfel/arbeitsblatt/arbeitsauftrag.html#ergebnisfelder",
-    "href": "content/perfekter-gipfel/arbeitsblatt/arbeitsauftrag.html#ergebnisfelder",
-    "title": "Der perfekte Gipfel",
-    "section": "Ergebnisfelder",
-    "text": "Ergebnisfelder\n\n\n\n\n\n\n\nFeld\nBedeutung\n\n\n\n\npp_id\nVom Tool vergebene Kennung; bei Maskeneingabe die einzige Kandidatenkennung\n\n\nsnap_m\nVerschiebung vom eingegebenen Punkt zur analysierten Gipfelzelle\n\n\npeak_h_m\nHöhe der Gipfelzelle im DGM\n\n\nrand_m\nEntfernung der Gipfelzelle zum DGM-Rand\n\n\ndominanz_m\nKürzeste Zellzentrumdistanz zu höherem Gelände innerhalb des DGM\n\n\nscharte_lo / scharte_hi\nUntere bzw. obere Grenze der aus Rasterstufen bestimmten Schartenhöhe\n\n\nprom_lo_m / prom_hi_m\nDaraus folgendes Prominenzintervall\n\n\ne_art_lo / e_art_hi\nE-Wert-Intervall nach der Formel des Panoramaartikels\n\n\ne_code_lo / e_code_hi\nE-Wert-Intervall nach der tatsächlich ausgeführten Verzweigung des historischen R-Codes\n\n\ne_note\nDokumentiert den Unterschied zwischen Artikel- und Code-Regel\n\n\npp_status\nGültigkeit des Ergebnisses\n\n\n\nok bedeutet: Dominanz und Scharte sind innerhalb des DGM bestimmt. edge_relevant bedeutet: Die Fläche des Gipfels knapp oberhalb der Scharte berührt den DGM-Rand, oder der Rand liegt näher als das gefundene höhere Gelände (rand_m &lt; dominanz_m). Außerhalb der Daten könnte dann eine höhere Verbindung oder näheres höheres Gelände liegen; das Ergebnis ist nur ausschnittsbezogen. no_higher_terrain_in_dem, not_local_maximum, outside_dem und nodata_cell sind keine Nullwerte, sondern begründete offene Ergebnisse.",
-    "crumbs": [
-      "Der perfekte Gipfel",
-      "QGIS-Arbeitsauftrag"
-    ]
-  },
-  {
-    "objectID": "content/perfekter-gipfel/arbeitsblatt/arbeitsauftrag.html#e-wert-formel-und-kritische-umsetzung",
-    "href": "content/perfekter-gipfel/arbeitsblatt/arbeitsauftrag.html#e-wert-formel-und-kritische-umsetzung",
-    "title": "Der perfekte Gipfel",
-    "section": "E-Wert: Formel und kritische Umsetzung",
-    "text": "E-Wert: Formel und kritische Umsetzung\nFür \\(d &lt; 100\\,000\\,m\\) verwendet der Panoramaartikel:\n\\[E=-\\frac{\\log_2(h/8848)+\\log_2(d/100000)+\\log_2(p/h)}{3}\\]\nFür \\(d &gt; 100\\,000\\,m\\) entfällt dort der Dominanzterm. Das Tool berechnet diese Lesart als e_art_lo bis e_art_hi; das Intervall folgt aus dem Prominenzintervall.\nDer historische Code calculateIndependence.R verzweigt tatsächlich umgekehrt: Unter 100 km lässt er den Dominanzterm weg, oberhalb von 100 km nimmt er ihn auf. Deshalb liefert das Tool zusätzlich e_code_lo bis e_code_hi, aber nicht als maßgeblichen Wert. e_note macht die verwendete Regel je Gipfel sichtbar. Bei exakt 100 km ist die Artikelformel nicht explizit; das Tool verwendet dafür die Variante ohne Dominanzterm.\nJe kleiner E, desto eigenständiger der Gipfel. Damit ist der E-Wert kein verborgenes Endergebnis: Er bleibt an Höhe, Dominanz, Prominenzintervall, Datenrand und die gewählte Formel gebunden.",
-    "crumbs": [
-      "Der perfekte Gipfel",
-      "QGIS-Arbeitsauftrag"
+      "Grünzugang",
+      "Teil 1 – Lesarten und Abstraktion"
     ]
   }
 ]

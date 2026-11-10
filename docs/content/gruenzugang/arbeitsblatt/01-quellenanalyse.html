@@ -1,0 +1,1371 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de" xml:lang="de"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.26">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Grünzugang · Sitzung 1 – Grundlagenkurs GI-S (QGIS)</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../">
+<link href="../../../content/gruenzugang/slides/01-quellen-abstraktion.html" rel="prev">
+<link href="../../../images/logo.png" rel="icon" type="image/png">
+<script src="../../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-597958c53c93a607afca12fd375c57ed.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-dark-7ac2f9da8c2617a4fdd15004b4601015.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-597958c53c93a607afca12fd375c57ed.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap-7ee1517e378b1eed86ed86c3e4f26a5e.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-dark-539e905237efd59d0d717aa5e73aad62.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../../site_libs/bootstrap/bootstrap-7ee1517e378b1eed86ed86c3e4f26a5e.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "language": {
+    "search-no-results-text": "Keine Treffer",
+    "search-matching-documents-text": "Treffer",
+    "search-copy-link-title": "Link in die Suche kopieren",
+    "search-hide-matches-text": "Zusätzliche Treffer verbergen",
+    "search-more-match-text": "weitere Treffer in diesem Dokument",
+    "search-more-matches-text": "weitere Treffer in diesem Dokument",
+    "search-clear-button-title": "Zurücksetzen",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Abbrechen",
+    "search-submit-button-title": "Abschicken",
+    "search-label": "Suchen"
+  }
+}</script>
+<style>
+
+      .quarto-title-block .quarto-title-banner h1,
+      .quarto-title-block .quarto-title-banner h2,
+      .quarto-title-block .quarto-title-banner h3,
+      .quarto-title-block .quarto-title-banner h4,
+      .quarto-title-block .quarto-title-banner h5,
+      .quarto-title-block .quarto-title-banner h6
+      {
+        color: black;
+      }
+
+      .quarto-title-block .quarto-title-banner {
+        color: black;
+background-image: url(../../../images/banner-gz.png);
+background-size: cover;
+      }
+</style>
+<style>
+  .footer-wrapper {
+    position: relative;
+  }
+  .footer-banner {
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 75px;
+    text-align: center;
+    line-height: 75px; /* Vertically centers text within the height */
+    color: #0000A5;
+    font-size: 14px; /* Smaller font size */
+    z-index: 1000;
+    overflow: hidden;
+    background: url('../images/banner3.png') repeat-x; 
+    opacity: 0.5;  /* Makes the image 50% fainter */
+    
+  }
+    
+  
+  .footer-banner a {
+    color: #0000A5; /* Dark red with 80% opacity */
+    text-decoration: none;
+    padding: 0 10px;
+  }
+
+</style>
+
+
+<link rel="stylesheet" href="../../../css/styles.css">
+<meta property="og:title" content="Grünzugang · Sitzung 1 – Grundlagenkurs GI-S (QGIS)">
+<meta property="og:description" content="Lesarten und Abstraktion: Was meinen die eigentlich?">
+<meta property="og:site_name" content="Grundlagenkurs GI-S (QGIS)">
+<meta name="twitter:title" content="Grünzugang · Sitzung 1 – Grundlagenkurs GI-S (QGIS)">
+<meta name="twitter:description" content="Lesarten und Abstraktion: Was meinen die eigentlich?">
+<meta name="twitter:creator" content="@gisma">
+<meta name="twitter:card" content="summary">
+</head>
+
+<body class="nav-sidebar docked nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top quarto-banner">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="../../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../../images/logo.png" alt="" class="navbar-logo light-content">
+    <img src="../../../images/logo.png" alt="" class="navbar-logo dark-content">
+    </a>
+    <a class="navbar-brand" href="../../../index.html">
+    <span class="navbar-title">Grundlagenkurs GI-S (QGIS)</span>
+    </a>
+  </div>
+        <div class="quarto-navbar-tools tools-end">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Dunkelmodus umschalten"><i class="bi"></i></a>
+</div>
+          <div id="quarto-search" class="" title="Suchen"></div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <a class="flex-grow-1 no-decor" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+          <h1 class="quarto-secondary-nav-title">Grünzugang · Sitzung 1</h1>
+        </a>     
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title d-none d-lg-block">Grünzugang · Sitzung 1</h1>
+            <p class="subtitle lead">Lesarten und Abstraktion: Was meinen die eigentlich?</p>
+                      </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Geoinformatik Basiskurs</span></a>
+  </div>
+</li>
+        <li class="px-0"><hr class="sidebar-divider hi "></li>
+        <li class="px-0"><hr class="sidebar-divider hi "></li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false">
+ <span class="menu-text">Der perfekte Gipfel</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Abschnitt umschalten">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../content/perfekter-gipfel/slides/01-konzept.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Teil 1 – Konzept</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../content/perfekter-gipfel/slides/02-analyse.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Teil 2 – Modellkritik</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../content/perfekter-gipfel/slides/03-technische-umsetzung.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Teil 3 – QGIS-Workflow</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../content/perfekter-gipfel/arbeitsblatt/arbeitsauftrag.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">QGIS-Arbeitsauftrag</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../content/perfekter-gipfel/resume.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Resume und Ausblick</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Grünzugang</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Abschnitt umschalten">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../content/gruenzugang/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Überblick</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../content/gruenzugang/slides/01-quellen-abstraktion.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Teil 1 – Lesarten und Abstraktion</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../content/gruenzugang/arbeitsblatt/01-quellenanalyse.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Arbeitsauftrag Sitzung 1</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="px-0"><hr class="sidebar-divider hi "></li>
+        <li class="px-0"><hr class="sidebar-divider hi "></li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Inhalt</h2>
+   
+  <ul class="collapse">
+  <li><a href="#arbeitsauftrag" id="toc-arbeitsauftrag" class="nav-link active" data-scroll-target="#arbeitsauftrag">Arbeitsauftrag</a></li>
+  <li><a href="#a-die-referenz-durchdeklinieren-plenum" id="toc-a-die-referenz-durchdeklinieren-plenum" class="nav-link" data-scroll-target="#a-die-referenz-durchdeklinieren-plenum">A · Die Referenz durchdeklinieren (Plenum)</a></li>
+  <li><a href="#b-den-eigenen-ansatz-beim-wort-nehmen" id="toc-b-den-eigenen-ansatz-beim-wort-nehmen" class="nav-link" data-scroll-target="#b-den-eigenen-ansatz-beim-wort-nehmen">B · Den eigenen Ansatz beim Wort nehmen</a></li>
+  <li><a href="#c-was-sich-gegenüber-der-referenz-ändert" id="toc-c-was-sich-gegenüber-der-referenz-ändert" class="nav-link" data-scroll-target="#c-was-sich-gegenüber-der-referenz-ändert">C · Was sich gegenüber der Referenz ändert</a></li>
+  <li><a href="#d-prognose" id="toc-d-prognose" class="nav-link" data-scroll-target="#d-prognose">D · Prognose</a></li>
+  <li><a href="#e-gemeinsamer-datenplan-und-ergebnisformat-plenum" id="toc-e-gemeinsamer-datenplan-und-ergebnisformat-plenum" class="nav-link" data-scroll-target="#e-gemeinsamer-datenplan-und-ergebnisformat-plenum">E · Gemeinsamer Datenplan und Ergebnisformat (Plenum)</a></li>
+  <li><a href="#ergebnis-der-sitzung" id="toc-ergebnis-der-sitzung" class="nav-link" data-scroll-target="#ergebnis-der-sitzung">Ergebnis der Sitzung</a>
+  <ul class="collapse">
+  <li><a href="#vorbereitung-auf-sitzung-2" id="toc-vorbereitung-auf-sitzung-2" class="nav-link" data-scroll-target="#vorbereitung-auf-sitzung-2">Vorbereitung auf Sitzung 2</a></li>
+  <li><a href="#hintergrund-nicht-gegenstand-der-sitzung" id="toc-hintergrund-nicht-gegenstand-der-sitzung" class="nav-link" data-scroll-target="#hintergrund-nicht-gegenstand-der-sitzung">Hintergrund (nicht Gegenstand der Sitzung)</a></li>
+  </ul></li>
+  </ul>
+<div class="toc-actions"><ul class="collapse"><li><a href="https://github.com/gisma-courses/gc-geoinfo2.0/edit/main/content/gruenzugang/arbeitsblatt/01-quellenanalyse.qmd" class="toc-action"><i class="bi bi-github"></i>Seite editieren</a></li><li><a href="https://github.com/gisma-courses/gc-geoinfo2.0/issues/new" class="toc-action"><i class="bi empty"></i>Problem melden</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+
+
+<p><a href="../../../content/gruenzugang/index.html">← Themenblock 2</a> · <a href="../../../content/gruenzugang/slides/01-quellen-abstraktion.html">Folien Teil 1</a></p>
+<section id="arbeitsauftrag" class="level1">
+<h1>Arbeitsauftrag</h1>
+<p><strong>Ziel:</strong> Fünf Ansätze wollen dasselbe – Grün in Wohnungsnähe – und rechnen es verschieden. Ihr nehmt <strong>einen</strong> davon beim Wort und übersetzt ihn so genau, dass er sich in Sitzung 2 in QGIS rechnen lässt. In Sitzung 3 vergleichen wir alle Ansätze für Marburg.</p>
+<p>Heute entstehen:</p>
+<ol type="1">
+<li>die gemeinsam <strong>durchdeklinierte Referenz</strong> (Schritt A, Plenum),</li>
+<li>das <strong>Regelblatt</strong> eures Ansatzes (Schritt B, Gruppe),</li>
+<li>die <strong>Änderungen gegenüber der Referenz</strong> (Schritt C, Gruppe),</li>
+<li>eure <strong>Prognose</strong> (Schritt D, Gruppe),</li>
+<li>der <strong>gemeinsame Datenplan</strong> und das <strong>Ergebnisformat</strong> (Schritt E, Plenum).</li>
+</ol>
+<p>Wir diskutieren nicht, ob die Schwellen der Ansätze fachlich gut begründet sind. Wir prüfen, was sie bedeuten, wenn man sie anwendet.</p>
+<div class="callout callout-style-default callout-note callout-titled" title="Aus dem perfekten Gipfel">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Hinweis</span>Aus dem perfekten Gipfel
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Artikelformel und historischer Code setzten dieselbe Idee verschieden um und lieferten für dieselben Gipfel verschiedene E-Werte. Heute ist es dasselbe – nur mit fünf Umsetzungen und einer Stadt.</p>
+</div>
+</div>
+</section>
+<section id="a-die-referenz-durchdeklinieren-plenum" class="level1">
+<h1>A · Die Referenz durchdeklinieren (Plenum)</h1>
+<p>Referenz ist der WHO-Indikator, wie ihn <a href="https://doi.org/10.1177/1403494815615444">van den Bosch et al.&nbsp;(2016)</a> entwickelt und getestet haben: der <strong>Anteil der städtischen Bevölkerung</strong>, der innerhalb einer bestimmten Entfernung vom <strong>Rand einer Grünfläche</strong> wohnt. Als Standard empfehlen die Autorinnen und Autoren <strong>300 m Luftlinie</strong> und eine Mindestgröße von <strong>1 Hektar</strong>. Eine ausführliche Anleitung für die GIS-Umsetzung enthält der Bericht des <a href="https://www.who.int/europe/publications/i/item/who-euro-2016-3352-43111-60341">WHO-Regionalbüros Europa (2016)</a>.</p>
+<p>Gemeinsam übersetzen wir den Indikator Schritt für Schritt:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;"></th>
+<th style="text-align: left;">Begriff</th>
+<th style="text-align: left;">Kriterium</th>
+<th style="text-align: left;">Repräsentation</th>
+<th style="text-align: left;">Operation in QGIS</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>Grün</strong></td>
+<td style="text-align: left;">städtische Grünfläche</td>
+<td style="text-align: left;">öffentlich zugänglich, mindestens 1 ha</td>
+<td style="text-align: left;">OSM-Polygone ausgewählter Klassen</td>
+<td style="text-align: left;">Auswahl per Ausdruck, Fläche berechnen, filtern</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Entfernung</strong></td>
+<td style="text-align: left;">Nähe</td>
+<td style="text-align: left;">höchstens 300 m Luftlinie bis zum Flächenrand</td>
+<td style="text-align: left;">Pufferzone um jede Grünfläche</td>
+<td style="text-align: left;">Puffer 300 m, auflösen</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>Bevölkerung</strong></td>
+<td style="text-align: left;">Bewohnerinnen und Bewohner</td>
+<td style="text-align: left;">Wohnort innerhalb der Pufferzone</td>
+<td style="text-align: left;">Zensus-2022-Gitterzellen 100 m mit Einwohnerzahl</td>
+<td style="text-align: left;">Zellmittelpunkte, Lage-Abfrage</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Ergebnis</strong></td>
+<td style="text-align: left;">Zugang</td>
+<td style="text-align: left;">Anteil der versorgten Bevölkerung</td>
+<td style="text-align: left;">Feld <code>versorgt</code> je Zelle</td>
+<td style="text-align: left;">Summe versorgt / Summe aller</td>
+</tr>
+</tbody>
+</table>
+<p>Was der Indikator <strong>nicht</strong> festlegt, setzen wir einmal gemeinsam. Diese Setzungen gelten für <strong>alle</strong> Ansätze, sofern ein Ansatz nicht ausdrücklich etwas anderes verlangt:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Offene Frage</th>
+<th style="text-align: left;">Gemeinsame Setzung</th>
+<th style="text-align: left;">Begründung</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Welche OSM-Klassen zählen als Grünfläche?</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Woran erkennen wir „öffentlich zugänglich“?</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Wann zählt eine Gitterzelle als versorgt – Mittelpunkt oder Anteil in der Zone?</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Wie weit reicht das Rechengebiet über Marburg hinaus?</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Welches Untersuchungsgebiet: Stadt Marburg oder Kernstadt?</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+</tbody>
+</table>
+<div class="callout callout-style-default callout-note callout-titled" title="Aus dem perfekten Gipfel">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Hinweis</span>Aus dem perfekten Gipfel
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Am Rand des DGM blieb offen, ob außerhalb höheres Gelände liegt. An der Stadtgrenze bleibt offen, ob jenseits davon eine Grünfläche liegt. Das Rechengebiet muss deshalb mindestens um die größte Distanz, die ein Ansatz verwendet, über Marburg hinausreichen.</p>
+</div>
+</div>
+</section>
+<section id="b-den-eigenen-ansatz-beim-wort-nehmen" class="level1">
+<h1>B · Den eigenen Ansatz beim Wort nehmen</h1>
+<p>Jede Gruppe übernimmt einen Ansatz. Lest gezielt die Stelle, an der die Schwellen stehen, und haltet die <strong>Fundstelle</strong> fest (Seite, Abschnitt, Abbildung).</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Gruppe</th>
+<th style="text-align: left;">Ansatz</th>
+<th style="text-align: left;">Quelle</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">„WHO“, wie häufig zitiert</td>
+<td style="text-align: left;"><a href="https://www.isglobal.org/en/-/isglobal-presenta-el-ranking-de-las-ciudades-europeas-con-mayor-mortalidad-atribuible-a-la-falta-de-espacios-verdes">ISGlobal (2021)</a>; <a href="https://doi.org/10.1016/S2542-5196(21)00229-1">Pereira Barboza et al.&nbsp;(2021): <em>Green space and mortality in European cities: a health impact assessment study</em></a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">2</td>
+<td style="text-align: left;">3-30-300-Regel</td>
+<td style="text-align: left;"><a href="https://doi.org/10.1007/s11676-022-01523-z">Konijnendijk (2023): <em>Evidence-based guidelines for greener, healthier, more resilient neighbourhoods: Introducing the 3–30–300 rule</em></a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">3</td>
+<td style="text-align: left;">BBSR 2018</td>
+<td style="text-align: left;"><a href="https://epflicht.ulb.uni-bonn.de/download/pdf/372854">BBSR (2018): <em>Handlungsziele für Stadtgrün und deren empirische Evidenz</em>, Kap. 2.2, S. 26</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">4</td>
+<td style="text-align: left;">BfN – Grünerreichbarkeit</td>
+<td style="text-align: left;"><a href="https://doi.org/10.19217/brs242">Blum et al.&nbsp;(2024): <em>Orientierungswerte für öffentliches Grün. Kurzfassung</em></a>; ausführlich: <a href="https://doi.org/10.19217/skr653">Blum et al.&nbsp;(2023), BfN-Schriften 653</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">5</td>
+<td style="text-align: left;">BfN – Grünraumversorgung</td>
+<td style="text-align: left;">wie Gruppe 4</td>
+</tr>
+</tbody>
+</table>
+<p>Gibt es mehr Gruppen als Ansätze, wird ein Ansatz doppelt vergeben. Die beiden Gruppen arbeiten <strong>unabhängig</strong> voneinander und vergleichen erst in Sitzung 3.</p>
+<p>Füllt dann euer <strong>Regelblatt</strong>:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;"></th>
+<th style="text-align: left;">Was die Quelle festlegt (mit Fundstelle)</th>
+<th style="text-align: left;">Was offen bleibt</th>
+<th style="text-align: left;">Unsere Setzung</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>Grünfläche:</strong> welche Art? öffentlich?</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Mindestgröße:</strong> je Fläche oder als Summe?</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>Entfernungsmaß:</strong> Luftlinie, Fußweg, nicht festgelegt?</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Distanz</strong></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>Bezugspunkt:</strong> Rand, Eingang, Mittelpunkt?</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Bevölkerung:</strong> wer zählt, in welcher Einheit?</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>Ergebnisgröße:</strong> Anteil versorgter Menschen, m² pro Einwohner, ja/nein?</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Mehrere Stufen:</strong> Wie werden sie kombiniert?</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+</tbody>
+</table>
+<p>Für die Spalte „Unsere Setzung“ gilt: <strong>Was eure Quelle offenlässt, setzt ihr wie in der Referenz.</strong> Eine Abweichung davon ist nur zulässig, wenn ihr sie aus der Quelle begründen könnt.</p>
+<div class="callout callout-style-default callout-tip callout-titled" title="Prüffrage">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tipp</span>Prüffrage
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Gibt es in eurer Quelle einen Satz, den man auf zwei Arten rechnen könnte? Notiert beide Lesarten. Genau diese Stellen meinen wir mit „klingt gut – aber was heißt das?“.</p>
+</div>
+</div>
+</section>
+<section id="c-was-sich-gegenüber-der-referenz-ändert" class="level1">
+<h1>C · Was sich gegenüber der Referenz ändert</h1>
+<p>Listet jede Stelle auf, an der euer Ansatz anders rechnet als die Referenz, und was das für die Verarbeitungskette bedeutet.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Änderung</th>
+<th style="text-align: left;">in der Referenz</th>
+<th style="text-align: left;">in unserem Ansatz</th>
+<th style="text-align: left;">Folge für die Umsetzung in QGIS</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+</tbody>
+</table>
+<p>Hinweise für die einzelnen Ansätze:</p>
+<ul>
+<li><strong>Gruppe 3 (BBSR):</strong> Zwei Stufen mit unterschiedlicher Größe und Entfernung. Muss eine Zelle beide erfüllen, eine von beiden – oder werden sie getrennt ausgewiesen?</li>
+<li><strong>Gruppe 4 (BfN – Erreichbarkeit):</strong> Fußweg statt Luftlinie, und die Mindestgröße gilt für die <strong>Summe</strong> der erreichbaren Flächen. Dafür braucht ihr ein Wegenetz und eine Netzwerkanalyse.</li>
+<li><strong>Gruppe 5 (BfN – Versorgung):</strong> Das Ergebnis ist kein Ja/Nein, sondern Quadratmeter Grün pro Einwohner. Wie die Grünfläche auf die Menschen im Einzugsbereich aufgeteilt wird, müsst ihr selbst festlegen und begründen. Dafür ist ein Vergleich mit dem <a href="https://www.berlin.de/umweltatlas/nutzung/oeffentliche-gruenanlagen/2020/einleitung/">Berliner Umweltatlas</a> hilfreich, der ebenfalls mit 6 m² pro Einwohner arbeitet.</li>
+</ul>
+</section>
+<section id="d-prognose" class="level1">
+<h1>D · Prognose</h1>
+<p>Bevor gerechnet wird: Schätzt, ob euer Ansatz in Marburg <strong>mehr oder weniger Menschen als versorgt</strong> ausweist als die Referenz – und wo in der Stadt sich die Ergebnisse vermutlich am stärksten unterscheiden.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;"></th>
+<th style="text-align: left;">Unsere Prognose</th>
+<th style="text-align: left;">Begründung</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Anteil versorgt im Vergleich zur Referenz (mehr / weniger / gleich)</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Wo in Marburg erwarten wir die größten Unterschiede?</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+</tbody>
+</table>
+<p>Die Prognose wird in Sitzung 3 mit dem Ergebnis verglichen. Eine falsche Prognose ist kein Fehler, sondern ein Befund.</p>
+</section>
+<section id="e-gemeinsamer-datenplan-und-ergebnisformat-plenum" class="level1">
+<h1>E · Gemeinsamer Datenplan und Ergebnisformat (Plenum)</h1>
+<p>Alle Gruppen rechnen mit <strong>denselben Daten</strong>. Nur so lässt sich am Ende sagen, dass ein Unterschied aus dem Ansatz kommt.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Kriterium</th>
+<th style="text-align: left;">Daten</th>
+<th style="text-align: left;">Quelle und Abruf</th>
+<th style="text-align: left;">Lizenz</th>
+<th style="text-align: left;">KBS und Auflösung</th>
+<th style="text-align: left;">Was wissen wir über die Daten <strong>nicht</strong>?</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Grünflächen</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Wegenetz (für Gruppe 4 und 5)</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Bevölkerung</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Untersuchungs- und Rechengebiet</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+</tbody>
+</table>
+<p>Mögliche Quellen:</p>
+<ul>
+<li><strong>OpenStreetMap</strong> für Grünflächen und Wege – in QGIS über das Plugin <strong>QuickOSM</strong> abrufbar. Lizenz: ODbL. Haltet Abrufdatum und Abfrage fest; alle Gruppen verwenden dieselbe Abfrage.</li>
+<li><strong>Zensus 2022, Bevölkerungszahlen in Gitterzellen</strong> (100 m): <a href="https://www.zensus2022.de/DE/Ergebnisse-des-Zensus/_inhalt.html#Gitterdaten2022">Gitterdaten zum Download</a>.</li>
+<li>Verwaltungsgrenzen für Untersuchungs- und Rechengebiet.</li>
+</ul>
+<p><strong>Ergebnisformat:</strong> Jede Gruppe liefert in Sitzung 2 einen Layer der Zensus-Gitterzellen im Untersuchungsgebiet mit diesen Feldern:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Feld</th>
+<th style="text-align: left;">Inhalt</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><code>zelle_id</code></td>
+<td style="text-align: left;">Kennung der Gitterzelle aus dem Zensus</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>ew</code></td>
+<td style="text-align: left;">Einwohnerzahl</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><code>ansatz</code></td>
+<td style="text-align: left;">Kürzel des Ansatzes, z. B. <code>REF</code>, <code>WHO05</code>, <code>3-30-300</code>, <code>BBSR</code>, <code>BFN_E</code>, <code>BFN_V</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>versorgt</code></td>
+<td style="text-align: left;">1 = versorgt, 0 = nicht versorgt nach eurem Ansatz</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><code>wert</code></td>
+<td style="text-align: left;">optional: der zugrunde liegende Wert, z. B. m² pro Einwohner</td>
+</tr>
+</tbody>
+</table>
+<p>Nur weil alle dasselbe Format liefern, lassen sich die Ergebnisse in Sitzung 3 Zelle für Zelle zu einer <strong>Übereinstimmungskarte</strong> zusammenführen.</p>
+<div class="callout callout-style-default callout-note callout-titled" title="Aus dem perfekten Gipfel">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Hinweis</span>Aus dem perfekten Gipfel
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Beim Gipfel waren Feldnamen und Statuswerte im Skript festgelegt; deshalb ließen sich die Ergebnisse aller Gruppen vergleichen. Diesmal legt ihr das Format selbst fest – und haltet euch daran.</p>
+</div>
+</div>
+</section>
+<section id="ergebnis-der-sitzung" class="level1">
+<h1>Ergebnis der Sitzung</h1>
+<ul>
+<li>die gemeinsamen <strong>Setzungen</strong> der Referenz,</li>
+<li>euer <strong>Regelblatt</strong> mit Fundstellen,</li>
+<li>die <strong>Änderungsliste</strong> gegenüber der Referenz,</li>
+<li>eure <strong>Prognose</strong>,</li>
+<li>der gemeinsame <strong>Datenplan</strong> und das <strong>Ergebnisformat</strong>.</li>
+</ul>
+<section id="vorbereitung-auf-sitzung-2" class="level2">
+<h2 class="anchored" data-anchor-id="vorbereitung-auf-sitzung-2">Vorbereitung auf Sitzung 2</h2>
+<ul>
+<li>In QGIS das Plugin <strong>QuickOSM</strong> installieren: <strong>Erweiterungen → Erweiterungen verwalten und installieren → QuickOSM</strong>.</li>
+<li>Regelblatt und Änderungsliste so speichern, dass ihr sie in Sitzung 2 neben QGIS geöffnet habt.</li>
+</ul>
+</section>
+<section id="hintergrund-nicht-gegenstand-der-sitzung" class="level2">
+<h2 class="anchored" data-anchor-id="hintergrund-nicht-gegenstand-der-sitzung">Hintergrund (nicht Gegenstand der Sitzung)</h2>
+<ul>
+<li><a href="https://www.who.int/europe/publications/i/item/who-euro-2016-3352-43111-60341">WHO-Regionalbüro Europa (2016): <em>Urban green spaces and health. A review of evidence</em></a> – Evidenz zu Gesundheitswirkungen und Herleitung des Indikators.</li>
+<li><a href="https://doi.org/10.3390/ijerph19042226">Masterson et al.&nbsp;(2022): <em>Use of the natural outdoor environment in different populations in Europe in relation to access: Implications for policy</em></a> – ob Zugang auch zu Nutzung führt; wichtig für die Aussagegrenze in Sitzung 3.</li>
+</ul>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<div class="footer-banner">
+
+    <a href="https://gisma-courses.github.io/gc/" target="_blank">GISMA (2026)</a> |
+    <a href="../unit00/impressum.html" target="_blank">Impressum</a>
+
+</div>
+
+
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Kopiert");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Kopiert");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("^(?:http:|https:)\/\/www\.quarto\.org\/custom");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../../../content/gruenzugang/slides/01-quellen-abstraktion.html" class="pagination-link" aria-label="Teil 1 – Lesarten und Abstraktion">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Teil 1 – Lesarten und Abstraktion</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/gisma-courses/gc-geoinfo2.0/edit/main/content/gruenzugang/arbeitsblatt/01-quellenanalyse.qmd" class="toc-action"><i class="bi bi-github"></i>Seite editieren</a></li><li><a href="https://github.com/gisma-courses/gc-geoinfo2.0/issues/new" class="toc-action"><i class="bi empty"></i>Problem melden</a></li></ul></div></div></div></footer></body></html>

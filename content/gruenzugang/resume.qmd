@@ -1,0 +1,29 @@
+---
+title: "Resume: Grünzugang"
+subtitle: "Klingt gut – und was heißt es, wenn man es rechnet?"
+title-block-banner: ../../images/banner-gz.png
+title-block-banner-color: black
+lang: de
+draft: true
+format:
+  html:
+    toc: false
+---
+
+<!-- ENTWURF – Struktur steht, Inhalte folgen. -->
+
+## Was davon ist Grundlagenkurs Geoinformatik?
+
+<!-- Tabelle analog zum Gipfel: Abstraktion, Realität und Repräsentation, Datenbeschaffung und Datenkritik, Methode, Transparenz und Reproduzierbarkeit – jetzt am Grünzugang. -->
+
+## Was ihr diesmal selbst gemacht habt
+
+<!-- Ansatz beim Wort genommen, Regel aus der Quelle gelesen, Referenzkette nachgebaut und umgebaut, Ansätze für Marburg verglichen – gegenüber dem Gipfel. -->
+
+## Und die Werkzeuge?
+
+<!-- QuickOSM, Ausdrücke, Puffer, Netzwerkanalyse, grafischer Modellierer – jeweils mit fachlichem Zweck. -->
+
+## Fazit
+
+<!-- Übertragbarkeit auf Block 3 (Raumkonstruktion). -->

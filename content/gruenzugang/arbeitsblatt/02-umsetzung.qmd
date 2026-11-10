@@ -1,0 +1,55 @@
+---
+title: "Grünzugang · Sitzung 2"
+subtitle: "Umsetzung: Referenz bauen, für den eigenen Ansatz umbauen"
+title-block-banner: ../../../images/banner-gz.png
+title-block-banner-color: black
+lang: de
+draft: true
+format:
+  html:
+    toc: true
+    toc-depth: 2
+    number-sections: false
+---
+
+<!-- ENTWURF – Struktur steht, Inhalte folgen. Nicht in _quarto.yml/render eingetragen. -->
+
+# Arbeitsauftrag
+
+Ihr baut zuerst gemeinsam die Referenzkette (WHO-Indikator nach van den Bosch et al. 2016) für Marburg und baut sie dann so um, dass sie genau das rechnet, was euer Ansatz verlangt. Grundlage sind Regelblatt, Änderungsliste, gemeinsamer Datenplan und Ergebnisformat aus Sitzung 1.
+
+# 0 · Projekt anlegen und KBS festlegen
+
+<!-- Leeres Projekt, EPSG:25832, Ordnerstruktur, relative Pfade. -->
+
+# 1 · Daten nach dem gemeinsamen Datenplan beschaffen
+
+<!-- Dieselbe QuickOSM-Abfrage für alle; Zensus-Gitter 100 m laden und auf das Rechengebiet zuschneiden; Abrufdatum festhalten. Aus dem Gipfel: Datenherkunft. -->
+
+# 2 · Referenz: Grünflächenregel als Ausdruck
+
+<!-- Gemeinsame OSM-Klassen, Fläche ≥ 1 ha. Aus dem Gipfel: Gipfelregel. -->
+
+# 3 · Referenz: Puffer und Bevölkerung
+
+<!-- Puffer 300 m, Zellmittelpunkte, Lage-Abfrage, Feld versorgt; Anteil versorgt. Aus dem Gipfel: Dominanz per Proximity. -->
+
+# 4 · Referenz als Modell im grafischen Modellierer
+
+<!-- Kette 2–3 als .model3 mit Parametern Mindestgröße und Distanz. Aus dem Gipfel: vom Vorgehen zum Algorithmus – diesmal selbst gebaut. -->
+
+# 5 · Umbau für den eigenen Ansatz
+
+<!-- Je Gruppe nur die Änderungen aus der Änderungsliste:
+     G1 Mindestgröße; G2 ohne Mindestgröße; G3 zweite Stufe 10 ha / 700 m und Kombination;
+     G4 Netzwerkanalyse (Dienstbereich) und Summe der erreichbaren Fläche > 1 ha;
+     G5 m² pro Einwohner im 500-m-Fußweg-Einzugsbereich, versorgt = wert ≥ 6.
+     Aus dem Gipfel: Höhenstufen – erst die Verbindung entscheidet. -->
+
+# 6 · Ergebnis im gemeinsamen Format
+
+<!-- Felder zelle_id, ew, ansatz, versorgt, wert; Zellen am Rand des Rechengebiets kennzeichnen. Aus dem Gipfel: Ein unbestimmter Wert ist keine Null. -->
+
+# Abgabe
+
+<!-- Projekt mit Modell (.model3), Ergebnislayer im gemeinsamen Format, aktualisiertes Regelblatt. -->

@@ -1,6 +1,8 @@
 ---
 title: "Resume: Der perfekte Gipfel"
 subtitle: "Vom fachlichen Begriff zum prüfbaren GIS-Workflow"
+title-block-banner: ../../images/banner-pp.png
+title-block-banner-color: black
 lang: de
 format:
   html:

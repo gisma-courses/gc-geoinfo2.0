@@ -2,7 +2,7 @@
 title: "Geoinformatik Basiskurs"
 subtitle: ""
 order: 10
-title-block-banner: ../images/placeholder.png
+title-block-banner: images/banner-index.png
 title-block-banner-color: black
 #page-layout: full
 format-links: [html]

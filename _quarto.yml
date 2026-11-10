@@ -8,6 +8,9 @@ project:
     - content/perfekter-gipfel/slides/03-technische-umsetzung.qmd
     - content/perfekter-gipfel/arbeitsblatt/arbeitsauftrag.qmd
     - content/perfekter-gipfel/resume.qmd
+    - content/gruenzugang/index.qmd
+    - content/gruenzugang/slides/01-quellen-abstraktion.qmd
+    - content/gruenzugang/arbeitsblatt/01-quellenanalyse.qmd
 
 website:
   favicon: images/logo.png
@@ -125,6 +128,14 @@ website:
               text: "QGIS-Arbeitsauftrag"
             - href: content/perfekter-gipfel/resume.qmd
               text: "Resume und Ausblick"
+        - section: "Grünzugang"
+          contents:
+            - href: content/gruenzugang/index.qmd
+              text: "Überblick"
+            - href: content/gruenzugang/slides/01-quellen-abstraktion.qmd
+              text: "Teil 1 – Lesarten und Abstraktion"
+            - href: content/gruenzugang/arbeitsblatt/01-quellenanalyse.qmd
+              text: "Arbeitsauftrag Sitzung 1"
               
         # - text: "---"
         # - section: "Reader Projektarbeit "

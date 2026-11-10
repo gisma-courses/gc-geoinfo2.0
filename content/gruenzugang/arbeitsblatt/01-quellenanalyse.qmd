@@ -1,0 +1,169 @@
+---
+title: "Grünzugang · Sitzung 1"
+subtitle: "Lesarten und Abstraktion: Was meinen die eigentlich?"
+title-block-banner: ../../../images/banner-gz.png
+title-block-banner-color: black
+lang: de
+format:
+  html:
+    toc: true
+    toc-depth: 2
+    number-sections: false
+---
+
+[← Themenblock 2](../index.qmd) · [Folien Teil 1](../slides/01-quellen-abstraktion.qmd)
+
+# Arbeitsauftrag
+
+**Ziel:** Fünf Ansätze wollen dasselbe – Grün in Wohnungsnähe – und rechnen es verschieden. Ihr nehmt **einen** davon beim Wort und übersetzt ihn so genau, dass er sich in Sitzung 2 in QGIS rechnen lässt. In Sitzung 3 vergleichen wir alle Ansätze für Marburg.
+
+Heute entstehen:
+
+1. die gemeinsam **durchdeklinierte Referenz** (Schritt A, Plenum),
+2. das **Regelblatt** eures Ansatzes (Schritt B, Gruppe),
+3. die **Änderungen gegenüber der Referenz** (Schritt C, Gruppe),
+4. eure **Prognose** (Schritt D, Gruppe),
+5. der **gemeinsame Datenplan** und das **Ergebnisformat** (Schritt E, Plenum).
+
+Wir diskutieren nicht, ob die Schwellen der Ansätze fachlich gut begründet sind. Wir prüfen, was sie bedeuten, wenn man sie anwendet.
+
+::: {.callout-note title="Aus dem perfekten Gipfel"}
+Artikelformel und historischer Code setzten dieselbe Idee verschieden um und lieferten für dieselben Gipfel verschiedene E-Werte. Heute ist es dasselbe – nur mit fünf Umsetzungen und einer Stadt.
+:::
+
+# A · Die Referenz durchdeklinieren (Plenum)
+
+Referenz ist der WHO-Indikator, wie ihn [van den Bosch et al. (2016)](https://doi.org/10.1177/1403494815615444) entwickelt und getestet haben: der **Anteil der städtischen Bevölkerung**, der innerhalb einer bestimmten Entfernung vom **Rand einer Grünfläche** wohnt. Als Standard empfehlen die Autorinnen und Autoren **300 m Luftlinie** und eine Mindestgröße von **1 Hektar**. Eine ausführliche Anleitung für die GIS-Umsetzung enthält der Bericht des [WHO-Regionalbüros Europa (2016)](https://www.who.int/europe/publications/i/item/who-euro-2016-3352-43111-60341).
+
+Gemeinsam übersetzen wir den Indikator Schritt für Schritt:
+
+| | Begriff | Kriterium | Repräsentation | Operation in QGIS |
+|:--|:--|:--|:--|:--|
+| **Grün** | städtische Grünfläche | öffentlich zugänglich, mindestens 1 ha | OSM-Polygone ausgewählter Klassen | Auswahl per Ausdruck, Fläche berechnen, filtern |
+| **Entfernung** | Nähe | höchstens 300 m Luftlinie bis zum Flächenrand | Pufferzone um jede Grünfläche | Puffer 300 m, auflösen |
+| **Bevölkerung** | Bewohnerinnen und Bewohner | Wohnort innerhalb der Pufferzone | Zensus-2022-Gitterzellen 100 m mit Einwohnerzahl | Zellmittelpunkte, Lage-Abfrage |
+| **Ergebnis** | Zugang | Anteil der versorgten Bevölkerung | Feld `versorgt` je Zelle | Summe versorgt / Summe aller |
+
+Was der Indikator **nicht** festlegt, setzen wir einmal gemeinsam. Diese Setzungen gelten für **alle** Ansätze, sofern ein Ansatz nicht ausdrücklich etwas anderes verlangt:
+
+| Offene Frage | Gemeinsame Setzung | Begründung |
+|:--|:--|:--|
+| Welche OSM-Klassen zählen als Grünfläche? | | |
+| Woran erkennen wir „öffentlich zugänglich“? | | |
+| Wann zählt eine Gitterzelle als versorgt – Mittelpunkt oder Anteil in der Zone? | | |
+| Wie weit reicht das Rechengebiet über Marburg hinaus? | | |
+| Welches Untersuchungsgebiet: Stadt Marburg oder Kernstadt? | | |
+
+::: {.callout-note title="Aus dem perfekten Gipfel"}
+Am Rand des DGM blieb offen, ob außerhalb höheres Gelände liegt. An der Stadtgrenze bleibt offen, ob jenseits davon eine Grünfläche liegt. Das Rechengebiet muss deshalb mindestens um die größte Distanz, die ein Ansatz verwendet, über Marburg hinausreichen.
+:::
+
+# B · Den eigenen Ansatz beim Wort nehmen
+
+Jede Gruppe übernimmt einen Ansatz. Lest gezielt die Stelle, an der die Schwellen stehen, und haltet die **Fundstelle** fest (Seite, Abschnitt, Abbildung).
+
+| Gruppe | Ansatz | Quelle |
+|:--|:--|:--|
+| 1 | „WHO“, wie häufig zitiert | [ISGlobal (2021)](https://www.isglobal.org/en/-/isglobal-presenta-el-ranking-de-las-ciudades-europeas-con-mayor-mortalidad-atribuible-a-la-falta-de-espacios-verdes); [Pereira Barboza et al. (2021): *Green space and mortality in European cities: a health impact assessment study*](https://doi.org/10.1016/S2542-5196(21)00229-1) |
+| 2 | 3-30-300-Regel | [Konijnendijk (2023): *Evidence-based guidelines for greener, healthier, more resilient neighbourhoods: Introducing the 3–30–300 rule*](https://doi.org/10.1007/s11676-022-01523-z) |
+| 3 | BBSR 2018 | [BBSR (2018): *Handlungsziele für Stadtgrün und deren empirische Evidenz*, Kap. 2.2, S. 26](https://epflicht.ulb.uni-bonn.de/download/pdf/372854) |
+| 4 | BfN – Grünerreichbarkeit | [Blum et al. (2024): *Orientierungswerte für öffentliches Grün. Kurzfassung*](https://doi.org/10.19217/brs242); ausführlich: [Blum et al. (2023), BfN-Schriften 653](https://doi.org/10.19217/skr653) |
+| 5 | BfN – Grünraumversorgung | wie Gruppe 4 |
+
+Gibt es mehr Gruppen als Ansätze, wird ein Ansatz doppelt vergeben. Die beiden Gruppen arbeiten **unabhängig** voneinander und vergleichen erst in Sitzung 3.
+
+Füllt dann euer **Regelblatt**:
+
+| | Was die Quelle festlegt (mit Fundstelle) | Was offen bleibt | Unsere Setzung |
+|:--|:--|:--|:--|
+| **Grünfläche:** welche Art? öffentlich? | | | |
+| **Mindestgröße:** je Fläche oder als Summe? | | | |
+| **Entfernungsmaß:** Luftlinie, Fußweg, nicht festgelegt? | | | |
+| **Distanz** | | | |
+| **Bezugspunkt:** Rand, Eingang, Mittelpunkt? | | | |
+| **Bevölkerung:** wer zählt, in welcher Einheit? | | | |
+| **Ergebnisgröße:** Anteil versorgter Menschen, m² pro Einwohner, ja/nein? | | | |
+| **Mehrere Stufen:** Wie werden sie kombiniert? | | | |
+
+Für die Spalte „Unsere Setzung“ gilt: **Was eure Quelle offenlässt, setzt ihr wie in der Referenz.** Eine Abweichung davon ist nur zulässig, wenn ihr sie aus der Quelle begründen könnt.
+
+::: {.callout-tip title="Prüffrage"}
+Gibt es in eurer Quelle einen Satz, den man auf zwei Arten rechnen könnte? Notiert beide Lesarten. Genau diese Stellen meinen wir mit „klingt gut – aber was heißt das?“.
+:::
+
+# C · Was sich gegenüber der Referenz ändert
+
+Listet jede Stelle auf, an der euer Ansatz anders rechnet als die Referenz, und was das für die Verarbeitungskette bedeutet.
+
+| Änderung | in der Referenz | in unserem Ansatz | Folge für die Umsetzung in QGIS |
+|:--|:--|:--|:--|
+| | | | |
+| | | | |
+
+Hinweise für die einzelnen Ansätze:
+
+- **Gruppe 3 (BBSR):** Zwei Stufen mit unterschiedlicher Größe und Entfernung. Muss eine Zelle beide erfüllen, eine von beiden – oder werden sie getrennt ausgewiesen?
+- **Gruppe 4 (BfN – Erreichbarkeit):** Fußweg statt Luftlinie, und die Mindestgröße gilt für die **Summe** der erreichbaren Flächen. Dafür braucht ihr ein Wegenetz und eine Netzwerkanalyse.
+- **Gruppe 5 (BfN – Versorgung):** Das Ergebnis ist kein Ja/Nein, sondern Quadratmeter Grün pro Einwohner. Wie die Grünfläche auf die Menschen im Einzugsbereich aufgeteilt wird, müsst ihr selbst festlegen und begründen. Dafür ist ein Vergleich mit dem [Berliner Umweltatlas](https://www.berlin.de/umweltatlas/nutzung/oeffentliche-gruenanlagen/2020/einleitung/) hilfreich, der ebenfalls mit 6 m² pro Einwohner arbeitet.
+
+# D · Prognose
+
+Bevor gerechnet wird: Schätzt, ob euer Ansatz in Marburg **mehr oder weniger Menschen als versorgt** ausweist als die Referenz – und wo in der Stadt sich die Ergebnisse vermutlich am stärksten unterscheiden.
+
+| | Unsere Prognose | Begründung |
+|:--|:--|:--|
+| Anteil versorgt im Vergleich zur Referenz (mehr / weniger / gleich) | | |
+| Wo in Marburg erwarten wir die größten Unterschiede? | | |
+
+Die Prognose wird in Sitzung 3 mit dem Ergebnis verglichen. Eine falsche Prognose ist kein Fehler, sondern ein Befund.
+
+# E · Gemeinsamer Datenplan und Ergebnisformat (Plenum)
+
+Alle Gruppen rechnen mit **denselben Daten**. Nur so lässt sich am Ende sagen, dass ein Unterschied aus dem Ansatz kommt.
+
+| Kriterium | Daten | Quelle und Abruf | Lizenz | KBS und Auflösung | Was wissen wir über die Daten **nicht**? |
+|:--|:--|:--|:--|:--|:--|
+| Grünflächen | | | | | |
+| Wegenetz (für Gruppe 4 und 5) | | | | | |
+| Bevölkerung | | | | | |
+| Untersuchungs- und Rechengebiet | | | | | |
+
+Mögliche Quellen:
+
+- **OpenStreetMap** für Grünflächen und Wege – in QGIS über das Plugin **QuickOSM** abrufbar. Lizenz: ODbL. Haltet Abrufdatum und Abfrage fest; alle Gruppen verwenden dieselbe Abfrage.
+- **Zensus 2022, Bevölkerungszahlen in Gitterzellen** (100 m): [Gitterdaten zum Download](https://www.zensus2022.de/DE/Ergebnisse-des-Zensus/_inhalt.html#Gitterdaten2022).
+- Verwaltungsgrenzen für Untersuchungs- und Rechengebiet.
+
+**Ergebnisformat:** Jede Gruppe liefert in Sitzung 2 einen Layer der Zensus-Gitterzellen im Untersuchungsgebiet mit diesen Feldern:
+
+| Feld | Inhalt |
+|:--|:--|
+| `zelle_id` | Kennung der Gitterzelle aus dem Zensus |
+| `ew` | Einwohnerzahl |
+| `ansatz` | Kürzel des Ansatzes, z. B. `REF`, `WHO05`, `3-30-300`, `BBSR`, `BFN_E`, `BFN_V` |
+| `versorgt` | 1 = versorgt, 0 = nicht versorgt nach eurem Ansatz |
+| `wert` | optional: der zugrunde liegende Wert, z. B. m² pro Einwohner |
+
+Nur weil alle dasselbe Format liefern, lassen sich die Ergebnisse in Sitzung 3 Zelle für Zelle zu einer **Übereinstimmungskarte** zusammenführen.
+
+::: {.callout-note title="Aus dem perfekten Gipfel"}
+Beim Gipfel waren Feldnamen und Statuswerte im Skript festgelegt; deshalb ließen sich die Ergebnisse aller Gruppen vergleichen. Diesmal legt ihr das Format selbst fest – und haltet euch daran.
+:::
+
+# Ergebnis der Sitzung
+
+- die gemeinsamen **Setzungen** der Referenz,
+- euer **Regelblatt** mit Fundstellen,
+- die **Änderungsliste** gegenüber der Referenz,
+- eure **Prognose**,
+- der gemeinsame **Datenplan** und das **Ergebnisformat**.
+
+## Vorbereitung auf Sitzung 2
+
+- In QGIS das Plugin **QuickOSM** installieren: **Erweiterungen → Erweiterungen verwalten und installieren → QuickOSM**.
+- Regelblatt und Änderungsliste so speichern, dass ihr sie in Sitzung 2 neben QGIS geöffnet habt.
+
+## Hintergrund (nicht Gegenstand der Sitzung)
+
+- [WHO-Regionalbüro Europa (2016): *Urban green spaces and health. A review of evidence*](https://www.who.int/europe/publications/i/item/who-euro-2016-3352-43111-60341) – Evidenz zu Gesundheitswirkungen und Herleitung des Indikators.
+- [Masterson et al. (2022): *Use of the natural outdoor environment in different populations in Europe in relation to access: Implications for policy*](https://doi.org/10.3390/ijerph19042226) – ob Zugang auch zu Nutzung führt; wichtig für die Aussagegrenze in Sitzung 3.
