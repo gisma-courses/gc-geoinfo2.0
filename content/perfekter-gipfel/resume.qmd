@@ -76,22 +76,50 @@ Der Weg zu einem geeigneten Verfahren:
 
 Ein möglicher Arbeitsauftrag an einen KI-Assistenten:
 
-> Ich möchte folgende räumliche Operation durchführen: **[Operation mit Eingaben und gewünschter Ausgabe beschreiben]**.
->
-> Welche etablierten algorithmischen Verfahren lösen dieses Problem?
->
-> Nenne zunächst die Fachbegriffe, unter denen ich dazu Literatur, Dokumentation oder Tutorials finde.
->
-> Zeige anschließend höchstens drei Umsetzungswege in QGIS, GDAL, GRASS oder Python – vom einfachsten vorhandenen Werkzeug bis zur eigenen Implementierung.
->
-> Gib für jeden Weg die benötigten Eingaben, die wesentlichen Annahmen und einen Link zur offiziellen Dokumentation oder einem nachvollziehbaren Tutorial an.
->
-> Unterscheide ausdrücklich zwischen Verfahren, die das Problem vollständig lösen, und solchen, die nur einen Teilschritt abdecken.
->
-> Schlage einen kleinen Testfall vor, dessen richtiges Ergebnis ich unabhängig bestimmen kann.
+**Rolle:** Du recherchierst vorhandene, dokumentierte GIS-Algorithmen. Erfinde keine Verfahren und implementiere noch keinen Workflow.
+
+### Gesuchte Operation (Contract)
+
+- **Ziel:** [Gesuchte räumliche Beziehung oder Größe]
+- **Eingaben:** [Datentypen, Geometrien, KBS, Attribute]
+- **Ausgabe:** [Datentyp, Bedeutung, Einheit]
+- **Bedingungen:** [Nachbarschaft, NoData, räumliche Einschränkungen usw.]
+- **Kontrollfall:** [Ein einfaches Beispiel mit bekanntem Ergebnis]
+
+### Rechercheauftrag
+
+1. Ermittle den etablierten Fachbegriff der Operation.
+2. Recherchiere höchstens zwei bestehende Implementierungen, bevorzugt in QGIS, GDAL oder GRASS.
+3. **Öffne und prüfe die Originaldokumentation jedes vorgeschlagenen Verfahrens.** Belege mit konkreten Fundstellen, welche Funktionen, Eingaben, Ausgaben und Parameter dokumentiert sind.
+4. Gleiche jedes Verfahren mit sämtlichen Anforderungen des Contracts ab. Unterscheide zwischen nachgewiesener Eignung, Einschränkungen und ungeklärten Punkten.
+5. Empfiehl das einfachste Verfahren, das den Contract nachweislich erfüllt.
+
+### Verbindliche Quellenregeln
+
+- **Jede vorgeschlagene Implementierung benötigt einen überprüfbaren Beleg aus der offiziellen Dokumentation** mit URL und konkreter Fundstelle (Abschnitt, Parameterbeschreibung oder entsprechender Textstelle).
+- Verwende nur Quellen, deren Inhalt du tatsächlich abrufen und prüfen konntest. Eine URL allein ist kein Beleg.
+- Tutorials dürfen die offizielle Dokumentation ergänzen, aber nicht ersetzen. Gib auch hier die konkrete Fundstelle an.
+- Belege die tatsächliche Funktion des Werkzeugs, nicht nur seine Existenz.
+- Erfinde keine Quellen, URLs, Zitate, Parameter oder Werkzeugnamen.
+- Wenn du die Originalquellen nicht überprüfen kannst, **brich die Empfehlung ab**. Gib stattdessen die ungeklärten Anforderungen und geeignete Suchbegriffe an.
+- Wenn keine Implementierung sämtliche Anforderungen erfüllt, benenne die Abweichungen ausdrücklich. Keine spekulativen Ergänzungen oder selbst erfundenen Workflows.
+
+### Antwortformat
+
+| Verfahren | Beleg aus Originaldokumentation | Contract erfüllt? | Einschränkungen |
+|---|---|---|---|
+
+Führe für jedes Verfahren die vollständige URL und die konkrete Fundstelle auf. Begründe die Eignung anhand dieser Belege.
+
+**Abschluss:** Empfiehl nur ein nachweislich geeignetes Verfahren. Falls keines nachgewiesen werden kann, lautet das Ergebnis: **„Keine ausreichend belegte Implementierung gefunden.“**
+
+Schreibe noch keinen Anwendungscode.
+
+
+:::
 
 **Entscheidend:** Die gefundene Lösung muss nicht besonders aufwendig sein. Wählen Sie das einfachste Verfahren, das die benötigte Aussage unter nachvollziehbaren Annahmen ermöglicht.
-:::
+
 
 ## Derselbe Ablauf in jedem Themenblock
 

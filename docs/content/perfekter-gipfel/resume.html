@@ -657,19 +657,67 @@ window.Quarto = {
 <div id="callout-1" class="callout-1-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Ein möglicher Arbeitsauftrag an einen KI-Assistenten:</p>
-<blockquote class="blockquote">
-<p>Ich möchte folgende räumliche Operation durchführen: <strong>[Operation mit Eingaben und gewünschter Ausgabe beschreiben]</strong>.</p>
-<p>Welche etablierten algorithmischen Verfahren lösen dieses Problem?</p>
-<p>Nenne zunächst die Fachbegriffe, unter denen ich dazu Literatur, Dokumentation oder Tutorials finde.</p>
-<p>Zeige anschließend höchstens drei Umsetzungswege in QGIS, GDAL, GRASS oder Python – vom einfachsten vorhandenen Werkzeug bis zur eigenen Implementierung.</p>
-<p>Gib für jeden Weg die benötigten Eingaben, die wesentlichen Annahmen und einen Link zur offiziellen Dokumentation oder einem nachvollziehbaren Tutorial an.</p>
-<p>Unterscheide ausdrücklich zwischen Verfahren, die das Problem vollständig lösen, und solchen, die nur einen Teilschritt abdecken.</p>
-<p>Schlage einen kleinen Testfall vor, dessen richtiges Ergebnis ich unabhängig bestimmen kann.</p>
-</blockquote>
+<p><strong>Rolle:</strong> Du recherchierst vorhandene, dokumentierte GIS-Algorithmen. Erfinde keine Verfahren und implementiere noch keinen Workflow.</p>
+<section id="gesuchte-operation-contract" class="level3">
+<h3 class="anchored" data-anchor-id="gesuchte-operation-contract">Gesuchte Operation (Contract)</h3>
+<ul>
+<li><strong>Ziel:</strong> [Gesuchte räumliche Beziehung oder Größe]</li>
+<li><strong>Eingaben:</strong> [Datentypen, Geometrien, KBS, Attribute]</li>
+<li><strong>Ausgabe:</strong> [Datentyp, Bedeutung, Einheit]</li>
+<li><strong>Bedingungen:</strong> [Nachbarschaft, NoData, räumliche Einschränkungen usw.]</li>
+<li><strong>Kontrollfall:</strong> [Ein einfaches Beispiel mit bekanntem Ergebnis]</li>
+</ul>
+</section>
+<section id="rechercheauftrag" class="level3">
+<h3 class="anchored" data-anchor-id="rechercheauftrag">Rechercheauftrag</h3>
+<ol type="1">
+<li>Ermittle den etablierten Fachbegriff der Operation.</li>
+<li>Recherchiere höchstens zwei bestehende Implementierungen, bevorzugt in QGIS, GDAL oder GRASS.</li>
+<li><strong>Öffne und prüfe die Originaldokumentation jedes vorgeschlagenen Verfahrens.</strong> Belege mit konkreten Fundstellen, welche Funktionen, Eingaben, Ausgaben und Parameter dokumentiert sind.</li>
+<li>Gleiche jedes Verfahren mit sämtlichen Anforderungen des Contracts ab. Unterscheide zwischen nachgewiesener Eignung, Einschränkungen und ungeklärten Punkten.</li>
+<li>Empfiehl das einfachste Verfahren, das den Contract nachweislich erfüllt.</li>
+</ol>
+</section>
+<section id="verbindliche-quellenregeln" class="level3">
+<h3 class="anchored" data-anchor-id="verbindliche-quellenregeln">Verbindliche Quellenregeln</h3>
+<ul>
+<li><strong>Jede vorgeschlagene Implementierung benötigt einen überprüfbaren Beleg aus der offiziellen Dokumentation</strong> mit URL und konkreter Fundstelle (Abschnitt, Parameterbeschreibung oder entsprechender Textstelle).</li>
+<li>Verwende nur Quellen, deren Inhalt du tatsächlich abrufen und prüfen konntest. Eine URL allein ist kein Beleg.</li>
+<li>Tutorials dürfen die offizielle Dokumentation ergänzen, aber nicht ersetzen. Gib auch hier die konkrete Fundstelle an.</li>
+<li>Belege die tatsächliche Funktion des Werkzeugs, nicht nur seine Existenz.</li>
+<li>Erfinde keine Quellen, URLs, Zitate, Parameter oder Werkzeugnamen.</li>
+<li>Wenn du die Originalquellen nicht überprüfen kannst, <strong>brich die Empfehlung ab</strong>. Gib stattdessen die ungeklärten Anforderungen und geeignete Suchbegriffe an.</li>
+<li>Wenn keine Implementierung sämtliche Anforderungen erfüllt, benenne die Abweichungen ausdrücklich. Keine spekulativen Ergänzungen oder selbst erfundenen Workflows.</li>
+</ul>
+</section>
+<section id="antwortformat" class="level3">
+<h3 class="anchored" data-anchor-id="antwortformat">Antwortformat</h3>
+<table class="caption-top">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Verfahren</th>
+<th>Beleg aus Originaldokumentation</th>
+<th>Contract erfüllt?</th>
+<th>Einschränkungen</th>
+</tr>
+</thead>
+<tbody>
+</tbody>
+</table>
+<p>Führe für jedes Verfahren die vollständige URL und die konkrete Fundstelle auf. Begründe die Eignung anhand dieser Belege.</p>
+<p><strong>Abschluss:</strong> Empfiehl nur ein nachweislich geeignetes Verfahren. Falls keines nachgewiesen werden kann, lautet das Ergebnis: <strong>„Keine ausreichend belegte Implementierung gefunden.“</strong></p>
+<p>Schreibe noch keinen Anwendungscode.</p>
+</section>
+</div>
+</div>
+</div>
 <p><strong>Entscheidend:</strong> Die gefundene Lösung muss nicht besonders aufwendig sein. Wählen Sie das einfachste Verfahren, das die benötigte Aussage unter nachvollziehbaren Annahmen ermöglicht.</p>
-</div>
-</div>
-</div>
 </section>
 <section id="derselbe-ablauf-in-jedem-themenblock" class="level2">
 <h2 class="anchored" data-anchor-id="derselbe-ablauf-in-jedem-themenblock">Derselbe Ablauf in jedem Themenblock</h2>
