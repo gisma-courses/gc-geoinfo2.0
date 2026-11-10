@@ -50,6 +50,18 @@ Die Schartenhöhe $h_{s,A}$ ist die höchste Schwelle, bei der die Fläche von $
 Das Ergebnis ist zunächst ein Intervall: letzte getrennte Stufe / erste verbundene Stufe. Rastergitter und Nachbarschaft bestimmen seine Auflösung.
 :::
 
+## Prominenz im historischen Code
+
+Der Code flutet das DGM und bricht ab, sobald die Fläche des Zielgipfels **mehr als einen Gipfel** enthält.
+
+::: {.framebox}
+**Arbeitsfrage:** Ist das dieselbe Regel wie „Verbindung zu **höherem** Gelände“? Was passiert, wenn zuerst ein niedrigerer Nebengipfel angeschlossen wird?
+:::
+
+::: {.small}
+Fundstelle: `R/calculateProminence.R`, Commit `37b49f1`.
+:::
+
 ## Die Gipfelmaske ist fachlicher Kern
 
 | Entscheidung | Wirkung auf das Ergebnis |
@@ -70,6 +82,10 @@ Der historische Code `calculateIndependence.R` verzweigt umgekehrt: Er lässt de
 :::
 
 Das Processing-Tool gibt deshalb beide E-Intervalle getrennt aus: `e_art_*` für die Artikelformel und `e_code_*` für die historische Implementierung.
+
+::: {.small}
+Lesart: **Je kleiner $E$, desto eigenständiger der Gipfel**; der Mount Everest hat $E = 0$.
+:::
 
 ## Was der Vergleich lehrt
 

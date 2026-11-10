@@ -87,22 +87,25 @@ Wann reicht der DGM-Ausschnitt für eine belastbare Aussage?
 
 ## Modellbildung dokumentieren
 
-::: {layout-ncol="2" layout-valign="center"}
-![](../../../assets/images/pp/agis-concept2.png){.fullfig}
+Ziel des Modells ist eine Tabelle, deren Werte sich begründen lassen:
+
+| Gipfel | Lage | Höhe $h$ | Dominanz $d$ | Prominenz $p$ | $E$ | Status |
+|:--|:--|--:|--:|--:|--:|:--|
+| … | … | … | … | … | … | bestimmt / ausschnittsbezogen / offen |
 
 ::: {.framebox}
-**Dokumentiert werden:**
-
-- Gipfelmaske und Plateau-Regel
-- DGM, Rastergitter und KBS
-- Nachbarschaft und Höhentoleranz
-- Suchregel und Datenrand
-:::
+**Dokumentiert werden:** Gipfelmaske und Plateau-Regel · DGM, Rastergitter und KBS · Nachbarschaft und Höhentoleranz · Suchregel und Datenrand
 :::
 
 ## Von der Frage zum QGIS-Workflow
 
-![](../../../assets/images/pp/slide1png.png){.fullfig}
+| Fachliche Entscheidung | Ergebnislayer im Projekt |
+|:--|:--|
+| Was zählt als Gipfel? | Punktlayer `eigene_gipfel` mit Regel |
+| Wo beginnt höheres Gelände? | 0/1-Maske `dgm_10m > h` |
+| Wie weit ist es entfernt? | Distanzraster, Wert an der Gipfelzelle |
+| Wo liegt die maßgebliche Scharte? | Masken je Höhenstufe, Schartenpunkt |
+| Wie belastbar ist der Wert? | Statusfeld: bestimmt / ausschnittsbezogen / offen |
 
 ::: {.keyline}
 Nicht die Bedienungsschritte sind der Workflow. Der Workflow beschreibt, **welche fachliche Entscheidung** mit welchem Ergebnislayer geprüft wird.
@@ -110,35 +113,52 @@ Nicht die Bedienungsschritte sind der Workflow. Der Workflow beschreibt, **welch
 
 ## Arbeitspakete statt Werkzeugliste
 
-![](../../../assets/images/pp/slide2png.png){.fullfig}
-
 ::: {.process}
 1. Gipfelkandidaten definieren · 2. höheres Gelände bestimmen · 3. Distanz prüfen · 4. Scharte eingrenzen · 5. Ergebnis und Grenze dokumentieren
 :::
 
 ## Umsetzung kann interaktiv beginnen
 
-![](../../../assets/images/pp/slide3.png){.fullfig}
+![](../../../assets/images/pp/projektuebersicht.png){.tallfig}
 
 Die lokale Hypothese wird als Linie und Schartenpunkt gespeichert. Sie ist ein prüfbarer Start, kein endgültiger Nachweis.
 
 ## … und reproduzierbar werden
 
-![](../../../assets/images/pp/slide4.png){.fullfig}
+![](../../../assets/images/pp/hoehenstufen_dominanz.png){.fullfig}
 
 Rastermaske, Proximity und Höhenstufen machen die einzelnen Prüfungen wiederholbar. Das Skript automatisiert nur diese klar definierten Schritte.
 
 ## Nicht Code, sondern eine nachvollziehbare Regel
 
-![](../../../assets/images/pp/slide5.png){.fullfig}
+::: {.docgrid}
+::: {.doccard}
+**Eingaben**
+
+DGM, Gipfelpunkt oder Gipfelmaske
+:::
+::: {.doccard}
+**Parameter**
+
+Höhentoleranz, Nachbarschaft, Stufenweite
+:::
+::: {.doccard}
+**Ergebnis**
+
+Dominanz, Schartenintervall, Prominenz, $E$
+:::
+::: {.doccard}
+**Abbruchregel**
+
+Suche endet, wenn der Übergang „getrennt/verbunden“ eingegrenzt ist
+:::
+:::
 
 ::: {.keyline}
 Eine gute Umsetzung zeigt Eingaben, Parameter, Ergebnis und Abbruchregel – unabhängig davon, ob sie geklickt, modelliert oder programmiert wurde.
 :::
 
 ## Übersetzung in GIS-Anforderungen
-
-![](../../../assets/images/pp/slide6.png){.fullfig}
 
 | Fachliche Frage | Technische Übersetzung |
 |:--|:--|
@@ -165,6 +185,10 @@ Gesucht ist nicht der erstbeste Grat, sondern die **höchste** Schwelle, bei der
 
 ::: {.keyline}
 Dokumentiert werden die letzte getrennte und die erste verbundene Stufe. Berührt die Fläche den DGM-Rand, bleibt das Ergebnis ausschnittsbezogen.
+:::
+
+::: {.small}
+Die Grafik zeigt das Abbruchkriterium des historischen Codes: Die Suche endet, sobald die Fläche **irgendeinen** weiteren Gipfel enthält. Maßgeblich wäre aber nur **höheres** Gelände. Diese Abweichung untersuchen wir in Teil 2.
 :::
 
 ## Übergang zum Arbeitsblatt

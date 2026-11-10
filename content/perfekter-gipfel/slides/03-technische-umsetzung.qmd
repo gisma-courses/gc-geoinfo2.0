@@ -32,7 +32,7 @@ Die erste Verbindung ist kein Nachweis einer maßgeblichen Scharte.
 
 ## 2 · Suchraum und Gipfeldefinition erweitern
 
-Zoomt auf **`DGM_10m – Analysegrundlage`**. Erst jetzt werden C, D und der Datenrand Teil der Frage.
+Zoomt auf **`dgm_10m`**. Erst jetzt werden C, D und der Datenrand Teil der Frage.
 
 ::: {.framebox}
 **Eigene Gipfelregel:** Welche lokalen Maxima zählen? Die Entscheidung wird als Punktlayer oder als Gipfelmaske dokumentiert – nicht nur als mündliche Vermutung.
@@ -41,7 +41,7 @@ Zoomt auf **`DGM_10m – Analysegrundlage`**. Erst jetzt werden C, D und der Dat
 ## 3 · Dominanz als Höhenmaske und Distanz
 
 ```text
-"DGM_10m – Analysegrundlage@1" > h_A
+"dgm_10m@1" > h_A
 ```
 
 1. Höheres Gelände als 0/1-Maske erzeugen.
@@ -55,7 +55,7 @@ Der Wert ist eine Rasterzellzentrumdistanz innerhalb des vorhandenen DGM.
 ## 4 · Scharte als Intervall bestimmen
 
 ```text
-"DGM_10m – Analysegrundlage@1" > s
+"dgm_10m@1" > s
 ```
 
 Prüft Höhenstufen zuerst grob in 25 m, dann nahe des Übergangs in 10 m. Haltet fest:
@@ -88,12 +88,13 @@ Der Algorithmus muss dieselben Entscheidungen offenlegen wie die manuelle Analys
 
 ## Automatisierung im Processing-Tool
 
-Das PyQGIS-Tool verarbeitet entweder Gipfelpunkte oder alle positiven Bereiche einer Gipfelmaske. Es erzeugt:
+Das PyQGIS-Tool verarbeitet Gipfelpunkte – vorbereitet oder selbst erfasst – und setzt sie auf die höchste Zelle im Fangradius. Eine Gipfelmaske ist als Vertiefung möglich. Es erzeugt:
 
-- Höhe, Dominanz und Scharten-/Prominenzintervall,
+- Höhe, Fangverschiebung `snap_m`, Abstand zum DGM-Rand `rand_m`,
+- Dominanz und Scharten-/Prominenzintervall,
 - `e_art_*` nach Artikelformel,
 - `e_code_*` nach historischer Codeverzweigung,
-- Status für Datenrand, NoData und fehlendes höheres Gelände.
+- Status für Datenrand, NoData, fehlendes höheres Gelände und Punkte, die kein lokales Maximum sind.
 
 ::: {.small}
 Installation, Eingaben und Felddefinitionen stehen im Automatisierungskapitel des Arbeitsblatts.
