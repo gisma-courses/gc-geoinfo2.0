@@ -32,74 +32,8 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
-    /* CSS for syntax highlighting */
-    html { -webkit-text-size-adjust: 100%; }
-    pre > code.sourceCode { white-space: pre; position: relative; }
-    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-    pre > code.sourceCode > span:empty { height: 1.2em; }
-    .sourceCode { overflow: visible; }
-    code.sourceCode > span { color: inherit; text-decoration: inherit; }
-    div.sourceCode { margin: 1em 0; }
-    pre.sourceCode { margin: 0; }
-    @media screen {
-    div.sourceCode { overflow: auto; }
-    }
-    @media print {
-    pre > code.sourceCode { white-space: pre-wrap; }
-    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-    }
-    pre.numberSource code
-      { counter-reset: source-line 0; }
-    pre.numberSource code > span
-      { position: relative; left: -4em; counter-increment: source-line; }
-    pre.numberSource code > span > a:first-child::before
-      { content: counter(source-line);
-        position: relative; left: -1em; text-align: right; vertical-align: baseline;
-        border: none; display: inline-block;
-        -webkit-touch-callout: none; -webkit-user-select: none;
-        -khtml-user-select: none; -moz-user-select: none;
-        -ms-user-select: none; user-select: none;
-        padding: 0 4px; width: 4em;
-        color: #aaaaaa;
-      }
-    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
-    div.sourceCode
-      { color: #003b4f; background-color: #f1f3f5; }
-    @media screen {
-    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-    }
-    code span { color: #003b4f; } /* Normal */
-    code span.al { color: #ad0000; } /* Alert */
-    code span.an { color: #5e5e5e; } /* Annotation */
-    code span.at { color: #657422; } /* Attribute */
-    code span.bn { color: #ad0000; } /* BaseN */
-    code span.bu { } /* BuiltIn */
-    code span.cf { color: #003b4f; font-weight: bold; } /* ControlFlow */
-    code span.ch { color: #20794d; } /* Char */
-    code span.cn { color: #8f5902; } /* Constant */
-    code span.co { color: #5e5e5e; } /* Comment */
-    code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
-    code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
-    code span.dt { color: #ad0000; } /* DataType */
-    code span.dv { color: #ad0000; } /* DecVal */
-    code span.er { color: #ad0000; } /* Error */
-    code span.ex { } /* Extension */
-    code span.fl { color: #ad0000; } /* Float */
-    code span.fu { color: #4758ab; } /* Function */
-    code span.im { color: #00769e; } /* Import */
-    code span.in { color: #5e5e5e; } /* Information */
-    code span.kw { color: #003b4f; font-weight: bold; } /* Keyword */
-    code span.op { color: #5e5e5e; } /* Operator */
-    code span.ot { color: #003b4f; } /* Other */
-    code span.pp { color: #ad0000; } /* Preprocessor */
-    code span.sc { color: #5e5e5e; } /* SpecialChar */
-    code span.ss { color: #20794d; } /* SpecialString */
-    code span.st { color: #20794d; } /* String */
-    code span.va { color: #111111; } /* Variable */
-    code span.vs { color: #20794d; } /* VerbatimString */
-    code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
-  <link rel="stylesheet" href="../../../site_libs/revealjs/dist/theme/quarto-f4e4671750997bb0c446976250139a7f.css">
+  <link rel="stylesheet" href="../../../site_libs/revealjs/dist/theme/quarto-8f6ce23709f011e28eaeb03055df0303.css">
   <link href="../../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../../../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -194,10 +128,10 @@
     }
   </style>
 <meta property="og:title" content="Der perfekte Gipfel – Grundlagenkurs GI-S (QGIS)">
-<meta property="og:description" content="Problemlösung dokumentieren: von der Idee zum nachvollziehbaren GIS-Workflow">
+<meta property="og:description" content="Vom Bewertungsbegriff zum prüfbaren Modell">
 <meta property="og:site_name" content="Grundlagenkurs GI-S (QGIS)">
 <meta name="twitter:title" content="Der perfekte Gipfel – Grundlagenkurs GI-S (QGIS)">
-<meta name="twitter:description" content="Problemlösung dokumentieren: von der Idee zum nachvollziehbaren GIS-Workflow">
+<meta name="twitter:description" content="Vom Bewertungsbegriff zum prüfbaren Modell">
 <meta name="twitter:creator" content="@gisma">
 <meta name="twitter:card" content="summary">
 </head>
@@ -207,7 +141,7 @@
 
 <section id="title-slide" class="quarto-title-block center">
   <h1 class="title">Der perfekte Gipfel</h1>
-  <p class="subtitle">Problemlösung dokumentieren: von der Idee zum nachvollziehbaren GIS-Workflow</p>
+  <p class="subtitle">Vom Bewertungsbegriff zum prüfbaren Modell</p>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -218,322 +152,250 @@ Chris Reudenbach
 </div>
 
 </section>
-<section class="slide level2">
-
-<style>
-.reveal .slides section { text-align: left; }
-.reveal h2 { letter-spacing: -0.02em; }
-.reveal .big { font-size: 1.30em; line-height: 1.25; }
-.reveal .small { font-size: .72em; color: #475569; }
-.reveal .center { text-align: center; }
-.reveal .fullfig {
-  display: block;
-  margin: 0 auto;
-  width: 100%;
-  max-height: 82vh;
-  object-fit: contain;
-}
-.reveal .tallfig {
-  display: block;
-  margin: 0 auto;
-  width: auto;
-  max-width: 100%;
-  max-height: 82vh;
-  object-fit: contain;
-}
-.reveal .overlay-note {
-  position: absolute;
-  left: 4%;
-  bottom: 5%;
-  width: 54%;
-  background: rgba(255,255,255,.93);
-  border-left: 8px solid #2e7d32;
-  padding: .6em .8em;
-  font-size: .72em;
-  box-shadow: 0 8px 28px rgba(0,0,0,.18);
-}
-.reveal .overlay-note.right { left: auto; right: 4%; }
-.reveal .overlay-note.top { bottom: auto; top: 11%; }
-.reveal .overlay-note.wide { width: 74%; }
-.reveal .keyline {
-  border-left: 8px solid #1f6f5b;
-  padding-left: .8em;
-  margin-top: .8em;
-}
-.reveal .process {
-  font-size: 1.16em;
-  line-height: 1.55;
-  padding: .7em .9em;
-  border: 2px solid #1f6f5b;
-  border-radius: 16px;
-  background: #f6fbf7;
-}
-.reveal .framebox {
-  padding: .75em .9em;
-  border-radius: 16px;
-  background: #f8fafc;
-  border: 1.5px solid #cbd5e1;
-}
-.reveal .docgrid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: .65em;
-  font-size: .84em;
-}
-.reveal .doccard {
-  border: 1.5px solid #cbd5e1;
-  border-radius: 14px;
-  background: #f8fafc;
-  padding: .55em .7em;
-}
-.reveal .doccard strong { color: #0b2b68; }
-.reveal code { font-size: .88em; }
-</style>
-</section>
-<section id="worum-es-hier-geht" class="slide level2">
-<h2>Worum es hier geht</h2>
-<p>Der „perfekte Gipfel“ ist ein gutes Beispiel für ein GIS-Projekt, weil die Frage typisch qualitativ ist, jedoch quasi-naturwissenschaftlich begründet erscheint.</p>
-<div class="fragment process">
-<p>Aus einer Fragestellung wird erst dann wissenschaftlich belastbare Studie, wenn dokumentiert ist, wie sie in Kriterien, Daten, Operationen und Ergebnisgrenzen übersetzt wurde.</p>
+<section id="worum-es-geht" class="slide level2">
+<h2>Worum es geht</h2>
+<div class="process">
+<p><strong>Begriff</strong> → <strong>Kriterien</strong> → <strong>Modellannahmen</strong> → <strong>Daten und Operationen</strong> → <strong>Ergebnis mit Aussagegrenze</strong></p>
 </div>
+<p>Der „perfekte Gipfel“ ist kein Sonderfall. Er zeigt das Grundmuster jeder GIS-Analyse: Ein fachlicher Begriff wird erst durch explizite Entscheidungen berechenbar.</p>
 </section>
-<section id="dokumentationsrahmen" class="slide level2">
-<h2>Dokumentationsrahmen</h2>
-<p>Für jedes (GI)-Projekt muss die gleiche Kette eingehalten werden:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb1-1"><a></a>Problem → Projektfrage → Kriterium → Datenbasis → Operation → Ergebnislayer → Aussagegrenze</span></code></pre></div><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></div>
-</section>
-<section id="ausgangspunkt-was-ist-ein-perfekter-gipfel" class="slide level2">
-<h2>Ausgangspunkt: Was ist ein „perfekter Gipfel“?</h2>
+<section id="ausgangspunkt-eine-anschauliche-frage" class="slide level2">
+<h2>Ausgangspunkt: eine anschauliche Frage</h2>
 <div data-layout-align="center">
 <p><a href="../../../assets/pdf/DAV_Panorama_2_2012.pdf"><img data-src="../../../assets/images/pp/agis-workflow1.png" class="tallfig"></a></p>
 </div>
-<div class="fragment overlay-note wide">
-<p>Die Ausgangsidee ist ein <em>Qualitätsurteil</em>. Vor der methodischen, technischen GIS-Umsetzung muss zwingend geklärt werden, welche fachlichen und räumlichen Eigenschaften dieses Urteil reproduzierbar bestimmen sollen.</p>
+<div class="keyline">
+<p>Die Frage lautet nicht: „Welcher Gipfel sieht wichtig aus?“ Sondern: <strong>Welche Eigenschaften sollen Eigenständigkeit beschreiben – und wie lassen sie sich prüfen?</strong></p>
 </div>
 </section>
-<section id="von-der-idee-zur-projektfrage" class="slide level2">
-<h2>Von der Idee zur Projektfrage</h2>
-<p>Was ist beim „perfekten Gipfel“ die zu bearbeitende Frage und was sind messbare Parameter.</p>
-<div class="fragment process">
-<p>Extrahiere aus dem Artikel die Definitionen die benannt werden: Gipfel, Höhe, Dominanz, Prominenz, Eigenständigkeit…?</p>
-</div>
-<div class="fragment keyline">
-<p>Das ist der erste dokumentierbare Schritt: Die Alltagsformulierung wird in eine räumliche Analysefrage übersetzt.</p>
-</div>
-</section>
-<section id="kriterien-statt-bauchgefühl" class="slide level2">
-<h2>Kriterien statt Bauchgefühl</h2>
+<section id="vom-begriff-zu-kriterien" class="slide level2">
+<h2>Vom Begriff zu Kriterien</h2>
 <div class="quarto-layout-panel" data-layout-ncol="2">
 <div class="quarto-layout-row quarto-layout-valign-center">
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
 <p><a href="../../../assets/images/pp/agis-concept1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img data-src="../../../assets/images/pp/agis-concept1.png" class="tallfig"></a></p>
 </div>
 <div class="framebox quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
-<p>Aus der Analyse entstehen Kriterien:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb2-1"><a></a>Höhe </span>
-<span id="cb2-2"><a></a>Position</span>
-<span id="cb2-3"><a></a>Dominanz</span>
-<span id="cb2-4"><a></a>Prominenz </span>
-<span id="cb2-5"><a></a>Schartenhöhe</span>
-<span id="cb2-6"><a></a>Eigenständigkeit</span></code></pre></div><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Nicht alle Kriterien sind direkt als Daten aus dem DGM Verfügbar. Einige müssen abgeleitet werden.</p>
+<p><strong>Benötigte Größen</strong></p>
+<ul>
+<li>Gipfelhöhe <span class="math inline">\(h\)</span></li>
+<li>Dominanz <span class="math inline">\(d\)</span></li>
+<li>maßgebliche Schartenhöhe</li>
+<li>Prominenz <span class="math inline">\(p\)</span></li>
+<li>Eigenständigkeitswert <span class="math inline">\(E\)</span></li>
+</ul>
 </div>
 </div>
 </div>
-<div class="fragment overlay-note wide">
-<p>Für jedes Kriterium muss festgehalten werden, welche Datenbasis und welche Ableitungslogik verwendet wird.</p>
+<div class="small">
+<p>Nicht jede Größe liegt direkt im DGM vor. Dominanz, Scharte und Prominenz werden aus räumlichen Beziehungen abgeleitet.</p>
 </div>
 </section>
-<section id="formale-definition-als-entscheidung" class="slide level2">
-<h2>Formale Definition als Entscheidung</h2>
+<section id="die-e-formel-ist-eine-modellentscheidung" class="slide level2">
+<h2>Die E-Formel ist eine Modellentscheidung</h2>
 <p><a href="../../../assets/images/pp/formel.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img data-src="../../../assets/images/pp/formel.png" class="fullfig"></a></p>
-<div class="fragment overlay-note right">
-<p>Eine Formel dokumentiert, welche Eigenschaften in die Bewertung eingehen und wie sie gewichtet bzw. verrechnet werden. Formeln sind kritisierbar!</p>
+<div class="keyline">
+<p>Die Formel setzt voraus, dass <span class="math inline">\(h\)</span>, <span class="math inline">\(d\)</span> und <span class="math inline">\(p\)</span> bereits fachlich begründet bestimmt wurden. Sie ersetzt diese Entscheidungen nicht.</p>
+</div>
+</section>
+<section id="was-der-artikel-offen-lässt" class="slide level2">
+<h2>Was der Artikel offen lässt</h2>
+<div class="docgrid">
+<div class="doccard">
+<p><strong>Gipfel</strong></p>
+<p>Welche lokalen Maxima oder Plateaus zählen?</p>
+</div>
+<div class="doccard">
+<p><strong>Höheres Gelände</strong></p>
+<p>Ab welchem Höhenunterschied ist es relevant?</p>
+</div>
+<div class="doccard">
+<p><strong>Scharte</strong></p>
+<p>Wie wird die beste Verbindung gesucht und wann gilt sie als gefunden?</p>
+</div>
+<div class="doccard">
+<p><strong>Geltung</strong></p>
+<p>Wann reicht der DGM-Ausschnitt für eine belastbare Aussage?</p>
+</div>
 </div>
 </section>
 <section id="modellbildung-dokumentieren" class="slide level2">
 <h2>Modellbildung dokumentieren</h2>
-<div class="quarto-layout-panel" data-layout-ncol="2">
-<div class="quarto-layout-row quarto-layout-valign-center">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><a href="../../../assets/images/pp/agis-concept2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img data-src="../../../assets/images/pp/agis-concept2.png" class="fullfig"></a></p>
-</div>
-<div class="framebox quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
-<p>Als Methodendokumentation genügt die (technische) Formel nicht.</p>
-<p>Dokumentiert werden muss:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb3-1"><a></a>Objekte: Gipfelpunkte</span>
-<span id="cb3-2"><a></a>Fläche: Höhenmodell</span>
-<span id="cb3-3"><a></a>Beziehungen: Distanz, Trennung, Verbindung</span>
-<span id="cb3-4"><a></a>Produkt: Prominenz / Eigenständigkeit</span></code></pre></div><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
-</div>
-</div>
-</section>
-<section id="problemlösung-als-arbeitsprotokoll" class="slide level2">
-<h2>Problemlösung als Arbeitsprotokoll</h2>
-<p><a href="../../../assets/images/pp/slide1png.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img data-src="../../../assets/images/pp/slide1png.png" class="fullfig"></a></p>
-<div class="fragment overlay-note">
-<p>Welche Teilprobleme entstehen, welche Entscheidungen werden getroffen, welche Zwischenergebnisse müssen gesichert werden?</p>
-</div>
-</section>
-<section id="vom-problem-zu-arbeitspaketen" class="slide level2">
-<h2>Vom Problem zu Arbeitspaketen</h2>
-<p><a href="../../../assets/images/pp/slide2png.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5"><img data-src="../../../assets/images/pp/slide2png.png" class="fullfig"></a></p>
-<div class="fragment overlay-note right">
-<p>Nicht alles muss automatisiert werden. Wichtig ist, dass die relevanten Arbeitspakete benannt werden: Datenprüfung, Kriteriendefinition, Operation, Kontrolle, Ergebnisinterpretation.</p>
-</div>
-</section>
-<section id="umsetzung-dokumentieren-interaktiv" class="slide level2">
-<h2>Umsetzung dokumentieren: interaktiv</h2>
-<p><a href="../../../assets/images/pp/slide3.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6"><img data-src="../../../assets/images/pp/slide3.png" class="fullfig"></a></p>
-<div class="fragment overlay-note">
-<p>Interaktive Arbeit ist zulässig. Dokumentiert werden aber die stabilen Schritte: Werkzeug, Eingangsdaten, zentrale Parameter, Ausgabe und fachlicher Zweck.</p>
-</div>
-</section>
-<section id="umsetzung-dokumentieren-reproduzierbare-befehle" class="slide level2">
-<h2>Umsetzung dokumentieren: reproduzierbare Befehle</h2>
-<p><a href="../../../assets/images/pp/slide4.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7"><img data-src="../../../assets/images/pp/slide4.png" class="fullfig"></a></p>
-<div class="fragment overlay-note right">
-<p>Kommandozeilen oder kopierte Processing-Aufrufe sind kein Programmierziel. Sie sind ein Mittel, um Parameter und Dateipfade eindeutig zu sichern.</p>
+<p>Ziel des Modells ist eine Tabelle, deren Werte sich begründen lassen:</p>
+<table class="caption-top" style="width:100%;">
+<colgroup>
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Gipfel</th>
+<th style="text-align: left;">Lage</th>
+<th style="text-align: right;">Höhe <span class="math inline">\(h\)</span></th>
+<th style="text-align: right;">Dominanz <span class="math inline">\(d\)</span></th>
+<th style="text-align: right;">Prominenz <span class="math inline">\(p\)</span></th>
+<th style="text-align: right;"><span class="math inline">\(E\)</span></th>
+<th style="text-align: left;">Status</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">…</td>
+<td style="text-align: left;">…</td>
+<td style="text-align: right;">…</td>
+<td style="text-align: right;">…</td>
+<td style="text-align: right;">…</td>
+<td style="text-align: right;">…</td>
+<td style="text-align: left;">bestimmt / ausschnittsbezogen / offen</td>
+</tr>
+</tbody>
+</table>
+<div class="framebox">
+<p><strong>Dokumentiert werden:</strong> Gipfelmaske und Plateau-Regel · DGM, Rastergitter und KBS · Nachbarschaft und Höhentoleranz · Suchregel und Datenrand</p>
 </div>
 </section>
-<section id="umsetzung-dokumentieren-ablauf-statt-code" class="slide level2">
-<h2>Umsetzung dokumentieren: Ablauf statt Code</h2>
-<p><a href="../../../assets/images/pp/slide5.png" class="lightbox" data-gallery="quarto-lightbox-gallery-8"><img data-src="../../../assets/images/pp/slide5.png" class="fullfig"></a></p>
-<div class="fragment overlay-note">
-<p>Wenn Skripte verwendet werden, dann als dokumentierte Ablaufbeschreibung. Entscheidend bleibt: Welche Entscheidung wird umgesetzt und welcher Ergebnislayer entsteht?</p>
+<section id="von-der-frage-zum-qgis-workflow" class="slide level2">
+<h2>Von der Frage zum QGIS-Workflow</h2>
+<table class="caption-top">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Fachliche Entscheidung</th>
+<th style="text-align: left;">Ergebnislayer im Projekt</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Was zählt als Gipfel?</td>
+<td style="text-align: left;">Punktlayer <code>eigene_gipfel</code> mit Regel</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Wo beginnt höheres Gelände?</td>
+<td style="text-align: left;">0/1-Maske <code>dgm_10m &gt; h</code></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Wie weit ist es entfernt?</td>
+<td style="text-align: left;">Distanzraster, Wert an der Gipfelzelle</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Wo liegt die maßgebliche Scharte?</td>
+<td style="text-align: left;">Masken je Höhenstufe, Schartenpunkt</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Wie belastbar ist der Wert?</td>
+<td style="text-align: left;">Statusfeld: bestimmt / ausschnittsbezogen / offen</td>
+</tr>
+</tbody>
+</table>
+<div class="keyline">
+<p>Nicht die Bedienungsschritte sind der Workflow. Der Workflow beschreibt, <strong>welche fachliche Entscheidung</strong> mit welchem Ergebnislayer geprüft wird.</p>
+</div>
+</section>
+<section id="arbeitspakete-statt-werkzeugliste" class="slide level2">
+<h2>Arbeitspakete statt Werkzeugliste</h2>
+<div class="process">
+<ol type="1">
+<li>Gipfelkandidaten definieren · 2. höheres Gelände bestimmen · 3. Distanz prüfen · 4. Scharte eingrenzen · 5. Ergebnis und Grenze dokumentieren</li>
+</ol>
+</div>
+</section>
+<section id="umsetzung-kann-interaktiv-beginnen" class="slide level2">
+<h2>Umsetzung kann interaktiv beginnen</h2>
+<p><a href="../../../assets/images/pp/projektuebersicht.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img data-src="../../../assets/images/pp/projektuebersicht.png" class="tallfig"></a></p>
+<p>Die lokale Hypothese wird als Linie und Schartenpunkt gespeichert. Sie ist ein prüfbarer Start, kein endgültiger Nachweis.</p>
+</section>
+<section id="und-reproduzierbar-werden" class="slide level2">
+<h2>… und reproduzierbar werden</h2>
+<p><a href="../../../assets/images/pp/hoehenstufen_dominanz.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img data-src="../../../assets/images/pp/hoehenstufen_dominanz.png" class="fullfig"></a></p>
+<p>Rastermaske, Proximity und Höhenstufen machen die einzelnen Prüfungen wiederholbar. Das Skript automatisiert nur diese klar definierten Schritte.</p>
+</section>
+<section id="nicht-code-sondern-eine-nachvollziehbare-regel" class="slide level2">
+<h2>Nicht Code, sondern eine nachvollziehbare Regel</h2>
+<div class="docgrid">
+<div class="doccard">
+<p><strong>Eingaben</strong></p>
+<p>DGM, Gipfelpunkt oder Gipfelmaske</p>
+</div>
+<div class="doccard">
+<p><strong>Parameter</strong></p>
+<p>Höhentoleranz, Nachbarschaft, Stufenweite</p>
+</div>
+<div class="doccard">
+<p><strong>Ergebnis</strong></p>
+<p>Dominanz, Schartenintervall, Prominenz, <span class="math inline">\(E\)</span></p>
+</div>
+<div class="doccard">
+<p><strong>Abbruchregel</strong></p>
+<p>Suche endet, wenn der Übergang „getrennt/verbunden“ eingegrenzt ist</p>
+</div>
+</div>
+<div class="keyline">
+<p>Eine gute Umsetzung zeigt Eingaben, Parameter, Ergebnis und Abbruchregel – unabhängig davon, ob sie geklickt, modelliert oder programmiert wurde.</p>
 </div>
 </section>
 <section id="übersetzung-in-gis-anforderungen" class="slide level2">
 <h2>Übersetzung in GIS-Anforderungen</h2>
-<p><a href="../../../assets/images/pp/slide6.png" class="lightbox" data-gallery="quarto-lightbox-gallery-9"><img data-src="../../../assets/images/pp/slide6.png" class="fullfig"></a></p>
-<div class="fragment overlay-note wide">
-<p>Hier liegt der Kern der Dokumentation: Fachliche Begriffe werden in Datenstrukturen, Raster-/Vektoroperationen, Parameter und Zwischenergebnisse übersetzt.</p>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Fachliche Frage</th>
+<th style="text-align: left;">Technische Übersetzung</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Was zählt als Gipfel?</td>
+<td style="text-align: left;">Gipfelmaske oder Punktlayer</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Wo liegt höheres Gelände?</td>
+<td style="text-align: left;">Höhenmaske über <span class="math inline">\(h\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Wie weit ist es entfernt?</td>
+<td style="text-align: left;">Distanzraster / Proximity</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Wo liegt die Scharte?</td>
+<td style="text-align: left;">Zusammenhang über Höhenstufen</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="prominenz-durch-fluten-denken" class="slide level2">
+<h2>Prominenz durch Fluten denken</h2>
+<p><a href="../../../assets/images/pp/flood0.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5"><img data-src="../../../assets/images/pp/flood0.png" class="fullfig"></a></p>
+<p>Bei hoher Schwelle sind Gipfelbereiche getrennt. Mit sinkender Schwelle wachsen die Zusammenhangsflächen.</p>
+</section>
+<section id="die-maßgebliche-verbindung-suchen" class="slide level2">
+<h2>Die maßgebliche Verbindung suchen</h2>
+<p><a href="../../../assets/images/pp/flood1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6"><img data-src="../../../assets/images/pp/flood1.png" class="fullfig"></a></p>
+<p>Gesucht ist nicht der erstbeste Grat, sondern die <strong>höchste</strong> Schwelle, bei der die Fläche des Zielgipfels höheres Gelände erreicht.</p>
+</section>
+<section id="abbruch-und-aussagegrenze" class="slide level2">
+<h2>Abbruch und Aussagegrenze</h2>
+<p><a href="../../../assets/images/pp/flood2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7"><img data-src="../../../assets/images/pp/flood2.png" class="fullfig"></a></p>
+<div class="keyline">
+<p>Dokumentiert werden die letzte getrennte und die erste verbundene Stufe. Berührt die Fläche den DGM-Rand, bleibt das Ergebnis ausschnittsbezogen.</p>
+</div>
+<div class="small">
+<p>Die Grafik zeigt das Abbruchkriterium des historischen Codes: Die Suche endet, sobald die Fläche <strong>irgendeinen</strong> weiteren Gipfel enthält. Maßgeblich wäre aber nur <strong>höheres</strong> Gelände. Diese Abweichung untersuchen wir in Teil 2.</p>
 </div>
 </section>
-<section id="dokumentationsschema-für-einen-hauptschritt" class="slide level2">
-<h2>Dokumentationsschema für einen Hauptschritt</h2>
-<p>Ein Hauptschritt sollte knapp, aber vollständig dokumentiert werden.</p>
-<div class="docgrid">
-<div class="doccard">
-<p><strong>Zweck</strong><br> Welches Kriterium oder Teilproblem wird bearbeitet?</p>
-</div>
-<div class="doccard">
-<p><strong>Datenbasis</strong><br> Welche Eingangsdaten werden verwendet?</p>
-</div>
-<div class="doccard">
-<p><strong>Operation</strong><br> Welche GIS-Operation wird eingesetzt?</p>
-</div>
-<div class="doccard">
-<p><strong>Parameter</strong><br> Welche Schwellenwerte, Toleranzen oder Abbruchkriterien gelten?</p>
-</div>
-<div class="doccard">
-<p><strong>Ausgabe</strong><br> Welcher Layer oder Wert entsteht?</p>
-</div>
-<div class="doccard">
-<p><strong>Grenze</strong><br> Wovon hängt die Aussagekraft ab?</p>
-</div>
-</div>
-</section>
-<section id="wie-soll-das-gehen" class="slide level2">
-<h2>Wie soll das gehen?</h2>
-<p><a href="../../../assets/images/pp/slide7.png" class="lightbox" data-gallery="quarto-lightbox-gallery-10"><img data-src="../../../assets/images/pp/slide7.png" class="fullfig"></a></p>
-<div class="fragment overlay-note right">
-<p>Ein komplexes Problem wird dokumentierbar, wenn es in prüfbare Zwischenschritte zerlegt wird. Die Dokumentation folgt dieser Zerlegung.</p>
-</div>
-</section>
-<section id="beispiel-prominenz-durch-fluten-denken" class="slide level2">
-<h2>Beispiel: Prominenz durch Fluten denken</h2>
-<p><a href="../../../assets/images/pp/flood0.png" class="lightbox" data-gallery="quarto-lightbox-gallery-11"><img data-src="../../../assets/images/pp/flood0.png" class="fullfig"></a></p>
-<div class="fragment overlay-note wide">
-<p>Dokumentationspunkt: Die fachliche Idee lautet nicht „wir benutzen ein Tool“, sondern: Wir variieren ein Flutniveau und prüfen, wann der aktuelle Gipfel mit anderen Gipfeln verbunden wird.</p>
-</div>
-</section>
-<section id="suchstrategie-festhalten" class="slide level2">
-<h2>Suchstrategie festhalten</h2>
-<p><a href="../../../assets/images/pp/flood1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-12"><img data-src="../../../assets/images/pp/flood1.png" class="fullfig"></a></p>
-<div class="fragment overlay-note">
-<p>Der naive Weg wäre schrittweises Fluten. Die dokumentierte Verbesserung ist eine Suchstrategie, die den relevanten Höhenbereich systematisch eingrenzt.</p>
-</div>
-</section>
-<section id="abbruchkriterium-dokumentieren" class="slide level2">
-<h2>Abbruchkriterium dokumentieren</h2>
-<p><a href="../../../assets/images/pp/flood2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-13"><img data-src="../../../assets/images/pp/flood2.png" class="fullfig"></a></p>
-<div class="fragment overlay-note right">
-<p>Für die Aussagekraft ist nicht nur das Ergebnis wichtig, sondern auch: Wann wurde die Suche beendet und welche Genauigkeit wurde akzeptiert?</p>
-</div>
-</section>
-<section id="beispiel-einer-methodennotiz" class="slide level2">
-<h2>Beispiel einer Methodennotiz</h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb4-1"><a></a>Fragestellung:</span>
-<span id="cb4-2"><a></a>Wie eigenständig ist ein Gipfel im Verhältnis zu benachbarten Gipfeln?</span>
-<span id="cb4-3"><a></a></span>
-<span id="cb4-4"><a></a>Kriterium:</span>
-<span id="cb4-5"><a></a>Prominenz / Schartenhöhe.</span>
-<span id="cb4-6"><a></a></span>
-<span id="cb4-7"><a></a>Datenbasis:</span>
-<span id="cb4-8"><a></a>Digitales Höhenmodell und Gipfelpunkte.</span>
-<span id="cb4-9"><a></a></span>
-<span id="cb4-10"><a></a>Operationelle Idee:</span>
-<span id="cb4-11"><a></a>Flutniveau variieren und Verbindung der Gipfeleinheiten prüfen.</span>
-<span id="cb4-12"><a></a></span>
-<span id="cb4-13"><a></a>Suchstrategie:</span>
-<span id="cb4-14"><a></a>Höhenbereich durch binäre Suche eingrenzen.</span>
-<span id="cb4-15"><a></a></span>
-<span id="cb4-16"><a></a>Abbruchkriterium:</span>
-<span id="cb4-17"><a></a>Suche endet bei definierter Höhentoleranz.</span>
-<span id="cb4-18"><a></a></span>
-<span id="cb4-19"><a></a>Aussagegrenze:</span>
-<span id="cb4-20"><a></a>DEM-Auflösung, Gipfelerkennung und Toleranz beeinflussen den Wert.</span></code></pre></div><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></div>
-</section>
-<section id="was-davon-ins-eigene-projekt-gehört" class="slide level2">
-<h2>Was davon ins eigene Projekt gehört</h2>
+<section id="übergang-zum-arbeitsblatt" class="slide level2">
+<h2>Übergang zum Arbeitsblatt</h2>
 <div class="process">
-<p>Projektfrage schärfen → Kriterien ableiten → Daten wählen → Hauptschritte planen → Parameter begründen → Ergebnislayer sichern → Aussagegrenze benennen</p>
+<p>Das Arbeitsblatt setzt dieses Modell um: erst lokale Hypothese, dann DGM-Ausschnitt erweitern, Dominanz und Schartenintervall prüfen, anschließend E-Wert und Status transparent ausgeben.</p>
 </div>
-<div class="fragment keyline">
-<p>Das Gipfelbeispiel ist nur komplexer als viele Kursprojekte. Die Dokumentationslogik ist dieselbe.</p>
-</div>
-</section>
-<section id="nicht-dokumentieren-vollständige-history" class="slide level2">
-<h2>Nicht dokumentieren: vollständige History</h2>
-<p>Eine Workflow-Dokumentation ist kein Mitschnitt jeder Bedienhandlung.</p>
-<p>Dokumentiert werden nur Hauptschritte, die das Ergebnis fachlich verändern.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb5-1"><a></a>nicht: Layer verschoben, Stil getestet, Ansicht gezoomt</span>
-<span id="cb5-2"><a></a>sondern: Distanz berechnet, reklassifiziert, gewichtet, maskiert, kombiniert</span></code></pre></div><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="fragment keyline">
-<p>Die Leitfrage lautet: Könnte eine andere Person den methodischen Weg fachlich nachvollziehen?</p>
-</div>
-</section>
-<section id="übertrag-auf-einfache-gis-projekte" class="slide level2">
-<h2>Übertrag auf einfache GIS-Projekte</h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb6-1"><a></a>Siedlungsferne</span>
-<span id="cb6-2"><a></a>→ Distanz zur Siedlung</span>
-<span id="cb6-3"><a></a>→ Reklassifikation</span>
-<span id="cb6-4"><a></a>→ Störungskriterium</span>
-<span id="cb6-5"><a></a>→ Beitrag zur Eignungskarte</span>
-<span id="cb6-6"><a></a></span>
-<span id="cb6-7"><a></a>Hangneigung</span>
-<span id="cb6-8"><a></a>→ DGM-Ableitung</span>
-<span id="cb6-9"><a></a>→ Klassenbildung</span>
-<span id="cb6-10"><a></a>→ Reliefkriterium</span>
-<span id="cb6-11"><a></a>→ Beitrag zur Eignungskarte</span></code></pre></div><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="fragment keyline">
-<p>Auch einfache Projekte brauchen keine lange History, sondern eine begründete Kette zwischen Frage, Kriterium, Operation und Ergebnis.</p>
-</div>
-</section>
-<section id="prüfregel-für-die-dokumentation" class="slide level2">
-<h2>Prüfregel für die Dokumentation</h2>
-<p>Für jeden Hauptschritt sollte eine fremde Person erkennen können:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb7-1"><a></a>Warum dieser Schritt?</span>
-<span id="cb7-2"><a></a>Welche Daten?</span>
-<span id="cb7-3"><a></a>Welche Operation?</span>
-<span id="cb7-4"><a></a>Welche Parameter?</span>
-<span id="cb7-5"><a></a>Welcher Ergebnislayer?</span>
-<span id="cb7-6"><a></a>Welche Aussagegrenze?</span></code></pre></div><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="fragment big keyline">
-<p>Das Ziel ist nicht Programmierung. Das Ziel ist nachvollziehbare GIS-Arbeit.</p>
-</div>
+<p><strong>Merksatz:</strong> Ein GIS-Ergebnis besteht aus <strong>Wert, Regel, Parametern und Aussagegrenze</strong>.</p>
 
 
 </section>

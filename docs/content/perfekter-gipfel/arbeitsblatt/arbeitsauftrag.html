@@ -362,19 +362,19 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../content/perfekter-gipfel/slides/01-konzept.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Block 1 – Konzept</span></a>
+ <span class="menu-text">Teil 1 – Konzept</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../content/perfekter-gipfel/slides/02-analyse.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Block 2 – Analyse</span></a>
+ <span class="menu-text">Teil 2 – Modellkritik</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../content/perfekter-gipfel/slides/03-technische-umsetzung.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Block 3 – Technische Umsetzung</span></a>
+ <span class="menu-text">Teil 3 – QGIS-Workflow</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -428,7 +428,7 @@ window.Quarto = {
   <li><a href="#exkurs-wie-das-qgis-projekt-vorbereitet-wurde" id="toc-exkurs-wie-das-qgis-projekt-vorbereitet-wurde" class="nav-link" data-scroll-target="#exkurs-wie-das-qgis-projekt-vorbereitet-wurde">Exkurs · Wie das QGIS-Projekt vorbereitet wurde</a></li>
   <li><a href="#datengrundlage-und-hinweise" id="toc-datengrundlage-und-hinweise" class="nav-link" data-scroll-target="#datengrundlage-und-hinweise">Datengrundlage und Hinweise</a></li>
   </ul>
-<div class="toc-actions"><ul class="collapse"><li><a href="https://github.com/gisma-courses/gc-geoinfo2.0/edit/master/content/perfekter-gipfel/arbeitsblatt/arbeitsauftrag.qmd" class="toc-action"><i class="bi bi-github"></i>Seite editieren</a></li><li><a href="https://github.com/gisma-courses/gc-geoinfo2.0/issues/new" class="toc-action"><i class="bi empty"></i>Problem melden</a></li></ul></div></nav>
+<div class="toc-actions"><ul class="collapse"><li><a href="https://github.com/gisma-courses/gc-geoinfo2.0/edit/main/content/perfekter-gipfel/arbeitsblatt/arbeitsauftrag.qmd" class="toc-action"><i class="bi bi-github"></i>Seite editieren</a></li><li><a href="https://github.com/gisma-courses/gc-geoinfo2.0/issues/new" class="toc-action"><i class="bi empty"></i>Problem melden</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -459,15 +459,15 @@ window.Quarto = {
 <p><strong>Ziel:</strong> Bestimmt die Gipfel im Untersuchungsgebiet. Wählt einen Gipfel aus und versucht, seine <strong>Dominanz</strong>, <strong>Prominenz</strong> und den <strong>Eigenständigkeitswert E</strong> anhand der Definitionen aus der Artikelanalyse zu ermitteln. Entscheidend ist nicht nur ein Zahlenwert, sondern die Frage, <strong>welche räumlichen Beziehungen ihr tatsächlich nachweisen könnt</strong>.</p>
 <p>Ihr arbeitet vollständig <strong>digital in QGIS</strong>. Die gefundenen Gipfel werden als Punkte gespeichert, mögliche Verbindungen als Linien und Scharten als Punkte. Eure geometrischen Einträge und Begründungen bleiben im QGIS-Projekt erhalten.</p>
 <ol type="1">
-<li><strong>Gipfel bestimmen.</strong> Untersucht Höhenmodell, Schummerung und Höhenlinien. Erfasst die von euch angenommenen Gipfel als Punkte, lest ihre Höhen aus dem DGM ab und formuliert eure Aufnahmeregel. Vergleicht eure Auswahl mit einer anderen Gruppe: Wo gibt es Unterschiede und warum?</li>
-<li><strong>Einen Gipfel untersuchen.</strong> Bestimmt Gipfelhöhe, Dominanz, maßgebliche Schartenhöhe, Prominenz und – soweit begründbar – den E-Wert. Verwendet eigene Punkte und Linien, um eure Hypothesen räumlich festzuhalten.</li>
-<li><strong>Ergebnis überprüfen.</strong> Eine andere Gruppe sucht gezielt nach näher gelegenem höherem Gelände, alternativen Verbindungen oder Problemen am Datenrand. Überarbeitet die Berechnung, wenn nötig.</li>
-<li><strong>Aussagegrenzen benennen.</strong> Unterscheidet zwischen bestimmt, auf den Datenausschnitt beschränkt und noch offen. Ein begründet vorläufiges Ergebnis ist zulässig; zeigt, welche Information fehlt.</li>
-<li><strong>Vom Vorgehen zum Algorithmus.</strong> Beschreibt, wie ein Programm Gipfel finden, Verbindungen prüfen, eine Suche beenden und unvollständige Daten erkennen müsste. Vergleicht euren Ablauf danach mit dem Repository <a href="https://github.com/gisma/perfectPeak/tree/37b49f1"><code>perfectPeak</code></a>.</li>
+<li><strong>Gipfel bestimmen</strong> (Schritte 0–2). Untersucht Höhenmodell, Schummerung und Höhenlinien. Erfasst die von euch angenommenen Gipfel als Punkte, lest ihre Höhen aus dem DGM ab und formuliert eure Aufnahmeregel. Vergleicht eure Auswahl mit einer anderen Gruppe: Wo gibt es Unterschiede und warum?</li>
+<li><strong>Einen Gipfel untersuchen</strong> (Schritte 3–4). Bestimmt Gipfelhöhe, Dominanz, maßgebliche Schartenhöhe, Prominenz und – soweit begründbar – den E-Wert. Verwendet eigene Punkte und Linien, um eure Hypothesen räumlich festzuhalten.</li>
+<li><strong>Ergebnis überprüfen</strong> (Schritt 5). Eine andere Gruppe sucht gezielt nach näher gelegenem höherem Gelände, alternativen Verbindungen oder Problemen am Datenrand. Überarbeitet die Berechnung, wenn nötig.</li>
+<li><strong>Aussagegrenzen benennen</strong> (Schritt 5). Unterscheidet zwischen bestimmt, auf den Datenausschnitt beschränkt und noch offen. Ein begründet vorläufiges Ergebnis ist zulässig; zeigt, welche Information fehlt.</li>
+<li><strong>Vom Vorgehen zum Algorithmus</strong> (Schritt 6). Beschreibt, wie ein Programm Gipfel finden, Verbindungen prüfen, eine Suche beenden und unvollständige Daten erkennen müsste. Vergleicht euren Ablauf danach mit dem Repository <a href="https://github.com/gisma/perfectPeak/tree/37b49f1"><code>perfectPeak</code></a>.</li>
 </ol>
 <section id="abgabe" class="level2">
 <h2 class="anchored" data-anchor-id="abgabe">Abgabe</h2>
-<p>Speichert euer <strong>gespeichertes QGIS-Arbeitsprojekt</strong> mit den bearbeiteten Layern ab und erläutert euren ausgewählten Gipfel kurz anhand der Karte. Dazu gehören eure Gipfelregel, die Prüfung des höheren Geländes, die Schartenhypothese, die ermittelten Werte und der Status der Aussage. <strong>Ein Ausdruck oder eine Papierkarte ist nicht erforderlich.</strong></p>
+<p>Abgegeben wird das <strong>gespeicherte QGIS-Arbeitsprojekt</strong> mit den bearbeiteten Layern. Für das Portfolio ergänzt ihr eine kurze Einordnung eures ausgewählten Gipfels: einen Screenshot der Karte, eure Gipfelregel und die verwendeten Parameter, die Prüfung des höheren Geländes, die Schartenhypothese, die ermittelten Werte, einen Vergleich mit einer Variante (etwa der Gipfelregel einer anderen Gruppe oder 4er- statt 8er-Nachbarschaft) und den Status der Aussage. <strong>Ein Ausdruck oder eine Papierkarte ist nicht erforderlich.</strong></p>
 </section>
 </section>
 <section id="qgis-workflow" class="level1">
@@ -478,7 +478,7 @@ window.Quarto = {
 <li><a href="../../../assets/data/Perfekter_Gipfel_QGIS.zip"><code>Perfekter_Gipfel_QGIS.zip</code></a> herunterladen und <strong>vollständig entpacken</strong>.</li>
 <li>Eine <strong>Arbeitskopie des entpackten Ordners</strong> erstellen. Projektdatei und Unterordner zusammenlassen.</li>
 <li>In QGIS <strong>3.44 oder neuer</strong> <code>Perfekter_Gipfel.qgz</code> öffnen (alternativ <code>.qgs</code>). Die Startansicht zeigt die Umgebung der Gipfelkandidaten <strong>A und B</strong>.</li>
-<li>Über den Layerbaum zwischen <strong>Relief</strong>, <strong>Höhenlinien</strong>, <strong>Schummerung</strong> und <strong>DGM</strong> wechseln. Den Layer <strong>„Gipfelkandidaten A–F (DEM-Maxima)“</strong> zunächst ausblenden, um das Relief selbst einzuschätzen.</li>
+<li>Über den Layerbaum zwischen <strong>Relief</strong>, <strong>Höhenlinien</strong>, <strong>Schummerung</strong> und <strong>DGM</strong> wechseln. Der Layer <strong>„Gipfelkandidaten A–F (DEM-Maxima)“</strong> ist beim Öffnen ausgeblendet. Lasst ihn zunächst aus und schätzt das Relief selbst ein.</li>
 </ol>
 <div class="callout callout-style-default callout-tip callout-titled" title="QGIS: Was bedeutet hier markieren oder einzeichnen?">
 <div class="callout-header d-flex align-content-center">
@@ -490,7 +490,7 @@ window.Quarto = {
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p><strong>Markieren:</strong> Punktobjekt in einem editierbaren Vektorlayer speichern. <strong>Einzeichnen:</strong> Linienobjekt mit mehreren Stützpunkten speichern. Danach Kennung und Begründung im Attributformular eintragen.</p>
+<p><strong>Markieren:</strong> Punktobjekt in einem editierbaren Vektorlayer speichern. <strong>Einzeichnen:</strong> Linienobjekt mit mehreren Stützpunkten speichern. Danach im Attributformular die Felder ausfüllen – in den vorbereiteten Arbeitslayern <code>typ</code> (z. B. „Verbindung A–B“), <code>begruendung</code> und <code>status</code>.</p>
 <p>Eine Auswahl oder temporäre Skizze ist kein Ergebnis. Ergebnisse liegen als gespeicherte Objekte in den Arbeitslayern vor.</p>
 </div>
 </div>
@@ -509,7 +509,7 @@ window.Quarto = {
 <li>Über das <strong>Stiftsymbol „Bearbeitungsmodus umschalten“</strong> die Bearbeitung einschalten.</li>
 <li><strong>„Punktobjekt hinzufügen“</strong> bzw. <strong>„Linienobjekt hinzufügen“</strong> wählen.</li>
 <li><strong>Punkt:</strong> einmal in die Karte klicken. <strong>Linie:</strong> mit Linksklicks Stützpunkte setzen, <strong>mit Rechtsklick abschließen</strong>.</li>
-<li>Im Attributformular Kennung und Begründung eintragen und bestätigen.</li>
+<li>Im Attributformular <code>typ</code> und <code>begruendung</code> eintragen (in eigenen Layern die dort angelegten Felder) und bestätigen.</li>
 <li><strong>Layeränderungen speichern</strong> und den Bearbeitungsmodus beenden. Zusätzlich das <strong>QGIS-Projekt speichern</strong> (<code>Strg+S</code>).</li>
 </ol>
 <p>Wenn die Werkzeuge fehlen: <code>Ansicht → Werkzeugkästen → Digitalisierung</code> einschalten. <strong>Layeränderungen</strong> und <strong>Projektänderungen</strong> sind zwei verschiedene Speicherungen.</p>
@@ -543,7 +543,7 @@ window.Quarto = {
 </section>
 <section id="das-gesamte-gelände-und-eigene-gipfel-erfassen" class="level2">
 <h2 class="anchored" data-anchor-id="das-gesamte-gelände-und-eigene-gipfel-erfassen">2 · Das gesamte Gelände und eigene Gipfel erfassen</h2>
-<p>Rechtsklick auf <strong>„DGM_10m – Analysegrundlage“</strong> → <strong>„Auf Layer zoomen“</strong>. Das DGM muss dazu nicht sichtbar sein. Untersucht nun den gesamten <strong>3,24 × 3,60 km</strong> großen Ausschnitt. Betrachtet Relief, Schummerung und Höhenlinien und schaltet die vorbereiteten Gipfelkandidaten bei Bedarf wieder aus.</p>
+<p>Rechtsklick auf <strong>„dgm_10m“</strong> → <strong>„Auf Layer zoomen“</strong>. Das DGM muss dazu nicht sichtbar sein. Untersucht nun den gesamten <strong>3,24 × 3,60 km</strong> großen Ausschnitt. Betrachtet Relief, Schummerung und Höhenlinien und schaltet die vorbereiteten Gipfelkandidaten bei Bedarf wieder aus.</p>
 <p>Erstellt einen <strong>eigenen Punktlayer</strong> und erfasst die Geländestellen, die ihr nach eurer Regel als Gipfel bewertet. Gebt jedem Gipfel eine Kennung und einen Höhenwert aus dem DGM. Vergleicht erst danach mit den vorbereiteten Kandidaten A–F und mit einer anderen Gruppe. Die sechs Kandidaten sind <strong>keine vollständige Gipfelliste</strong>.</p>
 <div class="callout callout-style-default callout-tip callout-titled" title="QGIS: Eigenen Gipfel-Punktlayer anlegen und Punkte erfassen">
 <div class="callout-header d-flex align-content-center">
@@ -561,7 +561,7 @@ window.Quarto = {
 <li><strong>Geometrietyp: Punkt</strong>; <strong>KBS: EPSG:31254</strong>.</li>
 <li>Felder ergänzen: <strong><code>kennung</code></strong> (Text), <strong><code>hoehe_m</code></strong> (Dezimalzahl), <strong><code>regel</code></strong> (Text). Den neuen Layer anlegen.</li>
 <li>Layer aktivieren → Bearbeitungsmodus → <strong>Punktobjekt hinzufügen</strong> → auf jede als Gipfel bewertete Stelle klicken → Kennung und Regel eintragen.</li>
-<li>Für die Höhe <strong>„DGM_10m – Analysegrundlage“</strong> sichtbar und aktiv schalten, das Werkzeug <strong>„Objekte abfragen“</strong> aus der Attributwerkzeugleiste wählen und die betreffende Rasterzelle anklicken. Den Bandwert in <strong><code>hoehe_m</code></strong> des Gipfelpunkts eintragen; anschließend wieder zum Gipfellayer wechseln.</li>
+<li>Für die Höhe <strong>„dgm_10m“</strong> sichtbar und aktiv schalten, das Werkzeug <strong>„Objekte abfragen“</strong> aus der Attributwerkzeugleiste wählen und die betreffende Rasterzelle anklicken. Den Bandwert in <strong><code>hoehe_m</code></strong> des Gipfelpunkts eintragen; anschließend wieder zum Gipfellayer wechseln.</li>
 <li>Änderungen speichern. Der gespeicherte Punkt ist eure digitale Markierung.</li>
 </ol>
 <p><strong>Wichtig:</strong> Rasterwert und Punktlage müssen zur <strong>gleichen DGM-Zelle</strong> gehören. Für eine automatisierte und reproduzierbare Übertragung der Werte könnt ihr stattdessen das QGIS-Werkzeug <strong>„Rasterwerte abtasten“</strong> verwenden; dessen Ausgabelayer ist dann als Ergebnis dauerhaft zu speichern.</p>
@@ -596,7 +596,7 @@ window.Quarto = {
 </div>
 <div class="callout-body-container callout-body">
 <p>Im Menü <code>Raster → Rasterrechner…</code> eine Bedingung für die Gipfelhöhe formulieren. Für A lautet sie beispielsweise:</p>
-<pre class="text"><code>"DGM_10m – Analysegrundlage@1" &gt; 2564.257080078125</code></pre>
+<pre class="text"><code>"dgm_10m@1" &gt; 2564.257080078125</code></pre>
 <p>Den <strong>tatsächlichen Bandnamen</strong> in der Rasterbandliste prüfen. Für einen anderen Gipfel seine Höhe einsetzen. Als Ausgabeausdehnung das <strong>DGM</strong>, als Rastergröße <strong>324 × 360 Zellen</strong> und als KBS <strong>EPSG:31254</strong> verwenden. Ergebnis als Rasterdatei <strong>im Arbeitsordner</strong> speichern.</p>
 <p>Die Zellen mit <strong>1</strong> sind höher als A; die mit <strong>0</strong> nicht. Stellt <strong>0 transparent</strong> und <strong>1 farbig</strong> dar. So erkennt ihr höheres Gelände auf der Reliefkarte.</p>
 <p><strong>Optional für die Dominanz:</strong> Im Verarbeitungswerkzeug <strong>GDAL → Proximity (Rasterentfernung)</strong> für die Maske den <strong>Zielwert 1</strong> wählen und die Entfernungen in <strong>georeferenzierten Koordinaten (Meter)</strong> ausgeben. Den Wert der Gipfelzelle prüfen. Gemessen wird zwischen Rasterzellzentren – und nur zu Zellen <strong>innerhalb des Ausschnitts</strong>.</p>
@@ -618,7 +618,7 @@ window.Quarto = {
 </div>
 <div class="callout-body-container callout-body">
 <p>Erstellt mit <code>Raster → Rasterrechner…</code> zunächst beispielsweise:</p>
-<pre class="text"><code>"DGM_10m – Analysegrundlage@1" &gt; 2500</code></pre>
+<pre class="text"><code>"dgm_10m@1" &gt; 2500</code></pre>
 <p><strong>2500 m ist ein Startwert, kein Ergebnis.</strong> Prüft zunächst grob in 25-m-Stufen und grenzt den Übergang danach in 10-m-Stufen ein. Dokumentiert die letzte getrennte und die erste verbundene Stufe; die Schartenhöhe liegt innerhalb dieses Intervalls. Beurteilt dabei nur die Verbindung zu <strong>höherem Gelände</strong>.</p>
 <p>Wenn ihr Rasterflächen polygonisiert oder Zusammenhangsflächen berechnet, dokumentiert die zugrunde gelegte <strong>4er- oder 8er-Nachbarschaft</strong>. An diagonalen Zellkontakten entstehen unterschiedliche Ergebnisse.</p>
 <p>Neue mögliche Verbindungswege zeichnet ihr wieder in <strong>„Eigene Verbindungen und Hypothesen“</strong> ein; zusätzliche Scharten in <strong>„Eigene Schartenkandidaten“</strong>. Ergänzt die jeweilige Begründung im Attributformular.</p>
@@ -627,7 +627,7 @@ window.Quarto = {
 </section>
 <section id="werte-festhalten-und-gegenseitig-prüfen" class="level2">
 <h2 class="anchored" data-anchor-id="werte-festhalten-und-gegenseitig-prüfen">5 · Werte festhalten und gegenseitig prüfen</h2>
-<p>Übertragt die Ergebnisse für den gewählten Gipfel in eure Dokumentation. Die Felder <strong><code>scharte_m</code></strong>, <strong><code>dominanz_m</code></strong>, <strong><code>prominenz_m</code></strong> und <strong><code>e_wert</code></strong> sind im vorbereiteten Gipfelkandidatenlayer zunächst leer. Falls ihr mit einem <strong>eigenen Gipfellayer</strong> arbeitet, legt die entsprechenden Felder dort an. Tragt einen Zahlenwert erst dann ein, wenn ihr dessen räumliche Grundlage erklären könnt. Notiert die Kennung des Zielgipfels auch in den Begründungen der zugehörigen Linie und Scharte. Verwendet für <strong>E</strong> die Formel aus der Artikelanalyse.</p>
+<p>Übertragt die Ergebnisse für den gewählten Gipfel in eure Dokumentation. Die Felder <strong><code>scharte_m</code></strong>, <strong><code>dominanz_m</code></strong>, <strong><code>prominenz_m</code></strong> und <strong><code>e_wert</code></strong> sind im vorbereiteten Gipfelkandidatenlayer zunächst leer. Falls ihr mit einem <strong>eigenen Gipfellayer</strong> arbeitet, legt die entsprechenden Felder dort an. Tragt einen Zahlenwert erst dann ein, wenn ihr dessen räumliche Grundlage erklären könnt. Notiert die Kennung des Zielgipfels auch in der <code>begruendung</code> der zugehörigen Linie und Scharte. Verwendet für <strong>E</strong> die Formel aus der Artikelanalyse und lest den Wert richtig herum: <strong>Je kleiner E, desto eigenständiger der Gipfel</strong>; der Mount Everest hat E = 0.</p>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -705,17 +705,17 @@ window.Quarto = {
 </section>
 <section id="pyqgis-tool-dominanz-und-prominenzintervall" class="level1">
 <h1>PyQGIS-Tool · Dominanz und Prominenzintervall</h1>
-<p>Das Skript <a href="../../../scripts/perfect_peak_metrics.py"><code>perfect_peak_metrics.py</code></a> übernimmt die wiederholbare Rasteranalyse. Es verarbeitet entweder vorgegebene Gipfelpunkte oder <strong>alle Kandidaten einer Gipfelmaske</strong>. Die Maske enthält die fachliche Gipfeldefinition; das Tool berechnet anschließend die Kennwerte.</p>
+<p>Das Skript <a href="../../../scripts/perfect_peak_metrics.py"><code>perfect_peak_metrics.py</code></a> übernimmt die wiederholbare Rasteranalyse. Es verarbeitet <strong>Gipfelpunkte</strong> – die vorbereiteten Kandidaten oder euren eigenen Gipfellayer. Als Vertiefung kann es stattdessen <strong>alle Kandidaten einer Gipfelmaske</strong> auswerten; die Maske enthält dann die fachliche Gipfeldefinition.</p>
 <section id="installation-in-qgis-3.44" class="level2">
 <h2 class="anchored" data-anchor-id="installation-in-qgis-3.44">Installation in QGIS 3.44+</h2>
 <ol type="1">
 <li>Die Datei <a href="../../../scripts/perfect_peak_metrics.py"><code>perfect_peak_metrics.py</code></a> herunterladen.</li>
 <li>In QGIS <strong>Verarbeitung → Werkzeugkiste</strong> öffnen.</li>
-<li>Unter <strong>Skripte</strong> einen Rechtsklick auf <strong>Werkzeuge</strong> ausführen und <strong>Neues Skript erstellen</strong> wählen.</li>
-<li>Den gesamten Inhalt der Datei einfügen und als <code>perfect_peak_metrics.py</code> speichern.</li>
+<li>Oben in der Werkzeugkiste auf das <strong>Python-Symbol</strong> klicken und <strong>Skript zur Werkzeugkiste hinzufügen…</strong> wählen; die heruntergeladene Datei auswählen.</li>
+<li>Alternativ: <strong>Neues Skript erstellen…</strong>, den gesamten Inhalt der Datei einfügen und als <code>perfect_peak_metrics.py</code> speichern.</li>
 <li>Das neue Werkzeug erscheint unter <strong>Skripte → Perfect Peak → Perfect Peak: Dominanz und Prominenzintervall</strong>.</li>
 </ol>
-<p>Eine Zusatzinstallation von R, SAGA oder GRASS ist nicht erforderlich.</p>
+<p>Für Gipfelpunkte ist keine Zusatzinstallation von R, SAGA oder GRASS erforderlich.</p>
 </section>
 <section id="ausführen" class="level2">
 <h2 class="anchored" data-anchor-id="ausführen">Ausführen</h2>
@@ -733,32 +733,53 @@ window.Quarto = {
 <tbody>
 <tr class="odd">
 <td style="text-align: left;"><strong>DGM</strong></td>
-<td style="text-align: left;"><code>DGM_10m – Analysegrundlage</code></td>
+<td style="text-align: left;"><code>dgm_10m</code></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;"><strong>Gipfelpunkte</strong></td>
-<td style="text-align: left;">Optional: <code>Gipfelkandidaten A–F (DEM-Maxima)</code> oder eigener Punktlayer</td>
+<td style="text-align: left;"><code>Gipfelkandidaten A–F (DEM-Maxima)</code> oder euer Layer <code>eigene_gipfel</code></td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;"><strong>Gipfelmaske</strong></td>
-<td style="text-align: left;">Optional: Raster mit Wert <code>&gt; 0</code> für alle Gipfelkandidaten; muss dasselbe Rastergitter wie das DGM haben</td>
+<td style="text-align: left;">Leer lassen (Vertiefung, siehe unten)</td>
 </tr>
 <tr class="even">
+<td style="text-align: left;"><strong>Fangradius</strong></td>
+<td style="text-align: left;"><code>3</code> Zellen: Punkte werden auf die höchste Zelle im Umkreis von 30 m gesetzt</td>
+</tr>
+<tr class="odd">
 <td style="text-align: left;"><strong>Mindesthöhenunterschied</strong></td>
 <td style="text-align: left;"><code>0 m</code>; nur bei begründeter Höhentoleranz erhöhen</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;"><strong>Raster-Nachbarschaft</strong></td>
 <td style="text-align: left;">8er-Nachbarschaft, sofern diagonale Verbindungen gelten sollen</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;"><strong>Ausgabe</strong></td>
 <td style="text-align: left;">GeoPackage im Arbeitsordner, z. B. <code>daten/perfect_peak_ergebnis.gpkg</code></td>
 </tr>
 </tbody>
 </table>
-<p>Gebt <strong>entweder Gipfelpunkte oder eine Gipfelmaske</strong> an. Wenn beide Eingaben gesetzt sind, haben die Punkte Vorrang. Bei einer Maske fasst das Tool zusammenhängende positive Zellen zu je einem Gipfelkandidaten zusammen und verwendet die höchste Zelle als Gipfelpunkt.</p>
-<p>Die Gipfelmaske ist keine technische Nebenbedingung, sondern die fachliche Definition: Welche lokalen Maxima, Mindesthöhen, Plateaus oder Ausschlüsse gelten? DGM und Maske müssen dasselbe Rastergitter besitzen. Gipfelpunkte müssen auf gültigen DGM-Zellen liegen; alle Daten benötigen ein projiziertes KBS mit Meter-Einheiten.</p>
+<p>Ein geklickter Gipfelpunkt trifft selten genau die höchste Rasterzelle. Liegt er nur eine Zelle daneben, wäre die Nachbarzelle „höheres Gelände“ in 10 m Entfernung. Das Tool setzt jeden Punkt deshalb auf die höchste Zelle im <strong>Fangradius</strong> und gibt die Verschiebung als <code>snap_m</code> aus; der Ausgabepunkt liegt auf der analysierten Zelle. Ist auch diese Zelle kein lokales Maximum, lautet der Status <code>not_local_maximum</code>: Punkt prüfen oder Fangradius begründet erhöhen.</p>
+<div class="callout callout-style-default callout-note callout-titled" title="Vertiefung: Gipfelmaske statt Punkte">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Hinweis</span>Vertiefung: Gipfelmaske statt Punkte
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-9" class="callout-9-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Statt einzelner Punkte kann das Tool alle positiven Bereiche einer <strong>Gipfelmaske</strong> auswerten; zusammenhängende Zellen werden zu einem Kandidaten mit der höchsten Zelle als Gipfelpunkt zusammengefasst. Wenn beide Eingaben gesetzt sind, haben die Punkte Vorrang.</p>
+<p>Die Maske ist keine technische Nebenbedingung, sondern die fachliche Definition: Welche lokalen Maxima, Mindesthöhen, Plateaus oder Ausschlüsse gelten? Für lokale Maxima braucht ihr einen Maximumfilter, etwa <strong>GRASS → r.neighbors</strong> mit Methode <em>maximum</em> und Fenstergröße 31 (sofern der GRASS-Anbieter in eurer QGIS-Installation verfügbar ist). Anschließend markiert der Rasterrechner die Zellen, deren Höhe dem gefilterten Maximum entspricht. DGM und Maske müssen dasselbe Rastergitter besitzen.</p>
+</div>
+</div>
+</div>
+<p>Alle Daten benötigen ein projiziertes KBS mit Meter-Einheiten; Gipfelpunkte müssen auf gültigen DGM-Zellen liegen.</p>
 </section>
 <section id="ergebnisfelder" class="level2">
 <h2 class="anchored" data-anchor-id="ergebnisfelder">Ergebnisfelder</h2>
@@ -779,8 +800,16 @@ window.Quarto = {
 <td style="text-align: left;">Vom Tool vergebene Kennung; bei Maskeneingabe die einzige Kandidatenkennung</td>
 </tr>
 <tr class="even">
+<td style="text-align: left;"><code>snap_m</code></td>
+<td style="text-align: left;">Verschiebung vom eingegebenen Punkt zur analysierten Gipfelzelle</td>
+</tr>
+<tr class="odd">
 <td style="text-align: left;"><code>peak_h_m</code></td>
 <td style="text-align: left;">Höhe der Gipfelzelle im DGM</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>rand_m</code></td>
+<td style="text-align: left;">Entfernung der Gipfelzelle zum DGM-Rand</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;"><code>dominanz_m</code></td>
@@ -812,7 +841,7 @@ window.Quarto = {
 </tr>
 </tbody>
 </table>
-<p><code>ok</code> bedeutet: Die ermittelte Zusammenhangsfläche berührt den DGM-Rand nicht. Bei <code>edge_relevant</code> ist das Ergebnis nur ausschnittsbezogen. <code>no_higher_terrain_in_dem</code>, <code>outside_dem</code> und <code>nodata_cell</code> sind keine Nullwerte, sondern begründete offene Ergebnisse.</p>
+<p><code>ok</code> bedeutet: Dominanz und Scharte sind innerhalb des DGM bestimmt. <code>edge_relevant</code> bedeutet: Die Fläche des Gipfels knapp oberhalb der Scharte berührt den DGM-Rand, oder der Rand liegt näher als das gefundene höhere Gelände (<code>rand_m</code> &lt; <code>dominanz_m</code>). Außerhalb der Daten könnte dann eine höhere Verbindung oder näheres höheres Gelände liegen; das Ergebnis ist nur ausschnittsbezogen. <code>no_higher_terrain_in_dem</code>, <code>not_local_maximum</code>, <code>outside_dem</code> und <code>nodata_cell</code> sind keine Nullwerte, sondern begründete offene Ergebnisse.</p>
 </section>
 <section id="e-wert-formel-und-kritische-umsetzung" class="level2">
 <h2 class="anchored" data-anchor-id="e-wert-formel-und-kritische-umsetzung">E-Wert: Formel und kritische Umsetzung</h2>
@@ -820,14 +849,14 @@ window.Quarto = {
 <p><span class="math display">\[E=-\frac{\log_2(h/8848)+\log_2(d/100000)+\log_2(p/h)}{3}\]</span></p>
 <p>Für <span class="math inline">\(d &gt; 100\,000\,m\)</span> entfällt dort der Dominanzterm. Das Tool berechnet diese Lesart als <code>e_art_lo</code> bis <code>e_art_hi</code>; das Intervall folgt aus dem Prominenzintervall.</p>
 <p>Der historische Code <code>calculateIndependence.R</code> verzweigt tatsächlich umgekehrt: Unter 100 km lässt er den Dominanzterm weg, oberhalb von 100 km nimmt er ihn auf. Deshalb liefert das Tool zusätzlich <code>e_code_lo</code> bis <code>e_code_hi</code>, aber <strong>nicht</strong> als maßgeblichen Wert. <code>e_note</code> macht die verwendete Regel je Gipfel sichtbar. Bei exakt 100 km ist die Artikelformel nicht explizit; das Tool verwendet dafür die Variante ohne Dominanzterm.</p>
-<p>Damit ist der E-Wert kein verborgenes Endergebnis: Er bleibt an Höhe, Dominanz, Prominenzintervall, Datenrand und die gewählte Formel gebunden.</p>
+<p>Je kleiner E, desto eigenständiger der Gipfel. Damit ist der E-Wert kein verborgenes Endergebnis: Er bleibt an Höhe, Dominanz, Prominenzintervall, Datenrand und die gewählte Formel gebunden.</p>
 </section>
 </section>
 <section id="exkurs-wie-das-qgis-projekt-vorbereitet-wurde" class="level1">
 <h1>Exkurs · Wie das QGIS-Projekt vorbereitet wurde</h1>
 <p>Das QGIS-Projekt enthält <strong>ein Höhenmodell als Datengrundlage</strong> und mehrere daraus abgeleitete Darstellungen und Arbeitslayer. Diese wurden vor dem Seminar vorbereitet, damit die Analyse direkt im Gelände beginnen kann. Schummerung, Höhenlinien und farbiges Relief sind <strong>keine zusätzlichen Höhenmessungen</strong>, sondern unterschiedliche Darstellungen desselben DGM.</p>
 <ol type="1">
-<li><strong>Ausgangsdaten übernehmen.</strong> Verwendet wurde <code>inst/data/demo.asc</code> aus <a href="https://github.com/gisma/perfectPeak/tree/37b49f1"><code>gisma/perfectPeak</code> (Commit <code>37b49f1</code>)</a>. Das ASCII-Höhenmodell enthält <strong>324 × 360 Rasterzellen</strong> mit <strong>10 m Zellweite</strong>. Es wurde als GeoTIFF (<code>DGM_10m – Analysegrundlage</code>) bereitgestellt. Weil die ASCII-Datei kein eigenes Koordinatensystem mitliefert, wurde ihr entsprechend der Repository-Dokumentation <strong>EPSG:31254 (MGI / Austria GK West)</strong> zugewiesen – <strong>ohne</strong> die Rasterzellen neu zu projizieren oder ihre Höhenwerte neu zu berechnen.</li>
+<li><strong>Ausgangsdaten übernehmen.</strong> Verwendet wurde <code>inst/data/demo.asc</code> aus <a href="https://github.com/gisma/perfectPeak/tree/37b49f1"><code>gisma/perfectPeak</code> (Commit <code>37b49f1</code>)</a>. Das ASCII-Höhenmodell enthält <strong>324 × 360 Rasterzellen</strong> mit <strong>10 m Zellweite</strong>. Es wurde als GeoTIFF (Layer <code>dgm_10m</code>) bereitgestellt. Weil die ASCII-Datei kein eigenes Koordinatensystem mitliefert, wurde ihr entsprechend der Repository-Dokumentation <strong>EPSG:31254 (MGI / Austria GK West)</strong> zugewiesen – <strong>ohne</strong> die Rasterzellen neu zu projizieren oder ihre Höhenwerte neu zu berechnen.</li>
 <li><strong>Schummerung ableiten.</strong> Aus den Höhenunterschieden benachbarter DGM-Zellen wurde eine künstlich beleuchtete Geländedarstellung erzeugt. Die Beleuchtung kommt aus <strong>315° (Nordwest)</strong> bei einem <strong>Höhenwinkel von 45°</strong>. Dadurch treten Grate, Hänge und Täler deutlicher hervor. In QGIS lässt sich das über die <strong>Verarbeitungswerkzeugkiste → GDAL → Rasteranalyse → Schummerung</strong> nachvollziehen. Die hellen und dunklen Werte zeigen Beleuchtung, <strong>nicht</strong> Gelände- oder Schartenhöhen.</li>
 <li><strong>Höhenlinien erzeugen.</strong> Aus dem DGM wurden Linien im <strong>25-m-Höhenabstand</strong> abgeleitet. Das entsprechende QGIS-Werkzeug heißt <strong>GDAL → Rasterextraktion → Höhenlinien (Contour)</strong>; dort ist das Intervall <strong>25</strong> einzutragen. Die Linien verbinden interpolierte Stellen gleicher Höhe und sind ein <strong>Vektorprodukt aus demselben Raster</strong>, keine unabhängig vermessenen Höhenlinien.</li>
 <li><strong>Farbiges Relief herstellen.</strong> Höhenfarben und Schummerung wurden für den Layer <strong>„Relief – Höhenfarbe mit Schummerung“</strong> zu einer gut lesbaren Orientierungskarte kombiniert. Dieser Layer ist bereits als Bild gerendert: Er dient dem Erkennen von Geländeformen, <strong>nicht</strong> dem Auslesen oder Berechnen von Höhen. Für alle Zahlenwerte bleibt das DGM maßgeblich. Die konkrete Farbskala und Überblendungsmethode sind in der vorliegenden Beschreibung nicht dokumentiert.</li>
@@ -866,8 +895,8 @@ window.Quarto = {
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;"><strong>DGM_10m – Analysegrundlage</strong></td>
-<td style="text-align: left;">Höhenwerte im GeoTIFF, 10-m-Raster; zentrale Berechnungsgrundlage</td>
+<td style="text-align: left;"><strong>dgm_10m</strong></td>
+<td style="text-align: left;">Höhenwerte im GeoTIFF, 10-m-Raster; zentrale Analysegrundlage</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;"><strong>Relief – Höhenfarbe mit Schummerung</strong></td>
@@ -1331,8 +1360,8 @@ window.Quarto = {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../../../content/perfekter-gipfel/slides/03-technische-umsetzung.html" class="pagination-link" aria-label="Block 3 – Technische Umsetzung">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Block 3 – Technische Umsetzung</span>
+      <a href="../../../content/perfekter-gipfel/slides/03-technische-umsetzung.html" class="pagination-link" aria-label="Teil 3 – QGIS-Workflow">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Teil 3 – QGIS-Workflow</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
@@ -1346,4 +1375,4 @@ window.Quarto = {
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/gisma-courses/gc-geoinfo2.0/edit/master/content/perfekter-gipfel/arbeitsblatt/arbeitsauftrag.qmd" class="toc-action"><i class="bi bi-github"></i>Seite editieren</a></li><li><a href="https://github.com/gisma-courses/gc-geoinfo2.0/issues/new" class="toc-action"><i class="bi empty"></i>Problem melden</a></li></ul></div></div></div></footer></body></html>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/gisma-courses/gc-geoinfo2.0/edit/main/content/perfekter-gipfel/arbeitsblatt/arbeitsauftrag.qmd" class="toc-action"><i class="bi bi-github"></i>Seite editieren</a></li><li><a href="https://github.com/gisma-courses/gc-geoinfo2.0/issues/new" class="toc-action"><i class="bi empty"></i>Problem melden</a></li></ul></div></div></div></footer></body></html>
