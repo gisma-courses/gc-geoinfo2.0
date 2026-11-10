@@ -853,6 +853,17 @@
     ]
   },
   {
+    "objectID": "content/perfekter-gipfel/resume.html#wie-finde-ich-ein-verfahren-das-ich-noch-nicht-kenne",
+    "href": "content/perfekter-gipfel/resume.html#wie-finde-ich-ein-verfahren-das-ich-noch-nicht-kenne",
+    "title": "Resume: Der perfekte Gipfel",
+    "section": "Wie finde ich ein Verfahren, das ich noch nicht kenne?",
+    "text": "Wie finde ich ein Verfahren, das ich noch nicht kenne?\nIm Gipfelbeispiel waren die Werkzeuge weitgehend vorgegeben. Bei einer neuen Fragestellung müssen Sie diese erst finden. Die entscheidende Vorbereitung haben Sie bereits gelernt: Zerlegen Sie Ihre Frage in möglichst einfache räumliche Operationen, bevor Sie nach Software suchen.\nFür die Dominanz benötigten wir beispielsweise eine Höhenmaske und die Entfernung zum nächsten höheren Rasterfeld. Für die Prominenz reichte das nicht: Hier mussten wir untersuchen, bei welcher Höhenstufe zuvor getrennte Flächen miteinander verbunden werden.\nDer Weg zu einem geeigneten Verfahren:\n\nOperation beschreiben: Welche Eingaben liegen vor? Welche räumliche Beziehung soll berechnet werden? Welche Ausgabe wird benötigt?\nVerfahren recherchieren: Suchen Sie nach der Operation und ihren algorithmischen Bezeichnungen, nicht nur nach einem QGIS-Menüeintrag. Nutzen Sie Dokumentationen, Anwendungsbeispiele und Tutorials.\nEinfachste ausreichende Umsetzung wählen: Prüfen Sie zunächst vorhandene Standardwerkzeuge und deren Kombinationen. Ein eigenes Skript ist sinnvoll, wenn die benötigte Operation damit nicht angemessen realisiert werden kann.\nAn einem überschaubaren Fall testen: Kontrollieren Sie, ob das Verfahren wirklich die gesuchte Beziehung berechnet – einschließlich Nachbarschaft, Einheiten und Datenrändern.\n\nKI kann bei der Suche helfen, insbesondere wenn Ihnen der Fachbegriff für einen benötigten Algorithmus fehlt. Lassen Sie sich nicht einfach einen vollständigen Workflow erzeugen, sondern zunächst mögliche Verfahren mit Dokumentation, Voraussetzungen und Grenzen nennen.\n\n\n\n\n\n\nTippKI als Recherchehilfe: Vom Problem zum Verfahren\n\n\n\n\n\nEin möglicher Arbeitsauftrag an einen KI-Assistenten:\n\nIch möchte folgende räumliche Operation durchführen: [Operation mit Eingaben und gewünschter Ausgabe beschreiben].\nWelche etablierten algorithmischen Verfahren lösen dieses Problem?\nNenne zunächst die Fachbegriffe, unter denen ich dazu Literatur, Dokumentation oder Tutorials finde.\nZeige anschließend höchstens drei Umsetzungswege in QGIS, GDAL, GRASS oder Python – vom einfachsten vorhandenen Werkzeug bis zur eigenen Implementierung.\nGib für jeden Weg die benötigten Eingaben, die wesentlichen Annahmen und einen Link zur offiziellen Dokumentation oder einem nachvollziehbaren Tutorial an.\nUnterscheide ausdrücklich zwischen Verfahren, die das Problem vollständig lösen, und solchen, die nur einen Teilschritt abdecken.\nSchlage einen kleinen Testfall vor, dessen richtiges Ergebnis ich unabhängig bestimmen kann.\n\nEntscheidend: Die gefundene Lösung muss nicht besonders aufwendig sein. Wählen Sie das einfachste Verfahren, das die benötigte Aussage unter nachvollziehbaren Annahmen ermöglicht.",
+    "crumbs": [
+      "Der perfekte Gipfel",
+      "Resume und Ausblick"
+    ]
+  },
+  {
     "objectID": "content/perfekter-gipfel/resume.html#derselbe-ablauf-in-jedem-themenblock",
     "href": "content/perfekter-gipfel/resume.html#derselbe-ablauf-in-jedem-themenblock",
     "title": "Resume: Der perfekte Gipfel",

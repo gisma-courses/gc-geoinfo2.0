@@ -56,6 +56,43 @@ Ohne QGIS ließe sich keine dieser Fragen beantworten. Die Bedienung ist Vorauss
 
 Wer weiß, **wozu** ein Werkzeug eingesetzt wird, kann es sicher bedienen, Fehler erkennen – und es bei Bedarf durch ein anderes ersetzen. Die Methode bleibt dieselbe.
 
+## Wie finde ich ein Verfahren, das ich noch nicht kenne?
+
+Im Gipfelbeispiel waren die Werkzeuge weitgehend vorgegeben. Bei einer neuen Fragestellung müssen Sie diese erst finden. Die entscheidende Vorbereitung haben Sie bereits gelernt: **Zerlegen Sie Ihre Frage in möglichst einfache räumliche Operationen, bevor Sie nach Software suchen.**
+
+Für die Dominanz benötigten wir beispielsweise eine Höhenmaske und die Entfernung zum nächsten höheren Rasterfeld. Für die Prominenz reichte das nicht: Hier mussten wir untersuchen, bei welcher Höhenstufe zuvor getrennte Flächen miteinander verbunden werden.
+
+Der Weg zu einem geeigneten Verfahren:
+
+1. **Operation beschreiben:** Welche Eingaben liegen vor? Welche räumliche Beziehung soll berechnet werden? Welche Ausgabe wird benötigt?
+2. **Verfahren recherchieren:** Suchen Sie nach der Operation und ihren algorithmischen Bezeichnungen, nicht nur nach einem QGIS-Menüeintrag. Nutzen Sie Dokumentationen, Anwendungsbeispiele und Tutorials.
+3. **Einfachste ausreichende Umsetzung wählen:** Prüfen Sie zunächst vorhandene Standardwerkzeuge und deren Kombinationen. Ein eigenes Skript ist sinnvoll, wenn die benötigte Operation damit nicht angemessen realisiert werden kann.
+4. **An einem überschaubaren Fall testen:** Kontrollieren Sie, ob das Verfahren wirklich die gesuchte Beziehung berechnet – einschließlich Nachbarschaft, Einheiten und Datenrändern.
+
+**KI kann bei der Suche helfen**, insbesondere wenn Ihnen der Fachbegriff für einen benötigten Algorithmus fehlt. Lassen Sie sich nicht einfach einen vollständigen Workflow erzeugen, sondern zunächst mögliche Verfahren mit Dokumentation, Voraussetzungen und Grenzen nennen.
+
+::: {.callout-tip collapse="true"}
+## KI als Recherchehilfe: Vom Problem zum Verfahren
+
+Ein möglicher Arbeitsauftrag an einen KI-Assistenten:
+
+> Ich möchte folgende räumliche Operation durchführen: **[Operation mit Eingaben und gewünschter Ausgabe beschreiben]**.
+>
+> Welche etablierten algorithmischen Verfahren lösen dieses Problem?
+>
+> Nenne zunächst die Fachbegriffe, unter denen ich dazu Literatur, Dokumentation oder Tutorials finde.
+>
+> Zeige anschließend höchstens drei Umsetzungswege in QGIS, GDAL, GRASS oder Python – vom einfachsten vorhandenen Werkzeug bis zur eigenen Implementierung.
+>
+> Gib für jeden Weg die benötigten Eingaben, die wesentlichen Annahmen und einen Link zur offiziellen Dokumentation oder einem nachvollziehbaren Tutorial an.
+>
+> Unterscheide ausdrücklich zwischen Verfahren, die das Problem vollständig lösen, und solchen, die nur einen Teilschritt abdecken.
+>
+> Schlage einen kleinen Testfall vor, dessen richtiges Ergebnis ich unabhängig bestimmen kann.
+
+**Entscheidend:** Die gefundene Lösung muss nicht besonders aufwendig sein. Wählen Sie das einfachste Verfahren, das die benötigte Aussage unter nachvollziehbaren Annahmen ermöglicht.
+:::
+
 ## Derselbe Ablauf in jedem Themenblock
 
 Die Kursübersicht beschreibt für jeden Block drei Schritte. Beim Gipfel waren das:
