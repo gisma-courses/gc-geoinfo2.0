@@ -101,6 +101,35 @@ ul.task-list li input[type="checkbox"] {
 
 </style>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../../css/styles.css">
 <meta property="og:title" content="Resume: Der perfekte Gipfel – Grundlagenkurs GI-S (QGIS)">
@@ -397,6 +426,55 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="das-grundmuster-jeder-räumlichen-analyse">Das Grundmuster jeder räumlichen Analyse</h2>
 <p><strong>Alltags- oder Fachbegriff</strong> → <strong>Kriterien</strong> → <strong>Modellannahmen</strong> → <strong>Datenmodell</strong> → <strong>GIS-Operationen</strong> → <strong>Ergebnis</strong> → <strong>Prüfung und Geltungsgrenze</strong></p>
 <p>„Der perfekte Gipfel“ ist kein Sonderfall. Das Beispiel verdichtet den gesamten Analyseprozess: Eine zunächst sprachliche Bewertung wird in explizite Entscheidungen übersetzt. Erst danach kann ein GIS rechnen. Das Resultat ist daher nie nur eine Zahl, sondern die nachvollziehbare Verbindung von Fachbegriff, Annahmen, Daten und Methode.</p>
+</section>
+<section id="was-davon-ist-grundlagenkurs-geoinformatik" class="level2">
+<h2 class="anchored" data-anchor-id="was-davon-ist-grundlagenkurs-geoinformatik">Was davon ist Grundlagenkurs Geoinformatik?</h2>
+<p>Die <a href="../../index.html">Kursübersicht</a> nennt das Ziel: verstehen, wie aus geographischen Fragen räumliche Modelle werden und wie die Wahl von Daten, Maßstab, Stellvertretergrößen und Parametern die Ergebnisse bestimmt. Der Gipfel zeigt das im Kleinen – und nichts davon ist an ein bestimmtes Programm gebunden.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Kursziel</th>
+<th style="text-align: left;">Am perfekten Gipfel</th>
+<th style="text-align: left;">Übertragbar auf jede GI-Analyse</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>Abstraktion</strong></td>
+<td style="text-align: left;">„Eigenständigkeit“ wird zu Höhe, Dominanz, Prominenz und E-Formel. Was überhaupt als Gipfel gilt, legt eure Gipfelregel fest.</td>
+<td style="text-align: left;">Ein Fachbegriff muss in prüfbare Kriterien übersetzt werden, bevor gerechnet werden kann.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Realität und Repräsentation</strong></td>
+<td style="text-align: left;">Das DGM ist nicht das Gebirge: 10-m-Zellen, Zellzentren, 4er- oder 8er-Nachbarschaft und ein Ausschnitt mit Rand.</td>
+<td style="text-align: left;">Jedes Datenmodell lässt etwas weg; das Ergebnis gilt zunächst für die Repräsentation.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>Datenbeschaffung und Datenkritik</strong></td>
+<td style="text-align: left;">Herkunft (Land Tirol über <code>perfectPeak</code>), Lizenz, nachträglich zugewiesenes KBS, unbekannte Höhengenauigkeit und Aufnahmezeit.</td>
+<td style="text-align: left;">Wissen, woher Daten stammen – und was über sie nicht bekannt ist.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Methode</strong></td>
+<td style="text-align: left;">Höhenmaske, Distanz, Suche über Höhenstufen mit Abbruchregel. Artikel und historischer Code setzen dabei unterschiedliche Regeln um.</td>
+<td style="text-align: left;">Eine Methode ist eine begründete Regel, kein Werkzeugname.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>Transparenz und Reproduzierbarkeit</strong></td>
+<td style="text-align: left;">Gespeichertes Projekt, dokumentierte Parameter, Status jedes Werts und Gegenprüfung durch eine andere Gruppe.</td>
+<td style="text-align: left;">Andere müssen den Weg nachvollziehen und das Ergebnis wiederholen können.</td>
+</tr>
+</tbody>
+</table>
+<p>Wissenschaftliches Arbeiten mit Geodaten heißt deshalb: fachliche Frage und methodische Umsetzung <strong>miteinander verschränken</strong>. Die Fachfrage bestimmt, welche Daten und Regeln nötig sind; die Methode zeigt, welche Antwort sich daraus tatsächlich begründen lässt.</p>
+</section>
+<section id="im-einzelnen" class="level2">
+<h2 class="anchored" data-anchor-id="im-einzelnen">Im Einzelnen</h2>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 25%">
@@ -451,6 +529,63 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 </tbody>
 </table>
+</section>
+<section id="und-die-werkzeuge" class="level2">
+<h2 class="anchored" data-anchor-id="und-die-werkzeuge">Und die Werkzeuge?</h2>
+<p>Ohne QGIS ließe sich keine dieser Fragen beantworten. Die Bedienung ist Voraussetzung – aber nicht das Ziel. Jede Fertigkeit diente einer fachlichen Entscheidung:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Fertigkeit in QGIS</th>
+<th style="text-align: left;">Wozu im Gipfelbeispiel</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Daten laden, KBS und Rasterweite prüfen</td>
+<td style="text-align: left;">wissen, worauf sich jede Zahl bezieht</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Digitalisieren, Attributformular</td>
+<td style="text-align: left;">Hypothesen räumlich festhalten und begründen</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Objekte abfragen, Rasterwerte abtasten</td>
+<td style="text-align: left;">Höhe und Lage aus derselben DGM-Zelle</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Rasterrechner</td>
+<td style="text-align: left;">das Kriterium „höher als <span class="math inline">\(h\)</span>“ als Maske</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">GDAL Proximity</td>
+<td style="text-align: left;">Dominanz als Distanz zum höheren Gelände</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Processing-Skript</td>
+<td style="text-align: left;">dieselbe Regel für viele Gipfel wiederholen</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Projekt mit relativen Pfaden speichern</td>
+<td style="text-align: left;">Nachvollziehbarkeit und Abgabe</td>
+</tr>
+</tbody>
+</table>
+<p>Wer weiß, <strong>wozu</strong> ein Werkzeug eingesetzt wird, kann es sicher bedienen, Fehler erkennen – und es bei Bedarf durch ein anderes ersetzen. Die Methode bleibt dieselbe.</p>
+</section>
+<section id="derselbe-ablauf-in-jedem-themenblock" class="level2">
+<h2 class="anchored" data-anchor-id="derselbe-ablauf-in-jedem-themenblock">Derselbe Ablauf in jedem Themenblock</h2>
+<p>Die Kursübersicht beschreibt für jeden Block drei Schritte. Beim Gipfel waren das:</p>
+<ol type="1">
+<li><strong>Frage und Modell</strong> – Teil 1: vom Bewertungsbegriff zu Kriterien und Modellannahmen.</li>
+<li><strong>Umsetzung in QGIS</strong> – Arbeitsblatt und Teil 3: Hypothese, Maske, Distanz, Höhenstufen.</li>
+<li><strong>Vergleich und Einordnung</strong> – Teil 2 und Schritte 5–6: Gegenprüfung, Status, Artikel gegen Code.</li>
+</ol>
+<p>Grünzugang und Raumkonstruktion folgen demselben Muster mit anderen Begriffen, Daten und Werkzeugen. Portfolio und Klausur prüfen genau diese Verbindung: nicht, ob ein Werkzeug bedient wurde, sondern ob Annahmen, Daten, Methode und Aussagegrenzen begründet sind.</p>
 </section>
 <section id="fazit" class="level2">
 <h2 class="anchored" data-anchor-id="fazit">Fazit</h2>
