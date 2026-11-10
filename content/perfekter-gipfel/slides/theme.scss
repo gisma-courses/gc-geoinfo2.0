@@ -6,6 +6,21 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto+Mono|JetBrains+Mono&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap");
 
+// Shared course-slide layout for the Perfect Peak sequence
+.reveal .slides section { text-align: left; }
+.reveal h2 { letter-spacing: -0.02em; }
+.reveal .big { font-size: 1.22em; line-height: 1.32; }
+.reveal .small { font-size: .72em; color: #475569; }
+.reveal .fullfig { display: block; margin: 0 auto; width: 100%; max-height: 78vh; object-fit: contain; }
+.reveal .tallfig { display: block; margin: 0 auto; max-width: 100%; max-height: 78vh; object-fit: contain; }
+.reveal .process, .reveal .framebox { padding: .7em .9em; border-radius: 14px; background: #f6fbf7; border: 1.5px solid #cbd5e1; }
+.reveal .process { font-size: 1.1em; line-height: 1.45; border-color: #1f6f5b; }
+.reveal .keyline { border-left: 7px solid #1f6f5b; padding-left: .8em; margin-top: .7em; }
+.reveal .docgrid { display: grid; grid-template-columns: 1fr 1fr; gap: .65em; font-size: .84em; }
+.reveal .doccard { border: 1.5px solid #cbd5e1; border-radius: 12px; background: #f8fafc; padding: .55em .7em; }
+.reveal .doccard strong { color: #0b2b68; }
+.reveal table { font-size: .78em; width: 100%; }
+
 $font-family-sans-serif: "Roboto", "Fira Sans", "Droid Serif", serif !default;
 $font-family-monospace: "JetBrains Mono", "Fira Code", monospace;
 $presentation-font-size-root: 32px;

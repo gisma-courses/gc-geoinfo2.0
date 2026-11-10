@@ -1,387 +1,176 @@
 ---
 title: "Der perfekte Gipfel"
-subtitle: "Problemlösung dokumentieren: von der Idee zum nachvollziehbaren GIS-Workflow"
+subtitle: "Vom Bewertungsbegriff zum prüfbaren Modell"
 author: Chris Reudenbach
+lang: de
 format:
   revealjs:
     theme: [theme.scss]
     toc: false
-    toc-depth: 2
     chalkboard: true
     menu: false
     slide-number: true
 lightbox: true
 bibliography: ../../../assets/geoinfo.bib
-lang: de
 ---
 
-```{=html}
-<style>
-.reveal .slides section { text-align: left; }
-.reveal h2 { letter-spacing: -0.02em; }
-.reveal .big { font-size: 1.30em; line-height: 1.25; }
-.reveal .small { font-size: .72em; color: #475569; }
-.reveal .center { text-align: center; }
-.reveal .fullfig {
-  display: block;
-  margin: 0 auto;
-  width: 100%;
-  max-height: 82vh;
-  object-fit: contain;
-}
-.reveal .tallfig {
-  display: block;
-  margin: 0 auto;
-  width: auto;
-  max-width: 100%;
-  max-height: 82vh;
-  object-fit: contain;
-}
-.reveal .overlay-note {
-  position: absolute;
-  left: 4%;
-  bottom: 5%;
-  width: 54%;
-  background: rgba(255,255,255,.93);
-  border-left: 8px solid #2e7d32;
-  padding: .6em .8em;
-  font-size: .72em;
-  box-shadow: 0 8px 28px rgba(0,0,0,.18);
-}
-.reveal .overlay-note.right { left: auto; right: 4%; }
-.reveal .overlay-note.top { bottom: auto; top: 11%; }
-.reveal .overlay-note.wide { width: 74%; }
-.reveal .keyline {
-  border-left: 8px solid #1f6f5b;
-  padding-left: .8em;
-  margin-top: .8em;
-}
-.reveal .process {
-  font-size: 1.16em;
-  line-height: 1.55;
-  padding: .7em .9em;
-  border: 2px solid #1f6f5b;
-  border-radius: 16px;
-  background: #f6fbf7;
-}
-.reveal .framebox {
-  padding: .75em .9em;
-  border-radius: 16px;
-  background: #f8fafc;
-  border: 1.5px solid #cbd5e1;
-}
-.reveal .docgrid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: .65em;
-  font-size: .84em;
-}
-.reveal .doccard {
-  border: 1.5px solid #cbd5e1;
-  border-radius: 14px;
-  background: #f8fafc;
-  padding: .55em .7em;
-}
-.reveal .doccard strong { color: #0b2b68; }
-.reveal code { font-size: .88em; }
-</style>
-```
+## Worum es geht
 
-## Worum es hier geht
-
-Der „perfekte Gipfel“ ist ein gutes Beispiel für ein GIS-Projekt, weil die Frage typisch qualitativ ist, jedoch quasi-naturwissenschaftlich begründet erscheint.
-
-::: {.fragment .process}
-Aus einer Fragestellung wird erst dann wissenschaftlich belastbare Studie, wenn dokumentiert ist, wie sie in Kriterien, Daten, Operationen und Ergebnisgrenzen übersetzt wurde.
+::: {.process}
+**Begriff** → **Kriterien** → **Modellannahmen** → **Daten und Operationen** → **Ergebnis mit Aussagegrenze**
 :::
 
-## Dokumentationsrahmen
+Der „perfekte Gipfel“ ist kein Sonderfall. Er zeigt das Grundmuster jeder GIS-Analyse: Ein fachlicher Begriff wird erst durch explizite Entscheidungen berechenbar.
 
-Für jedes (GI)-Projekt muss die gleiche Kette eingehalten werden:
-
-```text
-Problem → Projektfrage → Kriterium → Datenbasis → Operation → Ergebnislayer → Aussagegrenze
-```
-
-## Ausgangspunkt: Was ist ein „perfekter Gipfel“?
+## Ausgangspunkt: eine anschauliche Frage
 
 ::: {layout-align="center"}
 [![](../../../assets/images/pp/agis-workflow1.png){.tallfig}](../../../assets/pdf/DAV_Panorama_2_2012.pdf)
 :::
 
-::: {.fragment .overlay-note .wide}
-Die Ausgangsidee ist ein *Qualitätsurteil*. Vor der methodischen, technischen GIS-Umsetzung muss zwingend geklärt werden, welche fachlichen und räumlichen Eigenschaften dieses Urteil reproduzierbar bestimmen sollen.
+::: {.keyline}
+Die Frage lautet nicht: „Welcher Gipfel sieht wichtig aus?“ Sondern: **Welche Eigenschaften sollen Eigenständigkeit beschreiben – und wie lassen sie sich prüfen?**
 :::
 
-## Von der Idee zur Projektfrage
-
-Was ist beim „perfekten Gipfel“ die zu bearbeitende Frage und was sind messbare Parameter.
-
-::: {.fragment .process}
-Extrahiere aus dem Artikel die Definitionen die benannt werden: Gipfel, Höhe, Dominanz, Prominenz, Eigenständigkeit...?
-:::
-
-::: {.fragment .keyline}
-Das ist der erste dokumentierbare Schritt: Die Alltagsformulierung wird in eine räumliche Analysefrage übersetzt.
-:::
-
-## Kriterien statt Bauchgefühl
+## Vom Begriff zu Kriterien
 
 ::: {layout-ncol="2" layout-valign="center"}
-
 ![](../../../assets/images/pp/agis-concept1.png){.tallfig}
 
 ::: {.framebox}
-Aus der Analyse entstehen Kriterien:
+**Benötigte Größen**
 
-```text
-Höhe 
-Position
-Dominanz
-Prominenz 
-Schartenhöhe
-Eigenständigkeit
-```
-
-Nicht alle Kriterien sind direkt als Daten aus dem DGM Verfügbar. Einige müssen abgeleitet werden.
+- Gipfelhöhe $h$
+- Dominanz $d$
+- maßgebliche Schartenhöhe
+- Prominenz $p$
+- Eigenständigkeitswert $E$
+:::
 :::
 
+::: {.small}
+Nicht jede Größe liegt direkt im DGM vor. Dominanz, Scharte und Prominenz werden aus räumlichen Beziehungen abgeleitet.
 :::
 
-::: {.fragment .overlay-note .wide}
-Für jedes Kriterium muss festgehalten werden, welche Datenbasis und welche Ableitungslogik verwendet wird.
-:::
-
-## Formale Definition als Entscheidung
+## Die E-Formel ist eine Modellentscheidung
 
 ![](../../../assets/images/pp/formel.png){.fullfig}
 
-::: {.fragment .overlay-note .right}
-Eine Formel dokumentiert, welche Eigenschaften in die Bewertung eingehen und wie sie gewichtet bzw. verrechnet werden. Formeln sind kritisierbar!
+::: {.keyline}
+Die Formel setzt voraus, dass $h$, $d$ und $p$ bereits fachlich begründet bestimmt wurden. Sie ersetzt diese Entscheidungen nicht.
+:::
+
+## Was der Artikel offen lässt
+
+::: {.docgrid}
+::: {.doccard}
+**Gipfel**
+
+Welche lokalen Maxima oder Plateaus zählen?
+:::
+::: {.doccard}
+**Höheres Gelände**
+
+Ab welchem Höhenunterschied ist es relevant?
+:::
+::: {.doccard}
+**Scharte**
+
+Wie wird die beste Verbindung gesucht und wann gilt sie als gefunden?
+:::
+::: {.doccard}
+**Geltung**
+
+Wann reicht der DGM-Ausschnitt für eine belastbare Aussage?
+:::
 :::
 
 ## Modellbildung dokumentieren
 
 ::: {layout-ncol="2" layout-valign="center"}
-
 ![](../../../assets/images/pp/agis-concept2.png){.fullfig}
 
 ::: {.framebox}
-Als Methodendokumentation genügt die (technische) Formel nicht.
+**Dokumentiert werden:**
 
-Dokumentiert werden muss:
-
-```text
-Objekte: Gipfelpunkte
-Fläche: Höhenmodell
-Beziehungen: Distanz, Trennung, Verbindung
-Produkt: Prominenz / Eigenständigkeit
-```
+- Gipfelmaske und Plateau-Regel
+- DGM, Rastergitter und KBS
+- Nachbarschaft und Höhentoleranz
+- Suchregel und Datenrand
+:::
 :::
 
-:::
-
-## Problemlösung als Arbeitsprotokoll
+## Von der Frage zum QGIS-Workflow
 
 ![](../../../assets/images/pp/slide1png.png){.fullfig}
 
-::: {.fragment .overlay-note}
-Welche Teilprobleme entstehen, welche Entscheidungen werden getroffen, welche Zwischenergebnisse müssen gesichert werden?
+::: {.keyline}
+Nicht die Bedienungsschritte sind der Workflow. Der Workflow beschreibt, **welche fachliche Entscheidung** mit welchem Ergebnislayer geprüft wird.
 :::
 
-## Vom Problem zu Arbeitspaketen
+## Arbeitspakete statt Werkzeugliste
 
 ![](../../../assets/images/pp/slide2png.png){.fullfig}
 
-::: {.fragment .overlay-note .right}
-Nicht alles muss automatisiert werden. Wichtig ist, dass die relevanten Arbeitspakete benannt werden: Datenprüfung, Kriteriendefinition, Operation, Kontrolle, Ergebnisinterpretation.
+::: {.process}
+1. Gipfelkandidaten definieren · 2. höheres Gelände bestimmen · 3. Distanz prüfen · 4. Scharte eingrenzen · 5. Ergebnis und Grenze dokumentieren
 :::
 
-## Umsetzung dokumentieren: interaktiv
+## Umsetzung kann interaktiv beginnen
 
 ![](../../../assets/images/pp/slide3.png){.fullfig}
 
-::: {.fragment .overlay-note}
-Interaktive Arbeit ist zulässig. Dokumentiert werden aber die stabilen Schritte: Werkzeug, Eingangsdaten, zentrale Parameter, Ausgabe und fachlicher Zweck.
-:::
+Die lokale Hypothese wird als Linie und Schartenpunkt gespeichert. Sie ist ein prüfbarer Start, kein endgültiger Nachweis.
 
-## Umsetzung dokumentieren: reproduzierbare Befehle
+## … und reproduzierbar werden
 
 ![](../../../assets/images/pp/slide4.png){.fullfig}
 
-::: {.fragment .overlay-note .right}
-Kommandozeilen oder kopierte Processing-Aufrufe sind kein Programmierziel. Sie sind ein Mittel, um Parameter und Dateipfade eindeutig zu sichern.
-:::
+Rastermaske, Proximity und Höhenstufen machen die einzelnen Prüfungen wiederholbar. Das Skript automatisiert nur diese klar definierten Schritte.
 
-## Umsetzung dokumentieren: Ablauf statt Code
+## Nicht Code, sondern eine nachvollziehbare Regel
 
 ![](../../../assets/images/pp/slide5.png){.fullfig}
 
-::: {.fragment .overlay-note}
-Wenn Skripte verwendet werden, dann als dokumentierte Ablaufbeschreibung. Entscheidend bleibt: Welche Entscheidung wird umgesetzt und welcher Ergebnislayer entsteht?
+::: {.keyline}
+Eine gute Umsetzung zeigt Eingaben, Parameter, Ergebnis und Abbruchregel – unabhängig davon, ob sie geklickt, modelliert oder programmiert wurde.
 :::
 
 ## Übersetzung in GIS-Anforderungen
 
 ![](../../../assets/images/pp/slide6.png){.fullfig}
 
-::: {.fragment .overlay-note .wide}
-Hier liegt der Kern der Dokumentation: Fachliche Begriffe werden in Datenstrukturen, Raster-/Vektoroperationen, Parameter und Zwischenergebnisse übersetzt.
-:::
+| Fachliche Frage | Technische Übersetzung |
+|:--|:--|
+| Was zählt als Gipfel? | Gipfelmaske oder Punktlayer |
+| Wo liegt höheres Gelände? | Höhenmaske über $h$ |
+| Wie weit ist es entfernt? | Distanzraster / Proximity |
+| Wo liegt die Scharte? | Zusammenhang über Höhenstufen |
 
-## Dokumentationsschema für einen Hauptschritt
-
-Ein Hauptschritt sollte knapp, aber vollständig dokumentiert werden.
-
-::: {.docgrid}
-
-::: {.doccard}
-<strong>Zweck</strong><br>
-Welches Kriterium oder Teilproblem wird bearbeitet?
-:::
-
-::: {.doccard}
-<strong>Datenbasis</strong><br>
-Welche Eingangsdaten werden verwendet?
-:::
-
-::: {.doccard}
-<strong>Operation</strong><br>
-Welche GIS-Operation wird eingesetzt?
-:::
-
-::: {.doccard}
-<strong>Parameter</strong><br>
-Welche Schwellenwerte, Toleranzen oder Abbruchkriterien gelten?
-:::
-
-::: {.doccard}
-<strong>Ausgabe</strong><br>
-Welcher Layer oder Wert entsteht?
-:::
-
-::: {.doccard}
-<strong>Grenze</strong><br>
-Wovon hängt die Aussagekraft ab?
-:::
-
-:::
-
-## Wie soll das gehen?
-
-![](../../../assets/images/pp/slide7.png){.fullfig}
-
-::: {.fragment .overlay-note .right}
-Ein komplexes Problem wird dokumentierbar, wenn es in prüfbare Zwischenschritte zerlegt wird. Die Dokumentation folgt dieser Zerlegung.
-:::
-
-## Beispiel: Prominenz durch Fluten denken
+## Prominenz durch Fluten denken
 
 ![](../../../assets/images/pp/flood0.png){.fullfig}
 
-::: {.fragment .overlay-note .wide}
-Dokumentationspunkt: Die fachliche Idee lautet nicht „wir benutzen ein Tool“, sondern: Wir variieren ein Flutniveau und prüfen, wann der aktuelle Gipfel mit anderen Gipfeln verbunden wird.
-:::
+Bei hoher Schwelle sind Gipfelbereiche getrennt. Mit sinkender Schwelle wachsen die Zusammenhangsflächen.
 
-## Suchstrategie festhalten
+## Die maßgebliche Verbindung suchen
 
 ![](../../../assets/images/pp/flood1.png){.fullfig}
 
-::: {.fragment .overlay-note}
-Der naive Weg wäre schrittweises Fluten. Die dokumentierte Verbesserung ist eine Suchstrategie, die den relevanten Höhenbereich systematisch eingrenzt.
-:::
+Gesucht ist nicht der erstbeste Grat, sondern die **höchste** Schwelle, bei der die Fläche des Zielgipfels höheres Gelände erreicht.
 
-## Abbruchkriterium dokumentieren
+## Abbruch und Aussagegrenze
 
 ![](../../../assets/images/pp/flood2.png){.fullfig}
 
-::: {.fragment .overlay-note .right}
-Für die Aussagekraft ist nicht nur das Ergebnis wichtig, sondern auch: Wann wurde die Suche beendet und welche Genauigkeit wurde akzeptiert?
+::: {.keyline}
+Dokumentiert werden die letzte getrennte und die erste verbundene Stufe. Berührt die Fläche den DGM-Rand, bleibt das Ergebnis ausschnittsbezogen.
 :::
 
-## Beispiel einer Methodennotiz
-
-```text
-Fragestellung:
-Wie eigenständig ist ein Gipfel im Verhältnis zu benachbarten Gipfeln?
-
-Kriterium:
-Prominenz / Schartenhöhe.
-
-Datenbasis:
-Digitales Höhenmodell und Gipfelpunkte.
-
-Operationelle Idee:
-Flutniveau variieren und Verbindung der Gipfeleinheiten prüfen.
-
-Suchstrategie:
-Höhenbereich durch binäre Suche eingrenzen.
-
-Abbruchkriterium:
-Suche endet bei definierter Höhentoleranz.
-
-Aussagegrenze:
-DEM-Auflösung, Gipfelerkennung und Toleranz beeinflussen den Wert.
-```
-
-## Was davon ins eigene Projekt gehört
+## Übergang zum Arbeitsblatt
 
 ::: {.process}
-Projektfrage schärfen → Kriterien ableiten → Daten wählen → Hauptschritte planen → Parameter begründen → Ergebnislayer sichern → Aussagegrenze benennen
+Das Arbeitsblatt setzt dieses Modell um: erst lokale Hypothese, dann DGM-Ausschnitt erweitern, Dominanz und Schartenintervall prüfen, anschließend E-Wert und Status transparent ausgeben.
 :::
 
-::: {.fragment .keyline}
-Das Gipfelbeispiel ist nur komplexer als viele Kursprojekte. Die Dokumentationslogik ist dieselbe.
-:::
-
-## Nicht dokumentieren: vollständige History
-
-Eine Workflow-Dokumentation ist kein Mitschnitt jeder Bedienhandlung.
-
-Dokumentiert werden nur Hauptschritte, die das Ergebnis fachlich verändern.
-
-```text
-nicht: Layer verschoben, Stil getestet, Ansicht gezoomt
-sondern: Distanz berechnet, reklassifiziert, gewichtet, maskiert, kombiniert
-```
-
-::: {.fragment .keyline}
-Die Leitfrage lautet: Könnte eine andere Person den methodischen Weg fachlich nachvollziehen?
-:::
-
-## Übertrag auf einfache GIS-Projekte
-
-```text
-Siedlungsferne
-→ Distanz zur Siedlung
-→ Reklassifikation
-→ Störungskriterium
-→ Beitrag zur Eignungskarte
-
-Hangneigung
-→ DGM-Ableitung
-→ Klassenbildung
-→ Reliefkriterium
-→ Beitrag zur Eignungskarte
-```
-
-::: {.fragment .keyline}
-Auch einfache Projekte brauchen keine lange History, sondern eine begründete Kette zwischen Frage, Kriterium, Operation und Ergebnis.
-:::
-
-## Prüfregel für die Dokumentation
-
-Für jeden Hauptschritt sollte eine fremde Person erkennen können:
-
-```text
-Warum dieser Schritt?
-Welche Daten?
-Welche Operation?
-Welche Parameter?
-Welcher Ergebnislayer?
-Welche Aussagegrenze?
-```
-
-::: {.fragment .big .keyline}
-Das Ziel ist nicht Programmierung. Das Ziel ist nachvollziehbare GIS-Arbeit.
-:::
+**Merksatz:** Ein GIS-Ergebnis besteht aus **Wert, Regel, Parametern und Aussagegrenze**.
