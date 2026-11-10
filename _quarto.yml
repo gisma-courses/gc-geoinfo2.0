@@ -18,7 +18,7 @@ website:
   site-url: https://gisma-courses.github.io/gc-geoinfo2.0
   repo-url: https://github.com/gisma-courses/gc-geoinfo2.0
   repo-actions: [edit, issue]
-  repo-branch: master
+  repo-branch: main
   search:
     location: navbar
     type: textbox
@@ -116,11 +116,11 @@ website:
         - section: "Der perfekte Gipfel"
           contents:
             - href: content/perfekter-gipfel/slides/01-konzept.qmd
-              text: "Block 1 – Konzept"
+              text: "Teil 1 – Konzept"
             - href: content/perfekter-gipfel/slides/02-analyse.qmd
-              text: "Block 2 – Analyse"
+              text: "Teil 2 – Modellkritik"
             - href: content/perfekter-gipfel/slides/03-technische-umsetzung.qmd
-              text: "Block 3 – Technische Umsetzung"
+              text: "Teil 3 – QGIS-Workflow"
             - href: content/perfekter-gipfel/arbeitsblatt/arbeitsauftrag.qmd
               text: "QGIS-Arbeitsauftrag"
             - href: content/perfekter-gipfel/resume.qmd
