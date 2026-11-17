@@ -76,15 +76,15 @@ Dieselbe Empfehlung, zwei Rechenvorschriften. Welche ist „die WHO“?
 ## Unsere Frage
 
 ::: {.framebox}
-**Wie wird aus einer Empfehlung eine eindeutige Berechnung für Marburg?**
+**Welche Interpretationsspielräume lassen die Empfehlungen – und wie verändern sie die Ergebnisse für Marburg?**
 :::
 
-**Nicht unsere Aufgabe:** festzustellen, ob die Kolleginnen und Kollegen 300 m, 0,5 ha oder andere Schwellen fachlich richtig gewählt haben.
+**Nicht unsere Aufgabe:** zu bewerten, ob die empfohlenen Schwellenwerte fachlich sinnvoll oder empirisch ausreichend begründet sind.
 
-**Unsere Aufgabe:** zu unterscheiden, was die Quelle festlegt, was bei der **Operationalisierung** ergänzt wird und was unsere **Daten nur näherungsweise** abbilden.
+**Unsere Aufgabe:** zu untersuchen, wie präzise Begriffe und Kriterien formuliert sind, welche unterschiedlichen Lesarten möglich sind und welche Folgen diese für die räumliche Operationalisierung haben.
 
 ::: {.keyline}
-Eine nicht vollständig GIS-spezifizierte Empfehlung ist **nicht automatisch schlechte Wissenschaft**.
+**Unschärfe ist ein Mangel an Präzision.** Wir unterscheiden Unschärfen der Quelle von notwendigen Modellentscheidungen und Datenbeschränkungen – und prüfen ihre Auswirkungen auf die Ergebnisse.
 :::
 
 ## Aus dem perfekten Gipfel

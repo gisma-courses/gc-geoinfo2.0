@@ -15,11 +15,19 @@ format:
 
 # Arbeitsauftrag
 
-**Ziel:** Fünf Literaturansätze werden als Beispiele gelesen, **drei Rechenvarianten** werden vorbereitet: Referenz `REF`, die häufig zitierte 0,5-ha-Variante `WHO05` und der zweistufige BBSR-Fall. Wir analysieren **Unschärfe beim Übergang von Quellenformulierung zu GIS-Regel**, nicht die fachliche Güte oder empirische Begründung der Empfehlungen.
+**Ziel:** Fünf Literaturansätze werden als Beispiele gelesen, drei Rechenvarianten werden vorbereitet: Referenz `REF`, die häufig zitierte 0,5-ha-Variante `WHO05` und der zweistufige BBSR-Fall. Wir untersuchen, wie präzise die Empfehlungen formuliert sind, welche Interpretationsspielräume sie lassen und welche Folgen diese für ihre räumliche Operationalisierung haben. Die fachliche Begründung der Empfehlungen selbst ist nicht Gegenstand der Bewertung.
 
 **Arbeitsform:** **Eine Gruppe** bearbeitet beide Vergleichsfälle nacheinander. Bei **zwei Gruppen** bearbeitet Gruppe 1 WHO05 und Gruppe 2 BBSR. Die Referenz sowie Datenstand, Untersuchungsraum und Ergebnisformat legt das Plenum gemeinsam fest. **3-30-300 und die beiden BfN-Ansätze** bleiben zusätzliche Diskussionsquellen, keine verpflichtenden GIS-Modelle.
 
-Heute entstehen die gemeinsamen Referenzsetzungen, Regelblätter für die Vergleichsfälle, Änderungsliste, Prognosen und ein gemeinsamer Datenplan. Entscheidend ist die Unterscheidung zwischen **Textmehrdeutigkeit**, **notwendiger Operationalisierung** und **Datenproxy**. Eine offene GIS-Entscheidung ist nicht automatisch ein fachlicher Fehler der Quelle.
+Heute entstehen die gemeinsamen Referenzsetzungen, Regelblätter für die Vergleichsfälle, Änderungslisten, Prognosen und ein gemeinsamer Datenplan.
+
+Dabei unterscheiden wir drei Ursachen für unterschiedliche Berechnungsergebnisse:
+
+- **Unschärfe der Quelle:** Begriffe oder Kriterien lassen mehrere Interpretationen zu.
+- **Modellentscheidung:** Für die Berechnung sind zusätzliche Festlegungen notwendig.
+- **Datenbeschränkung:** Die verfügbaren Geodaten bilden den gemeinten Sachverhalt nur näherungsweise ab.
+
+Eine Empfehlung kann fachlich gut begründet und dennoch unpräzise formuliert sein. Ob solche Unschärfen zu unterschiedlichen räumlichen Ergebnissen führen, untersuchen wir anhand der GIS-Umsetzung.
 
 ::: {.callout-note title="Aus dem perfekten Gipfel"}
 Artikelformel und historischer Code setzten dieselbe Idee verschieden um. Auch hier interessiert der Schritt von der wissenschaftlichen Aussage zur expliziten Rechenvorschrift – nicht ein Urteil über die Autorinnen und Autoren.
