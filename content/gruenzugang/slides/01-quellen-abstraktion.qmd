@@ -15,12 +15,14 @@ format:
 ## Worum es geht
 
 ::: {.process}
-**Quelle** → **Begriffe** → **Kriterien** → **Daten und Operationen** → **Ergebnis mit Aussagegrenze**
+**Quelle** → **Begriffe** → **Rechenregel** → **Daten und Operationen** → **Ergebnis mit Aussagegrenze**
 :::
 
-Leitfrage des Blocks: **Bedeutet räumliche Nähe auch Zugang?**
+Leitfrage: **Was genau wird aus einer veröffentlichten Empfehlung, wenn wir sie in QGIS berechnen?**
 
-Heute bauen wir noch nichts in QGIS. Heute klären wir, **was die Ansätze eigentlich meinen** – so genau, dass man es rechnen kann.
+Wir prüfen **nicht**, ob die Empfehlung fachlich sinnvoll oder empirisch gut begründet ist. Wir prüfen **wo Interpretationen, zusätzliche Festlegungen und Datenproxies in die Berechnung eingehen**.
+
+**Heute:** Referenz im Plenum; WHO05 und BBSR mit **einer oder zwei Gruppen** vorbereiten. 3-30-300 und BfN bleiben weitere Lesebeispiele.
 
 ## Eine Empfehlung, die eindeutig klingt
 
@@ -53,30 +55,37 @@ Dieselbe Empfehlung, zwei Rechenvorschriften. Welche ist „die WHO“?
 [van den Bosch et al. 2016](https://doi.org/10.1177/1403494815615444) · [ISGlobal 2021](https://www.isglobal.org/en/-/isglobal-presenta-el-ranking-de-las-ciudades-europeas-con-mayor-mortalidad-atribuible-a-la-falta-de-espacios-verdes)
 :::
 
-## Dieselbe Absicht, andere Regeln
+## Fünf Perspektiven – nicht fünf Gruppen
 
-| Ansatz | Grünfläche | Entfernung |
-|:--|:--|:--|
-| WHO, wie zitiert | ≥ 0,5 ha | 300 m Luftlinie |
-| WHO-Indikator | ≥ 1 ha | 300 m Luftlinie zum Rand |
-| 3-30-300-Regel | öffentlich, keine Mindestgröße | 300 m zur nächsten Fläche |
-| BBSR 2018 | ≥ 1 ha / ≥ 10 ha | 300 m / 700 m Luftlinie |
-| BfN 2024 | insgesamt > 1 ha | ≤ 500 m Fußweg |
-| BfN 2024 / Berlin | 6 m² pro Einwohner | im Einzugsbereich |
+| Quellenbeispiel | Unterschied, der beim Rechnen wichtig wird |
+|:--|:--|
+| WHO, häufig zitiert (WHO05) | 0,5 ha statt 1 ha |
+| WHO-Indikator als Referenz (REF) | 1 ha, 300 m bis zum Grünflächenrand |
+| BBSR 2018 | zwei Stufen: 1 ha / 300 m und 10 ha / 700 m |
+| 3-30-300-Regel | **drei** Anforderungen: Bäume sehen, Kronendeckung, Grünerreichbarkeit |
+| BfN: Erreichbarkeit / Versorgung | Wegenetz und Flächensumme / m² pro Einwohner |
+
+::: {.keyline}
+**Wir rechnen verbindlich REF, WHO05 und BBSR.** Die übrigen Beispiele dienen der Quellenlektüre: Welche weiteren Operationen wären erforderlich?
+:::
 
 ::: {.small}
-[Konijnendijk 2023](https://doi.org/10.1007/s11676-022-01523-z) · [BBSR 2018, S. 26](https://epflicht.ulb.uni-bonn.de/download/pdf/372854) · [Blum et al. 2024](https://doi.org/10.19217/brs242) · [Umweltatlas Berlin](https://www.berlin.de/umweltatlas/nutzung/oeffentliche-gruenanlagen/2020/einleitung/)
+[Konijnendijk 2023](https://doi.org/10.1007/s11676-022-01523-z) · [BBSR 2018, S. 26](https://epflicht.ulb.uni-bonn.de/download/pdf/372854) · [Blum et al. 2024](https://doi.org/10.19217/brs242)
 :::
 
 ## Unsere Frage
 
 ::: {.framebox}
-Klingt gut. Ist gut gemeint. **Aber was heißt das in Marburg?**
+**Wie wird aus einer Empfehlung eine eindeutige Berechnung für Marburg?**
 :::
 
-Wir prüfen **nicht**, ob die Schwellen fachlich gut begründet sind – das ist die Arbeit der Kolleginnen und Kollegen, die sie aufgestellt haben.
+**Nicht unsere Aufgabe:** festzustellen, ob die Kolleginnen und Kollegen 300 m, 0,5 ha oder andere Schwellen fachlich richtig gewählt haben.
 
-Wir prüfen, **was herauskommt, wenn man sie beim Wort nimmt**: gleiche Stadt, gleiche Daten, andere Regel.
+**Unsere Aufgabe:** zu unterscheiden, was die Quelle festlegt, was bei der **Operationalisierung** ergänzt wird und was unsere **Daten nur näherungsweise** abbilden.
+
+::: {.keyline}
+Eine nicht vollständig GIS-spezifizierte Empfehlung ist **nicht automatisch schlechte Wissenschaft**.
+:::
 
 ## Aus dem perfekten Gipfel
 
@@ -89,7 +98,7 @@ Artikelformel und historischer Code setzen dieselbe Idee verschieden um – für
 ::: {.doccard}
 **Hier**
 
-Fünf Ansätze setzen dieselbe Absicht verschieden um – für dieselbe Stadt ergeben sich verschiedene Versorgungsgrade.
+Drei berechnete Varianten setzen verwandte Aussagen unterschiedlich um – für dieselbe Stadt ergeben sich möglicherweise verschiedene Versorgungsgrade.
 :::
 :::
 
@@ -134,7 +143,7 @@ Wie erkennt man in den Daten, ob eine Fläche zugänglich ist?
 :::
 
 ::: {.keyline}
-Diese Punkte setzen wir **einmal gemeinsam** – und alle Ansätze übernehmen die Setzung, wenn sie selbst nichts anderes sagen.
+Diese Punkte setzen wir **einmal gemeinsam**; WHO05 und BBSR übernehmen sie, wo ihre Quellen keine andere Vorgabe machen.
 :::
 
 ## Proxys: Wofür steht was?
@@ -163,7 +172,7 @@ Wer am Stadtrand wohnt, geht vielleicht in den Wald der Nachbargemeinde. Endet u
 ## Gleiche Daten, andere Regel
 
 ::: {.process}
-gleiche Stadt · gleiche Daten · gleiche Setzungen → **nur die Regel des Ansatzes wechselt**
+gleiche Stadt · gleiche Daten · gleiche Setzungen → **nur eine begründete Rechenregel wechselt**
 :::
 
 Nur so lässt sich am Ende sagen, dass ein Unterschied **aus dem Ansatz** kommt – und nicht aus einer anderen Datenquelle oder einer anderen Auswahl von Grünflächen.
@@ -172,43 +181,66 @@ Nur so lässt sich am Ende sagen, dass ein Unterschied **aus dem Ansatz** kommt 
 Dasselbe Prinzip hatte der Gipfel: ein DGM, mehrere Gipfeldefinitionen.
 :::
 
-## Ein Ansatz pro Gruppe
+## Wo liegt die Unschärfe?
 
-| Gruppe | Ansatz | Was sich gegenüber der Referenz ändert |
+| Ebene | Beispiel | Prüffrage |
 |:--|:--|:--|
-| 1 | WHO, wie zitiert | Mindestgröße |
-| 2 | 3-30-300-Regel | keine Mindestgröße; Entfernungsmaß nicht festgelegt |
-| 3 | BBSR 2018 | zwei Stufen: 1 ha / 300 m und 10 ha / 700 m |
-| 4 | BfN – Erreichbarkeit | Fußweg statt Luftlinie; Flächen werden summiert |
-| 5 | BfN – Versorgung | Quadratmeter pro Einwohner statt ja/nein |
+| **Quellentext** | zwei Entfernungs-/Flächenstufen | Schreibt die Quelle eine Verknüpfung vor? |
+| **Operationalisierung** | „von der Wohnung“ | Welche räumliche Einheit nehmen wir als Wohnort? |
+| **Datenproxy** | OSM-Polygon = zugängliche Grünfläche? | Wie belastbar bildet die Datenklasse das Gemeinte ab? |
 
-::: {.small}
-Gibt es mehr Gruppen als Ansätze, wird ein Ansatz doppelt vergeben und **unabhängig** umgesetzt. Weichen beide Ergebnisse ab, ist das ein Befund zur Reproduzierbarkeit.
+::: {.keyline}
+**Offen heißt nicht falsch.** Haltet fest, **wo** eine Entscheidung entsteht und **wer** sie für diese Übung trifft.
+:::
+
+## Eine oder zwei Gruppen – drei Rechenvarianten
+
+| Arbeitsform | Aufgabenverteilung | Gemeinsames Ergebnis |
+|:--|:--|:--|
+| **1 Gruppe** | Referenz gemeinsam; danach WHO05 und BBSR nacheinander | REF + WHO05 + BBSR |
+| **2 Gruppen** | Referenz gemeinsam; Gruppe 1: WHO05, Gruppe 2: BBSR | REF + WHO05 + BBSR |
+
+**WHO05:** Von 1 ha auf 0,5 ha – was ändert sich wirklich?
+
+**BBSR:** Zwei räumliche Bedingungen; einzeln kartieren. **Legt die Quelle fest, wie man sie zu einem einzigen Ja/Nein kombiniert?** Eine eigene Zusammenführung klar kennzeichnen.
+
+::: {.keyline}
+**Kein Wettbewerb zwischen Quellen.** Wir prüfen die Reproduzierbarkeit unserer Interpretation und Umsetzung.
 :::
 
 ## Ergebnis heute
 
 ::: {.docgrid}
 ::: {.doccard}
-**Regelblatt**
+**Quellenbefund**
 
-Was euer Ansatz festlegt – mit Fundstelle –, was er offenlässt und wie ihr es setzt.
+Welche Rechenparameter stehen in den Quellen? **Mit Fundstelle.** Welche Bedeutungen bleiben für unsere Anwendung offen?
+:::
+::: {.doccard}
+**Modellentscheidung**
+
+Was ergänzen wir? Wo übernehmen wir die gemeinsame Referenzsetzung? Was ist eine Folge unserer Daten?
 :::
 ::: {.doccard}
 **Prognose**
 
-Weist euer Ansatz in Marburg mehr oder weniger Menschen als versorgt aus als die Referenz? Warum?
+Mehr, weniger oder gleich viele Versorgte gegenüber REF – getrennt für WHO05 und BBSR?
+:::
+::: {.doccard}
+**Gemeinsame Daten**
+
+Gleiche OSM-Flächen, Zensus-Zellen, Gebietsgrenzen und Kennungen in einer oder zwei Gruppen.
 :::
 :::
 
 ::: {.keyline}
-Die Prognose wird in Sitzung 3 überprüft. Ohne Erwartung vor dem Rechnen gibt es hinterher nichts zu prüfen.
+**Wichtig:** Nicht die Kolleginnen und Kollegen werden bewertet, sondern **die Nachvollziehbarkeit der Übersetzung vom Text zum GIS-Modell**.
 :::
 
 ## Merksatz
 
 ::: {.process}
-Ein Ansatz ist erst dann klar, wenn man ihn rechnen kann. **Was er bedeutet, zeigt der Vergleich.**
+Eine modellierte Aussage wird erst prüfbar, wenn **Text, Interpretation und Rechenregel** unterscheidbar sind. **Der Vergleich zeigt die Folgen.**
 :::
 
 [**Umsetzung, Teil A öffnen**](../arbeitsblatt/arbeitsauftrag.html#teil-a-lesarten-und-abstraktion-sitzung-1)

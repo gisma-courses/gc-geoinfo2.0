@@ -152,10 +152,11 @@ Chris Reudenbach
 <section id="worum-es-geht" class="slide level2">
 <h2>Worum es geht</h2>
 <div class="process">
-<p><strong>Quelle</strong> → <strong>Begriffe</strong> → <strong>Kriterien</strong> → <strong>Daten und Operationen</strong> → <strong>Ergebnis mit Aussagegrenze</strong></p>
+<p><strong>Quelle</strong> → <strong>Begriffe</strong> → <strong>Rechenregel</strong> → <strong>Daten und Operationen</strong> → <strong>Ergebnis mit Aussagegrenze</strong></p>
 </div>
-<p>Leitfrage des Blocks: <strong>Bedeutet räumliche Nähe auch Zugang?</strong></p>
-<p>Heute bauen wir noch nichts in QGIS. Heute klären wir, <strong>was die Ansätze eigentlich meinen</strong> – so genau, dass man es rechnen kann.</p>
+<p>Leitfrage: <strong>Was genau wird aus einer veröffentlichten Empfehlung, wenn wir sie in QGIS berechnen?</strong></p>
+<p>Wir prüfen <strong>nicht</strong>, ob die Empfehlung fachlich sinnvoll oder empirisch gut begründet ist. Wir prüfen <strong>wo Interpretationen, zusätzliche Festlegungen und Datenproxies in die Berechnung eingehen</strong>.</p>
+<p><strong>Heute:</strong> Referenz im Plenum; WHO05 und BBSR mit <strong>einer oder zwei Gruppen</strong> vorbereiten. 3-30-300 und BfN bleiben weitere Lesebeispiele.</p>
 </section>
 <section id="eine-empfehlung-die-eindeutig-klingt" class="slide level2">
 <h2>Eine Empfehlung, die eindeutig klingt</h2>
@@ -214,65 +215,59 @@ Chris Reudenbach
 <p><a href="https://doi.org/10.1177/1403494815615444">van den Bosch et al.&nbsp;2016</a> · <a href="https://www.isglobal.org/en/-/isglobal-presenta-el-ranking-de-las-ciudades-europeas-con-mayor-mortalidad-atribuible-a-la-falta-de-espacios-verdes">ISGlobal 2021</a></p>
 </div>
 </section>
-<section id="dieselbe-absicht-andere-regeln" class="slide level2">
-<h2>Dieselbe Absicht, andere Regeln</h2>
+<section id="fünf-perspektiven-nicht-fünf-gruppen" class="slide level2">
+<h2>Fünf Perspektiven – nicht fünf Gruppen</h2>
 <table class="caption-top">
 <colgroup>
-<col style="width: 33%">
-<col style="width: 33%">
-<col style="width: 33%">
+<col style="width: 50%">
+<col style="width: 50%">
 </colgroup>
 <thead>
 <tr class="header">
-<th style="text-align: left;">Ansatz</th>
-<th style="text-align: left;">Grünfläche</th>
-<th style="text-align: left;">Entfernung</th>
+<th style="text-align: left;">Quellenbeispiel</th>
+<th style="text-align: left;">Unterschied, der beim Rechnen wichtig wird</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;">WHO, wie zitiert</td>
-<td style="text-align: left;">≥ 0,5 ha</td>
-<td style="text-align: left;">300 m Luftlinie</td>
+<td style="text-align: left;">WHO, häufig zitiert (WHO05)</td>
+<td style="text-align: left;">0,5 ha statt 1 ha</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">WHO-Indikator</td>
-<td style="text-align: left;">≥ 1 ha</td>
-<td style="text-align: left;">300 m Luftlinie zum Rand</td>
+<td style="text-align: left;">WHO-Indikator als Referenz (REF)</td>
+<td style="text-align: left;">1 ha, 300 m bis zum Grünflächenrand</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">3-30-300-Regel</td>
-<td style="text-align: left;">öffentlich, keine Mindestgröße</td>
-<td style="text-align: left;">300 m zur nächsten Fläche</td>
-</tr>
-<tr class="even">
 <td style="text-align: left;">BBSR 2018</td>
-<td style="text-align: left;">≥ 1 ha / ≥ 10 ha</td>
-<td style="text-align: left;">300 m / 700 m Luftlinie</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">BfN 2024</td>
-<td style="text-align: left;">insgesamt &gt; 1 ha</td>
-<td style="text-align: left;">≤ 500 m Fußweg</td>
+<td style="text-align: left;">zwei Stufen: 1 ha / 300 m und 10 ha / 700 m</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">BfN 2024 / Berlin</td>
-<td style="text-align: left;">6 m² pro Einwohner</td>
-<td style="text-align: left;">im Einzugsbereich</td>
+<td style="text-align: left;">3-30-300-Regel</td>
+<td style="text-align: left;"><strong>drei</strong> Anforderungen: Bäume sehen, Kronendeckung, Grünerreichbarkeit</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">BfN: Erreichbarkeit / Versorgung</td>
+<td style="text-align: left;">Wegenetz und Flächensumme / m² pro Einwohner</td>
 </tr>
 </tbody>
 </table>
+<div class="keyline">
+<p><strong>Wir rechnen verbindlich REF, WHO05 und BBSR.</strong> Die übrigen Beispiele dienen der Quellenlektüre: Welche weiteren Operationen wären erforderlich?</p>
+</div>
 <div class="small">
-<p><a href="https://doi.org/10.1007/s11676-022-01523-z">Konijnendijk 2023</a> · <a href="https://epflicht.ulb.uni-bonn.de/download/pdf/372854">BBSR 2018, S. 26</a> · <a href="https://doi.org/10.19217/brs242">Blum et al.&nbsp;2024</a> · <a href="https://www.berlin.de/umweltatlas/nutzung/oeffentliche-gruenanlagen/2020/einleitung/">Umweltatlas Berlin</a></p>
+<p><a href="https://doi.org/10.1007/s11676-022-01523-z">Konijnendijk 2023</a> · <a href="https://epflicht.ulb.uni-bonn.de/download/pdf/372854">BBSR 2018, S. 26</a> · <a href="https://doi.org/10.19217/brs242">Blum et al.&nbsp;2024</a></p>
 </div>
 </section>
 <section id="unsere-frage" class="slide level2">
 <h2>Unsere Frage</h2>
 <div class="framebox">
-<p>Klingt gut. Ist gut gemeint. <strong>Aber was heißt das in Marburg?</strong></p>
+<p><strong>Wie wird aus einer Empfehlung eine eindeutige Berechnung für Marburg?</strong></p>
 </div>
-<p>Wir prüfen <strong>nicht</strong>, ob die Schwellen fachlich gut begründet sind – das ist die Arbeit der Kolleginnen und Kollegen, die sie aufgestellt haben.</p>
-<p>Wir prüfen, <strong>was herauskommt, wenn man sie beim Wort nimmt</strong>: gleiche Stadt, gleiche Daten, andere Regel.</p>
+<p><strong>Nicht unsere Aufgabe:</strong> festzustellen, ob die Kolleginnen und Kollegen 300 m, 0,5 ha oder andere Schwellen fachlich richtig gewählt haben.</p>
+<p><strong>Unsere Aufgabe:</strong> zu unterscheiden, was die Quelle festlegt, was bei der <strong>Operationalisierung</strong> ergänzt wird und was unsere <strong>Daten nur näherungsweise</strong> abbilden.</p>
+<div class="keyline">
+<p>Eine nicht vollständig GIS-spezifizierte Empfehlung ist <strong>nicht automatisch schlechte Wissenschaft</strong>.</p>
+</div>
 </section>
 <section id="aus-dem-perfekten-gipfel" class="slide level2">
 <h2>Aus dem perfekten Gipfel</h2>
@@ -283,7 +278,7 @@ Chris Reudenbach
 </div>
 <div class="doccard">
 <p><strong>Hier</strong></p>
-<p>Fünf Ansätze setzen dieselbe Absicht verschieden um – für dieselbe Stadt ergeben sich verschiedene Versorgungsgrade.</p>
+<p>Drei berechnete Varianten setzen verwandte Aussagen unterschiedlich um – für dieselbe Stadt ergeben sich möglicherweise verschiedene Versorgungsgrade.</p>
 </div>
 </div>
 <div class="keyline">
@@ -363,7 +358,7 @@ Chris Reudenbach
 </div>
 </div>
 <div class="keyline">
-<p>Diese Punkte setzen wir <strong>einmal gemeinsam</strong> – und alle Ansätze übernehmen die Setzung, wenn sie selbst nichts anderes sagen.</p>
+<p>Diese Punkte setzen wir <strong>einmal gemeinsam</strong>; WHO05 und BBSR übernehmen sie, wo ihre Quellen keine andere Vorgabe machen.</p>
 </div>
 </section>
 <section id="proxys-wofür-steht-was" class="slide level2">
@@ -419,15 +414,15 @@ Chris Reudenbach
 <section id="gleiche-daten-andere-regel" class="slide level2">
 <h2>Gleiche Daten, andere Regel</h2>
 <div class="process">
-<p>gleiche Stadt · gleiche Daten · gleiche Setzungen → <strong>nur die Regel des Ansatzes wechselt</strong></p>
+<p>gleiche Stadt · gleiche Daten · gleiche Setzungen → <strong>nur eine begründete Rechenregel wechselt</strong></p>
 </div>
 <p>Nur so lässt sich am Ende sagen, dass ein Unterschied <strong>aus dem Ansatz</strong> kommt – und nicht aus einer anderen Datenquelle oder einer anderen Auswahl von Grünflächen.</p>
 <div class="small">
 <p>Dasselbe Prinzip hatte der Gipfel: ein DGM, mehrere Gipfeldefinitionen.</p>
 </div>
 </section>
-<section id="ein-ansatz-pro-gruppe" class="slide level2">
-<h2>Ein Ansatz pro Gruppe</h2>
+<section id="wo-liegt-die-unschärfe" class="slide level2">
+<h2>Wo liegt die Unschärfe?</h2>
 <table class="caption-top">
 <colgroup>
 <col style="width: 33%">
@@ -436,63 +431,95 @@ Chris Reudenbach
 </colgroup>
 <thead>
 <tr class="header">
-<th style="text-align: left;">Gruppe</th>
-<th style="text-align: left;">Ansatz</th>
-<th style="text-align: left;">Was sich gegenüber der Referenz ändert</th>
+<th style="text-align: left;">Ebene</th>
+<th style="text-align: left;">Beispiel</th>
+<th style="text-align: left;">Prüffrage</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;">1</td>
-<td style="text-align: left;">WHO, wie zitiert</td>
-<td style="text-align: left;">Mindestgröße</td>
+<td style="text-align: left;"><strong>Quellentext</strong></td>
+<td style="text-align: left;">zwei Entfernungs-/Flächenstufen</td>
+<td style="text-align: left;">Schreibt die Quelle eine Verknüpfung vor?</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">2</td>
-<td style="text-align: left;">3-30-300-Regel</td>
-<td style="text-align: left;">keine Mindestgröße; Entfernungsmaß nicht festgelegt</td>
+<td style="text-align: left;"><strong>Operationalisierung</strong></td>
+<td style="text-align: left;">„von der Wohnung“</td>
+<td style="text-align: left;">Welche räumliche Einheit nehmen wir als Wohnort?</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">3</td>
-<td style="text-align: left;">BBSR 2018</td>
-<td style="text-align: left;">zwei Stufen: 1 ha / 300 m und 10 ha / 700 m</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">4</td>
-<td style="text-align: left;">BfN – Erreichbarkeit</td>
-<td style="text-align: left;">Fußweg statt Luftlinie; Flächen werden summiert</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">5</td>
-<td style="text-align: left;">BfN – Versorgung</td>
-<td style="text-align: left;">Quadratmeter pro Einwohner statt ja/nein</td>
+<td style="text-align: left;"><strong>Datenproxy</strong></td>
+<td style="text-align: left;">OSM-Polygon = zugängliche Grünfläche?</td>
+<td style="text-align: left;">Wie belastbar bildet die Datenklasse das Gemeinte ab?</td>
 </tr>
 </tbody>
 </table>
-<div class="small">
-<p>Gibt es mehr Gruppen als Ansätze, wird ein Ansatz doppelt vergeben und <strong>unabhängig</strong> umgesetzt. Weichen beide Ergebnisse ab, ist das ein Befund zur Reproduzierbarkeit.</p>
+<div class="keyline">
+<p><strong>Offen heißt nicht falsch.</strong> Haltet fest, <strong>wo</strong> eine Entscheidung entsteht und <strong>wer</strong> sie für diese Übung trifft.</p>
+</div>
+</section>
+<section id="eine-oder-zwei-gruppen-drei-rechenvarianten" class="slide level2">
+<h2>Eine oder zwei Gruppen – drei Rechenvarianten</h2>
+<table class="caption-top">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Arbeitsform</th>
+<th style="text-align: left;">Aufgabenverteilung</th>
+<th style="text-align: left;">Gemeinsames Ergebnis</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>1 Gruppe</strong></td>
+<td style="text-align: left;">Referenz gemeinsam; danach WHO05 und BBSR nacheinander</td>
+<td style="text-align: left;">REF + WHO05 + BBSR</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>2 Gruppen</strong></td>
+<td style="text-align: left;">Referenz gemeinsam; Gruppe 1: WHO05, Gruppe 2: BBSR</td>
+<td style="text-align: left;">REF + WHO05 + BBSR</td>
+</tr>
+</tbody>
+</table>
+<p><strong>WHO05:</strong> Von 1 ha auf 0,5 ha – was ändert sich wirklich?</p>
+<p><strong>BBSR:</strong> Zwei räumliche Bedingungen; einzeln kartieren. <strong>Legt die Quelle fest, wie man sie zu einem einzigen Ja/Nein kombiniert?</strong> Eine eigene Zusammenführung klar kennzeichnen.</p>
+<div class="keyline">
+<p><strong>Kein Wettbewerb zwischen Quellen.</strong> Wir prüfen die Reproduzierbarkeit unserer Interpretation und Umsetzung.</p>
 </div>
 </section>
 <section id="ergebnis-heute" class="slide level2">
 <h2>Ergebnis heute</h2>
 <div class="docgrid">
 <div class="doccard">
-<p><strong>Regelblatt</strong></p>
-<p>Was euer Ansatz festlegt – mit Fundstelle –, was er offenlässt und wie ihr es setzt.</p>
+<p><strong>Quellenbefund</strong></p>
+<p>Welche Rechenparameter stehen in den Quellen? <strong>Mit Fundstelle.</strong> Welche Bedeutungen bleiben für unsere Anwendung offen?</p>
+</div>
+<div class="doccard">
+<p><strong>Modellentscheidung</strong></p>
+<p>Was ergänzen wir? Wo übernehmen wir die gemeinsame Referenzsetzung? Was ist eine Folge unserer Daten?</p>
 </div>
 <div class="doccard">
 <p><strong>Prognose</strong></p>
-<p>Weist euer Ansatz in Marburg mehr oder weniger Menschen als versorgt aus als die Referenz? Warum?</p>
+<p>Mehr, weniger oder gleich viele Versorgte gegenüber REF – getrennt für WHO05 und BBSR?</p>
+</div>
+<div class="doccard">
+<p><strong>Gemeinsame Daten</strong></p>
+<p>Gleiche OSM-Flächen, Zensus-Zellen, Gebietsgrenzen und Kennungen in einer oder zwei Gruppen.</p>
 </div>
 </div>
 <div class="keyline">
-<p>Die Prognose wird in Sitzung 3 überprüft. Ohne Erwartung vor dem Rechnen gibt es hinterher nichts zu prüfen.</p>
+<p><strong>Wichtig:</strong> Nicht die Kolleginnen und Kollegen werden bewertet, sondern <strong>die Nachvollziehbarkeit der Übersetzung vom Text zum GIS-Modell</strong>.</p>
 </div>
 </section>
 <section id="merksatz" class="slide level2">
 <h2>Merksatz</h2>
 <div class="process">
-<p>Ein Ansatz ist erst dann klar, wenn man ihn rechnen kann. <strong>Was er bedeutet, zeigt der Vergleich.</strong></p>
+<p>Eine modellierte Aussage wird erst prüfbar, wenn <strong>Text, Interpretation und Rechenregel</strong> unterscheidbar sind. <strong>Der Vergleich zeigt die Folgen.</strong></p>
 </div>
 <p><a href="../arbeitsblatt/arbeitsauftrag.html#teil-a-lesarten-und-abstraktion-sitzung-1"><strong>Umsetzung, Teil A öffnen</strong></a></p>
 

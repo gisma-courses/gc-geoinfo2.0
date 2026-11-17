@@ -15,20 +15,14 @@ format:
 
 # Arbeitsauftrag
 
-**Ziel:** Fünf Ansätze wollen dasselbe – Grün in Wohnungsnähe – und rechnen es verschieden. Ihr nehmt **einen** davon beim Wort und übersetzt ihn so genau, dass er sich in Sitzung 2 in QGIS rechnen lässt. In Sitzung 3 vergleichen wir alle Ansätze für Marburg.
+**Ziel:** Fünf Literaturansätze werden als Beispiele gelesen, **drei Rechenvarianten** werden vorbereitet: Referenz `REF`, die häufig zitierte 0,5-ha-Variante `WHO05` und der zweistufige BBSR-Fall. Wir analysieren **Unschärfe beim Übergang von Quellenformulierung zu GIS-Regel**, nicht die fachliche Güte oder empirische Begründung der Empfehlungen.
 
-Heute entstehen:
+**Arbeitsform:** **Eine Gruppe** bearbeitet beide Vergleichsfälle nacheinander. Bei **zwei Gruppen** bearbeitet Gruppe 1 WHO05 und Gruppe 2 BBSR. Die Referenz sowie Datenstand, Untersuchungsraum und Ergebnisformat legt das Plenum gemeinsam fest. **3-30-300 und die beiden BfN-Ansätze** bleiben zusätzliche Diskussionsquellen, keine verpflichtenden GIS-Modelle.
 
-1. die gemeinsam **durchdeklinierte Referenz** (Schritt A, Plenum),
-2. das **Regelblatt** eures Ansatzes (Schritt B, Gruppe),
-3. die **Änderungen gegenüber der Referenz** (Schritt C, Gruppe),
-4. eure **Prognose** (Schritt D, Gruppe),
-5. der **gemeinsame Datenplan** und das **Ergebnisformat** (Schritt E, Plenum).
-
-Wir diskutieren nicht, ob die Schwellen der Ansätze fachlich gut begründet sind. Wir prüfen, was sie bedeuten, wenn man sie anwendet.
+Heute entstehen die gemeinsamen Referenzsetzungen, Regelblätter für die Vergleichsfälle, Änderungsliste, Prognosen und ein gemeinsamer Datenplan. Entscheidend ist die Unterscheidung zwischen **Textmehrdeutigkeit**, **notwendiger Operationalisierung** und **Datenproxy**. Eine offene GIS-Entscheidung ist nicht automatisch ein fachlicher Fehler der Quelle.
 
 ::: {.callout-note title="Aus dem perfekten Gipfel"}
-Artikelformel und historischer Code setzten dieselbe Idee verschieden um und lieferten für dieselben Gipfel verschiedene E-Werte. Heute ist es dasselbe – nur mit fünf Umsetzungen und einer Stadt.
+Artikelformel und historischer Code setzten dieselbe Idee verschieden um. Auch hier interessiert der Schritt von der wissenschaftlichen Aussage zur expliziten Rechenvorschrift – nicht ein Urteil über die Autorinnen und Autoren.
 :::
 
 # A · Die Referenz durchdeklinieren (Plenum)
@@ -44,7 +38,7 @@ Gemeinsam übersetzen wir den Indikator Schritt für Schritt:
 | **Bevölkerung** | Bewohnerinnen und Bewohner | Wohnort innerhalb der Pufferzone | Zensus-2022-Gitterzellen 100 m mit Einwohnerzahl | Zellmittelpunkte, Lage-Abfrage |
 | **Ergebnis** | Zugang | Anteil der versorgten Bevölkerung | Feld `versorgt` je Zelle | Summe versorgt / Summe aller |
 
-Was der Indikator **nicht** festlegt, setzen wir einmal gemeinsam. Diese Setzungen gelten für **alle** Ansätze, sofern ein Ansatz nicht ausdrücklich etwas anderes verlangt:
+Was der Indikator **nicht** festlegt, setzen wir einmal gemeinsam. Diese Setzungen gelten für **REF, WHO05 und BBSR**, sofern die jeweilige Quelle nichts anderes verlangt:
 
 | Offene Frage | Gemeinsame Setzung | Begründung |
 |:--|:--|:--|
@@ -58,23 +52,20 @@ Was der Indikator **nicht** festlegt, setzen wir einmal gemeinsam. Diese Setzung
 Am Rand des DGM blieb offen, ob außerhalb höheres Gelände liegt. An der Stadtgrenze bleibt offen, ob jenseits davon eine Grünfläche liegt. Das Rechengebiet muss deshalb mindestens um die größte Distanz, die ein Ansatz verwendet, über Marburg hinausreichen.
 :::
 
-# B · Den eigenen Ansatz beim Wort nehmen
+# B · Vergleichsfälle beim Wort nehmen
 
-Jede Gruppe übernimmt einen Ansatz. Lest gezielt die Stelle, an der die Schwellen stehen, und haltet die **Fundstelle** fest (Seite, Abschnitt, Abbildung).
+**Wir arbeiten mit einer oder zwei Gruppen, aber mit denselben drei Rechenvarianten.** Alle nutzen zuerst die gemeinsame Referenz aus A1. Danach bearbeitet eine Gruppe beide Fälle nacheinander oder zwei Gruppen je einen Fall.
 
-| Gruppe | Ansatz | Quelle |
+| Fall | Zu untersuchende Quelle | Arbeitsauftrag |
 |:--|:--|:--|
-| 1 | „WHO“, wie häufig zitiert | [ISGlobal (2021)](https://www.isglobal.org/en/-/isglobal-presenta-el-ranking-de-las-ciudades-europeas-con-mayor-mortalidad-atribuible-a-la-falta-de-espacios-verdes); [Pereira Barboza et al. (2021): *Green space and mortality in European cities: a health impact assessment study*](https://doi.org/10.1016/S2542-5196(21)00229-1) |
-| 2 | 3-30-300-Regel | [Konijnendijk (2023): *Evidence-based guidelines for greener, healthier, more resilient neighbourhoods: Introducing the 3–30–300 rule*](https://doi.org/10.1007/s11676-022-01523-z) |
-| 3 | BBSR 2018 | [BBSR (2018): *Handlungsziele für Stadtgrün und deren empirische Evidenz*, Kap. 2.2, S. 26](https://epflicht.ulb.uni-bonn.de/download/pdf/372854) |
-| 4 | BfN – Grünerreichbarkeit | [Blum et al. (2024): *Orientierungswerte für öffentliches Grün. Kurzfassung*](https://doi.org/10.19217/brs242); ausführlich: [Blum et al. (2023), BfN-Schriften 653](https://doi.org/10.19217/skr653) |
-| 5 | BfN – Grünraumversorgung | wie Gruppe 4 |
+| **WHO05** | [ISGlobal (2021)](https://www.isglobal.org/en/-/isglobal-presenta-el-ranking-de-las-ciudades-europeas-con-mayor-mortalidad-atribuible-a-la-falta-de-espacios-verdes); [Pereira Barboza et al. (2021)](https://doi.org/10.1016/S2542-5196(21)00229-1) | Prüfen, was die häufig zitierte 0,5-ha-/300-m-Aussage tatsächlich festlegt und was für unsere Berechnung ergänzt werden muss. |
+| **BBSR** | [BBSR (2018), *Handlungsziele für Stadtgrün und deren empirische Evidenz*, Kap. 2.2, S. 26](https://epflicht.ulb.uni-bonn.de/download/pdf/372854) | Beide Größen-/Entfernungsstufen quellengetreu erfassen; prüfen, ob die Quelle ihre Verknüpfung als einheitliches Ja/Nein-Kriterium vorgibt. |
 
-Gibt es mehr Gruppen als Ansätze, wird ein Ansatz doppelt vergeben. Die beiden Gruppen arbeiten **unabhängig** voneinander und vergleichen erst in Sitzung 3.
+**Zusätzliche Quellenbeispiele für die gemeinsame Diskussion (nicht vollständig zu rechnen):** [3-30-300 nach Konijnendijk (2023)](https://doi.org/10.1007/s11676-022-01523-z); [BfN-Grünerreichbarkeit und Grünraumversorgung nach Blum et al. (2024)](https://doi.org/10.19217/brs242), [ausführliche BfN-Fassung (2023)](https://doi.org/10.19217/skr653). Die 3-30-300-Regel umfasst **drei** Anforderungen (Sichtbarkeit von Bäumen, Baumkronenanteil, Nähe zu Grün); eine 300-m-Pufferkarte allein ist nicht ihre vollständige Umsetzung.
 
-Füllt dann euer **Regelblatt**:
+Lest für euren Fall gezielt die Stellen mit den Schwellen und ihrer Interpretation. Haltet **Seite, Abschnitt oder Abbildung** fest und füllt das Regelblatt. Bei einer Gruppe gibt es zwei Regelblätter, bei zwei Gruppen je eines.
 
-| | Was die Quelle festlegt (mit Fundstelle) | Was offen bleibt | Unsere Setzung |
+| | Was die Quelle festlegt (mit Fundstelle) | Welche GIS-Entscheidung ist noch offen – und warum? | Unsere dokumentierte Setzung |
 |:--|:--|:--|:--|
 | **Grünfläche:** welche Art? öffentlich? | | | |
 | **Mindestgröße:** je Fläche oder als Summe? | | | |
@@ -82,86 +73,84 @@ Füllt dann euer **Regelblatt**:
 | **Distanz** | | | |
 | **Bezugspunkt:** Rand, Eingang, Mittelpunkt? | | | |
 | **Bevölkerung:** wer zählt, in welcher Einheit? | | | |
-| **Ergebnisgröße:** Anteil versorgter Menschen, m² pro Einwohner, ja/nein? | | | |
-| **Mehrere Stufen:** Wie werden sie kombiniert? | | | |
+| **Ergebnisgröße:** Anteil versorgter Menschen, m²/Einwohner, ja/nein? | | | |
+| **Mehrere Stufen:** getrennt, gemeinsam, alternativ? | | | |
 
-Für die Spalte „Unsere Setzung“ gilt: **Was eure Quelle offenlässt, setzt ihr wie in der Referenz.** Eine Abweichung davon ist nur zulässig, wenn ihr sie aus der Quelle begründen könnt.
+Für die letzte Spalte gilt: **Fehlt eine ausdrückliche abweichende Vorgabe in der Quelle, übernehmen wir für vergleichbare Fragen die gemeinsame Referenzsetzung.** Wo sich eine Lesart nicht aus der Quelle entscheiden lässt, kennzeichnen wir sie als **eigene Modellentscheidung**, nicht als Behauptung über die Absicht der Autorinnen und Autoren.
 
 ::: {.callout-tip title="Prüffrage"}
-Gibt es in eurer Quelle einen Satz, den man auf zwei Arten rechnen könnte? Notiert beide Lesarten. Genau diese Stellen meinen wir mit „klingt gut – aber was heißt das?“.
+Welche Wörter oder Größen sind unmittelbar in eine Rechenoperation übertragbar? **Wo beginnen wir zu interpretieren?** Notiert mindestens eine alternative Lesart oder Modellsetzung und erklärt, ob die Offenheit aus dem **Text**, aus der **Operationalisierung** oder aus den **Daten** stammt. Es geht nicht darum, der Quelle einen Fehler nachzuweisen.
 :::
 
 # C · Was sich gegenüber der Referenz ändert
 
-Listet jede Stelle auf, an der euer Ansatz anders rechnet als die Referenz, und was das für die Verarbeitungskette bedeutet.
+Tragt für WHO05 und BBSR die Abweichungen gegenüber **REF** ein. Bei zwei Gruppen bearbeitet jede ihren Fall; bei einer Gruppe werden beide nacheinander ausgefüllt.
 
-| Änderung | in der Referenz | in unserem Ansatz | Folge für die Umsetzung in QGIS |
-|:--|:--|:--|:--|
-| | | | |
-| | | | |
+| Änderung | Referenz (REF) | Vergleichsfall | Konsequenz für QGIS | Quellenbefund oder eigene Setzung? |
+|:--|:--|:--|:--|:--|
+| | | | | |
+| | | | | |
 
-Hinweise für die einzelnen Ansätze:
+- **WHO05:** Prüft zunächst, ob gegenüber REF tatsächlich nur die Mindestfläche von 1 ha auf 0,5 ha geändert werden muss. Trennt ausdrücklich die **Quellenaussage** von den aus REF übernommenen Annahmen, etwa zur Repräsentation in OSM und zu Zellmittelpunkten.
+- **BBSR:** Betrachtet **1 ha / 300 m** und **10 ha / 700 m** zunächst als **zwei getrennte Bedingungen**. Prüft anhand der Fundstelle, ob eine Zelle beide erfüllen muss oder ob die Quelle gar keine einzige binäre Zusammenfassung vorsieht. Erzeugt zwei Teilindikatoren; legt erst danach eine Regel für das gemeinsame Vergleichsfeld `versorgt` fest und markiert sie gegebenenfalls als eigene Auswertungsentscheidung.
 
-- **Gruppe 3 (BBSR):** Zwei Stufen mit unterschiedlicher Größe und Entfernung. Muss eine Zelle beide erfüllen, eine von beiden – oder werden sie getrennt ausgewiesen?
-- **Gruppe 4 (BfN – Erreichbarkeit):** Fußweg statt Luftlinie, und die Mindestgröße gilt für die **Summe** der erreichbaren Flächen. Dafür braucht ihr ein Wegenetz und eine Netzwerkanalyse.
-- **Gruppe 5 (BfN – Versorgung):** Das Ergebnis ist kein Ja/Nein, sondern Quadratmeter Grün pro Einwohner. Wie die Grünfläche auf die Menschen im Einzugsbereich aufgeteilt wird, müsst ihr selbst festlegen und begründen. Dafür ist ein Vergleich mit dem [Berliner Umweltatlas](https://www.berlin.de/umweltatlas/nutzung/oeffentliche-gruenanlagen/2020/einleitung/) hilfreich, der ebenfalls mit 6 m² pro Einwohner arbeitet.
+**Kurzer Quellenblick ohne GIS-Umsetzung:** Was müsste man bei 3-30-300 (drei Teilanforderungen) oder bei den beiden BfN-Ansätzen (Fußwege, summierte Fläche, m² pro Person) zusätzlich modellieren? Diese Überlegung dient dem Verständnis der Übertragung, nicht einer fachlichen Bewertung der Empfehlungen.
 
 # D · Prognose
 
-Bevor gerechnet wird: Schätzt, ob euer Ansatz in Marburg **mehr oder weniger Menschen als versorgt** ausweist als die Referenz – und wo in der Stadt sich die Ergebnisse vermutlich am stärksten unterscheiden.
+Bevor gerechnet wird, formuliert eine begründete Erwartung für **WHO05** und **BBSR** relativ zu **REF**. Bei zwei Gruppen werden die Prognosen anschließend ausgetauscht.
 
-| | Unsere Prognose | Begründung |
-|:--|:--|:--|
-| Anteil versorgt im Vergleich zur Referenz (mehr / weniger / gleich) | | |
-| Wo in Marburg erwarten wir die größten Unterschiede? | | |
+| Variante | Mehr / weniger / gleich viel versorgte Bevölkerung als REF? | Wo in Marburg erwarten wir Unterschiede? | Welche Regel könnte das erklären? |
+|:--|:--|:--|:--|
+| WHO05 | | | |
+| BBSR | | | |
 
-Die Prognose wird in Sitzung 3 mit dem Ergebnis verglichen. Eine falsche Prognose ist kein Fehler, sondern ein Befund.
+Für WHO05 lässt sich zusätzlich eine **gerichtete Hypothese** prüfen: Bei **identischen Grünflächenklassen und derselben 300-m-Distanzregel** darf eine Absenkung der Mindestfläche von 1 auf 0,5 ha den versorgten Bevölkerungsanteil **nicht verkleinern**. Ist das Ergebnis dennoch kleiner, deutet das auf Unterschiede in Daten oder Verarbeitung hin. Für BBSR hängt die Richtung unter anderem von der begründeten Verknüpfung der beiden Stufen ab.
+
+Eine nicht bestätigte Prognose ist ein auswertbarer Befund, kein Fehler.
 
 # E · Gemeinsamer Datenplan und Ergebnisformat (Plenum)
 
-Alle Gruppen rechnen mit **denselben Daten**. Nur so lässt sich am Ende sagen, dass ein Unterschied aus dem Ansatz kommt.
+**Alle Varianten verwenden dieselben Daten, denselben Raumbezug und dieselben gemeinsamen Setzungen.** Sonst könnten Unterschiede aus den Daten statt aus der Regel stammen. Bei zwei Gruppen wird **ein gemeinsamer Datenstand** vereinbart.
 
 | Kriterium | Daten | Quelle und Abruf | Lizenz | KBS und Auflösung | Was wissen wir über die Daten **nicht**? |
 |:--|:--|:--|:--|:--|:--|
 | Grünflächen | | | | | |
-| Wegenetz (für Gruppe 4 und 5) | | | | | |
 | Bevölkerung | | | | | |
 | Untersuchungs- und Rechengebiet | | | | | |
+| Wegenetz (nur bei freiwilliger BfN-Erweiterung) | | | | | |
 
 Mögliche Quellen:
 
-- **OpenStreetMap** für Grünflächen und Wege – in QGIS über das Plugin **QuickOSM** abrufbar. Lizenz: ODbL. Haltet Abrufdatum und Abfrage fest; alle Gruppen verwenden dieselbe Abfrage.
-- **Zensus 2022, Bevölkerungszahlen in Gitterzellen** (100 m): [Gitterdaten zum Download](https://www.zensus2022.de/DE/Ergebnisse-des-Zensus/_inhalt.html#Gitterdaten2022).
-- Verwaltungsgrenzen für Untersuchungs- und Rechengebiet.
+- **OpenStreetMap** für Grünflächen – in QGIS über **QuickOSM**. Lizenz: ODbL. Dokumentiert Abfrage, Klassenauswahl und Abrufdatum; beide Gruppen verwenden denselben Stand.
+- **Zensus 2022**, Einwohnerzahlen auf 100-m-Gitterzellen: [Gitterdaten zum Download](https://www.zensus2022.de/DE/Ergebnisse-des-Zensus/_inhalt.html#Gitterdaten2022).
+- Verwaltungsgrenzen für das Untersuchungsgebiet; das **Rechengebiet** muss mindestens die größte verwendete Distanz (**700 m für BBSR**) über die Stadtgrenze hinausreichen. Bei zusätzlicher Netzwerkanalyse ist gesondert zu prüfen, ob dieser Rand ausreichend ist.
 
-**Ergebnisformat:** Jede Gruppe liefert in Sitzung 2 einen Layer der Zensus-Gitterzellen im Untersuchungsgebiet mit diesen Feldern:
+**Ergebnisformat:** Für jede berechnete Variante (`REF`, `WHO05`, `BBSR`) wird ein Layer derselben Zensus-Gitterzellen bereitgestellt.
 
 | Feld | Inhalt |
 |:--|:--|
-| `zelle_id` | Kennung der Gitterzelle aus dem Zensus |
-| `ew` | Einwohnerzahl |
-| `ansatz` | Kürzel des Ansatzes, z. B. `REF`, `WHO05`, `3-30-300`, `BBSR`, `BFN_E`, `BFN_V` |
-| `versorgt` | 1 = versorgt, 0 = nicht versorgt nach eurem Ansatz |
-| `wert` | optional: der zugrunde liegende Wert, z. B. m² pro Einwohner |
+| `zelle_id` | gleiche Zellenkennung in allen Varianten |
+| `ew` | Einwohnerzahl; nur Zellen mit vergleichbarer gültiger Einwohnerinformation in die gemeinsame Quote aufnehmen |
+| `ansatz` | `REF`, `WHO05` oder `BBSR` |
+| `versorgt` | 1 = versorgt, 0 = nicht versorgt; **NULL**, wenn mit den vorhandenen Daten nicht entscheidbar |
+| `wert` | optional: zusätzlicher Kennwert |
+| `stufe_300`, `stufe_700` | **nur BBSR:** Ergebnis der beiden Teilbedingungen (1/0/NULL) |
 
-Nur weil alle dasselbe Format liefern, lassen sich die Ergebnisse in Sitzung 3 Zelle für Zelle zu einer **Übereinstimmungskarte** zusammenführen.
+Bei BBSR gehört die Regel, nach der aus `stufe_300` und `stufe_700` das gemeinsame Feld `versorgt` entsteht, **ins Regelblatt und in die Modellbeschreibung**. Nur so lassen sich Ergebnisse in Sitzung 3 Zelle für Zelle interpretieren und vergleichen.
 
 ::: {.callout-note title="Aus dem perfekten Gipfel"}
-Beim Gipfel waren Feldnamen und Statuswerte im Skript festgelegt; deshalb ließen sich die Ergebnisse aller Gruppen vergleichen. Diesmal legt ihr das Format selbst fest – und haltet euch daran.
+Gleich benannte Felder allein schaffen noch keine Vergleichbarkeit: Auch Zellbezug, Datenstand, Umgang mit fehlenden Werten und die Bedeutung von `versorgt` müssen übereinstimmen.
 :::
 
 # Ergebnis der Sitzung
 
-- die gemeinsamen **Setzungen** der Referenz,
-- euer **Regelblatt** mit Fundstellen,
-- die **Änderungsliste** gegenüber der Referenz,
-- eure **Prognose**,
-- der gemeinsame **Datenplan** und das **Ergebnisformat**.
+Die gemeinsam gesetzte Referenz, Regelblätter für WHO05 und BBSR, Quellen-/Modellentscheidungen, beide Prognosen und der gemeinsame Datenplan. Bei zwei Gruppen werden Regelblätter und Datenstand vor Sitzung 2 zusammengeführt.
 
 ## Vorbereitung auf Sitzung 2
 
 - In QGIS das Plugin **QuickOSM** installieren: **Erweiterungen → Erweiterungen verwalten und installieren → QuickOSM**.
-- Regelblatt und Änderungsliste so speichern, dass ihr sie in Sitzung 2 neben QGIS geöffnet habt.
+- Regelblätter für WHO05 und BBSR sowie die Änderungsliste für Sitzung 2 griffbereit speichern.
 
 ## Hintergrund (nicht Gegenstand der Sitzung)
 

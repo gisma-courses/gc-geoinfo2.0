@@ -17,27 +17,27 @@ format:
 
 ## Wie gut ist Marburg versorgt?
 
-<!-- Ergebnistabelle: Ansatz → Anteil versorgter Bevölkerung. Spannweite über alle Ansätze. -->
+<!-- Ergebnistabelle: REF, WHO05, BBSR; identischer Zellenbestand und gleiche Bevölkerungsgrundlage. BBSR-Zusammenführung offenlegen. -->
 
 ## Die Übereinstimmungskarte
 
-<!-- Je Gitterzelle: in wie vielen Ansätzen versorgt? 0 = alle sagen nein, n = alle sagen ja; dazwischen hängt das Urteil am Ansatz. -->
+<!-- 0 bis 3 positive Ergebnisse aus REF, WHO05, BBSR nur für vollständig vergleichbare Zellen; fehlende Werte niemals als 0 behandeln. BBSR-Stufen einzeln prüfen. -->
 
 ## Wo die Ansätze auseinandergehen
 
-<!-- Welche Stadtteile kippen? Welche Regel ist dafür verantwortlich: Mindestgröße, Luftlinie gegen Fußweg, Summe gegen Einzelfläche, Ja/Nein gegen m² pro Einwohner? -->
+<!-- Wo unterscheiden sich WHO05, REF und BBSR? Mindestgröße, zweite Größen-/Entfernungsstufe, gesetzte Kombination, Proxy-Entscheidungen. Netzweg- und m²-Ansätze nur als nicht berechnete Erweiterung erwähnen. -->
 
 ## Prognose gegen Ergebnis
 
-<!-- Jede Gruppe: Was haben wir erwartet, was kam heraus, warum? -->
+<!-- Eine Gruppe: Prognosen beider Fälle; zwei Gruppen: jede ihre Prognose. WHO05 bei identischen Eingaben nur größer/gleich als REF. BBSR abhängig von Stufenkombination. -->
 
-## Doppelt umgesetzt
+## Quelle, Setzung, Daten
 
-<!-- Falls ein Ansatz zweimal vergeben wurde: Stimmen die Ergebnisse überein? Wenn nicht – welche Setzung unterscheidet sich? Reproduzierbarkeit. -->
+<!-- Welche Abweichung folgt aus einer Quellenangabe, welche aus der selbst getroffenen Zusammenführungsregel bei BBSR und welche aus der Proxywahl? Nicht die wissenschaftliche Fachlichkeit der Kolleginnen und Kollegen bewerten. -->
 
 ## Aus dem perfekten Gipfel
 
-<!-- Artikelformel gegen historischen Code: gleiche Gipfel, andere E. Hier: gleiche Stadt, andere Versorgungsgrade. -->
+<!-- Artikel und Code: andere Formalisierungen, andere Ergebnisse. Hier: drei Rechenvarianten und sichtbare Modellierungsentscheidungen; keine Aussage über die Validität der Forschungsansätze. -->
 
 ## Zugang ist nicht Nutzung
 
@@ -45,4 +45,4 @@ format:
 
 ## Modellaussage
 
-<!-- „Marburg ist gut versorgt“ – nach welchem Ansatz? Was darf eine Stadt nach diesem Vergleich über ihre Grünversorgung sagen? Beobachtung, Modellkonstruktion, Prüfung, Aussagegrenze. -->
+<!-- „Marburg ist gut versorgt“ – unter welcher expliziten Rechenregel und Datengrundlage? Was ist durch Modellentscheidung, nicht durch Quelle gedeckt? Keine fachliche Bewertung der Schwellenwerte. -->

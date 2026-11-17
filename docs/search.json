@@ -15,7 +15,7 @@
     "href": "content/gruenzugang/arbeitsblatt/arbeitsauftrag.html#abgabe",
     "title": "Grünzugang · Umsetzung",
     "section": "Abgabe",
-    "text": "Abgabe\nAbgegeben wird das gespeicherte QGIS-Projekt mit eurem Modell (.model3) und eurem Ergebnis im gemeinsamen Format. Für das Portfolio ergänzt ihr: Regelblatt mit Fundstellen, Änderungsliste gegenüber der Referenz, Prognose und Ergebnis, den Vergleich mit der Referenz und mindestens einem weiteren Ansatz sowie eine knappe Modellaussage mit Aussagegrenze.\n\n\n\n\n\n\nHinweisAus dem perfekten Gipfel\n\n\n\nArtikelformel und historischer Code setzten dieselbe Idee verschieden um und lieferten für dieselben Gipfel verschiedene E-Werte. Hier ist es dasselbe – nur mit fünf Umsetzungen und einer Stadt.",
+    "text": "Abgabe\nAbgegeben wird das gespeicherte QGIS-Projekt mit Modell (.model3) und Ergebnislayern: bei einer Gruppe mit REF, WHO05 und BBSR; bei zwei Gruppen jeweils mit REF und der eigenen Vergleichsvariante (WHO05 bzw. BBSR). Für Sitzung 3 werden die drei Ergebnisse in einem gemeinsamen Vergleichsdatensatz zusammengeführt. Für das Portfolio: Regelblatt mit genauen Fundstellen, dokumentierte Lesarten/Setzungen, Änderungsliste, Prognose und Ergebnis sowie eine knappe Modellaussage mit Aussagegrenze. Bei BBSR sind beide Teilbedingungen separat zu dokumentieren; eine Zusammenführung zu einem Ja/Nein-Ergebnis muss explizit begründet werden.\n\n\n\n\n\n\nHinweisAus dem perfekten Gipfel\n\n\n\nArtikelformel und historischer Code setzten dieselbe Idee verschieden um und lieferten für dieselben Gipfel verschiedene E-Werte. Hier untersuchen wir dieselbe Art von Übergang: von einer Formulierung über eine Rechenregel zu einem räumlichen Ergebnis – an drei berechneten Varianten für eine Stadt.",
     "crumbs": [
       "Grünzugang",
       "Umsetzung"
@@ -26,18 +26,18 @@
     "href": "content/gruenzugang/arbeitsblatt/arbeitsauftrag.html#a1-die-referenz-durchdeklinieren-plenum",
     "title": "Grünzugang · Umsetzung",
     "section": "A1 · Die Referenz durchdeklinieren (Plenum)",
-    "text": "A1 · Die Referenz durchdeklinieren (Plenum)\nReferenz ist der WHO-Indikator, wie ihn van den Bosch et al. (2016) entwickelt und getestet haben: der Anteil der städtischen Bevölkerung, der innerhalb einer bestimmten Entfernung vom Rand einer Grünfläche wohnt. Als Standard empfehlen die Autorinnen und Autoren 300 m Luftlinie und eine Mindestgröße von 1 Hektar. Eine ausführliche Anleitung für die GIS-Umsetzung enthält der Bericht des WHO-Regionalbüros Europa (2016).\nGemeinsam übersetzen wir den Indikator Schritt für Schritt:\n\n\n\n\n\n\n\n\n\n\n\nBegriff\nKriterium\nRepräsentation\nOperation in QGIS\n\n\n\n\nGrün\nstädtische Grünfläche\nöffentlich zugänglich, mindestens 1 ha\nOSM-Polygone ausgewählter Klassen\nAuswahl per Ausdruck, Fläche berechnen, filtern\n\n\nEntfernung\nNähe\nhöchstens 300 m Luftlinie bis zum Flächenrand\nPufferzone um jede Grünfläche\nPuffer 300 m, auflösen\n\n\nBevölkerung\nBewohnerinnen und Bewohner\nWohnort innerhalb der Pufferzone\nZensus-2022-Gitterzellen 100 m mit Einwohnerzahl\nZellmittelpunkte, Lage-Abfrage\n\n\nErgebnis\nZugang\nAnteil der versorgten Bevölkerung\nFeld versorgt je Zelle\nSumme versorgt / Summe aller\n\n\n\nWas der Indikator nicht festlegt, setzen wir einmal gemeinsam. Diese Setzungen gelten für alle Ansätze, sofern ein Ansatz nicht ausdrücklich etwas anderes verlangt:\n\n\n\n\n\n\n\n\nOffene Frage\nGemeinsame Setzung\nBegründung\n\n\n\n\nWelche OSM-Klassen zählen als Grünfläche?\n\n\n\n\nWoran erkennen wir „öffentlich zugänglich“?\n\n\n\n\nWann zählt eine Gitterzelle als versorgt – Mittelpunkt oder Anteil in der Zone?\n\n\n\n\nWie weit reicht das Rechengebiet über Marburg hinaus?\n\n\n\n\nWelches Untersuchungsgebiet: Stadt Marburg oder Kernstadt?\n\n\n\n\n\n\n\n\n\n\n\nHinweisAus dem perfekten Gipfel\n\n\n\nAm Rand des DGM blieb offen, ob außerhalb höheres Gelände liegt. An der Stadtgrenze bleibt offen, ob jenseits davon eine Grünfläche liegt. Das Rechengebiet muss deshalb mindestens um die größte Distanz, die ein Ansatz verwendet, über Marburg hinausreichen.",
+    "text": "A1 · Die Referenz durchdeklinieren (Plenum)\nReferenz ist der WHO-Indikator, wie ihn van den Bosch et al. (2016) entwickelt und getestet haben: der Anteil der städtischen Bevölkerung, der innerhalb einer bestimmten Entfernung vom Rand einer Grünfläche wohnt. Als Standard empfehlen die Autorinnen und Autoren 300 m Luftlinie und eine Mindestgröße von 1 Hektar. Eine ausführliche Anleitung für die GIS-Umsetzung enthält der Bericht des WHO-Regionalbüros Europa (2016).\nGemeinsam übersetzen wir den Indikator Schritt für Schritt:\n\n\n\n\n\n\n\n\n\n\n\nBegriff\nKriterium\nRepräsentation\nOperation in QGIS\n\n\n\n\nGrün\nstädtische Grünfläche\nöffentlich zugänglich, mindestens 1 ha\nOSM-Polygone ausgewählter Klassen\nAuswahl per Ausdruck, Fläche berechnen, filtern\n\n\nEntfernung\nNähe\nhöchstens 300 m Luftlinie bis zum Flächenrand\nPufferzone um jede Grünfläche\nPuffer 300 m, auflösen\n\n\nBevölkerung\nBewohnerinnen und Bewohner\nWohnort innerhalb der Pufferzone\nZensus-2022-Gitterzellen 100 m mit Einwohnerzahl\nZellmittelpunkte, Lage-Abfrage\n\n\nErgebnis\nZugang\nAnteil der versorgten Bevölkerung\nFeld versorgt je Zelle\nSumme versorgt / Summe aller\n\n\n\nWas der Indikator nicht festlegt, setzen wir einmal gemeinsam. Diese Setzungen gelten für REF, WHO05 und BBSR, sofern eine der jeweiligen Quellen etwas anderes fordert:\n\n\n\n\n\n\n\n\nOffene Frage\nGemeinsame Setzung\nBegründung\n\n\n\n\nWelche OSM-Klassen zählen als Grünfläche?\n\n\n\n\nWoran erkennen wir „öffentlich zugänglich“?\n\n\n\n\nWann zählt eine Gitterzelle als versorgt – Mittelpunkt oder Anteil in der Zone?\n\n\n\n\nWie weit reicht das Rechengebiet über Marburg hinaus?\n\n\n\n\nWelches Untersuchungsgebiet: Stadt Marburg oder Kernstadt?\n\n\n\n\n\n\n\n\n\n\n\nHinweisAus dem perfekten Gipfel\n\n\n\nAm Rand des DGM blieb offen, ob außerhalb höheres Gelände liegt. An der Stadtgrenze bleibt offen, ob jenseits davon eine Grünfläche liegt. Das Rechengebiet muss deshalb mindestens um die größte Distanz, die ein Ansatz verwendet, über Marburg hinausreichen.",
     "crumbs": [
       "Grünzugang",
       "Umsetzung"
     ]
   },
   {
-    "objectID": "content/gruenzugang/arbeitsblatt/arbeitsauftrag.html#a2-den-eigenen-ansatz-beim-wort-nehmen",
-    "href": "content/gruenzugang/arbeitsblatt/arbeitsauftrag.html#a2-den-eigenen-ansatz-beim-wort-nehmen",
+    "objectID": "content/gruenzugang/arbeitsblatt/arbeitsauftrag.html#a2-die-vergleichsfälle-beim-wort-nehmen",
+    "href": "content/gruenzugang/arbeitsblatt/arbeitsauftrag.html#a2-die-vergleichsfälle-beim-wort-nehmen",
     "title": "Grünzugang · Umsetzung",
-    "section": "A2 · Den eigenen Ansatz beim Wort nehmen",
-    "text": "A2 · Den eigenen Ansatz beim Wort nehmen\nJede Gruppe übernimmt einen Ansatz. Lest gezielt die Stelle, an der die Schwellen stehen, und haltet die Fundstelle fest (Seite, Abschnitt, Abbildung).\n\n\n\nGruppe\nAnsatz\nQuelle\n\n\n\n\n1\n„WHO“, wie häufig zitiert\nISGlobal (2021); Pereira Barboza et al. (2021): Green space and mortality in European cities: a health impact assessment study\n\n\n2\n3-30-300-Regel\nKonijnendijk (2023): Evidence-based guidelines for greener, healthier, more resilient neighbourhoods: Introducing the 3–30–300 rule\n\n\n3\nBBSR 2018\nBBSR (2018): Handlungsziele für Stadtgrün und deren empirische Evidenz, Kap. 2.2, S. 26\n\n\n4\nBfN – Grünerreichbarkeit\nBlum et al. (2024): Orientierungswerte für öffentliches Grün. Kurzfassung; ausführlich: Blum et al. (2023), BfN-Schriften 653\n\n\n5\nBfN – Grünraumversorgung\nwie Gruppe 4\n\n\n\nGibt es mehr Gruppen als Ansätze, wird ein Ansatz doppelt vergeben. Die beiden Gruppen arbeiten unabhängig voneinander und vergleichen erst in Sitzung 3.\nFüllt dann euer Regelblatt:\n\n\n\n\n\n\n\n\n\n\nWas die Quelle festlegt (mit Fundstelle)\nWas offen bleibt\nUnsere Setzung\n\n\n\n\nGrünfläche: welche Art? öffentlich?\n\n\n\n\n\nMindestgröße: je Fläche oder als Summe?\n\n\n\n\n\nEntfernungsmaß: Luftlinie, Fußweg, nicht festgelegt?\n\n\n\n\n\nDistanz\n\n\n\n\n\nBezugspunkt: Rand, Eingang, Mittelpunkt?\n\n\n\n\n\nBevölkerung: wer zählt, in welcher Einheit?\n\n\n\n\n\nErgebnisgröße: Anteil versorgter Menschen, m² pro Einwohner, ja/nein?\n\n\n\n\n\nMehrere Stufen: Wie werden sie kombiniert?\n\n\n\n\n\n\nFür die Spalte „Unsere Setzung“ gilt: Was eure Quelle offenlässt, setzt ihr wie in der Referenz. Eine Abweichung davon ist nur zulässig, wenn ihr sie aus der Quelle begründen könnt.\n\n\n\n\n\n\nTippPrüffrage\n\n\n\nGibt es in eurer Quelle einen Satz, den man auf zwei Arten rechnen könnte? Notiert beide Lesarten. Genau diese Stellen meinen wir mit „klingt gut – aber was heißt das?“.",
+    "section": "A2 · Die Vergleichsfälle beim Wort nehmen",
+    "text": "A2 · Die Vergleichsfälle beim Wort nehmen\nWir arbeiten mit einer oder zwei Gruppen, aber mit denselben drei Rechenvarianten. Alle nutzen zuerst die gemeinsame Referenz aus A1. Danach bearbeitet eine Gruppe beide Fälle nacheinander oder zwei Gruppen je einen Fall.\n\n\n\nFall\nZu untersuchende Quelle\nArbeitsauftrag\n\n\n\n\nWHO05\nISGlobal (2021); Pereira Barboza et al. (2021)\nPrüfen, was die häufig zitierte 0,5-ha-/300-m-Aussage tatsächlich festlegt und was für unsere Berechnung ergänzt werden muss.\n\n\nBBSR\nBBSR (2018), Handlungsziele für Stadtgrün und deren empirische Evidenz, Kap. 2.2, S. 26\nBeide Größen-/Entfernungsstufen quellengetreu erfassen; prüfen, ob die Quelle ihre Verknüpfung als einheitliches Ja/Nein-Kriterium vorgibt.\n\n\n\nZusätzliche Quellenbeispiele für die gemeinsame Diskussion (nicht vollständig zu rechnen): 3-30-300 nach Konijnendijk (2023); BfN-Grünerreichbarkeit und Grünraumversorgung nach Blum et al. (2024), ausführliche BfN-Fassung (2023). Die 3-30-300-Regel umfasst drei Anforderungen (Sichtbarkeit von Bäumen, Baumkronenanteil, Nähe zu Grün); eine 300-m-Pufferkarte allein ist nicht ihre vollständige Umsetzung.\nLest für euren Fall gezielt die Stellen mit den Schwellen und ihrer Interpretation. Haltet Seite, Abschnitt oder Abbildung fest und füllt das Regelblatt. Bei einer Gruppe gibt es zwei Regelblätter, bei zwei Gruppen je eines.\n\n\n\n\n\n\n\n\n\n\nWas die Quelle festlegt (mit Fundstelle)\nWelche GIS-Entscheidung ist noch offen – und warum?\nUnsere dokumentierte Setzung\n\n\n\n\nGrünfläche: welche Art? öffentlich?\n\n\n\n\n\nMindestgröße: je Fläche oder als Summe?\n\n\n\n\n\nEntfernungsmaß: Luftlinie, Fußweg, nicht festgelegt?\n\n\n\n\n\nDistanz\n\n\n\n\n\nBezugspunkt: Rand, Eingang, Mittelpunkt?\n\n\n\n\n\nBevölkerung: wer zählt, in welcher Einheit?\n\n\n\n\n\nErgebnisgröße: Anteil versorgter Menschen, m²/Einwohner, ja/nein?\n\n\n\n\n\nMehrere Stufen: getrennt, gemeinsam, alternativ?\n\n\n\n\n\n\nFür die letzte Spalte gilt: Fehlt eine ausdrückliche abweichende Vorgabe in der Quelle, übernehmen wir für vergleichbare Fragen die gemeinsame Referenzsetzung. Wo sich eine Lesart nicht aus der Quelle entscheiden lässt, kennzeichnen wir sie als eigene Modellentscheidung, nicht als Behauptung über die Absicht der Autorinnen und Autoren.\n\n\n\n\n\n\nTippPrüffrage\n\n\n\nWelche Wörter oder Größen sind unmittelbar in eine Rechenoperation übertragbar? Wo beginnen wir zu interpretieren? Notiert mindestens eine alternative Lesart oder Modellsetzung und erklärt, ob die Offenheit aus dem Text, aus der Operationalisierung oder aus den Daten stammt. Es geht nicht darum, der Quelle einen Fehler nachzuweisen.",
     "crumbs": [
       "Grünzugang",
       "Umsetzung"
@@ -48,7 +48,7 @@
     "href": "content/gruenzugang/arbeitsblatt/arbeitsauftrag.html#a3-was-sich-gegenüber-der-referenz-ändert",
     "title": "Grünzugang · Umsetzung",
     "section": "A3 · Was sich gegenüber der Referenz ändert",
-    "text": "A3 · Was sich gegenüber der Referenz ändert\nListet jede Stelle auf, an der euer Ansatz anders rechnet als die Referenz, und was das für die Verarbeitungskette bedeutet.\n\n\n\n\n\n\n\n\n\nÄnderung\nin der Referenz\nin unserem Ansatz\nFolge für die Umsetzung in QGIS\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHinweise für die einzelnen Ansätze:\n\nGruppe 3 (BBSR): Zwei Stufen mit unterschiedlicher Größe und Entfernung. Muss eine Zelle beide erfüllen, eine von beiden – oder werden sie getrennt ausgewiesen?\nGruppe 4 (BfN – Erreichbarkeit): Fußweg statt Luftlinie, und die Mindestgröße gilt für die Summe der erreichbaren Flächen. Dafür braucht ihr ein Wegenetz und eine Netzwerkanalyse.\nGruppe 5 (BfN – Versorgung): Das Ergebnis ist kein Ja/Nein, sondern Quadratmeter Grün pro Einwohner. Wie die Grünfläche auf die Menschen im Einzugsbereich aufgeteilt wird, müsst ihr selbst festlegen und begründen. Dafür ist ein Vergleich mit dem Berliner Umweltatlas hilfreich, der ebenfalls mit 6 m² pro Einwohner arbeitet.",
+    "text": "A3 · Was sich gegenüber der Referenz ändert\nTragt für WHO05 und BBSR die Abweichungen gegenüber REF ein. Bei zwei Gruppen bearbeitet jede ihren Fall; bei einer Gruppe werden beide nacheinander ausgefüllt.\n\n\n\n\n\n\n\n\n\n\nÄnderung\nReferenz (REF)\nVergleichsfall\nKonsequenz für QGIS\nQuellenbefund oder eigene Setzung?\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWHO05: Prüft zunächst, ob gegenüber REF tatsächlich nur die Mindestfläche von 1 ha auf 0,5 ha geändert werden muss. Trennt ausdrücklich die Quellenaussage von den aus REF übernommenen Annahmen, etwa zur Repräsentation in OSM und zu Zellmittelpunkten.\nBBSR: Betrachtet 1 ha / 300 m und 10 ha / 700 m zunächst als zwei getrennte Bedingungen. Prüft anhand der Fundstelle, ob eine Zelle beide erfüllen muss oder ob die Quelle gar keine einzige binäre Zusammenfassung vorsieht. Erzeugt zwei Teilindikatoren; legt erst danach eine Regel für das gemeinsame Vergleichsfeld versorgt fest und markiert sie gegebenenfalls als eigene Auswertungsentscheidung.\n\nKurzer Quellenblick ohne GIS-Umsetzung: Was müsste man bei 3-30-300 (drei Teilanforderungen) oder bei den beiden BfN-Ansätzen (Fußwege, summierte Fläche, m² pro Person) zusätzlich modellieren? Diese Überlegung dient dem Verständnis der Übertragung, nicht einer fachlichen Bewertung der Empfehlungen.",
     "crumbs": [
       "Grünzugang",
       "Umsetzung"
@@ -59,7 +59,7 @@
     "href": "content/gruenzugang/arbeitsblatt/arbeitsauftrag.html#a4-prognose",
     "title": "Grünzugang · Umsetzung",
     "section": "A4 · Prognose",
-    "text": "A4 · Prognose\nBevor gerechnet wird: Schätzt, ob euer Ansatz in Marburg mehr oder weniger Menschen als versorgt ausweist als die Referenz – und wo in der Stadt sich die Ergebnisse vermutlich am stärksten unterscheiden.\n\n\n\n\n\n\n\n\n\nUnsere Prognose\nBegründung\n\n\n\n\nAnteil versorgt im Vergleich zur Referenz (mehr / weniger / gleich)\n\n\n\n\nWo in Marburg erwarten wir die größten Unterschiede?\n\n\n\n\n\nDie Prognose wird in Sitzung 3 mit dem Ergebnis verglichen. Eine falsche Prognose ist kein Fehler, sondern ein Befund.",
+    "text": "A4 · Prognose\nBevor gerechnet wird, formuliert eine begründete Erwartung für WHO05 und BBSR relativ zu REF. Bei zwei Gruppen werden die Prognosen anschließend ausgetauscht.\n\n\n\n\n\n\n\n\n\nVariante\nMehr / weniger / gleich viel versorgte Bevölkerung als REF?\nWo in Marburg erwarten wir Unterschiede?\nWelche Regel könnte das erklären?\n\n\n\n\nWHO05\n\n\n\n\n\nBBSR\n\n\n\n\n\n\nFür WHO05 lässt sich zusätzlich eine gerichtete Hypothese prüfen: Bei identischen Grünflächenklassen und derselben 300-m-Distanzregel darf eine Absenkung der Mindestfläche von 1 auf 0,5 ha den versorgten Bevölkerungsanteil nicht verkleinern. Ist das Ergebnis dennoch kleiner, deutet das auf Unterschiede in Daten oder Verarbeitung hin. Für BBSR hängt die Richtung unter anderem von der begründeten Verknüpfung der beiden Stufen ab.\nEine nicht bestätigte Prognose ist ein auswertbarer Befund, kein Fehler.",
     "crumbs": [
       "Grünzugang",
       "Umsetzung"
@@ -70,7 +70,7 @@
     "href": "content/gruenzugang/arbeitsblatt/arbeitsauftrag.html#a5-gemeinsamer-datenplan-und-ergebnisformat-plenum",
     "title": "Grünzugang · Umsetzung",
     "section": "A5 · Gemeinsamer Datenplan und Ergebnisformat (Plenum)",
-    "text": "A5 · Gemeinsamer Datenplan und Ergebnisformat (Plenum)\nAlle Gruppen rechnen mit denselben Daten. Nur so lässt sich am Ende sagen, dass ein Unterschied aus dem Ansatz kommt.\n\n\n\n\n\n\n\n\n\n\n\nKriterium\nDaten\nQuelle und Abruf\nLizenz\nKBS und Auflösung\nWas wissen wir über die Daten nicht?\n\n\n\n\nGrünflächen\n\n\n\n\n\n\n\nWegenetz (für Gruppe 4 und 5)\n\n\n\n\n\n\n\nBevölkerung\n\n\n\n\n\n\n\nUntersuchungs- und Rechengebiet\n\n\n\n\n\n\n\n\nMögliche Quellen:\n\nOpenStreetMap für Grünflächen und Wege – in QGIS über das Plugin QuickOSM abrufbar. Lizenz: ODbL. Haltet Abrufdatum und Abfrage fest; alle Gruppen verwenden dieselbe Abfrage.\nZensus 2022, Bevölkerungszahlen in Gitterzellen (100 m): Gitterdaten zum Download.\nVerwaltungsgrenzen für Untersuchungs- und Rechengebiet.\n\nErgebnisformat: Jede Gruppe liefert in Sitzung 2 einen Layer der Zensus-Gitterzellen im Untersuchungsgebiet mit diesen Feldern:\n\n\n\n\n\n\n\nFeld\nInhalt\n\n\n\n\nzelle_id\nKennung der Gitterzelle aus dem Zensus\n\n\new\nEinwohnerzahl\n\n\nansatz\nKürzel des Ansatzes, z. B. REF, WHO05, 3-30-300, BBSR, BFN_E, BFN_V\n\n\nversorgt\n1 = versorgt, 0 = nicht versorgt nach eurem Ansatz\n\n\nwert\noptional: der zugrunde liegende Wert, z. B. m² pro Einwohner\n\n\n\nNur weil alle dasselbe Format liefern, lassen sich die Ergebnisse in Sitzung 3 Zelle für Zelle zu einer Übereinstimmungskarte zusammenführen.\n\n\n\n\n\n\nHinweisAus dem perfekten Gipfel\n\n\n\nBeim Gipfel waren Feldnamen und Statuswerte im Skript festgelegt; deshalb ließen sich die Ergebnisse aller Gruppen vergleichen. Diesmal legt ihr das Format selbst fest – und haltet euch daran.",
+    "text": "A5 · Gemeinsamer Datenplan und Ergebnisformat (Plenum)\nAlle Varianten verwenden dieselben Daten, denselben Raumbezug und dieselben gemeinsamen Setzungen. Sonst könnten Unterschiede aus den Daten statt aus der Regel stammen. Bei zwei Gruppen wird ein gemeinsamer Datenstand vereinbart.\n\n\n\n\n\n\n\n\n\n\n\nKriterium\nDaten\nQuelle und Abruf\nLizenz\nKBS und Auflösung\nWas wissen wir über die Daten nicht?\n\n\n\n\nGrünflächen\n\n\n\n\n\n\n\nBevölkerung\n\n\n\n\n\n\n\nUntersuchungs- und Rechengebiet\n\n\n\n\n\n\n\nWegenetz (nur bei freiwilliger BfN-Erweiterung)\n\n\n\n\n\n\n\n\nMögliche Quellen:\n\nOpenStreetMap für Grünflächen – in QGIS über QuickOSM. Lizenz: ODbL. Dokumentiert Abfrage, Klassenauswahl und Abrufdatum; beide Gruppen verwenden denselben Stand.\nZensus 2022, Einwohnerzahlen auf 100-m-Gitterzellen: Gitterdaten zum Download.\nVerwaltungsgrenzen für das Untersuchungsgebiet; das Rechengebiet muss mindestens die größte verwendete Distanz (700 m für BBSR) über die Stadtgrenze hinausreichen. Bei zusätzlicher Netzwerkanalyse ist gesondert zu prüfen, ob dieser Rand ausreichend ist.\n\nErgebnisformat: Für jede berechnete Variante (REF, WHO05, BBSR) wird ein Layer derselben Zensus-Gitterzellen bereitgestellt.\n\n\n\n\n\n\n\nFeld\nInhalt\n\n\n\n\nzelle_id\ngleiche Zellenkennung in allen Varianten\n\n\new\nEinwohnerzahl; nur Zellen mit vergleichbarer gültiger Einwohnerinformation in die gemeinsame Quote aufnehmen\n\n\nansatz\nREF, WHO05 oder BBSR\n\n\nversorgt\n1 = versorgt, 0 = nicht versorgt; NULL, wenn mit den vorhandenen Daten nicht entscheidbar\n\n\nwert\noptional: zusätzlicher Kennwert\n\n\nstufe_300, stufe_700\nnur BBSR: Ergebnis der beiden Teilbedingungen (1/0/NULL)\n\n\n\nBei BBSR gehört die Regel, nach der aus stufe_300 und stufe_700 das gemeinsame Feld versorgt entsteht, ins Regelblatt und in die Modellbeschreibung. Nur so lassen sich Ergebnisse in Sitzung 3 Zelle für Zelle interpretieren und vergleichen.\n\n\n\n\n\n\nHinweisAus dem perfekten Gipfel\n\n\n\nGleich benannte Felder allein schaffen noch keine Vergleichbarkeit: Auch Zellbezug, Datenstand, Umgang mit fehlenden Werten und die Bedeutung von versorgt müssen übereinstimmen.",
     "crumbs": [
       "Grünzugang",
       "Umsetzung"
@@ -81,7 +81,7 @@
     "href": "content/gruenzugang/arbeitsblatt/arbeitsauftrag.html#ergebnis-von-teil-a",
     "title": "Grünzugang · Umsetzung",
     "section": "Ergebnis von Teil A",
-    "text": "Ergebnis von Teil A\n\ndie gemeinsamen Setzungen der Referenz,\neuer Regelblatt mit Fundstellen,\ndie Änderungsliste gegenüber der Referenz,\neure Prognose,\nder gemeinsame Datenplan und das Ergebnisformat.\n\nVorbereitung auf Teil B: In QGIS das Plugin QuickOSM installieren (Erweiterungen → Erweiterungen verwalten und installieren → QuickOSM). Regelblatt und Änderungsliste so speichern, dass ihr sie neben QGIS geöffnet habt.",
+    "text": "Ergebnis von Teil A\n\ndie gemeinsamen Referenzsetzungen,\nRegelblatt und Quellenfundstellen für WHO05 und BBSR,\nÄnderungsliste mit getrennten Quellen- und Modellentscheidungen,\nPrognosen zu beiden Vergleichsfällen,\ngemeinsamer Datenplan und vereinbartes Ergebnisformat.\n\nVorbereitung auf Teil B: QuickOSM in QGIS installieren. Regelblatt, Änderungsliste und die vereinbarten Datenabfragen griffbereit halten.",
     "crumbs": [
       "Grünzugang",
       "Umsetzung"
@@ -890,7 +890,7 @@
     "href": "content/gruenzugang/slides/01-quellen-abstraktion.html#worum-es-geht",
     "title": "Grünzugang",
     "section": "Worum es geht",
-    "text": "Worum es geht\n\nQuelle → Begriffe → Kriterien → Daten und Operationen → Ergebnis mit Aussagegrenze\n\nLeitfrage des Blocks: Bedeutet räumliche Nähe auch Zugang?\nHeute bauen wir noch nichts in QGIS. Heute klären wir, was die Ansätze eigentlich meinen – so genau, dass man es rechnen kann.",
+    "text": "Worum es geht\n\nQuelle → Begriffe → Rechenregel → Daten und Operationen → Ergebnis mit Aussagegrenze\n\nLeitfrage: Was genau wird aus einer veröffentlichten Empfehlung, wenn wir sie in QGIS berechnen?\nWir prüfen nicht, ob die Empfehlung fachlich sinnvoll oder empirisch gut begründet ist. Wir prüfen wo Interpretationen, zusätzliche Festlegungen und Datenproxies in die Berechnung eingehen.\nHeute: Referenz im Plenum; WHO05 und BBSR mit einer oder zwei Gruppen vorbereiten. 3-30-300 und BfN bleiben weitere Lesebeispiele.",
     "crumbs": [
       "Grünzugang",
       "Teil 1 – Lesarten und Abstraktion"
@@ -919,11 +919,11 @@
     ]
   },
   {
-    "objectID": "content/gruenzugang/slides/01-quellen-abstraktion.html#dieselbe-absicht-andere-regeln",
-    "href": "content/gruenzugang/slides/01-quellen-abstraktion.html#dieselbe-absicht-andere-regeln",
+    "objectID": "content/gruenzugang/slides/01-quellen-abstraktion.html#fünf-perspektiven-nicht-fünf-gruppen",
+    "href": "content/gruenzugang/slides/01-quellen-abstraktion.html#fünf-perspektiven-nicht-fünf-gruppen",
     "title": "Grünzugang",
-    "section": "Dieselbe Absicht, andere Regeln",
-    "text": "Dieselbe Absicht, andere Regeln\n\n\n\n\n\n\n\n\nAnsatz\nGrünfläche\nEntfernung\n\n\n\n\nWHO, wie zitiert\n≥ 0,5 ha\n300 m Luftlinie\n\n\nWHO-Indikator\n≥ 1 ha\n300 m Luftlinie zum Rand\n\n\n3-30-300-Regel\nöffentlich, keine Mindestgröße\n300 m zur nächsten Fläche\n\n\nBBSR 2018\n≥ 1 ha / ≥ 10 ha\n300 m / 700 m Luftlinie\n\n\nBfN 2024\ninsgesamt &gt; 1 ha\n≤ 500 m Fußweg\n\n\nBfN 2024 / Berlin\n6 m² pro Einwohner\nim Einzugsbereich\n\n\n\n\nKonijnendijk 2023 · BBSR 2018, S. 26 · Blum et al. 2024 · Umweltatlas Berlin",
+    "section": "Fünf Perspektiven – nicht fünf Gruppen",
+    "text": "Fünf Perspektiven – nicht fünf Gruppen\n\n\n\n\n\n\n\nQuellenbeispiel\nUnterschied, der beim Rechnen wichtig wird\n\n\n\n\nWHO, häufig zitiert (WHO05)\n0,5 ha statt 1 ha\n\n\nWHO-Indikator als Referenz (REF)\n1 ha, 300 m bis zum Grünflächenrand\n\n\nBBSR 2018\nzwei Stufen: 1 ha / 300 m und 10 ha / 700 m\n\n\n3-30-300-Regel\ndrei Anforderungen: Bäume sehen, Kronendeckung, Grünerreichbarkeit\n\n\nBfN: Erreichbarkeit / Versorgung\nWegenetz und Flächensumme / m² pro Einwohner\n\n\n\n\nWir rechnen verbindlich REF, WHO05 und BBSR. Die übrigen Beispiele dienen der Quellenlektüre: Welche weiteren Operationen wären erforderlich?\n\n\nKonijnendijk 2023 · BBSR 2018, S. 26 · Blum et al. 2024",
     "crumbs": [
       "Grünzugang",
       "Teil 1 – Lesarten und Abstraktion"
@@ -934,7 +934,7 @@
     "href": "content/gruenzugang/slides/01-quellen-abstraktion.html#unsere-frage",
     "title": "Grünzugang",
     "section": "Unsere Frage",
-    "text": "Unsere Frage\n\nKlingt gut. Ist gut gemeint. Aber was heißt das in Marburg?\n\nWir prüfen nicht, ob die Schwellen fachlich gut begründet sind – das ist die Arbeit der Kolleginnen und Kollegen, die sie aufgestellt haben.\nWir prüfen, was herauskommt, wenn man sie beim Wort nimmt: gleiche Stadt, gleiche Daten, andere Regel.",
+    "text": "Unsere Frage\n\nWie wird aus einer Empfehlung eine eindeutige Berechnung für Marburg?\n\nNicht unsere Aufgabe: festzustellen, ob die Kolleginnen und Kollegen 300 m, 0,5 ha oder andere Schwellen fachlich richtig gewählt haben.\nUnsere Aufgabe: zu unterscheiden, was die Quelle festlegt, was bei der Operationalisierung ergänzt wird und was unsere Daten nur näherungsweise abbilden.\n\nEine nicht vollständig GIS-spezifizierte Empfehlung ist nicht automatisch schlechte Wissenschaft.",
     "crumbs": [
       "Grünzugang",
       "Teil 1 – Lesarten und Abstraktion"
@@ -945,7 +945,7 @@
     "href": "content/gruenzugang/slides/01-quellen-abstraktion.html#aus-dem-perfekten-gipfel",
     "title": "Grünzugang",
     "section": "Aus dem perfekten Gipfel",
-    "text": "Aus dem perfekten Gipfel\n\n\nDort\nArtikelformel und historischer Code setzen dieselbe Idee verschieden um – für dieselben Gipfel ergeben sich verschiedene E-Werte.\n\n\nHier\nFünf Ansätze setzen dieselbe Absicht verschieden um – für dieselbe Stadt ergeben sich verschiedene Versorgungsgrade.\n\n\n\nErst die Umsetzung zeigt, was eine Regel tatsächlich bedeutet.",
+    "text": "Aus dem perfekten Gipfel\n\n\nDort\nArtikelformel und historischer Code setzen dieselbe Idee verschieden um – für dieselben Gipfel ergeben sich verschiedene E-Werte.\n\n\nHier\nDrei berechnete Varianten setzen verwandte Aussagen unterschiedlich um – für dieselbe Stadt ergeben sich möglicherweise verschiedene Versorgungsgrade.\n\n\n\nErst die Umsetzung zeigt, was eine Regel tatsächlich bedeutet.",
     "crumbs": [
       "Grünzugang",
       "Teil 1 – Lesarten und Abstraktion"
@@ -967,7 +967,7 @@
     "href": "content/gruenzugang/slides/01-quellen-abstraktion.html#was-auch-die-referenz-offenlässt",
     "title": "Grünzugang",
     "section": "Was auch die Referenz offenlässt",
-    "text": "Was auch die Referenz offenlässt\n\n\nGrün\nWelche OSM-Klassen? Park, Wald, Friedhof, Kleingarten?\n\n\nBevölkerung\nZählt eine Zelle, wenn ihr Mittelpunkt oder wenn ein Teil in der Zone liegt?\n\n\nRaum\nZählt die Grünfläche jenseits der Stadtgrenze?\n\n\nÖffentlich\nWie erkennt man in den Daten, ob eine Fläche zugänglich ist?\n\n\n\nDiese Punkte setzen wir einmal gemeinsam – und alle Ansätze übernehmen die Setzung, wenn sie selbst nichts anderes sagen.",
+    "text": "Was auch die Referenz offenlässt\n\n\nGrün\nWelche OSM-Klassen? Park, Wald, Friedhof, Kleingarten?\n\n\nBevölkerung\nZählt eine Zelle, wenn ihr Mittelpunkt oder wenn ein Teil in der Zone liegt?\n\n\nRaum\nZählt die Grünfläche jenseits der Stadtgrenze?\n\n\nÖffentlich\nWie erkennt man in den Daten, ob eine Fläche zugänglich ist?\n\n\n\nDiese Punkte setzen wir einmal gemeinsam; WHO05 und BBSR übernehmen sie, wo ihre Quellen keine andere Vorgabe machen.",
     "crumbs": [
       "Grünzugang",
       "Teil 1 – Lesarten und Abstraktion"
@@ -1000,18 +1000,29 @@
     "href": "content/gruenzugang/slides/01-quellen-abstraktion.html#gleiche-daten-andere-regel",
     "title": "Grünzugang",
     "section": "Gleiche Daten, andere Regel",
-    "text": "Gleiche Daten, andere Regel\n\ngleiche Stadt · gleiche Daten · gleiche Setzungen → nur die Regel des Ansatzes wechselt\n\nNur so lässt sich am Ende sagen, dass ein Unterschied aus dem Ansatz kommt – und nicht aus einer anderen Datenquelle oder einer anderen Auswahl von Grünflächen.\n\nDasselbe Prinzip hatte der Gipfel: ein DGM, mehrere Gipfeldefinitionen.",
+    "text": "Gleiche Daten, andere Regel\n\ngleiche Stadt · gleiche Daten · gleiche Setzungen → nur eine begründete Rechenregel wechselt\n\nNur so lässt sich am Ende sagen, dass ein Unterschied aus dem Ansatz kommt – und nicht aus einer anderen Datenquelle oder einer anderen Auswahl von Grünflächen.\n\nDasselbe Prinzip hatte der Gipfel: ein DGM, mehrere Gipfeldefinitionen.",
     "crumbs": [
       "Grünzugang",
       "Teil 1 – Lesarten und Abstraktion"
     ]
   },
   {
-    "objectID": "content/gruenzugang/slides/01-quellen-abstraktion.html#ein-ansatz-pro-gruppe",
-    "href": "content/gruenzugang/slides/01-quellen-abstraktion.html#ein-ansatz-pro-gruppe",
+    "objectID": "content/gruenzugang/slides/01-quellen-abstraktion.html#wo-liegt-die-unschärfe",
+    "href": "content/gruenzugang/slides/01-quellen-abstraktion.html#wo-liegt-die-unschärfe",
     "title": "Grünzugang",
-    "section": "Ein Ansatz pro Gruppe",
-    "text": "Ein Ansatz pro Gruppe\n\n\n\n\n\n\n\n\nGruppe\nAnsatz\nWas sich gegenüber der Referenz ändert\n\n\n\n\n1\nWHO, wie zitiert\nMindestgröße\n\n\n2\n3-30-300-Regel\nkeine Mindestgröße; Entfernungsmaß nicht festgelegt\n\n\n3\nBBSR 2018\nzwei Stufen: 1 ha / 300 m und 10 ha / 700 m\n\n\n4\nBfN – Erreichbarkeit\nFußweg statt Luftlinie; Flächen werden summiert\n\n\n5\nBfN – Versorgung\nQuadratmeter pro Einwohner statt ja/nein\n\n\n\n\nGibt es mehr Gruppen als Ansätze, wird ein Ansatz doppelt vergeben und unabhängig umgesetzt. Weichen beide Ergebnisse ab, ist das ein Befund zur Reproduzierbarkeit.",
+    "section": "Wo liegt die Unschärfe?",
+    "text": "Wo liegt die Unschärfe?\n\n\n\n\n\n\n\n\nEbene\nBeispiel\nPrüffrage\n\n\n\n\nQuellentext\nzwei Entfernungs-/Flächenstufen\nSchreibt die Quelle eine Verknüpfung vor?\n\n\nOperationalisierung\n„von der Wohnung“\nWelche räumliche Einheit nehmen wir als Wohnort?\n\n\nDatenproxy\nOSM-Polygon = zugängliche Grünfläche?\nWie belastbar bildet die Datenklasse das Gemeinte ab?\n\n\n\n\nOffen heißt nicht falsch. Haltet fest, wo eine Entscheidung entsteht und wer sie für diese Übung trifft.",
+    "crumbs": [
+      "Grünzugang",
+      "Teil 1 – Lesarten und Abstraktion"
+    ]
+  },
+  {
+    "objectID": "content/gruenzugang/slides/01-quellen-abstraktion.html#eine-oder-zwei-gruppen-drei-rechenvarianten",
+    "href": "content/gruenzugang/slides/01-quellen-abstraktion.html#eine-oder-zwei-gruppen-drei-rechenvarianten",
+    "title": "Grünzugang",
+    "section": "Eine oder zwei Gruppen – drei Rechenvarianten",
+    "text": "Eine oder zwei Gruppen – drei Rechenvarianten\n\n\n\n\n\n\n\n\nArbeitsform\nAufgabenverteilung\nGemeinsames Ergebnis\n\n\n\n\n1 Gruppe\nReferenz gemeinsam; danach WHO05 und BBSR nacheinander\nREF + WHO05 + BBSR\n\n\n2 Gruppen\nReferenz gemeinsam; Gruppe 1: WHO05, Gruppe 2: BBSR\nREF + WHO05 + BBSR\n\n\n\nWHO05: Von 1 ha auf 0,5 ha – was ändert sich wirklich?\nBBSR: Zwei räumliche Bedingungen; einzeln kartieren. Legt die Quelle fest, wie man sie zu einem einzigen Ja/Nein kombiniert? Eine eigene Zusammenführung klar kennzeichnen.\n\nKein Wettbewerb zwischen Quellen. Wir prüfen die Reproduzierbarkeit unserer Interpretation und Umsetzung.",
     "crumbs": [
       "Grünzugang",
       "Teil 1 – Lesarten und Abstraktion"
@@ -1022,7 +1033,7 @@
     "href": "content/gruenzugang/slides/01-quellen-abstraktion.html#ergebnis-heute",
     "title": "Grünzugang",
     "section": "Ergebnis heute",
-    "text": "Ergebnis heute\n\n\nRegelblatt\nWas euer Ansatz festlegt – mit Fundstelle –, was er offenlässt und wie ihr es setzt.\n\n\nPrognose\nWeist euer Ansatz in Marburg mehr oder weniger Menschen als versorgt aus als die Referenz? Warum?\n\n\n\nDie Prognose wird in Sitzung 3 überprüft. Ohne Erwartung vor dem Rechnen gibt es hinterher nichts zu prüfen.",
+    "text": "Ergebnis heute\n\n\nQuellenbefund\nWelche Rechenparameter stehen in den Quellen? Mit Fundstelle. Welche Bedeutungen bleiben für unsere Anwendung offen?\n\n\nModellentscheidung\nWas ergänzen wir? Wo übernehmen wir die gemeinsame Referenzsetzung? Was ist eine Folge unserer Daten?\n\n\nPrognose\nMehr, weniger oder gleich viele Versorgte gegenüber REF – getrennt für WHO05 und BBSR?\n\n\nGemeinsame Daten\nGleiche OSM-Flächen, Zensus-Zellen, Gebietsgrenzen und Kennungen in einer oder zwei Gruppen.\n\n\n\nWichtig: Nicht die Kolleginnen und Kollegen werden bewertet, sondern die Nachvollziehbarkeit der Übersetzung vom Text zum GIS-Modell.",
     "crumbs": [
       "Grünzugang",
       "Teil 1 – Lesarten und Abstraktion"
@@ -1033,7 +1044,7 @@
     "href": "content/gruenzugang/slides/01-quellen-abstraktion.html#merksatz",
     "title": "Grünzugang",
     "section": "Merksatz",
-    "text": "Merksatz\n\nEin Ansatz ist erst dann klar, wenn man ihn rechnen kann. Was er bedeutet, zeigt der Vergleich.\n\nUmsetzung, Teil A öffnen",
+    "text": "Merksatz\n\nEine modellierte Aussage wird erst prüfbar, wenn Text, Interpretation und Rechenregel unterscheidbar sind. Der Vergleich zeigt die Folgen.\n\nUmsetzung, Teil A öffnen",
     "crumbs": [
       "Grünzugang",
       "Teil 1 – Lesarten und Abstraktion"

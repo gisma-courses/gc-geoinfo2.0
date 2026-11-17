@@ -1,0 +1,53 @@
+---
+title: "Grünzugang · Sitzung 2"
+subtitle: "Umsetzung: Referenz bauen, für den eigenen Ansatz umbauen"
+title-block-banner: ../../../images/banner-gz.png
+title-block-banner-color: black
+lang: de
+draft: true
+format:
+  html:
+    toc: true
+    toc-depth: 2
+    number-sections: false
+---
+
+<!-- ENTWURF – Struktur steht, Inhalte folgen. Nicht in _quarto.yml/render eingetragen. -->
+
+# Arbeitsauftrag
+
+Wir modellieren **REF, WHO05 und BBSR** mit gemeinsamem Datenstand. **Eine Gruppe** bearbeitet beide Varianten nacheinander; bei **zwei Gruppen** bearbeiten die Gruppen WHO05 beziehungsweise BBSR, nachdem die gemeinsame Referenz gebaut wurde. 3-30-300 und BfN werden nicht verbindlich implementiert.
+
+Prüfziel ist nicht die fachliche Angemessenheit der publizierten Schwellen, sondern **die Transparenz der Übersetzung**: Quellenfestlegung, eigene Modellentscheidung und Datenproxy werden getrennt dokumentiert.
+
+# 0 · Projekt anlegen und KBS festlegen
+
+<!-- Leeres Projekt, EPSG:25832, Ordnerstruktur, relative Pfade. -->
+
+# 1 · Daten nach dem gemeinsamen Datenplan beschaffen
+
+<!-- Ein gemeinsamer Datenstand für REF, WHO05 und BBSR; Zensus-Gitter 100 m laden; Rechengebiet mindestens 700 m über Stadtgrenze; Abrufdatum dokumentieren. -->
+
+# 2 · Referenz: Grünflächenregel als Ausdruck
+
+<!-- Gemeinsame OSM-Klassen, REF-Fläche >= 1 ha. Auswahl begründen und festhalten, dass die OSM-Klasse ein Datenproxy ist. -->
+
+# 3 · Referenz: Puffer und Bevölkerung
+
+<!-- REF: 300 m Luftlinie zum Rand, Gitterzellmittelpunkte, Felder versorgt und ew; Anteil versorgter Bevölkerung. -->
+
+# 4 · Referenz als Modell im grafischen Modellierer
+
+<!-- Kette 2–3 als .model3 mit Parametern Mindestgröße und Distanz; Referenz explizit 1 ha / 300 m. -->
+
+# 5 · Varianten WHO05 und BBSR
+
+<!-- Eine Gruppe: beide Varianten nacheinander; zwei Gruppen: Gruppe 1 WHO05 (0,5 ha, 300 m), Gruppe 2 BBSR. BBSR: getrennte Teilindikatoren 1 ha/300 m und 10 ha/700 m berechnen; eine gemeinsame binäre Kodierung nur nach explizit dokumentierter Zusammenführungsregel. Die source-derived Regeln von eigenen Entscheidungen unterscheiden. Keine obligatorische BfN-Netzwerkanalyse. -->
+
+# 6 · Ergebnis im gemeinsamen Format
+
+<!-- REF/WHO05/BBSR mit identischen zelle_id und ew, ansatz, versorgt (1/0/NULL), optional wert; BBSR zusätzlich stufe_300 und stufe_700; auf identischen, gültigen Zellen vergleichen. -->
+
+# Abgabe
+
+<!-- REF, WHO05 und BBSR mit gespeicherten Modellen und Layern; Regelblätter und Zusammenführungsregel BBSR. -->
