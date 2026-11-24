@@ -15,58 +15,36 @@ format:
 
 ## Worum es geht
 
-Grün in Wohnungsnähe ist ein erklärtes Ziel von Gesundheitsforschung und Stadtplanung. Die Konzepte dazu klingen eindeutig – und sind es nicht. Schon „die WHO-Empfehlung“ kursiert in zwei Fassungen: [ISGlobal](https://www.isglobal.org/en/-/isglobal-presenta-el-ranking-de-las-ciudades-europeas-con-mayor-mortalidad-atribuible-a-la-falta-de-espacios-verdes) gibt sie im Zusammenhang mit der Studie von [Pereira Barboza et al. (2021)](https://doi.org/10.1016/S2542-5196(21)00229-1) mit einer Grünfläche von mindestens 0,5 Hektar in höchstens 300 Metern Luftlinie wieder; die Arbeit, mit der dieser WHO-Indikator entwickelt wurde, empfiehlt als Standard dagegen mindestens 1 Hektar und misst die 300 Meter bis zum Rand der Fläche ([van den Bosch et al. 2016](https://doi.org/10.1177/1403494815615444)).
+Wie verändert sich die modellierte Grünversorgung in Marburg, wenn wir die Mindestgröße eines Parks von 1 ha auf 0,5 ha absenken? Wir halten Daten und Distanzregel konstant und arbeiten in **einer Gruppe**.
 
-Die deutsche Planungspraxis setzt wieder andere Werte an: Eine Studie im Auftrag des [BBSR (2018)](https://epflicht.ulb.uni-bonn.de/download/pdf/372854) nennt Grünflächen ab einem Hektar in 300 Metern Luftlinie, die Orientierungswerte des [Bundesamts für Naturschutz (Blum et al. 2024)](https://doi.org/10.19217/brs242) Grünflächen von insgesamt über einem Hektar in höchstens 500 Metern **Fußweg**, und der [Berliner Umweltatlas](https://www.berlin.de/umweltatlas/nutzung/oeffentliche-gruenanlagen/2020/einleitung/) misst die Versorgung in Quadratmetern Grün pro Einwohner. Die [3-30-300-Regel](https://doi.org/10.1007/s11676-022-01523-z) verlangt höchstens 300 Meter bis zur nächsten öffentlichen Grünfläche – ohne Mindestgröße. Verwandt ist die Idee der 15-Minuten-Stadt, nach der Alltagsziele in einer Viertelstunde zu Fuß oder mit dem Rad erreichbar sein sollen ([Moreno et al. 2021](https://doi.org/10.3390/smartcities4010006)).
-
-Alle meinen ungefähr dasselbe. **Was sie genau meinen, zeigt sich erst, wenn man sie anwendet.** Genau das tun wir: Wir diskutieren nicht, ob die Schwellen fachlich gut begründet sind. Wir nehmen die Ansätze beim Wort, setzen sie für **Marburg** um und vergleichen, was dabei herauskommt.
+| Umfang | Ansatz für Marburg | Fundstelle |
+|:--|:--|:--|
+| **Gemeinsam rechnen** | **REF** mit ≥ 1 ha je Grünfläche und ≤ 300 m Luftlinie bis zum Rand. | [Van den Bosch et al. 2016, Abstract](https://research.slu.se/en/publications/development-of-an-urban-green-space-indicator-and-the-public-heal/) |
+| **Gemeinsam rechnen** | **WHO05** mit ≥ 0,5 ha und ≤ 300 m. Den Flächenrand übernehmen wir aus REF. | [ISGlobal 2021, Abs. 4](https://www.isglobal.org/en/-/isglobal-presenta-el-ranking-de-las-ciudades-europeas-con-mayor-mortalidad-atribuible-a-la-falta-de-espacios-verdes) · [Pereira Barboza et al. 2021, Studiendaten S. e719–e720](https://www.fs.usda.gov/nrs/pubs/jrnl/2021/nrs_2021_barboza_001.pdf) |
+| Freiwillig rechnen | **BBSR** mit zwei Stufen, 1 ha / 300 m und 10 ha / 700 m. | [BBSR 2018, Kap. 2.2, S. 26](https://epflicht.ulb.uni-bonn.de/download/pdf/372854) |
+| Freiwillig lesen | **3-30-300** mit sichtbaren Bäumen, Kronendeckung und Nähe zu öffentlichem Grün. | [Konijnendijk 2023, „The 3-30-300 rule“](https://doi.org/10.1007/s11676-022-01523-z) |
+| Freiwillig lesen | **BfN** mit Fußwegerreichbarkeit in Prozent der Bevölkerung und Grünraumversorgung in m² pro Einwohner. | [Blum et al. 2024, Abb. 2–4](https://epflicht.ulb.uni-bonn.de/download/pdf/772215#page=6) |
 
 ## Wie wir vorgehen
 
-**Ein Ansatz wird vollständig durchdekliniert** – der WHO-Indikator nach van den Bosch et al. (2016) als **Referenz**: vom Satz in der Quelle über Kriterien und Daten bis zur Verarbeitungskette in QGIS. Diese Kette ist das gemeinsame Gerüst.
+Wir lesen die beiden WHO-Fundstellen und halten fest, welche Teile der Rechenregel daraus folgen. Für beide Rechnungen verwenden wir dieselben Parkpolygone, Einwohnerzahlen und die Gemeindegrenze von Marburg. Die Entscheidung je Zelle fällt am Zellmittelpunkt. [OpenStreetMap](https://www.openstreetmap.org/copyright) · [Zensus 2022, Gitterdaten](https://www.zensus2022.de/DE/Ergebnisse-des-Zensus/_inhalt.html#Gitterdaten2022) · [BKG VG250](https://gdz.bkg.bund.de/index.php/default/verwaltungsgebiete-1-250-000-stand-31-12-vg250-31-12.html)
 
-**Jede Gruppe übernimmt dann einen anderen Ansatz** und baut die Referenzkette so um, dass sie genau das rechnet, was ihr Ansatz verlangt – nicht mehr und nicht weniger.
-
-**Die eigentliche Aufgabe ist der Vergleich:** Wie viele Menschen in Marburg gelten je nach Ansatz als versorgt? Wo sind sich alle Ansätze einig, und wo hängt das Urteil allein davon ab, welcher Ansatz gilt?
-
-Damit der Vergleich etwas aussagt, gelten zwei Regeln:
-
-1. **Gleiche Daten für alle.** Alle Gruppen rechnen mit derselben Datengrundlage. Sonst wüsste niemand, ob ein Unterschied aus dem Ansatz oder aus den Daten kommt.
-2. **Was ein Ansatz offenlässt, wird wie in der Referenz gesetzt.** So entstehen Unterschiede nur dort, wo die Ansätze tatsächlich Verschiedenes sagen.
-
-## Was diesmal anders ist
-
-| | Der perfekte Gipfel | Grünzugang |
-|:--|:--|:--|
-| Daten | fertiges QGIS-Paket | gemeinsamer Datenplan, Daten selbst beschaffen und prüfen |
-| Regel | Gipfelregel formulieren | Regel des eigenen Ansatzes aus der Quelle herauslesen und als QGIS-Ausdruck schreiben |
-| Automatisierung | fertiges Skript nutzen | Referenzkette im grafischen Modellierer nachbauen und für den eigenen Ansatz umbauen |
-| Vergleich | Gegenprüfung durch eine andere Gruppe | alle Ansätze für dieselbe Stadt; Übereinstimmungskarte für Marburg |
+Wir klicken **REF einmal** in der QGIS-Werkzeugkiste durch und sichern die tatsächlichen Python-Aufrufe in `protokoll/qgis-befehle.md`. Für **WHO05** nutzen wir dieselbe Kette mit der kleineren Mindestfläche. Wer automatisieren möchte, entwickelt aus dem Protokoll mit KI-Unterstützung ein Skript und prüft es zuerst am manuellen REF-Ergebnis. [QGIS-Dokumentation zum Verarbeitungsverlauf](https://docs.qgis.org/3.44/en/docs/user_manual/processing/history.html#the-processing-history)
 
 ## Ablauf
 
-Zu jeder Sitzung gibt es einen Foliensatz (Teil 1–3); gearbeitet wird durchgehend auf einer Seite: der [Umsetzung](arbeitsblatt/arbeitsauftrag.qmd) mit den Teilen A–C.
+Die [Folien zu Teil A](slides/01-quellen-abstraktion.qmd) zeigen die Fundstellen und die Musterlösung. Die [Umsetzung](arbeitsblatt/arbeitsauftrag.qmd) enthält alle drei Arbeitsschritte.
 
-| Sitzung | Frage und Modell → Umsetzung → Vergleich | Ergebnis |
+| Sitzung | Gemeinsame Aufgabe | Ergebnis |
 |:--|:--|:--|
-| **1 · Lesarten und Abstraktion** | Die Referenz gemeinsam durchdeklinieren; den eigenen Ansatz beim Wort nehmen: Was legt er fest, was lässt er offen? | Regelblatt des eigenen Ansatzes, gemeinsamer Datenplan, Prognose |
-| **2 · Umsetzung** | Daten nach Datenplan beschaffen; Referenzkette im Modellierer bauen; für den eigenen Ansatz umbauen | gespeichertes Projekt mit Modell und Ergebnis im gemeinsamen Format |
-| **3 · Vergleich für Marburg** | Ergebnistabelle aller Ansätze, Übereinstimmungskarte, Abgleich mit der Prognose | Vergleich, Status, Aussagegrenze |
-
-Zwischen den Sitzungen liegen Werkstatttermine für Datenbeschaffung und Umsetzung. Wer möchte, wendet die eigene Kette anschließend auf eine andere Stadt an.
+| **1 · Lesarten und Abstraktion** | REF und WHO05 aus den Fundstellen ableiten und eine Prognose vereinbaren. | Kurzes Regelblatt mit Quellen und Modellsetzungen |
+| **2 · Umsetzung** | Zensus und Parks vorbereiten, REF manuell rechnen, Befehle sichern und WHO05 ableiten. | QGIS-Projekt, zwei Ergebnislayer und Befehlsprotokoll |
+| **3 · Vergleich für Marburg** | Quoten und Karte vergleichen, Prognose abgleichen und Aussagegrenze benennen. | Zwei vergleichbare Quoten und eine Karte der Unterschiede |
 
 ## Was ihr aus dem perfekten Gipfel mitbringt
 
-| Beim Gipfel | Beim Grünzugang |
-|:--|:--|
-| Artikelformel und historischer Code setzen dieselbe Idee verschieden um – und liefern für dieselben Gipfel verschiedene E-Werte. | WHO-Zitat, WHO-Indikator, BBSR, BfN und 3-30-300 setzen dieselbe Absicht verschieden um – und liefern für dieselbe Stadt verschiedene Versorgungsgrade. |
-| Der Panoramaartikel liefert Begriffe und eine Formel, aber keine vollständige Rechenvorschrift. | Jeder Ansatz liefert Schwellen, aber keine vollständige Definition von Grün, Zugang oder Bevölkerung. |
-| Die Gipfelregel ist die fachliche Definition dessen, was als Gipfel gilt. | Die Grünflächenregel ist die fachliche Definition dessen, was als Grünfläche gilt. |
-| Dominanz als Distanz zu höherem Gelände | Luftlinie als Distanz zur nächsten Grünfläche |
-| Höhenstufen: Erst die Verbindung entscheidet. | Fußweg: Erst der begehbare Weg entscheidet. |
-| Datenrand: Außerhalb des DGM kann höheres Gelände liegen. | Stadtgrenze: Außerhalb der Stadt kann die nächste Grünfläche liegen. |
-| Ein unbestimmter Wert ist keine Null. | Eine nicht erreichbare Fläche ist kein Beleg für Nicht-Nutzung – und umgekehrt. |
+Wie beim Gipfel machen wir den Einfluss einer einzelnen Modellentscheidung sichtbar. Bei gleichen Eingabedaten kann eine niedrigere Mindestgröße mehr Flächen und damit mehr Einwohner erfassen. Die Karte zeigt die Luftliniennähe zu kartierten Parks. Ob Menschen diese Parks tatsächlich nutzen, ist eine eigene Untersuchungsfrage. [Van den Bosch et al. 2016](https://research.slu.se/en/publications/development-of-an-urban-green-space-indicator-and-the-public-heal/) · [ISGlobal 2021](https://www.isglobal.org/en/-/isglobal-presenta-el-ranking-de-las-ciudades-europeas-con-mayor-mortalidad-atribuible-a-la-falta-de-espacios-verdes) · [Masterson et al. 2022](https://doi.org/10.3390/ijerph19042226)
 
 ## Portfolio
 
-Ein gespeichertes QGIS-Projekt mit eurem Modell für euren Ansatz, das Regelblatt, euer Ergebnis im gemeinsamen Format, der Vergleich mit der Referenz und mindestens einem weiteren Ansatz sowie eine knappe Modellaussage: Was sagt euer Ansatz über Marburg – und was nicht?
+Gebt das gemeinsame QGIS-Projekt mit `REF` und `WHO05`, Befehlsprotokoll, Regelblatt, Karte und einer knappen Aussage zur modellierten Versorgung in Marburg ab. Ein erstelltes Skript könnt ihr dem Projektordner beilegen. Die BBSR-Rechnung und die zusätzlichen Lesebeispiele sind freiwillig.

@@ -122,10 +122,10 @@ background-size: cover;
 
 <link rel="stylesheet" href="../../../css/styles.css">
 <meta property="og:title" content="Grünzugang · Umsetzung – Grundlagenkurs GI-S (QGIS)">
-<meta property="og:description" content="Fünf Ansätze, eine Stadt: vom Satz in der Quelle zum Vergleich für Marburg">
+<meta property="og:description" content="Zwei Rechenregeln für Marburg, vom Quellentext zur QGIS-Auswertung">
 <meta property="og:site_name" content="Grundlagenkurs GI-S (QGIS)">
 <meta name="twitter:title" content="Grünzugang · Umsetzung – Grundlagenkurs GI-S (QGIS)">
-<meta name="twitter:description" content="Fünf Ansätze, eine Stadt: vom Satz in der Quelle zum Vergleich für Marburg">
+<meta name="twitter:description" content="Zwei Rechenregeln für Marburg, vom Quellentext zur QGIS-Auswertung">
 <meta name="twitter:creator" content="@gisma">
 <meta name="twitter:card" content="summary">
 </head>
@@ -329,7 +329,7 @@ background-size: cover;
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
       <h1 class="title d-none d-lg-block">Grünzugang · Umsetzung</h1>
-            <p class="subtitle lead">Fünf Ansätze, eine Stadt: vom Satz in der Quelle zum Vergleich für Marburg</p>
+            <p class="subtitle lead">Zwei Rechenregeln für Marburg, vom Quellentext zur QGIS-Auswertung</p>
                       </div>
   </div>
     
@@ -450,15 +450,23 @@ background-size: cover;
   <li><a href="#teil-a-lesarten-und-abstraktion-sitzung-1" id="toc-teil-a-lesarten-und-abstraktion-sitzung-1" class="nav-link" data-scroll-target="#teil-a-lesarten-und-abstraktion-sitzung-1">Teil A · Lesarten und Abstraktion (Sitzung 1)</a>
   <ul class="collapse">
   <li><a href="#a1-die-referenz-durchdeklinieren-plenum" id="toc-a1-die-referenz-durchdeklinieren-plenum" class="nav-link" data-scroll-target="#a1-die-referenz-durchdeklinieren-plenum">A1 · Die Referenz durchdeklinieren (Plenum)</a></li>
-  <li><a href="#a2-die-vergleichsfälle-beim-wort-nehmen" id="toc-a2-die-vergleichsfälle-beim-wort-nehmen" class="nav-link" data-scroll-target="#a2-die-vergleichsfälle-beim-wort-nehmen">A2 · Die Vergleichsfälle beim Wort nehmen</a></li>
+  <li><a href="#a2-die-vergleichsquelle-lesen" id="toc-a2-die-vergleichsquelle-lesen" class="nav-link" data-scroll-target="#a2-die-vergleichsquelle-lesen">A2 · Die Vergleichsquelle lesen</a></li>
   <li><a href="#a3-was-sich-gegenüber-der-referenz-ändert" id="toc-a3-was-sich-gegenüber-der-referenz-ändert" class="nav-link" data-scroll-target="#a3-was-sich-gegenüber-der-referenz-ändert">A3 · Was sich gegenüber der Referenz ändert</a></li>
   <li><a href="#a4-prognose" id="toc-a4-prognose" class="nav-link" data-scroll-target="#a4-prognose">A4 · Prognose</a></li>
   <li><a href="#a5-gemeinsamer-datenplan-und-ergebnisformat-plenum" id="toc-a5-gemeinsamer-datenplan-und-ergebnisformat-plenum" class="nav-link" data-scroll-target="#a5-gemeinsamer-datenplan-und-ergebnisformat-plenum">A5 · Gemeinsamer Datenplan und Ergebnisformat (Plenum)</a></li>
-  <li><a href="#ergebnis-von-teil-a" id="toc-ergebnis-von-teil-a" class="nav-link" data-scroll-target="#ergebnis-von-teil-a">Ergebnis von Teil A</a></li>
   </ul></li>
-  <li><a href="#teil-b-umsetzung-in-qgis-sitzung-2" id="toc-teil-b-umsetzung-in-qgis-sitzung-2" class="nav-link" data-scroll-target="#teil-b-umsetzung-in-qgis-sitzung-2">Teil B · Umsetzung in QGIS (Sitzung 2)</a></li>
+  <li><a href="#teil-b-umsetzung-in-qgis-sitzung-2" id="toc-teil-b-umsetzung-in-qgis-sitzung-2" class="nav-link" data-scroll-target="#teil-b-umsetzung-in-qgis-sitzung-2">Teil B · Umsetzung in QGIS (Sitzung 2)</a>
+  <ul class="collapse">
+  <li><a href="#b1-projekt-stadtgrenze-und-rechengebiet" id="toc-b1-projekt-stadtgrenze-und-rechengebiet" class="nav-link" data-scroll-target="#b1-projekt-stadtgrenze-und-rechengebiet">B1 · Projekt, Stadtgrenze und Rechengebiet</a></li>
+  <li><a href="#b2-zensus-csv-importieren-und-marburger-zellen-erzeugen" id="toc-b2-zensus-csv-importieren-und-marburger-zellen-erzeugen" class="nav-link" data-scroll-target="#b2-zensus-csv-importieren-und-marburger-zellen-erzeugen">B2 · Zensus-CSV importieren und Marburger Zellen erzeugen</a></li>
+  <li><a href="#b3-osm-parks-laden-und-flächen-messen" id="toc-b3-osm-parks-laden-und-flächen-messen" class="nav-link" data-scroll-target="#b3-osm-parks-laden-und-flächen-messen">B3 · OSM-Parks laden und Flächen messen</a></li>
+  <li><a href="#b4-ref-einmal-mit-den-qgis-werkzeugen-rechnen" id="toc-b4-ref-einmal-mit-den-qgis-werkzeugen-rechnen" class="nav-link" data-scroll-target="#b4-ref-einmal-mit-den-qgis-werkzeugen-rechnen">B4 · REF einmal mit den QGIS-Werkzeugen rechnen</a></li>
+  <li><a href="#b5-befehlsprotokoll-sichern-und-who05-ableiten" id="toc-b5-befehlsprotokoll-sichern-und-who05-ableiten" class="nav-link" data-scroll-target="#b5-befehlsprotokoll-sichern-und-who05-ableiten">B5 · Befehlsprotokoll sichern und WHO05 ableiten</a></li>
+  <li><a href="#b6-ergebnisse-prüfen-und-quoten-berechnen" id="toc-b6-ergebnisse-prüfen-und-quoten-berechnen" class="nav-link" data-scroll-target="#b6-ergebnisse-prüfen-und-quoten-berechnen">B6 · Ergebnisse prüfen und Quoten berechnen</a></li>
+  <li><a href="#optional-bbsr-als-dritte-rechenvariante" id="toc-optional-bbsr-als-dritte-rechenvariante" class="nav-link" data-scroll-target="#optional-bbsr-als-dritte-rechenvariante">Optional · BBSR als dritte Rechenvariante</a></li>
+  </ul></li>
   <li><a href="#teil-c-vergleich-für-marburg-sitzung-3" id="toc-teil-c-vergleich-für-marburg-sitzung-3" class="nav-link" data-scroll-target="#teil-c-vergleich-für-marburg-sitzung-3">Teil C · Vergleich für Marburg (Sitzung 3)</a></li>
-  <li><a href="#hintergrund-nicht-gegenstand-der-übung" id="toc-hintergrund-nicht-gegenstand-der-übung" class="nav-link" data-scroll-target="#hintergrund-nicht-gegenstand-der-übung">Hintergrund (nicht Gegenstand der Übung)</a></li>
+  <li><a href="#hintergrund-freiwillige-lektüre" id="toc-hintergrund-freiwillige-lektüre" class="nav-link" data-scroll-target="#hintergrund-freiwillige-lektüre">Hintergrund · freiwillige Lektüre</a></li>
   </ul>
 <div class="toc-actions"><ul class="collapse"><li><a href="https://github.com/gisma-courses/gc-geoinfo2.0/edit/main/content/gruenzugang/arbeitsblatt/arbeitsauftrag.qmd" class="toc-action"><i class="bi bi-github"></i>Seite editieren</a></li><li><a href="https://github.com/gisma-courses/gc-geoinfo2.0/issues/new" class="toc-action"><i class="bi empty"></i>Problem melden</a></li></ul></div></nav>
     </div>
@@ -473,397 +481,94 @@ background-size: cover;
 <p><a href="../../../content/gruenzugang/index.html">← Überblick</a> · <a href="../../../content/gruenzugang/slides/01-quellen-abstraktion.html">Folien Teil 1</a></p>
 <section id="arbeitsauftrag" class="level1">
 <h1>Arbeitsauftrag</h1>
-<p><strong>Ziel:</strong> Fünf Ansätze zur wohnungsnahen Grünversorgung begegnen uns in der Literatur. Wir untersuchen <strong>nicht</strong>, ob die Kolleginnen und Kollegen die fachlich richtigen Schwellen gewählt oder sie hinreichend empirisch begründet haben. Wir untersuchen die <strong>Unschärfen auf dem Weg von der veröffentlichten Formulierung zur ausführbaren GIS-Regel</strong>: Was sagt die Quelle tatsächlich, welche Lesarten sind möglich, was müssen wir aufgrund der Daten zusätzlich entscheiden, und wie verändert das die räumliche Aussage?</p>
-<p><strong>Arbeitsform: eine oder zwei Gruppen – nicht fünf.</strong> Alle erarbeiten die WHO-Referenz nach van den Bosch et al.&nbsp;(2016) gemeinsam. Anschließend bearbeiten wir zwei gezielte Vergleichsfälle: <strong>WHO05</strong> (die häufig zitierte 0,5-ha-Fassung) und <strong>BBSR</strong> (zwei Größen-/Entfernungsstufen).</p>
-<ul>
-<li><strong>Eine Gruppe:</strong> Ihr bearbeitet WHO05 und BBSR nacheinander und vergleicht beide mit der gemeinsamen Referenz.</li>
-<li><strong>Zwei Gruppen:</strong> Gruppe 1 bearbeitet WHO05, Gruppe 2 BBSR. Die Ergebnisse werden anschließend zu einem gemeinsamen Vergleich zusammengeführt.</li>
-</ul>
-<p><strong>3-30-300 sowie BfN-Erreichbarkeit und BfN-Versorgung</strong> bleiben als zusätzliche Quellenbeispiele im Blick. Ihre vollständige GIS-Umsetzung ist <strong>keine Pflichtaufgabe</strong>. Sie dienen der Frage, welche weiteren Festlegungen eine Umsetzung erfordern würde.</p>
+<p>Wir arbeiten <strong>als eine Gruppe</strong>. Zuerst bauen wir den Referenzlauf <strong>REF</strong> in QGIS und sichern die zugehörigen Befehle. Für den gemeinsamen Vergleich <strong>WHO05</strong> ändern wir anschließend die Mindestfläche. Mit KI-Unterstützung lässt sich aus dem Befehlsprotokoll ein Skript für den zweiten Lauf ableiten. Die Werkzeugkiste bleibt als Alternative verfügbar. <a href="https://research.slu.se/en/publications/development-of-an-urban-green-space-indicator-and-the-public-heal/">Van den Bosch et al., Abstract</a> · <a href="https://www.isglobal.org/en/-/isglobal-presenta-el-ranking-de-las-ciudades-europeas-con-mayor-mortalidad-atribuible-a-la-falta-de-espacios-verdes">ISGlobal, Abs. 4</a></p>
+<p><strong>Freiwillig:</strong> BBSR kann als dritte Variante gerechnet werden. 3-30-300 und die BfN-Kennzahlen dienen der freiwilligen Quellenlektüre. <a href="https://epflicht.ulb.uni-bonn.de/download/pdf/372854">BBSR 2018, S. 26</a> · <a href="https://doi.org/10.1007/s11676-022-01523-z">Konijnendijk 2023</a> · <a href="https://epflicht.ulb.uni-bonn.de/download/pdf/772215#page=6">Blum et al.&nbsp;2024, Abb. 2–4</a></p>
 <ol type="1">
-<li><strong>Lesarten und Abstraktion</strong> (Teil A, Sitzung 1): Referenz und ausgewählte Vergleichsfälle aus den Quellen in prüfbare Regeln übersetzen; offene Modellentscheidungen dokumentieren; Prognosen festhalten.</li>
-<li><strong>Umsetzung in QGIS</strong> (Teil B, Sitzung 2): gemeinsame Daten; die Referenzkette im Modellierer aufbauen und für WHO05 und BBSR anpassen.</li>
-<li><strong>Vergleich für Marburg</strong> (Teil C, Sitzung 3): Ergebnisse für <strong>REF, WHO05 und BBSR</strong> zusammenführen und interpretieren; Prognosen und Aussagegrenzen prüfen.</li>
+<li><strong>Teil A:</strong> Zwei Quellen lesen, eine Modellentscheidung benennen und eine Prognose notieren.</li>
+<li><strong>Teil B:</strong> Zensus und Parks vorbereiten, REF mit QGIS-Werkzeugen rechnen, Befehle sichern und WHO05 auswerten.</li>
+<li><strong>Teil C:</strong> Zwei Quoten und die Karte vergleichen. Eine Aussage zur modellierten Versorgung in Marburg formulieren.</li>
 </ol>
-<p><strong>Leitunterscheidung:</strong> Eine Quelle kann fachlich überzeugend und für ihren eigentlichen Zweck hinreichend präzise sein, ohne jede spätere GIS-Entscheidung vorwegzunehmen. Wir unterscheiden daher <strong>(a) sprachliche oder konzeptionelle Mehrdeutigkeit</strong>, <strong>(b) bei der Operationalisierung fehlende Angaben</strong> und <strong>(c) Einschränkungen oder Proxys unserer Geodaten</strong>. Das ist Analyse der Übersetzung, kein Urteil über die Forschung der Autorinnen und Autoren.</p>
 <section id="abgabe" class="level2">
 <h2 class="anchored" data-anchor-id="abgabe">Abgabe</h2>
-<p>Abgegeben wird das gespeicherte QGIS-Projekt mit Modell (<code>.model3</code>) und Ergebnislayern: <strong>bei einer Gruppe</strong> mit <code>REF</code>, <code>WHO05</code> und <code>BBSR</code>; <strong>bei zwei Gruppen</strong> jeweils mit <code>REF</code> und der eigenen Vergleichsvariante (<code>WHO05</code> bzw. <code>BBSR</code>). Für Sitzung 3 werden die drei Ergebnisse in einem gemeinsamen Vergleichsdatensatz zusammengeführt. Für das Portfolio: Regelblatt mit genauen Fundstellen, dokumentierte Lesarten/Setzungen, Änderungsliste, Prognose und Ergebnis sowie eine knappe Modellaussage mit Aussagegrenze. Bei BBSR sind <strong>beide Teilbedingungen separat</strong> zu dokumentieren; eine Zusammenführung zu einem Ja/Nein-Ergebnis muss explizit begründet werden.</p>
-<div class="callout callout-style-default callout-note callout-titled" title="Aus dem perfekten Gipfel">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Hinweis</span>Aus dem perfekten Gipfel
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Artikelformel und historischer Code setzten dieselbe Idee verschieden um und lieferten für dieselben Gipfel verschiedene E-Werte. Hier untersuchen wir dieselbe Art von Übergang: von einer Formulierung über eine Rechenregel zu einem räumlichen Ergebnis – an drei berechneten Varianten für eine Stadt.</p>
-</div>
-</div>
+<p>Ein gemeinsames QGIS-Projekt mit <code>REF</code> und <code>WHO05</code>, den zugehörigen GeoPackage-Layern und dem Befehlsprotokoll <code>protokoll/qgis-befehle.md</code>. Ergänzt ein kurzes Regelblatt mit Fundstellen, Datenstand, Prognose und Aussagegrenze. Falls ihr den WHO05-Lauf automatisiert, legt <code>scripts/gruenzugang.py</code> dazu.</p>
 </section>
 </section>
 <section id="teil-a-lesarten-und-abstraktion-sitzung-1" class="level1">
 <h1>Teil A · Lesarten und Abstraktion (Sitzung 1)</h1>
 <section id="a1-die-referenz-durchdeklinieren-plenum" class="level2">
 <h2 class="anchored" data-anchor-id="a1-die-referenz-durchdeklinieren-plenum">A1 · Die Referenz durchdeklinieren (Plenum)</h2>
-<p>Referenz ist der WHO-Indikator, wie ihn <a href="https://doi.org/10.1177/1403494815615444">van den Bosch et al.&nbsp;(2016)</a> entwickelt und getestet haben: der <strong>Anteil der städtischen Bevölkerung</strong>, der innerhalb einer bestimmten Entfernung vom <strong>Rand einer Grünfläche</strong> wohnt. Als Standard empfehlen die Autorinnen und Autoren <strong>300 m Luftlinie</strong> und eine Mindestgröße von <strong>1 Hektar</strong>. Eine ausführliche Anleitung für die GIS-Umsetzung enthält der Bericht des <a href="https://www.who.int/europe/publications/i/item/who-euro-2016-3352-43111-60341">WHO-Regionalbüros Europa (2016)</a>.</p>
-<p>Gemeinsam übersetzen wir den Indikator Schritt für Schritt:</p>
+<p>Der Referenzindikator misst den <strong>Anteil der städtischen Bevölkerung</strong>, der in Reichweite einer Grünfläche wohnt. Die Quellen empfehlen als Standard <strong>mindestens 1 ha Fläche</strong> und <strong>höchstens 300 m Luftlinie bis zum Flächenrand</strong>. <a href="https://research.slu.se/en/publications/development-of-an-urban-green-space-indicator-and-the-public-heal/">Van den Bosch et al., Abstract, „Methods“ und „Conclusions“</a> · <a href="https://www.who.int/europe/publications/i/item/who-euro-2016-3352-43111-60341">WHO-Regionalbüro Europa, Bericht zur Umsetzung</a></p>
 <table class="caption-top table">
-<colgroup>
-<col style="width: 20%">
-<col style="width: 20%">
-<col style="width: 20%">
-<col style="width: 20%">
-<col style="width: 20%">
-</colgroup>
 <thead>
 <tr class="header">
-<th style="text-align: left;"></th>
 <th style="text-align: left;">Begriff</th>
-<th style="text-align: left;">Kriterium</th>
-<th style="text-align: left;">Repräsentation</th>
+<th style="text-align: left;">Gemeinsame Modellsetzung für Marburg</th>
 <th style="text-align: left;">Operation in QGIS</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;"><strong>Grün</strong></td>
-<td style="text-align: left;">städtische Grünfläche</td>
-<td style="text-align: left;">öffentlich zugänglich, mindestens 1 ha</td>
-<td style="text-align: left;">OSM-Polygone ausgewählter Klassen</td>
-<td style="text-align: left;">Auswahl per Ausdruck, Fläche berechnen, filtern</td>
+<td style="text-align: left;">Grünfläche</td>
+<td style="text-align: left;">Ganze Parkpolygone mit <code>leisure=park</code>. <code>access=no</code> und <code>access=private</code> ausschließen. Fehlendes Zugangstag als unbestätigten Zugang dokumentieren. <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a></td>
+<td style="text-align: left;">Auswählen, Fläche je vollständigem Objekt berechnen und Größenfilter anwenden.</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"><strong>Entfernung</strong></td>
 <td style="text-align: left;">Nähe</td>
-<td style="text-align: left;">höchstens 300 m Luftlinie bis zum Flächenrand</td>
-<td style="text-align: left;">Pufferzone um jede Grünfläche</td>
-<td style="text-align: left;">Puffer 300 m, auflösen</td>
+<td style="text-align: left;">Luftlinie bis zum Parkrand. Innerhalb eines Parks gilt Distanz 0. <a href="https://research.slu.se/en/publications/development-of-an-urban-green-space-indicator-and-the-public-heal/">Van den Bosch et al., „Conclusions“</a></td>
+<td style="text-align: left;">Parkpolygone puffern und prüfen, ob der Wohnort die Pufferfläche berührt oder darin liegt.</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;"><strong>Bevölkerung</strong></td>
-<td style="text-align: left;">Bewohnerinnen und Bewohner</td>
-<td style="text-align: left;">Wohnort innerhalb der Pufferzone</td>
-<td style="text-align: left;">Zensus-2022-Gitterzellen 100 m mit Einwohnerzahl</td>
-<td style="text-align: left;">Zellmittelpunkte, Lage-Abfrage</td>
+<td style="text-align: left;">Bevölkerung</td>
+<td style="text-align: left;">Mittelpunkt der 100-m-Zelle als Wohnort-Proxy. <code>Einwohner</code> als Gewicht. <a href="https://www.zensus2022.de/DE/Ergebnisse-des-Zensus/_inhalt.html#Gitterdaten2022">Zensus 2022, Gitterdaten</a></td>
+<td style="text-align: left;">Über die Lage des Mittelpunkts entscheiden und seine Einwohnerzahl genau einmal zählen.</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"><strong>Ergebnis</strong></td>
-<td style="text-align: left;">Zugang</td>
-<td style="text-align: left;">Anteil der versorgten Bevölkerung</td>
-<td style="text-align: left;">Feld <code>versorgt</code> je Zelle</td>
-<td style="text-align: left;">Summe versorgt / Summe aller</td>
+<td style="text-align: left;">Gebiet</td>
+<td style="text-align: left;">Ganze Gemeinde Marburg. Grünflächen bis 300 m außerhalb berücksichtigen. <a href="https://gdz.bkg.bund.de/index.php/default/verwaltungsgebiete-1-250-000-stand-31-12-vg250-31-12.html">BKG VG250</a></td>
+<td style="text-align: left;">Wohnorte an der Stadtgrenze auswählen. Parkobjekte aus dem erweiterten Rechengebiet übernehmen.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Quote</td>
+<td style="text-align: left;">Einwohner in versorgten Zellen geteilt durch alle Einwohner der auswertbaren Zellen. <a href="https://research.slu.se/en/publications/development-of-an-urban-green-space-indicator-and-the-public-heal/">Van den Bosch et al., „Methods“</a></td>
+<td style="text-align: left;">Einwohnerzahlen summieren und den Anteil in Prozent angeben.</td>
 </tr>
 </tbody>
 </table>
-<p>Was der Indikator <strong>nicht</strong> festlegt, setzen wir einmal gemeinsam. Diese Setzungen gelten für <strong>REF, WHO05 und BBSR</strong>, sofern eine der jeweiligen Quellen etwas anderes fordert:</p>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 33%">
-<col style="width: 33%">
-<col style="width: 33%">
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: left;">Offene Frage</th>
-<th style="text-align: left;">Gemeinsame Setzung</th>
-<th style="text-align: left;">Begründung</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">Welche OSM-Klassen zählen als Grünfläche?</td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Woran erkennen wir „öffentlich zugänglich“?</td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Wann zählt eine Gitterzelle als versorgt – Mittelpunkt oder Anteil in der Zone?</td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Wie weit reicht das Rechengebiet über Marburg hinaus?</td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Welches Untersuchungsgebiet: Stadt Marburg oder Kernstadt?</td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-</tr>
-</tbody>
-</table>
-<div class="callout callout-style-default callout-note callout-titled" title="Aus dem perfekten Gipfel">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Hinweis</span>Aus dem perfekten Gipfel
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Am Rand des DGM blieb offen, ob außerhalb höheres Gelände liegt. An der Stadtgrenze bleibt offen, ob jenseits davon eine Grünfläche liegt. Das Rechengebiet muss deshalb mindestens um die größte Distanz, die ein Ansatz verwendet, über Marburg hinausreichen.</p>
-</div>
-</div>
 </section>
-<section id="a2-die-vergleichsfälle-beim-wort-nehmen" class="level2">
-<h2 class="anchored" data-anchor-id="a2-die-vergleichsfälle-beim-wort-nehmen">A2 · Die Vergleichsfälle beim Wort nehmen</h2>
-<p><strong>Wir arbeiten mit einer oder zwei Gruppen, aber mit denselben drei Rechenvarianten.</strong> Alle nutzen zuerst die gemeinsame Referenz aus A1. Danach bearbeitet eine Gruppe beide Fälle nacheinander oder zwei Gruppen je einen Fall.</p>
+<section id="a2-die-vergleichsquelle-lesen" class="level2">
+<h2 class="anchored" data-anchor-id="a2-die-vergleichsquelle-lesen">A2 · Die Vergleichsquelle lesen</h2>
+<p>Lest gemeinsam die beiden Fundstellen. Tragt je eine kurze Zeile ins Regelblatt ein. Haltet darin Schwelle, verwendete Daten und eine für Marburg notwendige Festlegung auseinander.</p>
 <table class="caption-top table">
 <thead>
 <tr class="header">
-<th style="text-align: left;">Fall</th>
-<th style="text-align: left;">Zu untersuchende Quelle</th>
-<th style="text-align: left;">Arbeitsauftrag</th>
+<th style="text-align: left;">Fundstelle</th>
+<th style="text-align: left;">Was ihr festhaltet</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;"><strong>WHO05</strong></td>
-<td style="text-align: left;"><a href="https://www.isglobal.org/en/-/isglobal-presenta-el-ranking-de-las-ciudades-europeas-con-mayor-mortalidad-atribuible-a-la-falta-de-espacios-verdes">ISGlobal (2021)</a>; <a href="https://doi.org/10.1016/S2542-5196(21)00229-1">Pereira Barboza et al.&nbsp;(2021)</a></td>
-<td style="text-align: left;">Prüfen, was die häufig zitierte 0,5-ha-/300-m-Aussage tatsächlich festlegt und was für unsere Berechnung ergänzt werden muss.</td>
+<td style="text-align: left;"><a href="https://www.isglobal.org/en/-/isglobal-presenta-el-ranking-de-las-ciudades-europeas-con-mayor-mortalidad-atribuible-a-la-falta-de-espacios-verdes">ISGlobal 2021, Abs. 4</a></td>
+<td style="text-align: left;">Welche Mindestfläche und welche Entfernung stehen in der häufig zitierten Empfehlung? Ist ein Bezugspunkt an der Grünfläche genannt?</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"><strong>BBSR</strong></td>
-<td style="text-align: left;"><a href="https://epflicht.ulb.uni-bonn.de/download/pdf/372854">BBSR (2018), <em>Handlungsziele für Stadtgrün und deren empirische Evidenz</em>, Kap. 2.2, S. 26</a></td>
-<td style="text-align: left;">Beide Größen-/Entfernungsstufen quellengetreu erfassen; prüfen, ob die Quelle ihre Verknüpfung als einheitliches Ja/Nein-Kriterium vorgibt.</td>
+<td style="text-align: left;"><a href="https://www.fs.usda.gov/nrs/pubs/jrnl/2021/nrs_2021_barboza_001.pdf">Pereira Barboza et al.&nbsp;2021, S. e719–e720, „Population and age distribution“ und „Exposure to green space“</a></td>
+<td style="text-align: left;">Welches Bevölkerungsraster und welche Grünmaße verwendet die Studie? Welche Daten brauchen wir für die Rechenregel in Marburg?</td>
 </tr>
 </tbody>
 </table>
-<p><strong>Zusätzliche Quellenbeispiele für die gemeinsame Diskussion (nicht vollständig zu rechnen):</strong> <a href="https://doi.org/10.1007/s11676-022-01523-z">3-30-300 nach Konijnendijk (2023)</a>; <a href="https://doi.org/10.19217/brs242">BfN-Grünerreichbarkeit und Grünraumversorgung nach Blum et al.&nbsp;(2024)</a>, <a href="https://doi.org/10.19217/skr653">ausführliche BfN-Fassung (2023)</a>. Die 3-30-300-Regel umfasst <strong>drei</strong> Anforderungen (Sichtbarkeit von Bäumen, Baumkronenanteil, Nähe zu Grün); eine 300-m-Pufferkarte allein ist nicht ihre vollständige Umsetzung.</p>
-<p>Lest für euren Fall gezielt die Stellen mit den Schwellen und ihrer Interpretation. Haltet <strong>Seite, Abschnitt oder Abbildung</strong> fest und füllt das Regelblatt. Bei einer Gruppe gibt es zwei Regelblätter, bei zwei Gruppen je eines.</p>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 25%">
-<col style="width: 25%">
-<col style="width: 25%">
-<col style="width: 25%">
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: left;"></th>
-<th style="text-align: left;">Was die Quelle festlegt (mit Fundstelle)</th>
-<th style="text-align: left;">Welche GIS-Entscheidung ist noch offen – und warum?</th>
-<th style="text-align: left;">Unsere dokumentierte Setzung</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;"><strong>Grünfläche:</strong> welche Art? öffentlich?</td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;"><strong>Mindestgröße:</strong> je Fläche oder als Summe?</td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;"><strong>Entfernungsmaß:</strong> Luftlinie, Fußweg, nicht festgelegt?</td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;"><strong>Distanz</strong></td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;"><strong>Bezugspunkt:</strong> Rand, Eingang, Mittelpunkt?</td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;"><strong>Bevölkerung:</strong> wer zählt, in welcher Einheit?</td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;"><strong>Ergebnisgröße:</strong> Anteil versorgter Menschen, m²/Einwohner, ja/nein?</td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;"><strong>Mehrere Stufen:</strong> getrennt, gemeinsam, alternativ?</td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-</tr>
-</tbody>
-</table>
-<p>Für die letzte Spalte gilt: <strong>Fehlt eine ausdrückliche abweichende Vorgabe in der Quelle, übernehmen wir für vergleichbare Fragen die gemeinsame Referenzsetzung.</strong> Wo sich eine Lesart nicht aus der Quelle entscheiden lässt, kennzeichnen wir sie als <strong>eigene Modellentscheidung</strong>, nicht als Behauptung über die Absicht der Autorinnen und Autoren.</p>
-<div class="callout callout-style-default callout-tip callout-titled" title="Prüffrage">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tipp</span>Prüffrage
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Welche Wörter oder Größen sind unmittelbar in eine Rechenoperation übertragbar? <strong>Wo beginnen wir zu interpretieren?</strong> Notiert mindestens eine alternative Lesart oder Modellsetzung und erklärt, ob die Offenheit aus dem <strong>Text</strong>, aus der <strong>Operationalisierung</strong> oder aus den <strong>Daten</strong> stammt. Es geht nicht darum, der Quelle einen Fehler nachzuweisen.</p>
-</div>
-</div>
+<p>Die <a href="../slides/01-quellen-abstraktion.html#/musterloesung-gruenzugang">Musterfolie mit Fundstellen</a> zeigt eine ausgefüllte Lösung. Die Auswertung der 3-30-300- und BfN-Lesebeispiele steht auf der <a href="../slides/01-quellen-abstraktion.html#/optionaler-quellenblick">freiwilligen Folie zu GIS-Operationen</a>, jeweils mit Quellen direkt an den Kriterien.</p>
 </section>
 <section id="a3-was-sich-gegenüber-der-referenz-ändert" class="level2">
 <h2 class="anchored" data-anchor-id="a3-was-sich-gegenüber-der-referenz-ändert">A3 · Was sich gegenüber der Referenz ändert</h2>
-<p>Tragt für WHO05 und BBSR die Abweichungen gegenüber <strong>REF</strong> ein. Bei zwei Gruppen bearbeitet jede ihren Fall; bei einer Gruppe werden beide nacheinander ausgefüllt.</p>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 20%">
-<col style="width: 20%">
-<col style="width: 20%">
-<col style="width: 20%">
-<col style="width: 20%">
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: left;">Änderung</th>
-<th style="text-align: left;">Referenz (REF)</th>
-<th style="text-align: left;">Vergleichsfall</th>
-<th style="text-align: left;">Konsequenz für QGIS</th>
-<th style="text-align: left;">Quellenbefund oder eigene Setzung?</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li><strong>WHO05:</strong> Prüft zunächst, ob gegenüber REF tatsächlich nur die Mindestfläche von 1 ha auf 0,5 ha geändert werden muss. Trennt ausdrücklich die <strong>Quellenaussage</strong> von den aus REF übernommenen Annahmen, etwa zur Repräsentation in OSM und zu Zellmittelpunkten.</li>
-<li><strong>BBSR:</strong> Betrachtet <strong>1 ha / 300 m</strong> und <strong>10 ha / 700 m</strong> zunächst als <strong>zwei getrennte Bedingungen</strong>. Prüft anhand der Fundstelle, ob eine Zelle beide erfüllen muss oder ob die Quelle gar keine einzige binäre Zusammenfassung vorsieht. Erzeugt zwei Teilindikatoren; legt erst danach eine Regel für das gemeinsame Vergleichsfeld <code>versorgt</code> fest und markiert sie gegebenenfalls als eigene Auswertungsentscheidung.</li>
-</ul>
-<p><strong>Kurzer Quellenblick ohne GIS-Umsetzung:</strong> Was müsste man bei 3-30-300 (drei Teilanforderungen) oder bei den beiden BfN-Ansätzen (Fußwege, summierte Fläche, m² pro Person) zusätzlich modellieren? Diese Überlegung dient dem Verständnis der Übertragung, nicht einer fachlichen Bewertung der Empfehlungen.</p>
+<p>Für <strong>WHO05</strong> verwenden wir <strong>0,5 ha statt 1 ha</strong> je Park. Für den Vergleich übernehmen wir aus REF die 300-m-Luftlinie bis zum Rand, die Parkauswahl und die Zuordnung der Zensus-Mittelpunkte. Schreibt diesen einen Parameterwechsel und die übernommene Modellsetzung ins Regelblatt. <a href="https://www.isglobal.org/en/-/isglobal-presenta-el-ranking-de-las-ciudades-europeas-con-mayor-mortalidad-atribuible-a-la-falta-de-espacios-verdes">ISGlobal, Abs. 4</a> · <a href="https://research.slu.se/en/publications/development-of-an-urban-green-space-indicator-and-the-public-heal/">Van den Bosch et al., „Conclusions“</a></p>
 </section>
 <section id="a4-prognose" class="level2">
 <h2 class="anchored" data-anchor-id="a4-prognose">A4 · Prognose</h2>
-<p>Bevor gerechnet wird, formuliert eine begründete Erwartung für <strong>WHO05</strong> und <strong>BBSR</strong> relativ zu <strong>REF</strong>. Bei zwei Gruppen werden die Prognosen anschließend ausgetauscht.</p>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 25%">
-<col style="width: 25%">
-<col style="width: 25%">
-<col style="width: 25%">
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: left;">Variante</th>
-<th style="text-align: left;">Mehr / weniger / gleich viel versorgte Bevölkerung als REF?</th>
-<th style="text-align: left;">Wo in Marburg erwarten wir Unterschiede?</th>
-<th style="text-align: left;">Welche Regel könnte das erklären?</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">WHO05</td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">BBSR</td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-</tr>
-</tbody>
-</table>
-<p>Für WHO05 lässt sich zusätzlich eine <strong>gerichtete Hypothese</strong> prüfen: Bei <strong>identischen Grünflächenklassen und derselben 300-m-Distanzregel</strong> darf eine Absenkung der Mindestfläche von 1 auf 0,5 ha den versorgten Bevölkerungsanteil <strong>nicht verkleinern</strong>. Ist das Ergebnis dennoch kleiner, deutet das auf Unterschiede in Daten oder Verarbeitung hin. Für BBSR hängt die Richtung unter anderem von der begründeten Verknüpfung der beiden Stufen ab.</p>
-<p>Eine nicht bestätigte Prognose ist ein auswertbarer Befund, kein Fehler.</p>
+<p>Notiert in einem Satz, <strong>wo</strong> durch WHO05 weitere Zellen als versorgt gelten könnten und <strong>warum</strong>. Bei derselben Pufferregel und denselben Eingaben kann WHO05 gleich viele oder mehr Einwohner erfassen als REF. <a href="https://www.isglobal.org/en/-/isglobal-presenta-el-ranking-de-las-ciudades-europeas-con-mayor-mortalidad-atribuible-a-la-falta-de-espacios-verdes">ISGlobal, Abs. 4</a> · <a href="https://research.slu.se/en/publications/development-of-an-urban-green-space-indicator-and-the-public-heal/">Van den Bosch et al., „Conclusions“</a></p>
 </section>
 <section id="a5-gemeinsamer-datenplan-und-ergebnisformat-plenum" class="level2">
 <h2 class="anchored" data-anchor-id="a5-gemeinsamer-datenplan-und-ergebnisformat-plenum">A5 · Gemeinsamer Datenplan und Ergebnisformat (Plenum)</h2>
-<p><strong>Alle Varianten verwenden dieselben Daten, denselben Raumbezug und dieselben gemeinsamen Setzungen.</strong> Sonst könnten Unterschiede aus den Daten statt aus der Regel stammen. Bei zwei Gruppen wird <strong>ein gemeinsamer Datenstand</strong> vereinbart.</p>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 16%">
-<col style="width: 16%">
-<col style="width: 16%">
-<col style="width: 16%">
-<col style="width: 16%">
-<col style="width: 16%">
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: left;">Kriterium</th>
-<th style="text-align: left;">Daten</th>
-<th style="text-align: left;">Quelle und Abruf</th>
-<th style="text-align: left;">Lizenz</th>
-<th style="text-align: left;">KBS und Auflösung</th>
-<th style="text-align: left;">Was wissen wir über die Daten <strong>nicht</strong>?</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">Grünflächen</td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Bevölkerung</td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Untersuchungs- und Rechengebiet</td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Wegenetz (nur bei freiwilliger BfN-Erweiterung)</td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-</tr>
-</tbody>
-</table>
-<p>Mögliche Quellen:</p>
-<ul>
-<li><strong>OpenStreetMap</strong> für Grünflächen – in QGIS über <strong>QuickOSM</strong>. Lizenz: ODbL. Dokumentiert Abfrage, Klassenauswahl und Abrufdatum; beide Gruppen verwenden denselben Stand.</li>
-<li><strong>Zensus 2022</strong>, Einwohnerzahlen auf 100-m-Gitterzellen: <a href="https://www.zensus2022.de/DE/Ergebnisse-des-Zensus/_inhalt.html#Gitterdaten2022">Gitterdaten zum Download</a>.</li>
-<li>Verwaltungsgrenzen für das Untersuchungsgebiet; das <strong>Rechengebiet</strong> muss mindestens die größte verwendete Distanz (<strong>700 m für BBSR</strong>) über die Stadtgrenze hinausreichen. Bei zusätzlicher Netzwerkanalyse ist gesondert zu prüfen, ob dieser Rand ausreichend ist.</li>
-</ul>
-<p><strong>Ergebnisformat:</strong> Für jede berechnete Variante (<code>REF</code>, <code>WHO05</code>, <code>BBSR</code>) wird ein Layer derselben Zensus-Gitterzellen bereitgestellt.</p>
+<p>Sichert einen Datenstand für beide Läufe. Notiert bei den OSM-Parks Abfrage und Abrufdatum sowie bei Zensus und Gemeindegrenze den verwendeten Stand. <a href="https://www.openstreetmap.org/copyright">OpenStreetMap, ODbL</a> · <a href="https://www.zensus2022.de/DE/Ergebnisse-des-Zensus/_inhalt.html#Gitterdaten2022">Zensus 2022, Gitterdaten</a> · <a href="https://gdz.bkg.bund.de/index.php/default/verwaltungsgebiete-1-250-000-stand-31-12-vg250-31-12.html">BKG VG250</a></p>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 50%">
@@ -878,110 +583,264 @@ background-size: cover;
 <tbody>
 <tr class="odd">
 <td style="text-align: left;"><code>zelle_id</code></td>
-<td style="text-align: left;">gleiche Zellenkennung in allen Varianten</td>
+<td style="text-align: left;">dieselbe Zellkennung in beiden Varianten</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;"><code>ew</code></td>
-<td style="text-align: left;">Einwohnerzahl; nur Zellen mit vergleichbarer gültiger Einwohnerinformation in die gemeinsame Quote aufnehmen</td>
+<td style="text-align: left;">Einwohnerzahl der Zelle als Gewicht</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;"><code>ansatz</code></td>
-<td style="text-align: left;"><code>REF</code>, <code>WHO05</code> oder <code>BBSR</code></td>
+<td style="text-align: left;"><code>REF</code> oder <code>WHO05</code></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;"><code>versorgt</code></td>
-<td style="text-align: left;">1 = versorgt, 0 = nicht versorgt; <strong>NULL</strong>, wenn mit den vorhandenen Daten nicht entscheidbar</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;"><code>wert</code></td>
-<td style="text-align: left;">optional: zusätzlicher Kennwert</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;"><code>stufe_300</code>, <code>stufe_700</code></td>
-<td style="text-align: left;"><strong>nur BBSR:</strong> Ergebnis der beiden Teilbedingungen (1/0/NULL)</td>
+<td style="text-align: left;"><code>1</code> = versorgt, <code>0</code> = unversorgt, <code>NULL</code> = unentscheidbar</td>
 </tr>
 </tbody>
 </table>
-<p>Bei BBSR gehört die Regel, nach der aus <code>stufe_300</code> und <code>stufe_700</code> das gemeinsame Feld <code>versorgt</code> entsteht, <strong>ins Regelblatt und in die Modellbeschreibung</strong>. Nur so lassen sich Ergebnisse in Sitzung 3 Zelle für Zelle interpretieren und vergleichen.</p>
-<div class="callout callout-style-default callout-note callout-titled" title="Aus dem perfekten Gipfel">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Hinweis</span>Aus dem perfekten Gipfel
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Gleich benannte Felder allein schaffen noch keine Vergleichbarkeit: Auch Zellbezug, Datenstand, Umgang mit fehlenden Werten und die Bedeutung von <code>versorgt</code> müssen übereinstimmen.</p>
-</div>
-</div>
-</section>
-<section id="ergebnis-von-teil-a" class="level2">
-<h2 class="anchored" data-anchor-id="ergebnis-von-teil-a">Ergebnis von Teil A</h2>
-<ul>
-<li>die gemeinsamen Referenzsetzungen,</li>
-<li>Regelblatt und Quellenfundstellen für <strong>WHO05 und BBSR</strong>,</li>
-<li>Änderungsliste mit getrennten Quellen- und Modellentscheidungen,</li>
-<li>Prognosen zu beiden Vergleichsfällen,</li>
-<li>gemeinsamer Datenplan und vereinbartes Ergebnisformat.</li>
-</ul>
-<p><strong>Vorbereitung auf Teil B:</strong> <strong>QuickOSM</strong> in QGIS installieren. Regelblatt, Änderungsliste und die vereinbarten Datenabfragen griffbereit halten.</p>
+<p><strong>Ergebnis von Teil A:</strong> Ein Regelblatt mit Quellen und gemeinsamen Setzungen, der Parameterwechsel für WHO05 und eure Prognose. Für Teil B installiert ihr <a href="https://quickosm.github.io/QuickOSM/">QuickOSM</a>.</p>
 </section>
 </section>
 <section id="teil-b-umsetzung-in-qgis-sitzung-2" class="level1">
 <h1>Teil B · Umsetzung in QGIS (Sitzung 2)</h1>
-<div class="callout callout-style-default callout-note callout-titled" title="Folgt zu Sitzung 2">
+<p>Die Anleitung führt den Referenzlauf mit Werkzeugen vor. Für WHO05 werden die Eingaben wiederverwendet. Die <a href="../slides/01-quellen-abstraktion.html#/musterloesung-gruenzugang">Musterfolie mit Fundstellen</a> erklärt den Zusammenhang zwischen der Quelle und den konkreten Datenentscheidungen. <a href="https://research.slu.se/en/publications/development-of-an-urban-green-space-indicator-and-the-public-heal/">REF</a> · <a href="https://www.isglobal.org/en/-/isglobal-presenta-el-ranking-de-las-ciudades-europeas-con-mayor-mortalidad-atribuible-a-la-falta-de-espacios-verdes">WHO05</a></p>
+<p>Die folgenden Werkzeuge findet ihr über die Suche in <strong>Verarbeitung → Werkzeugkiste</strong>. Bei abweichenden Menünamen helfen die angegebenen Werkzeug-IDs.</p>
+<section id="b1-projekt-stadtgrenze-und-rechengebiet" class="level2">
+<h2 class="anchored" data-anchor-id="b1-projekt-stadtgrenze-und-rechengebiet">B1 · Projekt, Stadtgrenze und Rechengebiet</h2>
+<ol type="1">
+<li><strong>Projekt → Neu</strong>, dann <strong>Speichern unter…</strong> als <code>Gruenzugang_Marburg.qgz</code>. Legt im Projektordner die Unterordner <code>daten</code>, <code>protokoll</code> und bei Automatisierung <code>scripts</code> an. Wählt in <strong>Projekt → Eigenschaften</strong> relative Pfade und als Projekt-KBS <strong>EPSG:25832</strong> (ETRS89 / UTM-Zone 32N).</li>
+<li>Ladet beim BKG <strong>Verwaltungsgebiete 1:250 000, Stand 31.12.</strong> als <strong>GeoPackage, UTM32</strong> herunter, entpackt es und öffnet in QGIS den Layer <code>vg250_gem</code>. Sucht <strong>Nach Ausdruck extrahieren</strong> (<code>native:extractbyexpression</code>). Verwendet <code>"ags" = '06534014'</code>. Speichert das Ergebnis über <strong>Rechtsklick → Exportieren → Objekte speichern als…</strong> im GeoPackage <code>daten/gruenzugang.gpkg</code> als <code>marburg</code>, KBS <strong>EPSG:25832</strong>. <a href="https://gdz.bkg.bund.de/index.php/default/verwaltungsgebiete-1-250-000-stand-31-12-vg250-31-12.html">BKG-Download VG250</a></li>
+<li>Öffnet <strong>Puffer</strong> (<code>native:buffer</code>). Eingabe <code>marburg</code>, Distanz <strong>300 m</strong> für REF und WHO05, Segmente <strong>20</strong>, <strong>Ergebnis auflösen</strong> aktivieren. Speichert den Ergebnislayer als <code>rechengebiet</code>. In diesem Raum suchen wir Grünflächen. Die Wohnbevölkerung wählen wir in B2 mit der ursprünglichen Gemeindegrenze aus. Wenn ihr die BBSR-Vertiefung plant, stellt hier <strong>700 m</strong> ein und verwendet diesen Datenstand für alle Läufe. <a href="https://research.slu.se/en/publications/development-of-an-urban-green-space-indicator-and-the-public-heal/">REF</a> · <a href="https://www.isglobal.org/en/-/isglobal-presenta-el-ranking-de-las-ciudades-europeas-con-mayor-mortalidad-atribuible-a-la-falta-de-espacios-verdes">WHO05</a> · <a href="https://epflicht.ulb.uni-bonn.de/download/pdf/372854">BBSR 2018, S. 26</a></li>
+</ol>
+<p>Für alle weiteren gespeicherten Szenarien und Zwischenlayer könnt ihr dasselbe GeoPackage verwenden. Vergebt beim Export jeweils den angegebenen <strong>neuen Layernamen</strong>. Das GeoPackage kann mehrere Layer enthalten.</p>
+</section>
+<section id="b2-zensus-csv-importieren-und-marburger-zellen-erzeugen" class="level2">
+<h2 class="anchored" data-anchor-id="b2-zensus-csv-importieren-und-marburger-zellen-erzeugen">B2 · Zensus-CSV importieren und Marburger Zellen erzeugen</h2>
+<section id="aus-der-csv-werden-punkte" class="level3">
+<h3 class="anchored" data-anchor-id="aus-der-csv-werden-punkte">Aus der CSV werden Punkte</h3>
+<ol type="1">
+<li>Ladet das ZIP <strong>Bevölkerungszahl in Gitterzellen</strong> herunter und entpackt es lokal. Wählt daraus die Datei für <strong>100 m</strong> (<code>Zensus2022_Bevoelkerungszahl_100m-Gitter.csv</code>). Die Tabelle enthält die Zell-ID, die Koordinaten des Mittelpunkts und die Einwohnerzahl. <a href="https://www.destatis.de/static/DE/zensus/gitterdaten/Zensus2022_Bevoelkerungszahl.zip">Destatis, ZIP-Download</a> · <a href="https://www.zensus2022.de/DE/Ergebnisse-des-Zensus/_inhalt.html#Gitterdaten2022">Gitterdaten 2022</a></li>
+<li>Öffnet <strong>Layer → Layer hinzufügen → Getrennte Textdatei als Layer hinzufügen…</strong>. Wählt die CSV. Stellt <strong>benutzerdefinierte Trennzeichen → Semikolon</strong> ein und aktiviert <strong>Erster Datensatz enthält Feldnamen</strong> sowie <strong>Feldtypen erkennen</strong>. In der Vorschau müssen vier Spalten getrennt erscheinen.</li>
+<li>Wählt unter <strong>Geometriedefinition → Punktkoordinaten</strong> die Einstellungen in der Tabelle. Aktiviert unter <strong>Layereinstellungen</strong> den <strong>räumlichen Index</strong> und klickt <strong>Hinzufügen</strong>. Der erste Import der bundesweiten Datei kann einige Zeit dauern. <a href="https://docs.qgis.org/3.44/en/docs/user_manual/managing_data_source/opening_data.html#importing-a-delimited-text-file">QGIS-Dokumentation zum Import getrennter Textdateien</a></li>
+</ol>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Einstellung</th>
+<th style="text-align: left;">Wert</th>
+<th style="text-align: left;">Bedeutung</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">X-Feld</td>
+<td style="text-align: left;"><code>x_mp_100m</code></td>
+<td style="text-align: left;">Ostwert des Zellmittelpunkts</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Y-Feld</td>
+<td style="text-align: left;"><code>y_mp_100m</code></td>
+<td style="text-align: left;">Nordwert des Zellmittelpunkts</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Geometrie-KBS</td>
+<td style="text-align: left;"><strong>EPSG:3035</strong> (ETRS89 / LAEA Europe)</td>
+<td style="text-align: left;">Bezugssystem der Koordinaten in der CSV</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Zellkennung</td>
+<td style="text-align: left;"><code>GITTER_ID_100m</code></td>
+<td style="text-align: left;">Eindeutiger Schlüssel, der später Punkte und Zellen verbindet</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Einwohnerzahl</td>
+<td style="text-align: left;"><code>Einwohner</code></td>
+<td style="text-align: left;">Gewicht des Punkts in der Versorgungsquote</td>
+</tr>
+</tbody>
+</table>
+<div class="callout callout-style-default callout-tip callout-titled" title="Zwei Koordinatenbezugssysteme">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Hinweis</span>Folgt zu Sitzung 2
+<span class="screen-reader-only">Tipp</span>Zwei Koordinatenbezugssysteme
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Die detaillierten QGIS-Schritte werden nach Sitzung 1 ergänzt, wenn die gemeinsamen Setzungen feststehen.</p>
+<p><strong>EPSG:3035 beim Import</strong>, weil so die X/Y-Werte in der CSV definiert sind. <strong>EPSG:25832 für die Abstandsrechnung</strong>, nachdem die Punkte tatsächlich reprojiziert wurden. Wenn die Punkte am falschen Ort liegen, prüft zuerst das Quell-KBS und die Reihenfolge der X/Y-Felder. Ein anderes KBS zuzuweisen verschiebt die Interpretation der Koordinaten. Eine Reprojektion rechnet die Koordinaten um.</p>
 </div>
 </div>
-<ol start="0" type="1">
-<li><strong>Projekt anlegen:</strong> metrisches KBS (EPSG:25832), relative Pfade, gemeinsamer Datenstand.</li>
-<li><strong>Daten beschaffen:</strong> identische Grünflächen-, Bevölkerungs- und Grenzdaten für REF, WHO05 und BBSR; Rechengebiet mindestens 700 m über den Untersuchungsraum hinaus.</li>
-<li><strong>Referenz (REF):</strong> gemeinsame Grünflächenauswahl, Mindestgröße 1 ha, 300-m-Luftlinienpuffer, Wohnbevölkerung über Zellmittelpunkte zuordnen.</li>
-<li><strong>Referenzkette als Modell (<code>.model3</code>):</strong> Mindestfläche und Entfernung parametrieren.</li>
-<li><strong>WHO05:</strong> Modell mit 0,5 ha, sonst unveränderter Referenzregel ausführen.</li>
-<li><strong>BBSR:</strong> zwei unabhängige Auswertungen für 1 ha / 300 m und 10 ha / 700 m rechnen; beide im Ergebnis erhalten. Falls ein gemeinsamer <code>versorgt</code>-Wert verlangt wird, die Zusammenführungsregel ausdrücklich als Quellenbefund oder eigene Setzung dokumentieren.</li>
-<li><strong>Vergleichsdaten speichern:</strong> gleicher Zellenbestand und gemeinsame Felder, <code>NULL</code> für nicht entscheidbare Fälle; bei zwei Gruppen alle drei Varianten zusammenführen.</li>
+</section>
+<section id="auf-marburg-eingrenzen-und-attribute-vorbereiten" class="level3">
+<h3 class="anchored" data-anchor-id="auf-marburg-eingrenzen-und-attribute-vorbereiten">Auf Marburg eingrenzen und Attribute vorbereiten</h3>
+<ol start="4" type="1">
+<li><p>Deaktiviert die Darstellung des bundesweiten Zensuslayers. Öffnet <strong>Nach Position extrahieren</strong> (<code>native:extractbylocation</code>). Eingabe ist der <strong>CSV-Punktlayer</strong>, Vergleichslayer <code>marburg</code>, Prädikat <strong>schneidet / intersect</strong>. So werden Mittelpunkte im Stadtpolygon einschließlich seines Randes übernommen. Die Ausgabe bleibt zunächst in <strong>EPSG:3035</strong>. Zoomt auf <code>marburg</code> und schaltet die Ausgabe ein. Ihr solltet jetzt nur die Punktmenge für Marburg sehen.</p></li>
+<li><p>Sucht <strong>Nach Ausdruck extrahieren</strong> und übernehmt nur Datensätze mit numerischer, nicht negativer Einwohnerzahl. Verwendet den folgenden Ausdruck. Haltet fest, wenn Einträge beim Filtern wegfallen. Die entfernten Werte gehen als fehlende Information weder in den Zähler noch in den Nenner ein.</p>
+<pre class="text"><code>regexp_match(trim(to_string("Einwohner")), '^[0-9]+$') &gt; 0</code></pre></li>
+<li><p>Öffnet <strong>Felder überarbeiten</strong> (<code>native:refactorfields</code>) für die gefilterten Punkte. Lasst genau diese beiden Fachfelder stehen. Ändert in der Tabelle des Werkzeugs bei Bedarf Namen, Typ und Ausdruck. Speichert das Ergebnis als <code>zensus_marburg_3035</code>.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Ausgabefeld</th>
+<th style="text-align: left;">Typ</th>
+<th style="text-align: left;">Ausdruck</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><code>zelle_id</code></td>
+<td style="text-align: left;">Text</td>
+<td style="text-align: left;"><code>"GITTER_ID_100m"</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>ew</code></td>
+<td style="text-align: left;">Ganzzahl</td>
+<td style="text-align: left;"><code>to_int("Einwohner")</code></td>
+</tr>
+</tbody>
+</table></li>
+<li><p>Öffnet die Attributtabelle. Prüft an einigen Zeilen, ob <code>zelle_id</code> gefüllt ist und <code>ew</code> als Zahl erscheint. Notiert die Objektanzahl. Zählt bei der Auswertung später <strong>Einwohner</strong>, da ein Punkt für die gesamte Bevölkerung seiner Zelle steht.</p></li>
 </ol>
+</section>
+<section id="einen-punktlayer-für-die-rechnung-und-einen-polygonlayer-für-die-karte-erzeugen" class="level3">
+<h3 class="anchored" data-anchor-id="einen-punktlayer-für-die-rechnung-und-einen-polygonlayer-für-die-karte-erzeugen">Einen Punktlayer für die Rechnung und einen Polygonlayer für die Karte erzeugen</h3>
+<ol start="8" type="1">
+<li>Sucht <strong>Layer reprojizieren</strong> (<code>native:reprojectlayer</code>). Eingabe <code>zensus_marburg_3035</code>, Ziel-KBS <strong>EPSG:25832</strong>. Speichert das Ergebnis als <code>zensus_punkte</code>.</li>
+<li>Sucht <strong>Geometrie nach Ausdruck</strong> (<code>native:geometrybyexpression</code>). Eingabe ist wieder <strong><code>zensus_marburg_3035</code></strong>. Wählt als Ausgabegeometrie <strong>Polygon</strong> und verwendet <code>bounds(buffer($geometry, 50))</code>. Damit entstehen im ursprünglichen Zensus-KBS quadratische Zellen mit 100 m Seitenlänge. Speichert das Ergebnis als <code>zensus_zellen</code>. <code>zensus_punkte</code> und <code>zensus_zellen</code> müssen dieselben Zell-IDs und Einwohnerzahlen enthalten. Für die Karte übertragen wir die Punktentscheidung per <code>zelle_id</code> auf das jeweilige Quadrat.</li>
+</ol>
+</section>
+</section>
+<section id="b3-osm-parks-laden-und-flächen-messen" class="level2">
+<h2 class="anchored" data-anchor-id="b3-osm-parks-laden-und-flächen-messen">B3 · OSM-Parks laden und Flächen messen</h2>
+<ol type="1">
+<li><p>Installiert bei Bedarf <strong>QuickOSM</strong> über <strong>Erweiterungen → Erweiterungen verwalten und installieren…</strong>. Öffnet <strong>Vektor → QuickOSM → QuickOSM</strong> und wechselt zur <strong>Schnellabfrage / Quick Query</strong>. Wählt Schlüssel <code>leisure</code>, Wert <code>park</code>, räumliche Auswahl <strong>Layerausdehnung / Layer extent</strong> und den Layer <code>rechengebiet</code>. Führt die Abfrage aus. Verwendet den Ergebnislayer mit <strong>Polygonen bzw. Multipolygonen</strong>. Speichert diesen Datenstand für beide Läufe. <a href="https://quickosm.github.io/QuickOSM/">QuickOSM-Dokumentation</a></p></li>
+<li><p>Öffnet <strong>Geometrien reparieren</strong> (<code>native:fixgeometries</code>) auf dem Parklayer und anschließend <strong>Layer reprojizieren</strong> mit Ziel-KBS <strong>EPSG:25832</strong>. Öffnet <strong>Nach Position extrahieren</strong>. Eingabe sind die reprojizierten Parks, Vergleichslayer <code>rechengebiet</code>, Prädikat <strong>schneidet / intersect</strong>. Dadurch bleiben die berührenden Parks als vollständige Objekte erhalten.</p></li>
+<li><p>Öffnet <strong>Nach Ausdruck extrahieren</strong>. Schließt Parks mit <code>access=no</code> oder <code>access=private</code> aus. Der Ausdruck liest <code>access</code> sowohl aus einem eigenen Feld als auch aus den von QuickOSM mitgelieferten <code>other_tags</code>. Parks ohne Zugangstag bleiben als potenziell zugänglich in der Auswahl.</p>
+<pre class="text"><code>coalesce(
+  nullif(attribute(@feature, 'access'), ''),
+  map_get(hstore_to_map(coalesce(attribute(@feature, 'other_tags'), '')), 'access'),
+  ''
+) NOT IN ('no', 'private')</code></pre></li>
+<li><p>Sucht <strong>Feldrechner</strong> in der Werkzeugkiste (<code>native:fieldcalculator</code>). Ergänzt <code>flaeche_m2</code> als <strong>Dezimalzahl</strong> mit <code>area($geometry)</code>. Das misst die Fläche des vollständigen OSM-Objekts in Quadratmetern im Layer-KBS EPSG:25832. Speichert das Ergebnis als <code>parks</code>. Für die Mindestgröße zählt jedes Parkobjekt einzeln.</p></li>
+</ol>
+<p>Die OSM-Klasse bildet kartierte Parks ab. Ein fehlendes Zugangstag lässt den tatsächlichen Zugang offen. Dokumentiert Abfrage, Abrufdatum und Lizenz sowie den Stand der Gemeindegrenze und des Zensus. <a href="https://www.openstreetmap.org/copyright">OpenStreetMap-Lizenz und Namensnennung</a></p>
+</section>
+<section id="b4-ref-einmal-mit-den-qgis-werkzeugen-rechnen" class="level2">
+<h2 class="anchored" data-anchor-id="b4-ref-einmal-mit-den-qgis-werkzeugen-rechnen">B4 · REF einmal mit den QGIS-Werkzeugen rechnen</h2>
+<p>Verwendet <code>parks</code>, <code>zensus_punkte</code> und <code>zensus_zellen</code> aus B2 und B3. Führt die Werkzeuge in dieser Reihenfolge aus. Gebt temporären Ausgaben im Layerfenster den angegebenen Namen, damit ihr sie im nächsten Dialog wiederfindet. Für REF gelten 1 ha = 10.000 m² und 300 m Luftlinie. <a href="https://research.slu.se/en/publications/development-of-an-urban-green-space-indicator-and-the-public-heal/">Van den Bosch et al., „Conclusions“</a></p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Werkzeug</th>
+<th style="text-align: left;">Eingaben und Einstellungen</th>
+<th style="text-align: left;">Ausgabe</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>Nach Ausdruck extrahieren</strong> (<code>native:extractbyexpression</code>)</td>
+<td style="text-align: left;"><code>parks</code>. Ausdruck <code>"flaeche_m2" &gt;= 10000</code>.</td>
+<td style="text-align: left;"><code>ref_parks</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Puffer</strong> (<code>native:buffer</code>)</td>
+<td style="text-align: left;"><code>ref_parks</code>. Distanz <strong>300 m</strong>, Segmente <strong>20</strong>, <strong>Ergebnis auflösen</strong> aus. So bleibt <code>flaeche_m2</code> erhalten.</td>
+<td style="text-align: left;"><code>ref_puffer</code></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>Attribute nach Position verknüpfen</strong> (<code>native:joinattributesbylocation</code>)</td>
+<td style="text-align: left;">Eingabe <code>zensus_punkte</code>, Vergleichslayer <code>ref_puffer</code>. Prädikat <strong>schneidet / intersect</strong>. Nur <code>flaeche_m2</code> übernehmen, Präfix <code>park_</code>. Erstes passendes Objekt (<strong>1:1</strong>) wählen. Punkte ohne Treffer behalten.</td>
+<td style="text-align: left;"><code>ref_treffer</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Feldrechner</strong> (<code>native:fieldcalculator</code>)</td>
+<td style="text-align: left;"><code>ref_treffer</code>. Neues Ganzzahlfeld <code>versorgt</code>, Ausdruck <code>if("park_flaeche_m2" IS NULL, 0, 1)</code>.</td>
+<td style="text-align: left;"><code>ref_punkte</code></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>Attribute nach Feldwert verknüpfen</strong> (<code>native:joinattributestable</code>)</td>
+<td style="text-align: left;">Eingabe <code>zensus_zellen</code>, zweiter Layer <code>ref_punkte</code>. Auf beiden Seiten <code>zelle_id</code>, nur <code>versorgt</code> übernehmen. Präfix leer. Erstes passendes Objekt (<strong>1:1</strong>) wählen. Alle Zellen behalten.</td>
+<td style="text-align: left;"><code>REF_roh</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Feldrechner</strong> (<code>native:fieldcalculator</code>)</td>
+<td style="text-align: left;"><code>REF_roh</code>. Neues Textfeld <code>ansatz</code>, Ausdruck <code>'REF'</code>.</td>
+<td style="text-align: left;"><code>REF</code></td>
+</tr>
+</tbody>
+</table>
+<p>Speichert <code>REF</code> im GeoPackage <code>daten/gruenzugang.gpkg</code>. Kontrolliert im Ergebnis eine Zelle mit <code>versorgt = 1</code> und eine mit <code>versorgt = 0</code>, falls beide vorkommen. Im räumlichen Join zählt ein Zellmittelpunkt bei überlappenden Puffern genau einmal. Im letzten Join zeigt <code>NULL</code> eine fehlende Zuordnung per Zell-ID an. <a href="https://docs.qgis.org/3.44/en/docs/user_manual/processing_algs/qgis/vectorgeneral.html#join-attributes-by-location">QGIS-Dokumentation zu räumlichen und tabellarischen Verknüpfungen</a></p>
+</section>
+<section id="b5-befehlsprotokoll-sichern-und-who05-ableiten" class="level2">
+<h2 class="anchored" data-anchor-id="b5-befehlsprotokoll-sichern-und-who05-ableiten">B5 · Befehlsprotokoll sichern und WHO05 ableiten</h2>
+<section id="wo-die-befehle-stehen" class="level3">
+<h3 class="anchored" data-anchor-id="wo-die-befehle-stehen">Wo die Befehle stehen</h3>
+<ol type="1">
+<li>Öffnet in QGIS <strong>Verarbeitung → Verlauf…</strong> (<code>Strg</code> + <code>Alt</code> + <code>H</code>). QGIS speichert die Werkzeugaufrufe mit Parametern im Verlauf des lokalen QGIS-Profils. Sucht nach Zeitpunkt und Werkzeugnamen die sechs Aufrufe aus B4. <a href="https://docs.qgis.org/3.44/en/docs/user_manual/processing/history.html#the-processing-history">QGIS-Dokumentation zum Verarbeitungsverlauf</a></li>
+<li>Wählt je Eintrag <strong>Rechtsklick → Als Python-Befehl kopieren</strong>. Fügt die sechs <code>processing.run(...)</code>-Aufrufe in der Ausführungsreihenfolge in <code>protokoll/qgis-befehle.md</code> ein. Notiert daneben den Namen der Eingabe und der erwarteten Ausgabe aus der Tabelle. Ergänzt die QGIS-Version sowie <code>daten/gruenzugang.gpkg</code> mit den drei vorbereiteten Layernamen.</li>
+<li>Prüft im Protokoll die Werte <code>10000</code>, <code>300</code>, <code>20</code>, die 1:1-Verknüpfung und die Namen <code>flaeche_m2</code>, <code>zelle_id</code>, <code>versorgt</code>. Temporäre Layer-IDs in den kopierten Befehlen gelten nur für den damaligen Lauf. Die im Protokoll notierten Ein- und Ausgaben machen ihre Funktion nachvollziehbar. <a href="https://docs.qgis.org/3.44/en/docs/user_manual/processing/history.html#the-processing-history">QGIS-Dokumentation zum Verarbeitungsverlauf</a></li>
+</ol>
+</section>
+<section id="aus-dem-protokoll-ein-skript-machen" class="level3">
+<h3 class="anchored" data-anchor-id="aus-dem-protokoll-ein-skript-machen">Aus dem Protokoll ein Skript machen</h3>
+<p>Die KI erhält das Befehlsprotokoll und die Layernamen. Lokale Benutzerpfade könnt ihr im geteilten Text durch den Projektordner ersetzen. Nutzt zum Beispiel diesen Auftrag:</p>
+<blockquote class="blockquote">
+<p>Erstelle aus den unten stehenden sechs Aufrufen ein kurzes PyQGIS-Skript für die Python-Konsole im geöffneten QGIS-Projekt. Lade <code>parks</code>, <code>zensus_punkte</code> und <code>zensus_zellen</code> aus <code>daten/gruenzugang.gpkg</code> relativ zum Projektordner. Verwende die kopierten QGIS-Algorithmen und ihre Parameter. Ersetze temporäre Layer-IDs durch die Ausgaben der vorherigen <code>processing.run</code>-Aufrufe. Parametriere Mindestfläche, Distanz und Ansatz. Rechne WHO05 mit 5.000 m², 300 m und Ansatz <code>WHO05</code>. Erhalte alle Zellen, IDs, Einwohnerzahlen und die 1:1-Zuordnung. Speichere das Ergebnis getrennt als <code>daten/WHO05.gpkg</code> und lass das manuelle REF-Ergebnis erhalten. Nenne die Stelle, an der ich zu Prüfzwecken auf 10.000 m² und <code>REF_TEST</code> umstellen kann. Markiere Punkte, die anhand des Protokolls offen sind.</p>
+</blockquote>
+<p>Speichert den überprüften Code als <code>scripts/gruenzugang.py</code>. Öffnet <strong>Erweiterungen → Python-Konsole → Editor anzeigen</strong>, ladet das Skript, prüft Eingabe- und Ausgabepfade und führt es aus. Für einen Testlauf mit <code>10000</code>, <code>300</code> und <code>REF_TEST</code> wählt ihr eine eigene Ausgabedatei. Vergleicht Zellzahl und <code>versorgt</code> je <code>zelle_id</code> mit eurem manuellen REF-Ergebnis. Erst wenn die Ergebnisse übereinstimmen, setzt ihr 5.000 m² und speichert <code>WHO05</code>. <a href="https://docs.qgis.org/3.44/en/docs/user_manual/plugins/python_console.html">QGIS-Dokumentation zur Python-Konsole</a> · <a href="https://www.isglobal.org/en/-/isglobal-presenta-el-ranking-de-las-ciudades-europeas-con-mayor-mortalidad-atribuible-a-la-falta-de-espacios-verdes">ISGlobal, Abs. 4</a></p>
+<p><strong>WHO05 in der Werkzeugkiste:</strong> Öffnet die Aufrufe aus B4 per Doppelklick im Verlauf. Startet eine neue Kette mit <code>"flaeche_m2" &gt;= 5000</code>, aktualisiert in jedem Dialog den Eingabelayer auf die jeweils neue Ausgabe und setzt im letzten Feldrechner <code>'WHO05'</code>. Speichert den Ergebnislayer als <code>WHO05</code>. <a href="https://docs.qgis.org/3.44/en/docs/user_manual/processing/history.html#the-processing-history">QGIS-Dokumentation zum erneuten Start aus dem Verlauf</a> · <a href="https://www.isglobal.org/en/-/isglobal-presenta-el-ranking-de-las-ciudades-europeas-con-mayor-mortalidad-atribuible-a-la-falta-de-espacios-verdes">ISGlobal, Abs. 4</a></p>
+</section>
+</section>
+<section id="b6-ergebnisse-prüfen-und-quoten-berechnen" class="level2">
+<h2 class="anchored" data-anchor-id="b6-ergebnisse-prüfen-und-quoten-berechnen">B6 · Ergebnisse prüfen und Quoten berechnen</h2>
+<ol type="1">
+<li>Öffnet die Attributtabellen von <code>REF</code> und <code>WHO05</code>. Beide sollen dieselbe Zahl von Objekten wie <code>zensus_zellen</code> und eine Zeile je <code>zelle_id</code> haben. Die Felder <code>ew</code>, <code>versorgt</code> und <code>ansatz</code> müssen vorhanden sein. Prüft mit <code>"versorgt" IS NULL</code> auf fehlende Zuordnungen.</li>
+<li>Verknüpft <code>REF</code> und <code>WHO05</code> mit <strong>Attribute nach Feldwert verknüpfen</strong> über <code>zelle_id</code>, Methode <strong>1:1</strong>. Übernehmt aus WHO05 nur <code>versorgt</code> mit Präfix <code>who_</code>. Extrahiert mit <code>"versorgt" IS NOT NULL AND "who_versorgt" IS NOT NULL</code> die gemeinsam auswertbaren Zellen. Speichert sie als <code>vergleich</code>. <a href="https://docs.qgis.org/3.44/en/docs/user_manual/processing_algs/qgis/vectorgeneral.html#join-attributes-by-field-value">QGIS-Dokumentation zur Verknüpfung nach Feldwert</a></li>
+<li>Öffnet <strong>Ansicht → Bedienfelder → Statistische Zusammenfassung</strong>. Wählt <code>vergleich</code> und Feld <code>ew</code>. Die <strong>Summe</strong> ohne Auswahl ist der gemeinsame Nenner. Wählt für REF <code>"versorgt" = 1</code> und für WHO05 <code>"who_versorgt" = 1</code>. Aktiviert für jeden Zähler <strong>Nur ausgewählte Objekte</strong>. Bei keiner ausgewählten Zelle ist der Zähler 0. Berechnet je Variante <code>100 × Zähler / Nenner</code>. Die Quote setzt einen positiven Nenner voraus. WHO05 muss bei diesem Datenstand gleich viele oder mehr Einwohner erfassen. <a href="https://research.slu.se/en/publications/development-of-an-urban-green-space-indicator-and-the-public-heal/">Definition der Quote bei van den Bosch et al.</a> · <a href="https://www.isglobal.org/en/-/isglobal-presenta-el-ranking-de-las-ciudades-europeas-con-mayor-mortalidad-atribuible-a-la-falta-de-espacios-verdes">WHO05-Schwelle bei ISGlobal</a></li>
+<li>Speichert das Projekt mit <code>REF</code>, <code>WHO05</code> und <code>vergleich</code>. Für den Austausch gehören die verwendeten GeoPackages und <code>protokoll/qgis-befehle.md</code> in den Projektordner. Wenn euch das Skript geholfen hat, legt es ebenfalls dazu. Entfernt temporäre Layer und den bundesweiten CSV-Layer aus dem Projekt, sobald die gespeicherten Layer kontrolliert sind.</li>
+</ol>
+</section>
+<section id="optional-bbsr-als-dritte-rechenvariante" class="level2">
+<h2 class="anchored" data-anchor-id="optional-bbsr-als-dritte-rechenvariante">Optional · BBSR als dritte Rechenvariante</h2>
+<p>Wertet die Paare <strong>1 ha / 300 m</strong> und <strong>10 ha / 700 m</strong> getrennt aus. Für eine optionale gemeinsame Quote legt die Musterlösung <strong>UND</strong> als Auswertungsregel fest. <a href="https://epflicht.ulb.uni-bonn.de/download/pdf/372854">BBSR 2018, Kap. 2.2, S. 26</a> · <a href="https://doi.org/10.3390/ijerph16132300">Beispiel einer Anwendung beider Stufen bei Grunewald et al.&nbsp;2019, Tab. 1</a></p>
+<ol type="1">
+<li><p>Verwendet <code>REF</code> als erste Stufe, sofern die Parkdaten bereits das 700-m-Rechengebiet abdecken. Andernfalls erstellt in B1 das größere Rechengebiet, wiederholt die Parkabfrage und berechnet beide Stufen auf diesem gemeinsamen Parkstand. Nutzt die Kette aus B4 mit <code>100000</code> m² und <code>700</code> m für die zweite Stufe. Speichert sie als <code>BBSR700</code>.</p></li>
+<li><p>Verknüpft den Layer der ersten Stufe mit <code>BBSR700</code> über <code>zelle_id</code>. Kopiert <code>versorgt</code> aus der zweiten Stufe mit Präfix <code>fern_</code>. Erstellt mit <strong>Felder überarbeiten</strong> die Ganzzahlfelder <code>stufe_300</code> aus <code>"versorgt"</code> und <code>stufe_700</code> aus <code>"fern_versorgt"</code>. Setzt <code>ansatz</code> auf <code>'BBSR'</code> und berechnet das kombinierte Feld <code>versorgt</code> mit dem folgenden Ausdruck. Speichert <code>zelle_id</code>, <code>ew</code>, <code>ansatz</code>, <code>versorgt</code> und beide Stufen im Layer <code>BBSR</code>.</p>
+<pre class="text"><code>CASE
+  WHEN "versorgt" = 0 OR "fern_versorgt" = 0 THEN 0
+  WHEN "versorgt" = 1 AND "fern_versorgt" = 1 THEN 1
+  ELSE NULL
+END</code></pre></li>
+<li><p>Für die optionale BBSR-Quote verknüpft die Ausgaben über <code>zelle_id</code> wie in B6. Verwendet denselben Parkstand und denselben auswertbaren Zellbestand für alle Varianten, die ihr in die optionale Vergleichstabelle aufnehmt. Behaltet die beiden Stufen für die Interpretation.</p></li>
+</ol>
+</section>
 </section>
 <section id="teil-c-vergleich-für-marburg-sitzung-3" class="level1">
 <h1>Teil C · Vergleich für Marburg (Sitzung 3)</h1>
-<div class="callout callout-style-default callout-note callout-titled" title="Folgt zu Sitzung 3">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Hinweis</span>Folgt zu Sitzung 3
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Die detaillierten Vergleichsschritte werden nach Sitzung 2 ergänzt.</p>
-</div>
-</div>
 <ol type="1">
-<li><strong>Ergebnistabelle:</strong> vergleichbarer Bevölkerungsanteil nach <code>REF</code>, <code>WHO05</code> und <code>BBSR</code> – mit Angabe, wie BBSR zusammengeführt wurde.</li>
-<li><strong>Übereinstimmungskarte:</strong> 0 bis 3 positive Ergebnisse je Zelle, nur für nach denselben Regeln auswertbare Zellen; zusätzliche Karte der BBSR-Teilbedingungen.</li>
-<li><strong>Prognose prüfen:</strong> Wo bestätigen sich Erwartungen, wo nicht? Welche geänderte Modellregel erklärt das?</li>
-<li><strong>Lesarten prüfen:</strong> Welche Unterschiede folgen direkt aus dem Wortlaut, welche erst aus gemeinsam oder einzeln getroffenen GIS-Entscheidungen?</li>
-<li><strong>Aussagegrenze:</strong> Was lässt sich über die modellierte Nähe zu Grün in Marburg sagen, und was nicht? <strong>Keine Bewertung der wissenschaftlichen Angemessenheit der Empfehlungen.</strong></li>
+<li>Stellt <code>REF</code> und <code>WHO05</code> in einer kleinen Tabelle gegenüber. Gebt die beiden Quoten und ihre Differenz in Prozentpunkten an.</li>
+<li>Erstellt im Layer <code>vergleich</code> mit dem <strong>Feldrechner</strong> ein Ganzzahlfeld <code>beide</code> als <code>"versorgt" + "who_versorgt"</code>. Kartiert es mit <strong>Layereigenschaften → Symbolisierung → Kategorisiert</strong>. <code>0</code> bedeutet in beiden Läufen unversorgt, <code>1</code> bedeutet nur in WHO05 versorgt, <code>2</code> bedeutet in beiden versorgt. Markiert eine Stelle, an der der kleinere Parkflächenfilter einen Unterschied macht. <a href="https://research.slu.se/en/publications/development-of-an-urban-green-space-indicator-and-the-public-heal/">REF</a> · <a href="https://www.isglobal.org/en/-/isglobal-presenta-el-ranking-de-las-ciudades-europeas-con-mayor-mortalidad-atribuible-a-la-falta-de-espacios-verdes">WHO05</a></li>
+<li>Prüft eure Prognose und formuliert eine Aussagegrenze. Die Karte zeigt modellierte Nähe zu kartierten Parks. Die tatsächliche Nutzung wäre eine eigene Untersuchungsfrage. <a href="https://doi.org/10.3390/ijerph19042226">Masterson et al.&nbsp;2022, „Results“ und „Discussion“</a></li>
 </ol>
 </section>
-<section id="hintergrund-nicht-gegenstand-der-übung" class="level1">
-<h1>Hintergrund (nicht Gegenstand der Übung)</h1>
+<section id="hintergrund-freiwillige-lektüre" class="level1">
+<h1>Hintergrund · freiwillige Lektüre</h1>
 <ul>
-<li><a href="https://www.who.int/europe/publications/i/item/who-euro-2016-3352-43111-60341">WHO-Regionalbüro Europa (2016): <em>Urban green spaces and health. A review of evidence</em></a> – Evidenz zu Gesundheitswirkungen und Herleitung des Indikators.</li>
-<li><a href="https://doi.org/10.3390/ijerph19042226">Masterson et al.&nbsp;(2022): <em>Use of the natural outdoor environment in different populations in Europe in relation to access: Implications for policy</em></a> – ob Zugang auch zu Nutzung führt; wichtig für die Aussagegrenze in Sitzung 3.</li>
+<li><a href="https://www.who.int/europe/publications/i/item/who-euro-2016-3352-43111-60341">WHO-Regionalbüro Europa 2016, <em>Urban green spaces and health</em></a> zur Herleitung des Indikators.</li>
+<li><a href="https://doi.org/10.3390/ijerph19042226">Masterson et al.&nbsp;2022</a> zur Frage, wie sich Zugang und Nutzung zueinander verhalten.</li>
 </ul>
 
 

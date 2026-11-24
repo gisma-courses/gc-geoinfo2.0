@@ -1,6 +1,6 @@
 ---
 title: "Grünzugang · Umsetzung"
-subtitle: "Fünf Ansätze, eine Stadt: vom Satz in der Quelle zum Vergleich für Marburg"
+subtitle: "Zwei Rechenregeln für Marburg, vom Quellentext zur QGIS-Auswertung"
 title-block-banner: ../../../images/banner-gz.png
 title-block-banner-color: black
 lang: de
@@ -15,186 +15,221 @@ format:
 
 # Arbeitsauftrag
 
-**Ziel:** Fünf Ansätze zur wohnungsnahen Grünversorgung begegnen uns in der Literatur. Wir untersuchen **nicht**, ob die Kolleginnen und Kollegen die fachlich richtigen Schwellen gewählt oder sie hinreichend empirisch begründet haben. Wir untersuchen die **Unschärfen auf dem Weg von der veröffentlichten Formulierung zur ausführbaren GIS-Regel**: Was sagt die Quelle tatsächlich, welche Lesarten sind möglich, was müssen wir aufgrund der Daten zusätzlich entscheiden, und wie verändert das die räumliche Aussage?
+Wir arbeiten **als eine Gruppe**. Zuerst bauen wir den Referenzlauf **REF** in QGIS und sichern die zugehörigen Befehle. Für den gemeinsamen Vergleich **WHO05** ändern wir anschließend die Mindestfläche. Mit KI-Unterstützung lässt sich aus dem Befehlsprotokoll ein Skript für den zweiten Lauf ableiten. Die Werkzeugkiste bleibt als Alternative verfügbar. [Van den Bosch et al., Abstract][ref-quelle] · [ISGlobal, Abs. 4][who05-quelle]
 
-**Arbeitsform: eine oder zwei Gruppen – nicht fünf.** Alle erarbeiten die WHO-Referenz nach van den Bosch et al. (2016) gemeinsam. Anschließend bearbeiten wir zwei gezielte Vergleichsfälle: **WHO05** (die häufig zitierte 0,5-ha-Fassung) und **BBSR** (zwei Größen-/Entfernungsstufen).
+**Freiwillig:** BBSR kann als dritte Variante gerechnet werden. 3-30-300 und die BfN-Kennzahlen dienen der freiwilligen Quellenlektüre. [BBSR 2018, S. 26][bbsr-quelle] · [Konijnendijk 2023][330300-quelle] · [Blum et al. 2024, Abb. 2–4][bfn-quelle]
 
-- **Eine Gruppe:** Ihr bearbeitet WHO05 und BBSR nacheinander und vergleicht beide mit der gemeinsamen Referenz.
-- **Zwei Gruppen:** Gruppe 1 bearbeitet WHO05, Gruppe 2 BBSR. Die Ergebnisse werden anschließend zu einem gemeinsamen Vergleich zusammengeführt.
-
-**3-30-300 sowie BfN-Erreichbarkeit und BfN-Versorgung** bleiben als zusätzliche Quellenbeispiele im Blick. Ihre vollständige GIS-Umsetzung ist **keine Pflichtaufgabe**. Sie dienen der Frage, welche weiteren Festlegungen eine Umsetzung erfordern würde.
-
-1. **Lesarten und Abstraktion** (Teil A, Sitzung 1): Referenz und ausgewählte Vergleichsfälle aus den Quellen in prüfbare Regeln übersetzen; offene Modellentscheidungen dokumentieren; Prognosen festhalten.
-2. **Umsetzung in QGIS** (Teil B, Sitzung 2): gemeinsame Daten; die Referenzkette im Modellierer aufbauen und für WHO05 und BBSR anpassen.
-3. **Vergleich für Marburg** (Teil C, Sitzung 3): Ergebnisse für **REF, WHO05 und BBSR** zusammenführen und interpretieren; Prognosen und Aussagegrenzen prüfen.
-
-**Leitunterscheidung:** Eine Quelle kann fachlich überzeugend und für ihren eigentlichen Zweck hinreichend präzise sein, ohne jede spätere GIS-Entscheidung vorwegzunehmen. Wir unterscheiden daher **(a) sprachliche oder konzeptionelle Mehrdeutigkeit**, **(b) bei der Operationalisierung fehlende Angaben** und **(c) Einschränkungen oder Proxys unserer Geodaten**. Das ist Analyse der Übersetzung, kein Urteil über die Forschung der Autorinnen und Autoren.
+1. **Teil A:** Zwei Quellen lesen, eine Modellentscheidung benennen und eine Prognose notieren.
+2. **Teil B:** Zensus und Parks vorbereiten, REF mit QGIS-Werkzeugen rechnen, Befehle sichern und WHO05 auswerten.
+3. **Teil C:** Zwei Quoten und die Karte vergleichen. Eine Aussage zur modellierten Versorgung in Marburg formulieren.
 
 ## Abgabe
 
-Abgegeben wird das gespeicherte QGIS-Projekt mit Modell (`.model3`) und Ergebnislayern: **bei einer Gruppe** mit `REF`, `WHO05` und `BBSR`; **bei zwei Gruppen** jeweils mit `REF` und der eigenen Vergleichsvariante (`WHO05` bzw. `BBSR`). Für Sitzung 3 werden die drei Ergebnisse in einem gemeinsamen Vergleichsdatensatz zusammengeführt. Für das Portfolio: Regelblatt mit genauen Fundstellen, dokumentierte Lesarten/Setzungen, Änderungsliste, Prognose und Ergebnis sowie eine knappe Modellaussage mit Aussagegrenze. Bei BBSR sind **beide Teilbedingungen separat** zu dokumentieren; eine Zusammenführung zu einem Ja/Nein-Ergebnis muss explizit begründet werden.
-
-::: {.callout-note title="Aus dem perfekten Gipfel"}
-Artikelformel und historischer Code setzten dieselbe Idee verschieden um und lieferten für dieselben Gipfel verschiedene E-Werte. Hier untersuchen wir dieselbe Art von Übergang: von einer Formulierung über eine Rechenregel zu einem räumlichen Ergebnis – an drei berechneten Varianten für eine Stadt.
-:::
+Ein gemeinsames QGIS-Projekt mit `REF` und `WHO05`, den zugehörigen GeoPackage-Layern und dem Befehlsprotokoll `protokoll/qgis-befehle.md`. Ergänzt ein kurzes Regelblatt mit Fundstellen, Datenstand, Prognose und Aussagegrenze. Falls ihr den WHO05-Lauf automatisiert, legt `scripts/gruenzugang.py` dazu.
 
 # Teil A · Lesarten und Abstraktion (Sitzung 1)
 
 ## A1 · Die Referenz durchdeklinieren (Plenum)
 
-Referenz ist der WHO-Indikator, wie ihn [van den Bosch et al. (2016)](https://doi.org/10.1177/1403494815615444) entwickelt und getestet haben: der **Anteil der städtischen Bevölkerung**, der innerhalb einer bestimmten Entfernung vom **Rand einer Grünfläche** wohnt. Als Standard empfehlen die Autorinnen und Autoren **300 m Luftlinie** und eine Mindestgröße von **1 Hektar**. Eine ausführliche Anleitung für die GIS-Umsetzung enthält der Bericht des [WHO-Regionalbüros Europa (2016)](https://www.who.int/europe/publications/i/item/who-euro-2016-3352-43111-60341).
+Der Referenzindikator misst den **Anteil der städtischen Bevölkerung**, der in Reichweite einer Grünfläche wohnt. Die Quellen empfehlen als Standard **mindestens 1 ha Fläche** und **höchstens 300 m Luftlinie bis zum Flächenrand**. [Van den Bosch et al., Abstract, „Methods“ und „Conclusions“][ref-quelle] · [WHO-Regionalbüro Europa, Bericht zur Umsetzung][who-bericht]
 
-Gemeinsam übersetzen wir den Indikator Schritt für Schritt:
-
-| | Begriff | Kriterium | Repräsentation | Operation in QGIS |
-|:--|:--|:--|:--|:--|
-| **Grün** | städtische Grünfläche | öffentlich zugänglich, mindestens 1 ha | OSM-Polygone ausgewählter Klassen | Auswahl per Ausdruck, Fläche berechnen, filtern |
-| **Entfernung** | Nähe | höchstens 300 m Luftlinie bis zum Flächenrand | Pufferzone um jede Grünfläche | Puffer 300 m, auflösen |
-| **Bevölkerung** | Bewohnerinnen und Bewohner | Wohnort innerhalb der Pufferzone | Zensus-2022-Gitterzellen 100 m mit Einwohnerzahl | Zellmittelpunkte, Lage-Abfrage |
-| **Ergebnis** | Zugang | Anteil der versorgten Bevölkerung | Feld `versorgt` je Zelle | Summe versorgt / Summe aller |
-
-Was der Indikator **nicht** festlegt, setzen wir einmal gemeinsam. Diese Setzungen gelten für **REF, WHO05 und BBSR**, sofern eine der jeweiligen Quellen etwas anderes fordert:
-
-| Offene Frage | Gemeinsame Setzung | Begründung |
+| Begriff | Gemeinsame Modellsetzung für Marburg | Operation in QGIS |
 |:--|:--|:--|
-| Welche OSM-Klassen zählen als Grünfläche? | | |
-| Woran erkennen wir „öffentlich zugänglich“? | | |
-| Wann zählt eine Gitterzelle als versorgt – Mittelpunkt oder Anteil in der Zone? | | |
-| Wie weit reicht das Rechengebiet über Marburg hinaus? | | |
-| Welches Untersuchungsgebiet: Stadt Marburg oder Kernstadt? | | |
+| Grünfläche | Ganze Parkpolygone mit `leisure=park`. `access=no` und `access=private` ausschließen. Fehlendes Zugangstag als unbestätigten Zugang dokumentieren. [OpenStreetMap][osm-quelle] | Auswählen, Fläche je vollständigem Objekt berechnen und Größenfilter anwenden. |
+| Nähe | Luftlinie bis zum Parkrand. Innerhalb eines Parks gilt Distanz 0. [Van den Bosch et al., „Conclusions“][ref-quelle] | Parkpolygone puffern und prüfen, ob der Wohnort die Pufferfläche berührt oder darin liegt. |
+| Bevölkerung | Mittelpunkt der 100-m-Zelle als Wohnort-Proxy. `Einwohner` als Gewicht. [Zensus 2022, Gitterdaten][zensus-quelle] | Über die Lage des Mittelpunkts entscheiden und seine Einwohnerzahl genau einmal zählen. |
+| Gebiet | Ganze Gemeinde Marburg. Grünflächen bis 300 m außerhalb berücksichtigen. [BKG VG250][bkg-quelle] | Wohnorte an der Stadtgrenze auswählen. Parkobjekte aus dem erweiterten Rechengebiet übernehmen. |
+| Quote | Einwohner in versorgten Zellen geteilt durch alle Einwohner der auswertbaren Zellen. [Van den Bosch et al., „Methods“][ref-quelle] | Einwohnerzahlen summieren und den Anteil in Prozent angeben. |
 
-::: {.callout-note title="Aus dem perfekten Gipfel"}
-Am Rand des DGM blieb offen, ob außerhalb höheres Gelände liegt. An der Stadtgrenze bleibt offen, ob jenseits davon eine Grünfläche liegt. Das Rechengebiet muss deshalb mindestens um die größte Distanz, die ein Ansatz verwendet, über Marburg hinausreichen.
-:::
+## A2 · Die Vergleichsquelle lesen
 
-## A2 · Die Vergleichsfälle beim Wort nehmen
+Lest gemeinsam die beiden Fundstellen. Tragt je eine kurze Zeile ins Regelblatt ein. Haltet darin Schwelle, verwendete Daten und eine für Marburg notwendige Festlegung auseinander.
 
-**Wir arbeiten mit einer oder zwei Gruppen, aber mit denselben drei Rechenvarianten.** Alle nutzen zuerst die gemeinsame Referenz aus A1. Danach bearbeitet eine Gruppe beide Fälle nacheinander oder zwei Gruppen je einen Fall.
+| Fundstelle | Was ihr festhaltet |
+|:--|:--|
+| [ISGlobal 2021, Abs. 4][who05-quelle] | Welche Mindestfläche und welche Entfernung stehen in der häufig zitierten Empfehlung? Ist ein Bezugspunkt an der Grünfläche genannt? |
+| [Pereira Barboza et al. 2021, S. e719–e720, „Population and age distribution“ und „Exposure to green space“][barboza-quelle] | Welches Bevölkerungsraster und welche Grünmaße verwendet die Studie? Welche Daten brauchen wir für die Rechenregel in Marburg? |
 
-| Fall | Zu untersuchende Quelle | Arbeitsauftrag |
-|:--|:--|:--|
-| **WHO05** | [ISGlobal (2021)](https://www.isglobal.org/en/-/isglobal-presenta-el-ranking-de-las-ciudades-europeas-con-mayor-mortalidad-atribuible-a-la-falta-de-espacios-verdes); [Pereira Barboza et al. (2021)](https://doi.org/10.1016/S2542-5196(21)00229-1) | Prüfen, was die häufig zitierte 0,5-ha-/300-m-Aussage tatsächlich festlegt und was für unsere Berechnung ergänzt werden muss. |
-| **BBSR** | [BBSR (2018), *Handlungsziele für Stadtgrün und deren empirische Evidenz*, Kap. 2.2, S. 26](https://epflicht.ulb.uni-bonn.de/download/pdf/372854) | Beide Größen-/Entfernungsstufen quellengetreu erfassen; prüfen, ob die Quelle ihre Verknüpfung als einheitliches Ja/Nein-Kriterium vorgibt. |
-
-**Zusätzliche Quellenbeispiele für die gemeinsame Diskussion (nicht vollständig zu rechnen):** [3-30-300 nach Konijnendijk (2023)](https://doi.org/10.1007/s11676-022-01523-z); [BfN-Grünerreichbarkeit und Grünraumversorgung nach Blum et al. (2024)](https://doi.org/10.19217/brs242), [ausführliche BfN-Fassung (2023)](https://doi.org/10.19217/skr653). Die 3-30-300-Regel umfasst **drei** Anforderungen (Sichtbarkeit von Bäumen, Baumkronenanteil, Nähe zu Grün); eine 300-m-Pufferkarte allein ist nicht ihre vollständige Umsetzung.
-
-Lest für euren Fall gezielt die Stellen mit den Schwellen und ihrer Interpretation. Haltet **Seite, Abschnitt oder Abbildung** fest und füllt das Regelblatt. Bei einer Gruppe gibt es zwei Regelblätter, bei zwei Gruppen je eines.
-
-| | Was die Quelle festlegt (mit Fundstelle) | Welche GIS-Entscheidung ist noch offen – und warum? | Unsere dokumentierte Setzung |
-|:--|:--|:--|:--|
-| **Grünfläche:** welche Art? öffentlich? | | | |
-| **Mindestgröße:** je Fläche oder als Summe? | | | |
-| **Entfernungsmaß:** Luftlinie, Fußweg, nicht festgelegt? | | | |
-| **Distanz** | | | |
-| **Bezugspunkt:** Rand, Eingang, Mittelpunkt? | | | |
-| **Bevölkerung:** wer zählt, in welcher Einheit? | | | |
-| **Ergebnisgröße:** Anteil versorgter Menschen, m²/Einwohner, ja/nein? | | | |
-| **Mehrere Stufen:** getrennt, gemeinsam, alternativ? | | | |
-
-Für die letzte Spalte gilt: **Fehlt eine ausdrückliche abweichende Vorgabe in der Quelle, übernehmen wir für vergleichbare Fragen die gemeinsame Referenzsetzung.** Wo sich eine Lesart nicht aus der Quelle entscheiden lässt, kennzeichnen wir sie als **eigene Modellentscheidung**, nicht als Behauptung über die Absicht der Autorinnen und Autoren.
-
-::: {.callout-tip title="Prüffrage"}
-Welche Wörter oder Größen sind unmittelbar in eine Rechenoperation übertragbar? **Wo beginnen wir zu interpretieren?** Notiert mindestens eine alternative Lesart oder Modellsetzung und erklärt, ob die Offenheit aus dem **Text**, aus der **Operationalisierung** oder aus den **Daten** stammt. Es geht nicht darum, der Quelle einen Fehler nachzuweisen.
-:::
+Die [Musterfolie mit Fundstellen](../slides/01-quellen-abstraktion.html#/musterloesung-gruenzugang) zeigt eine ausgefüllte Lösung. Die Auswertung der 3-30-300- und BfN-Lesebeispiele steht auf der [freiwilligen Folie zu GIS-Operationen](../slides/01-quellen-abstraktion.html#/optionaler-quellenblick), jeweils mit Quellen direkt an den Kriterien.
 
 ## A3 · Was sich gegenüber der Referenz ändert
 
-Tragt für WHO05 und BBSR die Abweichungen gegenüber **REF** ein. Bei zwei Gruppen bearbeitet jede ihren Fall; bei einer Gruppe werden beide nacheinander ausgefüllt.
-
-| Änderung | Referenz (REF) | Vergleichsfall | Konsequenz für QGIS | Quellenbefund oder eigene Setzung? |
-|:--|:--|:--|:--|:--|
-| | | | | |
-| | | | | |
-
-- **WHO05:** Prüft zunächst, ob gegenüber REF tatsächlich nur die Mindestfläche von 1 ha auf 0,5 ha geändert werden muss. Trennt ausdrücklich die **Quellenaussage** von den aus REF übernommenen Annahmen, etwa zur Repräsentation in OSM und zu Zellmittelpunkten.
-- **BBSR:** Betrachtet **1 ha / 300 m** und **10 ha / 700 m** zunächst als **zwei getrennte Bedingungen**. Prüft anhand der Fundstelle, ob eine Zelle beide erfüllen muss oder ob die Quelle gar keine einzige binäre Zusammenfassung vorsieht. Erzeugt zwei Teilindikatoren; legt erst danach eine Regel für das gemeinsame Vergleichsfeld `versorgt` fest und markiert sie gegebenenfalls als eigene Auswertungsentscheidung.
-
-**Kurzer Quellenblick ohne GIS-Umsetzung:** Was müsste man bei 3-30-300 (drei Teilanforderungen) oder bei den beiden BfN-Ansätzen (Fußwege, summierte Fläche, m² pro Person) zusätzlich modellieren? Diese Überlegung dient dem Verständnis der Übertragung, nicht einer fachlichen Bewertung der Empfehlungen.
+Für **WHO05** verwenden wir **0,5 ha statt 1 ha** je Park. Für den Vergleich übernehmen wir aus REF die 300-m-Luftlinie bis zum Rand, die Parkauswahl und die Zuordnung der Zensus-Mittelpunkte. Schreibt diesen einen Parameterwechsel und die übernommene Modellsetzung ins Regelblatt. [ISGlobal, Abs. 4][who05-quelle] · [Van den Bosch et al., „Conclusions“][ref-quelle]
 
 ## A4 · Prognose
 
-Bevor gerechnet wird, formuliert eine begründete Erwartung für **WHO05** und **BBSR** relativ zu **REF**. Bei zwei Gruppen werden die Prognosen anschließend ausgetauscht.
-
-| Variante | Mehr / weniger / gleich viel versorgte Bevölkerung als REF? | Wo in Marburg erwarten wir Unterschiede? | Welche Regel könnte das erklären? |
-|:--|:--|:--|:--|
-| WHO05 | | | |
-| BBSR | | | |
-
-Für WHO05 lässt sich zusätzlich eine **gerichtete Hypothese** prüfen: Bei **identischen Grünflächenklassen und derselben 300-m-Distanzregel** darf eine Absenkung der Mindestfläche von 1 auf 0,5 ha den versorgten Bevölkerungsanteil **nicht verkleinern**. Ist das Ergebnis dennoch kleiner, deutet das auf Unterschiede in Daten oder Verarbeitung hin. Für BBSR hängt die Richtung unter anderem von der begründeten Verknüpfung der beiden Stufen ab.
-
-Eine nicht bestätigte Prognose ist ein auswertbarer Befund, kein Fehler.
+Notiert in einem Satz, **wo** durch WHO05 weitere Zellen als versorgt gelten könnten und **warum**. Bei derselben Pufferregel und denselben Eingaben kann WHO05 gleich viele oder mehr Einwohner erfassen als REF. [ISGlobal, Abs. 4][who05-quelle] · [Van den Bosch et al., „Conclusions“][ref-quelle]
 
 ## A5 · Gemeinsamer Datenplan und Ergebnisformat (Plenum)
 
-**Alle Varianten verwenden dieselben Daten, denselben Raumbezug und dieselben gemeinsamen Setzungen.** Sonst könnten Unterschiede aus den Daten statt aus der Regel stammen. Bei zwei Gruppen wird **ein gemeinsamer Datenstand** vereinbart.
-
-| Kriterium | Daten | Quelle und Abruf | Lizenz | KBS und Auflösung | Was wissen wir über die Daten **nicht**? |
-|:--|:--|:--|:--|:--|:--|
-| Grünflächen | | | | | |
-| Bevölkerung | | | | | |
-| Untersuchungs- und Rechengebiet | | | | | |
-| Wegenetz (nur bei freiwilliger BfN-Erweiterung) | | | | | |
-
-Mögliche Quellen:
-
-- **OpenStreetMap** für Grünflächen – in QGIS über **QuickOSM**. Lizenz: ODbL. Dokumentiert Abfrage, Klassenauswahl und Abrufdatum; beide Gruppen verwenden denselben Stand.
-- **Zensus 2022**, Einwohnerzahlen auf 100-m-Gitterzellen: [Gitterdaten zum Download](https://www.zensus2022.de/DE/Ergebnisse-des-Zensus/_inhalt.html#Gitterdaten2022).
-- Verwaltungsgrenzen für das Untersuchungsgebiet; das **Rechengebiet** muss mindestens die größte verwendete Distanz (**700 m für BBSR**) über die Stadtgrenze hinausreichen. Bei zusätzlicher Netzwerkanalyse ist gesondert zu prüfen, ob dieser Rand ausreichend ist.
-
-**Ergebnisformat:** Für jede berechnete Variante (`REF`, `WHO05`, `BBSR`) wird ein Layer derselben Zensus-Gitterzellen bereitgestellt.
+Sichert einen Datenstand für beide Läufe. Notiert bei den OSM-Parks Abfrage und Abrufdatum sowie bei Zensus und Gemeindegrenze den verwendeten Stand. [OpenStreetMap, ODbL][osm-quelle] · [Zensus 2022, Gitterdaten][zensus-quelle] · [BKG VG250][bkg-quelle]
 
 | Feld | Inhalt |
 |:--|:--|
-| `zelle_id` | gleiche Zellenkennung in allen Varianten |
-| `ew` | Einwohnerzahl; nur Zellen mit vergleichbarer gültiger Einwohnerinformation in die gemeinsame Quote aufnehmen |
-| `ansatz` | `REF`, `WHO05` oder `BBSR` |
-| `versorgt` | 1 = versorgt, 0 = nicht versorgt; **NULL**, wenn mit den vorhandenen Daten nicht entscheidbar |
-| `wert` | optional: zusätzlicher Kennwert |
-| `stufe_300`, `stufe_700` | **nur BBSR:** Ergebnis der beiden Teilbedingungen (1/0/NULL) |
+| `zelle_id` | dieselbe Zellkennung in beiden Varianten |
+| `ew` | Einwohnerzahl der Zelle als Gewicht |
+| `ansatz` | `REF` oder `WHO05` |
+| `versorgt` | `1` = versorgt, `0` = unversorgt, `NULL` = unentscheidbar |
 
-Bei BBSR gehört die Regel, nach der aus `stufe_300` und `stufe_700` das gemeinsame Feld `versorgt` entsteht, **ins Regelblatt und in die Modellbeschreibung**. Nur so lassen sich Ergebnisse in Sitzung 3 Zelle für Zelle interpretieren und vergleichen.
-
-::: {.callout-note title="Aus dem perfekten Gipfel"}
-Gleich benannte Felder allein schaffen noch keine Vergleichbarkeit: Auch Zellbezug, Datenstand, Umgang mit fehlenden Werten und die Bedeutung von `versorgt` müssen übereinstimmen.
-:::
-
-## Ergebnis von Teil A
-
-- die gemeinsamen Referenzsetzungen,
-- Regelblatt und Quellenfundstellen für **WHO05 und BBSR**,
-- Änderungsliste mit getrennten Quellen- und Modellentscheidungen,
-- Prognosen zu beiden Vergleichsfällen,
-- gemeinsamer Datenplan und vereinbartes Ergebnisformat.
-
-**Vorbereitung auf Teil B:** **QuickOSM** in QGIS installieren. Regelblatt, Änderungsliste und die vereinbarten Datenabfragen griffbereit halten.
+**Ergebnis von Teil A:** Ein Regelblatt mit Quellen und gemeinsamen Setzungen, der Parameterwechsel für WHO05 und eure Prognose. Für Teil B installiert ihr [QuickOSM][quickosm-quelle].
 
 # Teil B · Umsetzung in QGIS (Sitzung 2)
 
-::: {.callout-note title="Folgt zu Sitzung 2"}
-Die detaillierten QGIS-Schritte werden nach Sitzung 1 ergänzt, wenn die gemeinsamen Setzungen feststehen.
+Die Anleitung führt den Referenzlauf mit Werkzeugen vor. Für WHO05 werden die Eingaben wiederverwendet. Die [Musterfolie mit Fundstellen](../slides/01-quellen-abstraktion.html#/musterloesung-gruenzugang) erklärt den Zusammenhang zwischen der Quelle und den konkreten Datenentscheidungen. [REF][ref-quelle] · [WHO05][who05-quelle]
+
+Die folgenden Werkzeuge findet ihr über die Suche in **Verarbeitung → Werkzeugkiste**. Bei abweichenden Menünamen helfen die angegebenen Werkzeug-IDs.
+
+## B1 · Projekt, Stadtgrenze und Rechengebiet
+
+1. **Projekt → Neu**, dann **Speichern unter…** als `Gruenzugang_Marburg.qgz`. Legt im Projektordner die Unterordner `daten`, `protokoll` und bei Automatisierung `scripts` an. Wählt in **Projekt → Eigenschaften** relative Pfade und als Projekt-KBS **EPSG:25832** (ETRS89 / UTM-Zone 32N).
+2. Ladet beim BKG **Verwaltungsgebiete 1:250 000, Stand 31.12.** als **GeoPackage, UTM32** herunter, entpackt es und öffnet in QGIS den Layer `vg250_gem`. Sucht **Nach Ausdruck extrahieren** (`native:extractbyexpression`). Verwendet `"ags" = '06534014'`. Speichert das Ergebnis über **Rechtsklick → Exportieren → Objekte speichern als…** im GeoPackage `daten/gruenzugang.gpkg` als `marburg`, KBS **EPSG:25832**. [BKG-Download VG250](https://gdz.bkg.bund.de/index.php/default/verwaltungsgebiete-1-250-000-stand-31-12-vg250-31-12.html)
+3. Öffnet **Puffer** (`native:buffer`). Eingabe `marburg`, Distanz **300 m** für REF und WHO05, Segmente **20**, **Ergebnis auflösen** aktivieren. Speichert den Ergebnislayer als `rechengebiet`. In diesem Raum suchen wir Grünflächen. Die Wohnbevölkerung wählen wir in B2 mit der ursprünglichen Gemeindegrenze aus. Wenn ihr die BBSR-Vertiefung plant, stellt hier **700 m** ein und verwendet diesen Datenstand für alle Läufe. [REF][ref-quelle] · [WHO05][who05-quelle] · [BBSR 2018, S. 26][bbsr-quelle]
+
+Für alle weiteren gespeicherten Szenarien und Zwischenlayer könnt ihr dasselbe GeoPackage verwenden. Vergebt beim Export jeweils den angegebenen **neuen Layernamen**. Das GeoPackage kann mehrere Layer enthalten.
+
+## B2 · Zensus-CSV importieren und Marburger Zellen erzeugen
+
+### Aus der CSV werden Punkte
+
+1. Ladet das ZIP **Bevölkerungszahl in Gitterzellen** herunter und entpackt es lokal. Wählt daraus die Datei für **100 m** (`Zensus2022_Bevoelkerungszahl_100m-Gitter.csv`). Die Tabelle enthält die Zell-ID, die Koordinaten des Mittelpunkts und die Einwohnerzahl. [Destatis, ZIP-Download](https://www.destatis.de/static/DE/zensus/gitterdaten/Zensus2022_Bevoelkerungszahl.zip) · [Gitterdaten 2022](https://www.zensus2022.de/DE/Ergebnisse-des-Zensus/_inhalt.html#Gitterdaten2022)
+2. Öffnet **Layer → Layer hinzufügen → Getrennte Textdatei als Layer hinzufügen…**. Wählt die CSV. Stellt **benutzerdefinierte Trennzeichen → Semikolon** ein und aktiviert **Erster Datensatz enthält Feldnamen** sowie **Feldtypen erkennen**. In der Vorschau müssen vier Spalten getrennt erscheinen.
+3. Wählt unter **Geometriedefinition → Punktkoordinaten** die Einstellungen in der Tabelle. Aktiviert unter **Layereinstellungen** den **räumlichen Index** und klickt **Hinzufügen**. Der erste Import der bundesweiten Datei kann einige Zeit dauern. [QGIS-Dokumentation zum Import getrennter Textdateien](https://docs.qgis.org/3.44/en/docs/user_manual/managing_data_source/opening_data.html#importing-a-delimited-text-file)
+
+| Einstellung | Wert | Bedeutung |
+|:--|:--|:--|
+| X-Feld | `x_mp_100m` | Ostwert des Zellmittelpunkts |
+| Y-Feld | `y_mp_100m` | Nordwert des Zellmittelpunkts |
+| Geometrie-KBS | **EPSG:3035** (ETRS89 / LAEA Europe) | Bezugssystem der Koordinaten in der CSV |
+| Zellkennung | `GITTER_ID_100m` | Eindeutiger Schlüssel, der später Punkte und Zellen verbindet |
+| Einwohnerzahl | `Einwohner` | Gewicht des Punkts in der Versorgungsquote |
+
+::: {.callout-tip title="Zwei Koordinatenbezugssysteme"}
+**EPSG:3035 beim Import**, weil so die X/Y-Werte in der CSV definiert sind. **EPSG:25832 für die Abstandsrechnung**, nachdem die Punkte tatsächlich reprojiziert wurden. Wenn die Punkte am falschen Ort liegen, prüft zuerst das Quell-KBS und die Reihenfolge der X/Y-Felder. Ein anderes KBS zuzuweisen verschiebt die Interpretation der Koordinaten. Eine Reprojektion rechnet die Koordinaten um.
 :::
 
-0. **Projekt anlegen:** metrisches KBS (EPSG:25832), relative Pfade, gemeinsamer Datenstand.
-1. **Daten beschaffen:** identische Grünflächen-, Bevölkerungs- und Grenzdaten für REF, WHO05 und BBSR; Rechengebiet mindestens 700 m über den Untersuchungsraum hinaus.
-2. **Referenz (REF):** gemeinsame Grünflächenauswahl, Mindestgröße 1 ha, 300-m-Luftlinienpuffer, Wohnbevölkerung über Zellmittelpunkte zuordnen.
-3. **Referenzkette als Modell (`.model3`):** Mindestfläche und Entfernung parametrieren.
-4. **WHO05:** Modell mit 0,5 ha, sonst unveränderter Referenzregel ausführen.
-5. **BBSR:** zwei unabhängige Auswertungen für 1 ha / 300 m und 10 ha / 700 m rechnen; beide im Ergebnis erhalten. Falls ein gemeinsamer `versorgt`-Wert verlangt wird, die Zusammenführungsregel ausdrücklich als Quellenbefund oder eigene Setzung dokumentieren.
-6. **Vergleichsdaten speichern:** gleicher Zellenbestand und gemeinsame Felder, `NULL` für nicht entscheidbare Fälle; bei zwei Gruppen alle drei Varianten zusammenführen.
+### Auf Marburg eingrenzen und Attribute vorbereiten
+
+4. Deaktiviert die Darstellung des bundesweiten Zensuslayers. Öffnet **Nach Position extrahieren** (`native:extractbylocation`). Eingabe ist der **CSV-Punktlayer**, Vergleichslayer `marburg`, Prädikat **schneidet / intersect**. So werden Mittelpunkte im Stadtpolygon einschließlich seines Randes übernommen. Die Ausgabe bleibt zunächst in **EPSG:3035**. Zoomt auf `marburg` und schaltet die Ausgabe ein. Ihr solltet jetzt nur die Punktmenge für Marburg sehen.
+5. Sucht **Nach Ausdruck extrahieren** und übernehmt nur Datensätze mit numerischer, nicht negativer Einwohnerzahl. Verwendet den folgenden Ausdruck. Haltet fest, wenn Einträge beim Filtern wegfallen. Die entfernten Werte gehen als fehlende Information weder in den Zähler noch in den Nenner ein.
+
+   ```text
+   regexp_match(trim(to_string("Einwohner")), '^[0-9]+$') > 0
+   ```
+
+6. Öffnet **Felder überarbeiten** (`native:refactorfields`) für die gefilterten Punkte. Lasst genau diese beiden Fachfelder stehen. Ändert in der Tabelle des Werkzeugs bei Bedarf Namen, Typ und Ausdruck. Speichert das Ergebnis als `zensus_marburg_3035`.
+
+   | Ausgabefeld | Typ | Ausdruck |
+   |:--|:--|:--|
+   | `zelle_id` | Text | `"GITTER_ID_100m"` |
+   | `ew` | Ganzzahl | `to_int("Einwohner")` |
+
+7. Öffnet die Attributtabelle. Prüft an einigen Zeilen, ob `zelle_id` gefüllt ist und `ew` als Zahl erscheint. Notiert die Objektanzahl. Zählt bei der Auswertung später **Einwohner**, da ein Punkt für die gesamte Bevölkerung seiner Zelle steht.
+
+### Einen Punktlayer für die Rechnung und einen Polygonlayer für die Karte erzeugen
+
+8. Sucht **Layer reprojizieren** (`native:reprojectlayer`). Eingabe `zensus_marburg_3035`, Ziel-KBS **EPSG:25832**. Speichert das Ergebnis als `zensus_punkte`.
+9. Sucht **Geometrie nach Ausdruck** (`native:geometrybyexpression`). Eingabe ist wieder **`zensus_marburg_3035`**. Wählt als Ausgabegeometrie **Polygon** und verwendet `bounds(buffer($geometry, 50))`. Damit entstehen im ursprünglichen Zensus-KBS quadratische Zellen mit 100 m Seitenlänge. Speichert das Ergebnis als `zensus_zellen`. `zensus_punkte` und `zensus_zellen` müssen dieselben Zell-IDs und Einwohnerzahlen enthalten. Für die Karte übertragen wir die Punktentscheidung per `zelle_id` auf das jeweilige Quadrat.
+
+## B3 · OSM-Parks laden und Flächen messen
+
+1. Installiert bei Bedarf **QuickOSM** über **Erweiterungen → Erweiterungen verwalten und installieren…**. Öffnet **Vektor → QuickOSM → QuickOSM** und wechselt zur **Schnellabfrage / Quick Query**. Wählt Schlüssel `leisure`, Wert `park`, räumliche Auswahl **Layerausdehnung / Layer extent** und den Layer `rechengebiet`. Führt die Abfrage aus. Verwendet den Ergebnislayer mit **Polygonen bzw. Multipolygonen**. Speichert diesen Datenstand für beide Läufe. [QuickOSM-Dokumentation](https://quickosm.github.io/QuickOSM/)
+2. Öffnet **Geometrien reparieren** (`native:fixgeometries`) auf dem Parklayer und anschließend **Layer reprojizieren** mit Ziel-KBS **EPSG:25832**. Öffnet **Nach Position extrahieren**. Eingabe sind die reprojizierten Parks, Vergleichslayer `rechengebiet`, Prädikat **schneidet / intersect**. Dadurch bleiben die berührenden Parks als vollständige Objekte erhalten.
+3. Öffnet **Nach Ausdruck extrahieren**. Schließt Parks mit `access=no` oder `access=private` aus. Der Ausdruck liest `access` sowohl aus einem eigenen Feld als auch aus den von QuickOSM mitgelieferten `other_tags`. Parks ohne Zugangstag bleiben als potenziell zugänglich in der Auswahl.
+
+   ```text
+   coalesce(
+     nullif(attribute(@feature, 'access'), ''),
+     map_get(hstore_to_map(coalesce(attribute(@feature, 'other_tags'), '')), 'access'),
+     ''
+   ) NOT IN ('no', 'private')
+   ```
+
+4. Sucht **Feldrechner** in der Werkzeugkiste (`native:fieldcalculator`). Ergänzt `flaeche_m2` als **Dezimalzahl** mit `area($geometry)`. Das misst die Fläche des vollständigen OSM-Objekts in Quadratmetern im Layer-KBS EPSG:25832. Speichert das Ergebnis als `parks`. Für die Mindestgröße zählt jedes Parkobjekt einzeln.
+
+Die OSM-Klasse bildet kartierte Parks ab. Ein fehlendes Zugangstag lässt den tatsächlichen Zugang offen. Dokumentiert Abfrage, Abrufdatum und Lizenz sowie den Stand der Gemeindegrenze und des Zensus. [OpenStreetMap-Lizenz und Namensnennung](https://www.openstreetmap.org/copyright)
+
+## B4 · REF einmal mit den QGIS-Werkzeugen rechnen
+
+Verwendet `parks`, `zensus_punkte` und `zensus_zellen` aus B2 und B3. Führt die Werkzeuge in dieser Reihenfolge aus. Gebt temporären Ausgaben im Layerfenster den angegebenen Namen, damit ihr sie im nächsten Dialog wiederfindet. Für REF gelten 1 ha = 10.000 m² und 300 m Luftlinie. [Van den Bosch et al., „Conclusions“][ref-quelle]
+
+| Werkzeug | Eingaben und Einstellungen | Ausgabe |
+|:--|:--|:--|
+| **Nach Ausdruck extrahieren** (`native:extractbyexpression`) | `parks`. Ausdruck `"flaeche_m2" >= 10000`. | `ref_parks` |
+| **Puffer** (`native:buffer`) | `ref_parks`. Distanz **300 m**, Segmente **20**, **Ergebnis auflösen** aus. So bleibt `flaeche_m2` erhalten. | `ref_puffer` |
+| **Attribute nach Position verknüpfen** (`native:joinattributesbylocation`) | Eingabe `zensus_punkte`, Vergleichslayer `ref_puffer`. Prädikat **schneidet / intersect**. Nur `flaeche_m2` übernehmen, Präfix `park_`. Erstes passendes Objekt (**1:1**) wählen. Punkte ohne Treffer behalten. | `ref_treffer` |
+| **Feldrechner** (`native:fieldcalculator`) | `ref_treffer`. Neues Ganzzahlfeld `versorgt`, Ausdruck `if("park_flaeche_m2" IS NULL, 0, 1)`. | `ref_punkte` |
+| **Attribute nach Feldwert verknüpfen** (`native:joinattributestable`) | Eingabe `zensus_zellen`, zweiter Layer `ref_punkte`. Auf beiden Seiten `zelle_id`, nur `versorgt` übernehmen. Präfix leer. Erstes passendes Objekt (**1:1**) wählen. Alle Zellen behalten. | `REF_roh` |
+| **Feldrechner** (`native:fieldcalculator`) | `REF_roh`. Neues Textfeld `ansatz`, Ausdruck `'REF'`. | `REF` |
+
+Speichert `REF` im GeoPackage `daten/gruenzugang.gpkg`. Kontrolliert im Ergebnis eine Zelle mit `versorgt = 1` und eine mit `versorgt = 0`, falls beide vorkommen. Im räumlichen Join zählt ein Zellmittelpunkt bei überlappenden Puffern genau einmal. Im letzten Join zeigt `NULL` eine fehlende Zuordnung per Zell-ID an. [QGIS-Dokumentation zu räumlichen und tabellarischen Verknüpfungen][qgis-verknuepfung]
+
+## B5 · Befehlsprotokoll sichern und WHO05 ableiten
+
+### Wo die Befehle stehen
+
+1. Öffnet in QGIS **Verarbeitung → Verlauf…** (`Strg` + `Alt` + `H`). QGIS speichert die Werkzeugaufrufe mit Parametern im Verlauf des lokalen QGIS-Profils. Sucht nach Zeitpunkt und Werkzeugnamen die sechs Aufrufe aus B4. [QGIS-Dokumentation zum Verarbeitungsverlauf][qgis-verlauf]
+2. Wählt je Eintrag **Rechtsklick → Als Python-Befehl kopieren**. Fügt die sechs `processing.run(...)`-Aufrufe in der Ausführungsreihenfolge in `protokoll/qgis-befehle.md` ein. Notiert daneben den Namen der Eingabe und der erwarteten Ausgabe aus der Tabelle. Ergänzt die QGIS-Version sowie `daten/gruenzugang.gpkg` mit den drei vorbereiteten Layernamen.
+3. Prüft im Protokoll die Werte `10000`, `300`, `20`, die 1:1-Verknüpfung und die Namen `flaeche_m2`, `zelle_id`, `versorgt`. Temporäre Layer-IDs in den kopierten Befehlen gelten nur für den damaligen Lauf. Die im Protokoll notierten Ein- und Ausgaben machen ihre Funktion nachvollziehbar. [QGIS-Dokumentation zum Verarbeitungsverlauf][qgis-verlauf]
+
+### Aus dem Protokoll ein Skript machen
+
+Die KI erhält das Befehlsprotokoll und die Layernamen. Lokale Benutzerpfade könnt ihr im geteilten Text durch den Projektordner ersetzen. Nutzt zum Beispiel diesen Auftrag:
+
+> Erstelle aus den unten stehenden sechs Aufrufen ein kurzes PyQGIS-Skript für die Python-Konsole im geöffneten QGIS-Projekt. Lade `parks`, `zensus_punkte` und `zensus_zellen` aus `daten/gruenzugang.gpkg` relativ zum Projektordner. Verwende die kopierten QGIS-Algorithmen und ihre Parameter. Ersetze temporäre Layer-IDs durch die Ausgaben der vorherigen `processing.run`-Aufrufe. Parametriere Mindestfläche, Distanz und Ansatz. Rechne WHO05 mit 5.000 m², 300 m und Ansatz `WHO05`. Erhalte alle Zellen, IDs, Einwohnerzahlen und die 1:1-Zuordnung. Speichere das Ergebnis getrennt als `daten/WHO05.gpkg` und lass das manuelle REF-Ergebnis erhalten. Nenne die Stelle, an der ich zu Prüfzwecken auf 10.000 m² und `REF_TEST` umstellen kann. Markiere Punkte, die anhand des Protokolls offen sind.
+
+Speichert den überprüften Code als `scripts/gruenzugang.py`. Öffnet **Erweiterungen → Python-Konsole → Editor anzeigen**, ladet das Skript, prüft Eingabe- und Ausgabepfade und führt es aus. Für einen Testlauf mit `10000`, `300` und `REF_TEST` wählt ihr eine eigene Ausgabedatei. Vergleicht Zellzahl und `versorgt` je `zelle_id` mit eurem manuellen REF-Ergebnis. Erst wenn die Ergebnisse übereinstimmen, setzt ihr 5.000 m² und speichert `WHO05`. [QGIS-Dokumentation zur Python-Konsole][qgis-python] · [ISGlobal, Abs. 4][who05-quelle]
+
+**WHO05 in der Werkzeugkiste:** Öffnet die Aufrufe aus B4 per Doppelklick im Verlauf. Startet eine neue Kette mit `"flaeche_m2" >= 5000`, aktualisiert in jedem Dialog den Eingabelayer auf die jeweils neue Ausgabe und setzt im letzten Feldrechner `'WHO05'`. Speichert den Ergebnislayer als `WHO05`. [QGIS-Dokumentation zum erneuten Start aus dem Verlauf][qgis-verlauf] · [ISGlobal, Abs. 4][who05-quelle]
+
+## B6 · Ergebnisse prüfen und Quoten berechnen
+
+1. Öffnet die Attributtabellen von `REF` und `WHO05`. Beide sollen dieselbe Zahl von Objekten wie `zensus_zellen` und eine Zeile je `zelle_id` haben. Die Felder `ew`, `versorgt` und `ansatz` müssen vorhanden sein. Prüft mit `"versorgt" IS NULL` auf fehlende Zuordnungen.
+2. Verknüpft `REF` und `WHO05` mit **Attribute nach Feldwert verknüpfen** über `zelle_id`, Methode **1:1**. Übernehmt aus WHO05 nur `versorgt` mit Präfix `who_`. Extrahiert mit `"versorgt" IS NOT NULL AND "who_versorgt" IS NOT NULL` die gemeinsam auswertbaren Zellen. Speichert sie als `vergleich`. [QGIS-Dokumentation zur Verknüpfung nach Feldwert][qgis-attribut-join]
+3. Öffnet **Ansicht → Bedienfelder → Statistische Zusammenfassung**. Wählt `vergleich` und Feld `ew`. Die **Summe** ohne Auswahl ist der gemeinsame Nenner. Wählt für REF `"versorgt" = 1` und für WHO05 `"who_versorgt" = 1`. Aktiviert für jeden Zähler **Nur ausgewählte Objekte**. Bei keiner ausgewählten Zelle ist der Zähler 0. Berechnet je Variante `100 × Zähler / Nenner`. Die Quote setzt einen positiven Nenner voraus. WHO05 muss bei diesem Datenstand gleich viele oder mehr Einwohner erfassen. [Definition der Quote bei van den Bosch et al.][ref-quelle] · [WHO05-Schwelle bei ISGlobal][who05-quelle]
+4. Speichert das Projekt mit `REF`, `WHO05` und `vergleich`. Für den Austausch gehören die verwendeten GeoPackages und `protokoll/qgis-befehle.md` in den Projektordner. Wenn euch das Skript geholfen hat, legt es ebenfalls dazu. Entfernt temporäre Layer und den bundesweiten CSV-Layer aus dem Projekt, sobald die gespeicherten Layer kontrolliert sind.
+
+## Optional · BBSR als dritte Rechenvariante
+
+Wertet die Paare **1 ha / 300 m** und **10 ha / 700 m** getrennt aus. Für eine optionale gemeinsame Quote legt die Musterlösung **UND** als Auswertungsregel fest. [BBSR 2018, Kap. 2.2, S. 26][bbsr-quelle] · [Beispiel einer Anwendung beider Stufen bei Grunewald et al. 2019, Tab. 1][grunewald-quelle]
+
+1. Verwendet `REF` als erste Stufe, sofern die Parkdaten bereits das 700-m-Rechengebiet abdecken. Andernfalls erstellt in B1 das größere Rechengebiet, wiederholt die Parkabfrage und berechnet beide Stufen auf diesem gemeinsamen Parkstand. Nutzt die Kette aus B4 mit `100000` m² und `700` m für die zweite Stufe. Speichert sie als `BBSR700`.
+2. Verknüpft den Layer der ersten Stufe mit `BBSR700` über `zelle_id`. Kopiert `versorgt` aus der zweiten Stufe mit Präfix `fern_`. Erstellt mit **Felder überarbeiten** die Ganzzahlfelder `stufe_300` aus `"versorgt"` und `stufe_700` aus `"fern_versorgt"`. Setzt `ansatz` auf `'BBSR'` und berechnet das kombinierte Feld `versorgt` mit dem folgenden Ausdruck. Speichert `zelle_id`, `ew`, `ansatz`, `versorgt` und beide Stufen im Layer `BBSR`.
+
+   ```text
+   CASE
+     WHEN "versorgt" = 0 OR "fern_versorgt" = 0 THEN 0
+     WHEN "versorgt" = 1 AND "fern_versorgt" = 1 THEN 1
+     ELSE NULL
+   END
+   ```
+
+3. Für die optionale BBSR-Quote verknüpft die Ausgaben über `zelle_id` wie in B6. Verwendet denselben Parkstand und denselben auswertbaren Zellbestand für alle Varianten, die ihr in die optionale Vergleichstabelle aufnehmt. Behaltet die beiden Stufen für die Interpretation.
 
 # Teil C · Vergleich für Marburg (Sitzung 3)
 
-::: {.callout-note title="Folgt zu Sitzung 3"}
-Die detaillierten Vergleichsschritte werden nach Sitzung 2 ergänzt.
-:::
+1. Stellt `REF` und `WHO05` in einer kleinen Tabelle gegenüber. Gebt die beiden Quoten und ihre Differenz in Prozentpunkten an.
+2. Erstellt im Layer `vergleich` mit dem **Feldrechner** ein Ganzzahlfeld `beide` als `"versorgt" + "who_versorgt"`. Kartiert es mit **Layereigenschaften → Symbolisierung → Kategorisiert**. `0` bedeutet in beiden Läufen unversorgt, `1` bedeutet nur in WHO05 versorgt, `2` bedeutet in beiden versorgt. Markiert eine Stelle, an der der kleinere Parkflächenfilter einen Unterschied macht. [REF][ref-quelle] · [WHO05][who05-quelle]
+3. Prüft eure Prognose und formuliert eine Aussagegrenze. Die Karte zeigt modellierte Nähe zu kartierten Parks. Die tatsächliche Nutzung wäre eine eigene Untersuchungsfrage. [Masterson et al. 2022, „Results“ und „Discussion“][nutzung-quelle]
 
-1. **Ergebnistabelle:** vergleichbarer Bevölkerungsanteil nach `REF`, `WHO05` und `BBSR` – mit Angabe, wie BBSR zusammengeführt wurde.
-2. **Übereinstimmungskarte:** 0 bis 3 positive Ergebnisse je Zelle, nur für nach denselben Regeln auswertbare Zellen; zusätzliche Karte der BBSR-Teilbedingungen.
-3. **Prognose prüfen:** Wo bestätigen sich Erwartungen, wo nicht? Welche geänderte Modellregel erklärt das?
-4. **Lesarten prüfen:** Welche Unterschiede folgen direkt aus dem Wortlaut, welche erst aus gemeinsam oder einzeln getroffenen GIS-Entscheidungen?
-5. **Aussagegrenze:** Was lässt sich über die modellierte Nähe zu Grün in Marburg sagen, und was nicht? **Keine Bewertung der wissenschaftlichen Angemessenheit der Empfehlungen.**
+# Hintergrund · freiwillige Lektüre
 
-# Hintergrund (nicht Gegenstand der Übung)
+- [WHO-Regionalbüro Europa 2016, *Urban green spaces and health*][who-bericht] zur Herleitung des Indikators.
+- [Masterson et al. 2022][nutzung-quelle] zur Frage, wie sich Zugang und Nutzung zueinander verhalten.
 
-- [WHO-Regionalbüro Europa (2016): *Urban green spaces and health. A review of evidence*](https://www.who.int/europe/publications/i/item/who-euro-2016-3352-43111-60341) – Evidenz zu Gesundheitswirkungen und Herleitung des Indikators.
-- [Masterson et al. (2022): *Use of the natural outdoor environment in different populations in Europe in relation to access: Implications for policy*](https://doi.org/10.3390/ijerph19042226) – ob Zugang auch zu Nutzung führt; wichtig für die Aussagegrenze in Sitzung 3.
+[ref-quelle]: https://research.slu.se/en/publications/development-of-an-urban-green-space-indicator-and-the-public-heal/
+[who05-quelle]: https://www.isglobal.org/en/-/isglobal-presenta-el-ranking-de-las-ciudades-europeas-con-mayor-mortalidad-atribuible-a-la-falta-de-espacios-verdes
+[barboza-quelle]: https://www.fs.usda.gov/nrs/pubs/jrnl/2021/nrs_2021_barboza_001.pdf
+[who-bericht]: https://www.who.int/europe/publications/i/item/who-euro-2016-3352-43111-60341
+[bbsr-quelle]: https://epflicht.ulb.uni-bonn.de/download/pdf/372854
+[grunewald-quelle]: https://doi.org/10.3390/ijerph16132300
+[330300-quelle]: https://doi.org/10.1007/s11676-022-01523-z
+[bfn-quelle]: https://epflicht.ulb.uni-bonn.de/download/pdf/772215#page=6
+[osm-quelle]: https://www.openstreetmap.org/copyright
+[zensus-quelle]: https://www.zensus2022.de/DE/Ergebnisse-des-Zensus/_inhalt.html#Gitterdaten2022
+[bkg-quelle]: https://gdz.bkg.bund.de/index.php/default/verwaltungsgebiete-1-250-000-stand-31-12-vg250-31-12.html
+[quickosm-quelle]: https://quickosm.github.io/QuickOSM/
+[qgis-verknuepfung]: https://docs.qgis.org/3.44/en/docs/user_manual/processing_algs/qgis/vectorgeneral.html#join-attributes-by-location
+[qgis-attribut-join]: https://docs.qgis.org/3.44/en/docs/user_manual/processing_algs/qgis/vectorgeneral.html#join-attributes-by-field-value
+[qgis-verlauf]: https://docs.qgis.org/3.44/en/docs/user_manual/processing/history.html#the-processing-history
+[qgis-python]: https://docs.qgis.org/3.44/en/docs/user_manual/plugins/python_console.html
+[nutzung-quelle]: https://doi.org/10.3390/ijerph19042226

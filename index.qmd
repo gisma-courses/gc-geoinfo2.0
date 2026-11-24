@@ -29,7 +29,7 @@ Ausgehend von einer zunächst einfachen Frage entwickeln wir ein Modell, verglei
 | Block | Leitfrage | Inhalte |
 |:--|:--|:--|
 | **1 · Gipfel / Seven Summits** | Was zählt als eigenständiger Gipfel? | Digitale Geländemodelle, Auflösung und Maßstab; lokale Maxima, Scharten und Prominenz; Vergleich unterschiedlicher Gipfeldefinitionen. |
-| **2 · Grünzugang / 15-Minuten-Stadt** | Bedeutet räumliche Nähe auch Zugang? | Luftlinien- und Netzwerkentfernungen, Zugänge und Barrieren; Datenverfügbarkeit, Proxys und die Grenzen von Aussagen über tatsächliche Nutzung. |
+| **2 · Grünzugang / 15-Minuten-Stadt** | Bedeutet räumliche Nähe auch Zugang? | [REF und WHO05](content/gruenzugang/index.qmd) gemeinsam in QGIS vergleichen. Fußwege und weitere Ansätze stehen als freiwillige Vertiefungen bereit. |
 | **3 · Raumkonstruktion** | Wie entstehen unterschiedliche Räume durch Wahrnehmung, Nutzung und Modellierung? | Sichtbarkeit, Erreichbarkeit und Angsträume; Einfluss von Sichtlinien, Barrieren und bewerteten Widerständen. Vergleich verschiedener Perspektiven und Annahmen. |
 
 ## Ablauf und Arbeitsweise

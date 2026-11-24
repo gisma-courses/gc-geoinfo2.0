@@ -22,7 +22,7 @@ Leitfrage: **Was genau wird aus einer veröffentlichten Empfehlung, wenn wir sie
 
 Wir prüfen **nicht**, ob die Empfehlung fachlich sinnvoll oder empirisch gut begründet ist. Wir prüfen **wo Interpretationen, zusätzliche Festlegungen und Datenproxies in die Berechnung eingehen**.
 
-**Heute:** Referenz im Plenum; WHO05 und BBSR mit **einer oder zwei Gruppen** vorbereiten. 3-30-300 und BfN bleiben weitere Lesebeispiele.
+**Heute in einer Gruppe:** Gemeinsam REF erarbeiten und den Vergleich mit WHO05 vorbereiten. BBSR ist eine optionale QGIS-Vertiefung. 3-30-300 und BfN sind freiwillige Lesebeispiele. [REF][ref-quelle] · [WHO05][who05-quelle]
 
 ## Eine Empfehlung, die eindeutig klingt
 
@@ -42,7 +42,7 @@ Wiedergabe nach [ISGlobal (2021)](https://www.isglobal.org/en/-/isglobal-present
 
 | | wie häufig zitiert | wie der Indikator entwickelt wurde |
 |:--|:--|:--|
-| Quelle | ISGlobal 2021 | van den Bosch et al. 2016 |
+| Quelle | [ISGlobal 2021][who05-quelle] | [van den Bosch et al. 2016][ref-quelle] |
 | Grünfläche | ≥ 0,5 ha | ≥ 1 ha (Standard) |
 | Entfernung | 300 m Luftlinie | 300 m Luftlinie **bis zum Flächenrand** |
 | Ergebnis | – | Anteil der Bevölkerung innerhalb dieser Entfernung |
@@ -51,26 +51,36 @@ Wiedergabe nach [ISGlobal (2021)](https://www.isglobal.org/en/-/isglobal-present
 Dieselbe Empfehlung, zwei Rechenvorschriften. Welche ist „die WHO“?
 :::
 
-::: {.small}
-[van den Bosch et al. 2016](https://doi.org/10.1177/1403494815615444) · [ISGlobal 2021](https://www.isglobal.org/en/-/isglobal-presenta-el-ranking-de-las-ciudades-europeas-con-mayor-mortalidad-atribuible-a-la-falta-de-espacios-verdes)
-:::
+## Pflicht und freiwillige Vertiefung
 
-## Fünf Perspektiven – nicht fünf Gruppen
-
-| Quellenbeispiel | Unterschied, der beim Rechnen wichtig wird |
-|:--|:--|
-| WHO, häufig zitiert (WHO05) | 0,5 ha statt 1 ha |
-| WHO-Indikator als Referenz (REF) | 1 ha, 300 m bis zum Grünflächenrand |
-| BBSR 2018 | zwei Stufen: 1 ha / 300 m und 10 ha / 700 m |
-| 3-30-300-Regel | **drei** Anforderungen: Bäume sehen, Kronendeckung, Grünerreichbarkeit |
-| BfN: Erreichbarkeit / Versorgung | Wegenetz und Flächensumme / m² pro Einwohner |
+| Ansatz | Regel oder Kennzahl | Umfang für die Gruppe |
+|:----------------|:-------------------------------------|:---------------------|
+| **REF** | ≥ 1 ha, ≤ 300 m Luftlinie bis zum Flächenrand. [Van den Bosch et al., Abstract][ref-quelle] | **Gemeinsam rechnen** |
+| **WHO05** | ≥ 0,5 ha, ≤ 300 m Luftlinie. [ISGlobal, Abs. 4][who05-quelle] | **Gemeinsam rechnen** |
+| BBSR | Zwei Stufen mit 1 ha / 300 m und 10 ha / 700 m. [BBSR 2018, S. 26][bbsr-quelle] | Optionale QGIS-Vertiefung |
+| 3-30-300 | Drei sichtbare Bäume, 30 % Kronendeckung, 300 m bis zum öffentlichen Grün. [Konijnendijk 2023][330300-quelle] | Freiwillige Quellenlektüre |
+| BfN | Grünerreichbarkeit in % und Grünraumversorgung in m² pro Einwohner. [Blum et al. 2024, Abb. 2–4][bfn-quelle] | Freiwillige Quellenlektüre |
 
 ::: {.keyline}
-**Wir rechnen verbindlich REF, WHO05 und BBSR.** Die übrigen Beispiele dienen der Quellenlektüre: Welche weiteren Operationen wären erforderlich?
+**Freiwillige Denkfrage:** Welche zusätzlichen Daten und Operationen bräuchten die Lesebeispiele?
 :::
 
+## Welche GIS-Operationen fehlen? {#optionaler-quellenblick}
+
 ::: {.small}
-[Konijnendijk 2023](https://doi.org/10.1007/s11676-022-01523-z) · [BBSR 2018, S. 26](https://epflicht.ulb.uni-bonn.de/download/pdf/372854) · [Blum et al. 2024](https://doi.org/10.19217/brs242)
+Freiwillige Auflösung zur Quellenlektüre
+:::
+
+| Kriterium | Zusätzliche Daten | Mögliche GIS-Umsetzung |
+|:----------------|:-----------------------|:----------------------------------|
+| **3** Bäume in Sichtweite. [Konijnendijk, „The 3 trees“][330300-quelle] | Baumstandorte, Blickpunkte, Gebäude- und Geländehöhen | Sichtlinien von Wohnung, Schule und Arbeitsplatz prüfen. Sichtbare Bäume je Blickpunkt zählen. |
+| **30 %** Kronendeckung. [Konijnendijk, „The 30%“][330300-quelle] | Baumkronenflächen und Quartiersgrenzen | Kronen mit Quartiersgrenzen verschneiden. Bedeckte Fläche durch Quartiersfläche teilen. |
+| **300 m** bis zum öffentlichen Grün. [Konijnendijk, „The 300 m“][330300-quelle] | Wohnorte, Grünflächen, Zugänge und Fußwegenetz | Als Modellsetzung den kürzesten Fußweg zum nächsten Zugang rechnen und mit 300 m vergleichen. |
+| **BfN · Erreichbarkeit**. [Blum et al. 2024, Abb. 3][bfn-quelle] | Fußwegenetz, Zugänge, geeignete Grünflächen, Einwohner | Je Wohnort erreichbare Flächen bis 500 m Fußweg summieren. Bei insgesamt über 1 ha Einwohner als versorgt zählen. |
+| **BfN · Versorgung**. [Blum et al. 2024, Abb. 3][bfn-quelle] | Geeignete Grünflächen, Einwohner, räumliche Bezugseinheit und Wegeentfernungen | Anrechenbare Grünfläche in m² je Bezugseinheit summieren und durch ihre Einwohnerzahl teilen. Für Wohngebietsgrün gelten 6 m² je Einwohner bei max. 500 m Fußweg. |
+
+::: {.small}
+Für die Sichtanalyse müssten wir Blickhöhe und Hindernisse festlegen. Für beide Fußwegmodelle müssten wir dokumentieren, welche Eingänge und Wege tatsächlich nutzbar sind.
 :::
 
 ## Unsere Frage
@@ -98,7 +108,7 @@ Artikelformel und historischer Code setzen dieselbe Idee verschieden um – für
 ::: {.doccard}
 **Hier**
 
-Drei berechnete Varianten setzen verwandte Aussagen unterschiedlich um – für dieselbe Stadt ergeben sich möglicherweise verschiedene Versorgungsgrade.
+REF und WHO05 unterscheiden sich in der Mindestfläche. Für dieselbe Stadt können daraus unterschiedliche Versorgungsgrade folgen. [Van den Bosch et al.][ref-quelle] · [ISGlobal][who05-quelle]
 :::
 :::
 
@@ -108,13 +118,13 @@ Erst die Umsetzung zeigt, was eine Regel tatsächlich bedeutet.
 
 ## Die Referenz, durchdekliniert
 
-**WHO-Indikator nach van den Bosch et al. (2016)**
+**WHO-Indikator** nach [van den Bosch et al. (2016), Methods und Conclusions][ref-quelle]
 
 | | Begriff | Kriterium | Repräsentation | Operation |
 |:--|:--|:--|:--|:--|
 | **Grün** | städtische Grünfläche | öffentlich, ≥ 1 ha | OSM-Polygone ausgewählter Klassen | Ausdruck, Fläche, Filter |
 | **Entfernung** | Nähe | 300 m Luftlinie bis zum Rand | Pufferzone um die Flächen | Puffer 300 m |
-| **Bevölkerung** | Bewohnerinnen und Bewohner | Wohnort innerhalb der Zone | Zensus-Gitterzellen 100 m | Lage-Abfrage Zellmittelpunkt |
+| **Bevölkerung** | Bewohnerinnen und Bewohner | Wohnort innerhalb der Zone | [Zensus 2022, 100-m-Gitter][zensus-quelle] | Lage-Abfrage Zellmittelpunkt |
 | **Ergebnis** | Zugang | Anteil der Bevölkerung | Summe der Einwohner | versorgt / alle |
 
 ## Was auch die Referenz offenlässt
@@ -143,7 +153,7 @@ Wie erkennt man in den Daten, ob eine Fläche zugänglich ist?
 :::
 
 ::: {.keyline}
-Diese Punkte setzen wir **einmal gemeinsam**; WHO05 und BBSR übernehmen sie, wo ihre Quellen keine andere Vorgabe machen.
+Diese Punkte setzen wir gemeinsam für REF und WHO05. Die optionale BBSR-Vertiefung verwendet dieselbe Datengrundlage.
 :::
 
 ## Proxys: Wofür steht was?
@@ -193,16 +203,13 @@ Dasselbe Prinzip hatte der Gipfel: ein DGM, mehrere Gipfeldefinitionen.
 **Offen heißt nicht falsch.** Haltet fest, **wo** eine Entscheidung entsteht und **wer** sie für diese Übung trifft.
 :::
 
-## Eine oder zwei Gruppen – drei Rechenvarianten
+## Was die Gruppe gemeinsam bearbeitet
 
-| Arbeitsform | Aufgabenverteilung | Gemeinsames Ergebnis |
-|:--|:--|:--|
-| **1 Gruppe** | Referenz gemeinsam; danach WHO05 und BBSR nacheinander | REF + WHO05 + BBSR |
-| **2 Gruppen** | Referenz gemeinsam; Gruppe 1: WHO05, Gruppe 2: BBSR | REF + WHO05 + BBSR |
+1. **REF** einmal in der QGIS-Werkzeugkiste ausführen. [Van den Bosch et al., Abstract][ref-quelle]
+2. Die Python-Aufrufe aus **Verarbeitung → Verlauf** kopieren und im gemeinsamen Befehlsprotokoll sichern. [QGIS-Dokumentation zum Verlauf](https://docs.qgis.org/3.44/en/docs/user_manual/processing/history.html#the-processing-history)
+3. **WHO05** mit 0,5 ha rechnen. Aus dem Protokoll kann mit KI-Unterstützung ein Skript dafür entstehen. [ISGlobal, Abs. 4][who05-quelle] · [Klickanleitung](../arbeitsblatt/arbeitsauftrag.html#b5-befehlsprotokoll-sichern-und-who05-ableiten)
 
-**WHO05:** Von 1 ha auf 0,5 ha – was ändert sich wirklich?
-
-**BBSR:** Zwei räumliche Bedingungen; einzeln kartieren. **Legt die Quelle fest, wie man sie zu einem einzigen Ja/Nein kombiniert?** Eine eigene Zusammenführung klar kennzeichnen.
+**Optional · BBSR:** Zweite Stufe ergänzen, beide Stufen getrennt kartieren und die gewählte Verknüpfung dokumentieren. [BBSR 2018, S. 26][bbsr-quelle]
 
 ::: {.keyline}
 **Kein Wettbewerb zwischen Quellen.** Wir prüfen die Reproduzierbarkeit unserer Interpretation und Umsetzung.
@@ -224,17 +231,45 @@ Was ergänzen wir? Wo übernehmen wir die gemeinsame Referenzsetzung? Was ist ei
 ::: {.doccard}
 **Prognose**
 
-Mehr, weniger oder gleich viele Versorgte gegenüber REF – getrennt für WHO05 und BBSR?
+Wo könnte WHO05 gegenüber REF zusätzliche Einwohner erfassen? [ISGlobal, Abs. 4][who05-quelle] · [Van den Bosch et al., Abstract][ref-quelle]
 :::
 ::: {.doccard}
 **Gemeinsame Daten**
 
-Gleiche OSM-Flächen, Zensus-Zellen, Gebietsgrenzen und Kennungen in einer oder zwei Gruppen.
+Ein Datensatz für die Gruppe. Dieselben [OSM-Flächen][osm-quelle], [Zensus-Zellen][zensus-quelle] und [Gebietsgrenzen][bkg-quelle] für beide Läufe.
 :::
 :::
 
 ::: {.keyline}
 **Wichtig:** Nicht die Kolleginnen und Kollegen werden bewertet, sondern **die Nachvollziehbarkeit der Übersetzung vom Text zum GIS-Modell**.
+:::
+
+## Musterlösung · Welche Daten gehen ein? {#musterloesung-gruenzugang}
+
+| Fundstelle | Befund aus der Quelle | Umsetzung für Marburg |
+|:----------------------|:---------------------------------|:--------------------------|
+| **REF** · [van den Bosch et al., Abstract](https://research.slu.se/en/publications/development-of-an-urban-green-space-indicator-and-the-public-heal/) | Urban Atlas und Bevölkerungsdaten. Standard ≥ 1 ha und ≤ 300 m bis zum Flächenrand. | Parkpolygone nach Fläche filtern und 300 m puffern. |
+| **WHO05** · [ISGlobal, Abs. 4](https://www.isglobal.org/en/-/isglobal-presenta-el-ranking-de-las-ciudades-europeas-con-mayor-mortalidad-atribuible-a-la-falta-de-espacios-verdes) · [Pereira Barboza et al., S. e719–e720](https://www.fs.usda.gov/nrs/pubs/jrnl/2021/nrs_2021_barboza_001.pdf) | ISGlobal nennt 0,5 ha und 300 m. Die Studie rechnet mit Satellitengrün und Grünflächenanteilen. | Für die zitierte Schwelle die REF-Kette mit 0,5 ha rechnen. |
+| **BBSR, optional** · [Kap. 2.2, S. 26][bbsr-quelle] | Zwei Stufen mit 1 ha / 300 m und 10 ha / 700 m. | Beide Stufen kartieren. **UND** als Regel für die optionale Vergleichsquote. |
+
+::: {.small}
+**Grün** · Parkpolygone `leisure=park` bis 300 m über die Stadtgrenze, mit optionalem BBSR-Lauf bis 700 m. `access=no` oder `private` ausschließen. Fehlt das Tag, bleibt der Park im Modell. [OSM-Daten][osm-quelle]
+
+**Bevölkerung** · `x_mp_100m` und `y_mp_100m` ergeben den Wohnort-Proxy. `Einwohner` liefert das Gewicht je Zelle. [Zensus 2022, 100-m-Gitter][zensus-quelle]
+
+**Rechenbeispiel** · Eine Marburger Zelle mit 40 Einwohnern liegt 250 m vom einzigen Park in Reichweite entfernt. Er hat 0,7 ha. Die 40 zählen im Nenner beider Pflichtvarianten und im Zähler von WHO05.
+
+[**Zum Zensus-Import in der QGIS-Klickanleitung**](../arbeitsblatt/arbeitsauftrag.html#b2-zensus-csv-importieren-und-marburger-zellen-erzeugen)
+:::
+
+::: {.notes}
+Bei van den Bosch et al. stehen Indikatordefinition und Datengrundlage unter *Methods*, die empfohlenen Schwellen unter *Conclusions*. [Van den Bosch et al.][ref-quelle]
+
+Pereira Barboza et al. beschreiben unter *Population and age distribution* das GHSL-Bevölkerungsraster mit 250 m Zellweite und die Auswertung für Erwachsene ab 20 Jahren. Unter *Exposure to green space* stehen der MODIS-NDVI mit 250 m Auflösung und Grünflächenanteile aus amtlichen Landnutzungskarten. Beide Grünmaße beziehen ein 300-m-Umfeld der Rasterzellen ein. Die ISGlobal-Mitteilung liefert die Mindestgröße für unsere WHO05-Variante. [Pereira Barboza et al., S. e719–e720][barboza-quelle] · [ISGlobal, Abs. 4][who05-quelle]
+
+Das Untersuchungsgebiet ist die ganze Gemeinde Marburg (AGS `06534014`). Nur Zensus-Mittelpunkte im Stadtgebiet mit gültiger Einwohnerzahl gehen in die Quote ein. Maßgeblich ist die gesamte Einwohnerzahl der jeweiligen Zelle. Die Parkflächen messen wir am vollständigen Polygon. [BKG VG250][bkg-quelle] · [Zensus 2022][zensus-quelle] · [OSM-Daten][osm-quelle]
+
+Bei identischen Daten ist WHO05 mindestens so hoch wie REF. BBSR mit UND ist höchstens so hoch wie REF, weil zur ersten Stufe eine zweite Bedingung hinzukommt. [Grunewald et al. (2019), Tab. 1](https://doi.org/10.3390/ijerph16132300) zeigen eine Anwendung beider Distanzstufen mit ATKIS-Objektarten und einem Bevölkerungsraster. Unsere Auswertung behält `stufe_300` und `stufe_700` neben ihrem gemeinsamen Ergebnis bei.
 :::
 
 ## Merksatz
@@ -244,3 +279,13 @@ Eine modellierte Aussage wird erst prüfbar, wenn **Text, Interpretation und Rec
 :::
 
 [**Umsetzung, Teil A öffnen**](../arbeitsblatt/arbeitsauftrag.html#teil-a-lesarten-und-abstraktion-sitzung-1)
+
+[ref-quelle]: https://research.slu.se/en/publications/development-of-an-urban-green-space-indicator-and-the-public-heal/
+[who05-quelle]: https://www.isglobal.org/en/-/isglobal-presenta-el-ranking-de-las-ciudades-europeas-con-mayor-mortalidad-atribuible-a-la-falta-de-espacios-verdes
+[barboza-quelle]: https://www.fs.usda.gov/nrs/pubs/jrnl/2021/nrs_2021_barboza_001.pdf
+[bbsr-quelle]: https://epflicht.ulb.uni-bonn.de/download/pdf/372854
+[330300-quelle]: https://doi.org/10.1007/s11676-022-01523-z
+[bfn-quelle]: https://epflicht.ulb.uni-bonn.de/download/pdf/772215#page=6
+[osm-quelle]: https://www.openstreetmap.org/copyright
+[zensus-quelle]: https://www.zensus2022.de/DE/Ergebnisse-des-Zensus/_inhalt.html#Gitterdaten2022
+[bkg-quelle]: https://gdz.bkg.bund.de/index.php/default/verwaltungsgebiete-1-250-000-stand-31-12-vg250-31-12.html

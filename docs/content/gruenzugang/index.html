@@ -446,7 +446,6 @@ background-size: cover;
   <ul class="collapse">
   <li><a href="#worum-es-geht" id="toc-worum-es-geht" class="nav-link active" data-scroll-target="#worum-es-geht">Worum es geht</a></li>
   <li><a href="#wie-wir-vorgehen" id="toc-wie-wir-vorgehen" class="nav-link" data-scroll-target="#wie-wir-vorgehen">Wie wir vorgehen</a></li>
-  <li><a href="#was-diesmal-anders-ist" id="toc-was-diesmal-anders-ist" class="nav-link" data-scroll-target="#was-diesmal-anders-ist">Was diesmal anders ist</a></li>
   <li><a href="#ablauf" id="toc-ablauf" class="nav-link" data-scroll-target="#ablauf">Ablauf</a></li>
   <li><a href="#was-ihr-aus-dem-perfekten-gipfel-mitbringt" id="toc-was-ihr-aus-dem-perfekten-gipfel-mitbringt" class="nav-link" data-scroll-target="#was-ihr-aus-dem-perfekten-gipfel-mitbringt">Was ihr aus dem perfekten Gipfel mitbringt</a></li>
   <li><a href="#portfolio" id="toc-portfolio" class="nav-link" data-scroll-target="#portfolio">Portfolio</a></li>
@@ -464,63 +463,52 @@ background-size: cover;
 <p><a href="../../index.html">← Kursübersicht</a> · <a href="../../content/gruenzugang/slides/01-quellen-abstraktion.html">Teil 1 – Folien</a> · <a href="../../content/gruenzugang/arbeitsblatt/arbeitsauftrag.html">Umsetzung</a></p>
 <section id="worum-es-geht" class="level2">
 <h2 class="anchored" data-anchor-id="worum-es-geht">Worum es geht</h2>
-<p>Grün in Wohnungsnähe ist ein erklärtes Ziel von Gesundheitsforschung und Stadtplanung. Die Konzepte dazu klingen eindeutig – und sind es nicht. Schon „die WHO-Empfehlung“ kursiert in zwei Fassungen: <a href="https://www.isglobal.org/en/-/isglobal-presenta-el-ranking-de-las-ciudades-europeas-con-mayor-mortalidad-atribuible-a-la-falta-de-espacios-verdes">ISGlobal</a> gibt sie im Zusammenhang mit der Studie von <a href="https://doi.org/10.1016/S2542-5196(21)00229-1">Pereira Barboza et al.&nbsp;(2021)</a> mit einer Grünfläche von mindestens 0,5 Hektar in höchstens 300 Metern Luftlinie wieder; die Arbeit, mit der dieser WHO-Indikator entwickelt wurde, empfiehlt als Standard dagegen mindestens 1 Hektar und misst die 300 Meter bis zum Rand der Fläche (<a href="https://doi.org/10.1177/1403494815615444">van den Bosch et al.&nbsp;2016</a>).</p>
-<p>Die deutsche Planungspraxis setzt wieder andere Werte an: Eine Studie im Auftrag des <a href="https://epflicht.ulb.uni-bonn.de/download/pdf/372854">BBSR (2018)</a> nennt Grünflächen ab einem Hektar in 300 Metern Luftlinie, die Orientierungswerte des <a href="https://doi.org/10.19217/brs242">Bundesamts für Naturschutz (Blum et al.&nbsp;2024)</a> Grünflächen von insgesamt über einem Hektar in höchstens 500 Metern <strong>Fußweg</strong>, und der <a href="https://www.berlin.de/umweltatlas/nutzung/oeffentliche-gruenanlagen/2020/einleitung/">Berliner Umweltatlas</a> misst die Versorgung in Quadratmetern Grün pro Einwohner. Die <a href="https://doi.org/10.1007/s11676-022-01523-z">3-30-300-Regel</a> verlangt höchstens 300 Meter bis zur nächsten öffentlichen Grünfläche – ohne Mindestgröße. Verwandt ist die Idee der 15-Minuten-Stadt, nach der Alltagsziele in einer Viertelstunde zu Fuß oder mit dem Rad erreichbar sein sollen (<a href="https://doi.org/10.3390/smartcities4010006">Moreno et al.&nbsp;2021</a>).</p>
-<p>Alle meinen ungefähr dasselbe. <strong>Was sie genau meinen, zeigt sich erst, wenn man sie anwendet.</strong> Genau das tun wir: Wir diskutieren nicht, ob die Schwellen fachlich gut begründet sind. Wir nehmen die Ansätze beim Wort, setzen sie für <strong>Marburg</strong> um und vergleichen, was dabei herauskommt.</p>
-</section>
-<section id="wie-wir-vorgehen" class="level2">
-<h2 class="anchored" data-anchor-id="wie-wir-vorgehen">Wie wir vorgehen</h2>
-<p><strong>Ein Ansatz wird vollständig durchdekliniert</strong> – der WHO-Indikator nach van den Bosch et al.&nbsp;(2016) als <strong>Referenz</strong>: vom Satz in der Quelle über Kriterien und Daten bis zur Verarbeitungskette in QGIS. Diese Kette ist das gemeinsame Gerüst.</p>
-<p><strong>Jede Gruppe übernimmt dann einen anderen Ansatz</strong> und baut die Referenzkette so um, dass sie genau das rechnet, was ihr Ansatz verlangt – nicht mehr und nicht weniger.</p>
-<p><strong>Die eigentliche Aufgabe ist der Vergleich:</strong> Wie viele Menschen in Marburg gelten je nach Ansatz als versorgt? Wo sind sich alle Ansätze einig, und wo hängt das Urteil allein davon ab, welcher Ansatz gilt?</p>
-<p>Damit der Vergleich etwas aussagt, gelten zwei Regeln:</p>
-<ol type="1">
-<li><strong>Gleiche Daten für alle.</strong> Alle Gruppen rechnen mit derselben Datengrundlage. Sonst wüsste niemand, ob ein Unterschied aus dem Ansatz oder aus den Daten kommt.</li>
-<li><strong>Was ein Ansatz offenlässt, wird wie in der Referenz gesetzt.</strong> So entstehen Unterschiede nur dort, wo die Ansätze tatsächlich Verschiedenes sagen.</li>
-</ol>
-</section>
-<section id="was-diesmal-anders-ist" class="level2">
-<h2 class="anchored" data-anchor-id="was-diesmal-anders-ist">Was diesmal anders ist</h2>
+<p>Wie verändert sich die modellierte Grünversorgung in Marburg, wenn wir die Mindestgröße eines Parks von 1 ha auf 0,5 ha absenken? Wir halten Daten und Distanzregel konstant und arbeiten in <strong>einer Gruppe</strong>.</p>
 <table class="caption-top table">
-<colgroup>
-<col style="width: 33%">
-<col style="width: 33%">
-<col style="width: 33%">
-</colgroup>
 <thead>
 <tr class="header">
-<th style="text-align: left;"></th>
-<th style="text-align: left;">Der perfekte Gipfel</th>
-<th style="text-align: left;">Grünzugang</th>
+<th style="text-align: left;">Umfang</th>
+<th style="text-align: left;">Ansatz für Marburg</th>
+<th style="text-align: left;">Fundstelle</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;">Daten</td>
-<td style="text-align: left;">fertiges QGIS-Paket</td>
-<td style="text-align: left;">gemeinsamer Datenplan, Daten selbst beschaffen und prüfen</td>
+<td style="text-align: left;"><strong>Gemeinsam rechnen</strong></td>
+<td style="text-align: left;"><strong>REF</strong> mit ≥ 1 ha je Grünfläche und ≤ 300 m Luftlinie bis zum Rand.</td>
+<td style="text-align: left;"><a href="https://research.slu.se/en/publications/development-of-an-urban-green-space-indicator-and-the-public-heal/">Van den Bosch et al.&nbsp;2016, Abstract</a></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">Regel</td>
-<td style="text-align: left;">Gipfelregel formulieren</td>
-<td style="text-align: left;">Regel des eigenen Ansatzes aus der Quelle herauslesen und als QGIS-Ausdruck schreiben</td>
+<td style="text-align: left;"><strong>Gemeinsam rechnen</strong></td>
+<td style="text-align: left;"><strong>WHO05</strong> mit ≥ 0,5 ha und ≤ 300 m. Den Flächenrand übernehmen wir aus REF.</td>
+<td style="text-align: left;"><a href="https://www.isglobal.org/en/-/isglobal-presenta-el-ranking-de-las-ciudades-europeas-con-mayor-mortalidad-atribuible-a-la-falta-de-espacios-verdes">ISGlobal 2021, Abs. 4</a> · <a href="https://www.fs.usda.gov/nrs/pubs/jrnl/2021/nrs_2021_barboza_001.pdf">Pereira Barboza et al.&nbsp;2021, Studiendaten S. e719–e720</a></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">Automatisierung</td>
-<td style="text-align: left;">fertiges Skript nutzen</td>
-<td style="text-align: left;">Referenzkette im grafischen Modellierer nachbauen und für den eigenen Ansatz umbauen</td>
+<td style="text-align: left;">Freiwillig rechnen</td>
+<td style="text-align: left;"><strong>BBSR</strong> mit zwei Stufen, 1 ha / 300 m und 10 ha / 700 m.</td>
+<td style="text-align: left;"><a href="https://epflicht.ulb.uni-bonn.de/download/pdf/372854">BBSR 2018, Kap. 2.2, S. 26</a></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">Vergleich</td>
-<td style="text-align: left;">Gegenprüfung durch eine andere Gruppe</td>
-<td style="text-align: left;">alle Ansätze für dieselbe Stadt; Übereinstimmungskarte für Marburg</td>
+<td style="text-align: left;">Freiwillig lesen</td>
+<td style="text-align: left;"><strong>3-30-300</strong> mit sichtbaren Bäumen, Kronendeckung und Nähe zu öffentlichem Grün.</td>
+<td style="text-align: left;"><a href="https://doi.org/10.1007/s11676-022-01523-z">Konijnendijk 2023, „The 3-30-300 rule“</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Freiwillig lesen</td>
+<td style="text-align: left;"><strong>BfN</strong> mit Fußwegerreichbarkeit in Prozent der Bevölkerung und Grünraumversorgung in m² pro Einwohner.</td>
+<td style="text-align: left;"><a href="https://epflicht.ulb.uni-bonn.de/download/pdf/772215#page=6">Blum et al.&nbsp;2024, Abb. 2–4</a></td>
 </tr>
 </tbody>
 </table>
 </section>
+<section id="wie-wir-vorgehen" class="level2">
+<h2 class="anchored" data-anchor-id="wie-wir-vorgehen">Wie wir vorgehen</h2>
+<p>Wir lesen die beiden WHO-Fundstellen und halten fest, welche Teile der Rechenregel daraus folgen. Für beide Rechnungen verwenden wir dieselben Parkpolygone, Einwohnerzahlen und die Gemeindegrenze von Marburg. Die Entscheidung je Zelle fällt am Zellmittelpunkt. <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> · <a href="https://www.zensus2022.de/DE/Ergebnisse-des-Zensus/_inhalt.html#Gitterdaten2022">Zensus 2022, Gitterdaten</a> · <a href="https://gdz.bkg.bund.de/index.php/default/verwaltungsgebiete-1-250-000-stand-31-12-vg250-31-12.html">BKG VG250</a></p>
+<p>Wir klicken <strong>REF einmal</strong> in der QGIS-Werkzeugkiste durch und sichern die tatsächlichen Python-Aufrufe in <code>protokoll/qgis-befehle.md</code>. Für <strong>WHO05</strong> nutzen wir dieselbe Kette mit der kleineren Mindestfläche. Wer automatisieren möchte, entwickelt aus dem Protokoll mit KI-Unterstützung ein Skript und prüft es zuerst am manuellen REF-Ergebnis. <a href="https://docs.qgis.org/3.44/en/docs/user_manual/processing/history.html#the-processing-history">QGIS-Dokumentation zum Verarbeitungsverlauf</a></p>
+</section>
 <section id="ablauf" class="level2">
 <h2 class="anchored" data-anchor-id="ablauf">Ablauf</h2>
-<p>Zu jeder Sitzung gibt es einen Foliensatz (Teil 1–3); gearbeitet wird durchgehend auf einer Seite: der <a href="../../content/gruenzugang/arbeitsblatt/arbeitsauftrag.html">Umsetzung</a> mit den Teilen A–C.</p>
+<p>Die <a href="../../content/gruenzugang/slides/01-quellen-abstraktion.html">Folien zu Teil A</a> zeigen die Fundstellen und die Musterlösung. Die <a href="../../content/gruenzugang/arbeitsblatt/arbeitsauftrag.html">Umsetzung</a> enthält alle drei Arbeitsschritte.</p>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 33%">
@@ -530,78 +518,36 @@ background-size: cover;
 <thead>
 <tr class="header">
 <th style="text-align: left;">Sitzung</th>
-<th style="text-align: left;">Frage und Modell → Umsetzung → Vergleich</th>
+<th style="text-align: left;">Gemeinsame Aufgabe</th>
 <th style="text-align: left;">Ergebnis</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td style="text-align: left;"><strong>1 · Lesarten und Abstraktion</strong></td>
-<td style="text-align: left;">Die Referenz gemeinsam durchdeklinieren; den eigenen Ansatz beim Wort nehmen: Was legt er fest, was lässt er offen?</td>
-<td style="text-align: left;">Regelblatt des eigenen Ansatzes, gemeinsamer Datenplan, Prognose</td>
+<td style="text-align: left;">REF und WHO05 aus den Fundstellen ableiten und eine Prognose vereinbaren.</td>
+<td style="text-align: left;">Kurzes Regelblatt mit Quellen und Modellsetzungen</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;"><strong>2 · Umsetzung</strong></td>
-<td style="text-align: left;">Daten nach Datenplan beschaffen; Referenzkette im Modellierer bauen; für den eigenen Ansatz umbauen</td>
-<td style="text-align: left;">gespeichertes Projekt mit Modell und Ergebnis im gemeinsamen Format</td>
+<td style="text-align: left;">Zensus und Parks vorbereiten, REF manuell rechnen, Befehle sichern und WHO05 ableiten.</td>
+<td style="text-align: left;">QGIS-Projekt, zwei Ergebnislayer und Befehlsprotokoll</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;"><strong>3 · Vergleich für Marburg</strong></td>
-<td style="text-align: left;">Ergebnistabelle aller Ansätze, Übereinstimmungskarte, Abgleich mit der Prognose</td>
-<td style="text-align: left;">Vergleich, Status, Aussagegrenze</td>
+<td style="text-align: left;">Quoten und Karte vergleichen, Prognose abgleichen und Aussagegrenze benennen.</td>
+<td style="text-align: left;">Zwei vergleichbare Quoten und eine Karte der Unterschiede</td>
 </tr>
 </tbody>
 </table>
-<p>Zwischen den Sitzungen liegen Werkstatttermine für Datenbeschaffung und Umsetzung. Wer möchte, wendet die eigene Kette anschließend auf eine andere Stadt an.</p>
 </section>
 <section id="was-ihr-aus-dem-perfekten-gipfel-mitbringt" class="level2">
 <h2 class="anchored" data-anchor-id="was-ihr-aus-dem-perfekten-gipfel-mitbringt">Was ihr aus dem perfekten Gipfel mitbringt</h2>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 50%">
-<col style="width: 50%">
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: left;">Beim Gipfel</th>
-<th style="text-align: left;">Beim Grünzugang</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">Artikelformel und historischer Code setzen dieselbe Idee verschieden um – und liefern für dieselben Gipfel verschiedene E-Werte.</td>
-<td style="text-align: left;">WHO-Zitat, WHO-Indikator, BBSR, BfN und 3-30-300 setzen dieselbe Absicht verschieden um – und liefern für dieselbe Stadt verschiedene Versorgungsgrade.</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Der Panoramaartikel liefert Begriffe und eine Formel, aber keine vollständige Rechenvorschrift.</td>
-<td style="text-align: left;">Jeder Ansatz liefert Schwellen, aber keine vollständige Definition von Grün, Zugang oder Bevölkerung.</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Die Gipfelregel ist die fachliche Definition dessen, was als Gipfel gilt.</td>
-<td style="text-align: left;">Die Grünflächenregel ist die fachliche Definition dessen, was als Grünfläche gilt.</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Dominanz als Distanz zu höherem Gelände</td>
-<td style="text-align: left;">Luftlinie als Distanz zur nächsten Grünfläche</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Höhenstufen: Erst die Verbindung entscheidet.</td>
-<td style="text-align: left;">Fußweg: Erst der begehbare Weg entscheidet.</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Datenrand: Außerhalb des DGM kann höheres Gelände liegen.</td>
-<td style="text-align: left;">Stadtgrenze: Außerhalb der Stadt kann die nächste Grünfläche liegen.</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Ein unbestimmter Wert ist keine Null.</td>
-<td style="text-align: left;">Eine nicht erreichbare Fläche ist kein Beleg für Nicht-Nutzung – und umgekehrt.</td>
-</tr>
-</tbody>
-</table>
+<p>Wie beim Gipfel machen wir den Einfluss einer einzelnen Modellentscheidung sichtbar. Bei gleichen Eingabedaten kann eine niedrigere Mindestgröße mehr Flächen und damit mehr Einwohner erfassen. Die Karte zeigt die Luftliniennähe zu kartierten Parks. Ob Menschen diese Parks tatsächlich nutzen, ist eine eigene Untersuchungsfrage. <a href="https://research.slu.se/en/publications/development-of-an-urban-green-space-indicator-and-the-public-heal/">Van den Bosch et al.&nbsp;2016</a> · <a href="https://www.isglobal.org/en/-/isglobal-presenta-el-ranking-de-las-ciudades-europeas-con-mayor-mortalidad-atribuible-a-la-falta-de-espacios-verdes">ISGlobal 2021</a> · <a href="https://doi.org/10.3390/ijerph19042226">Masterson et al.&nbsp;2022</a></p>
 </section>
 <section id="portfolio" class="level2">
 <h2 class="anchored" data-anchor-id="portfolio">Portfolio</h2>
-<p>Ein gespeichertes QGIS-Projekt mit eurem Modell für euren Ansatz, das Regelblatt, euer Ergebnis im gemeinsamen Format, der Vergleich mit der Referenz und mindestens einem weiteren Ansatz sowie eine knappe Modellaussage: Was sagt euer Ansatz über Marburg – und was nicht?</p>
+<p>Gebt das gemeinsame QGIS-Projekt mit <code>REF</code> und <code>WHO05</code>, Befehlsprotokoll, Regelblatt, Karte und einer knappen Aussage zur modellierten Versorgung in Marburg ab. Ein erstelltes Skript könnt ihr dem Projektordner beilegen. Die BBSR-Rechnung und die zusätzlichen Lesebeispiele sind freiwillig.</p>
 
 
 </section>
